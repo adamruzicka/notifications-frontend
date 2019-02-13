@@ -10,9 +10,14 @@ extends:
   - 'eslint:recommended'
   - 'prettier'
   - 'plugin:react/recommended'
+  - './.dev.eslintrc.yml'
 parserOptions:
   ecmaVersion: 7
   sourceType: module
+  ecmaFeatures:
+    experimentalObjectRestSpread: true
+    experimentalDecorators: true
+    jsx: true
 globals:
   beforeAll: true
   describe: true

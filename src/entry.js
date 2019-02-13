@@ -15,7 +15,7 @@ import App from './App';
  */
 ReactDOM.render(
     <Provider store={ init().getStore() }>
-        <Router basename={ `/${RELEASE}/platform/advisor` }>
+        <Router basename={ `/${RELEASE}/platform/notifications` }>
             <App />
         </Router>
     </Provider>,

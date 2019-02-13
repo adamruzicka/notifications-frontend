@@ -9,7 +9,12 @@ webpackConfig.devServer = {
     hot: true,
     port: 8002,
     disableHostCheck: true,
-    historyApiFallback: true
+    historyApiFallback: true,
+    // when run in a container, file events may not work properly
+    // For this polling is enabled
+    watchOptions: {
+        poll: 1000
+    }
 };
 
 module.exports = _.merge({},

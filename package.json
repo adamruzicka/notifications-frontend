@@ -1,14 +1,19 @@
 {
-  "name": "insights-frontend-starter-app",
-  "version": "1.1.0",
+  "name": "insights-notifications",
+  "version": "0.1.0",
   "private": false,
   "dependencies": {
     "@babel/runtime": "^7.1.2",
     "@patternfly/patternfly-next": "^1.0.41",
     "@patternfly/react-core": "1.30.0",
-    "@red-hat-insights/insights-frontend-components": "^3.11.0",
+    "@patternfly/react-table": "^0.4.4",
+    "@red-hat-insights/insights-frontend-components": "^3.33.22",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "classnames": "^2.2.5",
-    "create-react-class": "^15.6.3"
+    "create-react-class": "^15.6.3",
+    "lodash": "^4.17.11",
+    "react-jsonschema-form": "^1.2.0",
+    "schema-utils": "^1.0.0"
   },
   "sassIncludes": {
     "patternfly": "node_modules/patternfly/dist/sass",
@@ -33,10 +38,12 @@
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/plugin-proposal-decorators": "^7.3.0",
     "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
     "@babel/plugin-syntax-dynamic-import": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.1.0",
-    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-env": "^7.3.1",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "babel-core": "^7.0.0-bridge.0",
@@ -88,8 +95,8 @@
     "topojson": "^3.0.2",
     "webpack": "^4.17.2",
     "webpack-bundle-analyzer": "^2.13.1",
-    "webpack-cli": "^2.1.4",
-    "webpack-dev-server": "3.1.10",
+    "webpack-cli": "^3.2.1",
+    "webpack-dev-server": "^3.1.14",
     "webpack-visualizer-plugin": "^0.1.11",
     "write-file-webpack-plugin": "^4.4.0"
   },

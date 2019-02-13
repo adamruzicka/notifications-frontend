@@ -1,26 +1,33 @@
 [![Build Status](https://travis-ci.org/RedHatInsights/insights-frontend-starter-app.svg?branch=master)](https://travis-ci.org/RedHatInsights/insights-frontend-starter-app)
 
-# insights-frontend-starter-app
+# Notifications Frontend
 
-React.js starter app for Red Hat Insights products that includes Patternfly 3 and Patternfly Next.
+Notifications Frontend for Red Hat Insights based on [https://github.com/RedHatInsights/insights-frontend-starter-app](insights-frontend-starter-app)*
+
+_* See for intro do basic workings of Insights frontend code_
 
 ## Getting Started
 
-There is a [comprehensive quick start guide in the Storybook Documentation](https://github.com/RedHatInsights/insights-frontend-storybook/blob/master/src/docs/welcome/quickStart/DOC.md) to setting up an Insights environment complete with:
+This app can either be run as described on the "Getting Started" section of the [Insights Starter App](https://github.com/RedHatInsights/notifications-frontend#getting-started).
 
-- Insights Frontend Starter App
+There is also a docker-compose file to start the insights-proxy with a local insights-chrome and the frontend in containers. If you have Docker and Docker Compose set up the following steps are required for them to be run:
 
-- [Insights Chroming](https://github.com/RedHatInsights/insights-chrome)
-- [Insights Proxy](https://github.com/RedHatInsights/insights-proxy)
+ 1. Clone and and [build insights-chrome](https://github.com/RedHatInsights/insights-chrome#running-the-build)*
+ 2. Copy `.env.example` to `.env`
+ 3. Change the `LOCAL_CHROME_PATH` environment path to point to the locally built insights-chrome
+ 4. [Update your hosts file](https://github.com/RedHatInsights/insights-proxy#setup-the-initial-etchosts-entries-do-this-once) to have required development host names correctly resolved
+ 5. Run `docker-compose up` in the notifications-frontend directory
+ 6. If all built correctly the frontend should be available at https://prod.foo.redhat.com:1337/insights/platform/notifications/
 
-Note: You will need to set up the Insights environment if you want to develop with the starter app due to the consumption of the chroming service as well as setting up your global/app navigation through the API.
+_* At this time the insights-chrome need to have an new entry to find the notifications frontend, which needs to be added to `src/js/nav/globalNav.js` as follows:_
 
-## Build app
+```
+{
+    id: 'notifications',
+    title: 'Notifications'
+}
+```
 
-1. ```npm install```
-
-2. ```npm run start```
-    - starts webpack bundler and serves the files with webpack dev server
 
 ### Testing
 

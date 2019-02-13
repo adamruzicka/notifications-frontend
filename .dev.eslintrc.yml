@@ -1,0 +1,6 @@
+---
+# rules:
+  # Add rules you'd want to enable/disable in development
+  # Changes will be gitignored
+  # no-debugger: off
+  # no-consle: off
