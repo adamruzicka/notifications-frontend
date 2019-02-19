@@ -4,10 +4,10 @@
   "private": false,
   "dependencies": {
     "@babel/runtime": "^7.1.2",
-    "@patternfly/patternfly-next": "^1.0.41",
-    "@patternfly/react-core": "1.30.0",
+    "@patternfly/patternfly-next": "^1.0.175",
+    "@patternfly/react-core": "^2.1.4",
     "@patternfly/react-table": "^0.4.4",
-    "@red-hat-insights/insights-frontend-components": "^3.33.22",
+    "@red-hat-insights/insights-frontend-components": "^3.34.9",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "classnames": "^2.2.5",
     "create-react-class": "^15.6.3",
