@@ -9,7 +9,8 @@ install:
 script:
   - npm run travis:verify
 after_success:
-- curl -sSL https://raw.githubusercontent.com/RedHatInsights/insights-frontend-builder-common/master/src/bootstrap.sh | bash -s
+  - bash <(curl -s https://codecov.io/bash) -e TRAVIS_NODE_VERSION
+  - curl -sSL https://raw.githubusercontent.com/RedHatInsights/insights-frontend-builder-common/master/src/bootstrap.sh | bash -s
 env:
     global:
     - REPO="git@github.com:RedHatInsights/notifications-frontend-build"
