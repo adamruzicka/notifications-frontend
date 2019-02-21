@@ -19,7 +19,7 @@ import './notifications-index.scss';
 import NotificationActions from '../../PresentationalComponents/NotificationActions/NotificationActions';
 
 @registryDecorator()
-class NotificationsIndex extends Component {
+export class NotificationsIndex extends Component {
     componentDidMount() {
         this.props.fetchFilters();
         this.props.fetchEndpoints();

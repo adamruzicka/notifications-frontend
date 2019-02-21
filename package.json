@@ -33,7 +33,8 @@
       "<rootDir>/src/"
     ],
     "moduleNameMapper": {
-      "\\.(css|scss)$": "identity-obj-proxy"
+      "\\.(css|scss)$": "identity-obj-proxy",
+      "c3": "<rootDir>/src/__mocks__/c3.js"
     }
   },
   "devDependencies": {
