@@ -13,15 +13,19 @@ import {
     TableVariant
 } from '@red-hat-insights/insights-frontend-components';
 import registryDecorator from '@red-hat-insights/insights-frontend-components/Utilities/Registry';
+import {
+    Split,
+    SplitItem
+} from '@patternfly/react-core';
 
 import './notifications-index.scss';
 
 import NotificationActions from '../../PresentationalComponents/NotificationActions/NotificationActions';
+import IndexToolbar from '../../PresentationalComponents/IndexToolbar/IndexToolbar';
 
 @registryDecorator()
 export class NotificationsIndex extends Component {
     componentDidMount() {
-        this.props.fetchFilters();
         this.props.fetchEndpoints();
     };
 
@@ -32,7 +36,9 @@ export class NotificationsIndex extends Component {
                 endpoint.url,
                 endpoint.active ? 'true' : 'false',
                 endpoint.filtersCount,
-                <NotificationActions key={ `notification_actions_${endpoint.id}` } endpointId={ endpoint.id } />
+                <NotificationActions key={ `notification_actions_${endpoint.id}` }
+                    endpointId={ endpoint.id }
+                    onDelete={ (event) => { event.preventDefault(); this.props.deleteEndpoint(endpoint.id, endpoint.name); } } />
             ]};
         });
     };
@@ -40,10 +46,19 @@ export class NotificationsIndex extends Component {
     render() {
         const tableColumns = [ 'Name', 'URL', 'Active', 'Filters', 'Actions' ];
 
+        if (this.props.loading) {
+            return 'Loading endpoints ...';
+        }
+
         return (
             <Fragment>
-                <PageHeader>
-                    <PageHeaderTitle title='Notifications'/>
+                <PageHeader >
+                    <Split>
+                        <SplitItem isMain>
+                            <PageHeaderTitle title='Notifications'/>
+                        </SplitItem>
+                        <SplitItem><IndexToolbar onClick={ this.props.newEndpoint }/></SplitItem>
+                    </Split>
                 </PageHeader>
                 <Main>
                     <Table aria-label='Notifications list'
@@ -60,23 +75,27 @@ export class NotificationsIndex extends Component {
 }
 
 NotificationsIndex.propTypes = {
-    fetchFilters: PropTypes.func.isRequired,
     fetchEndpoints: PropTypes.func.isRequired,
-    filters: PropTypes.array.isRequired,
-    endpoints: PropTypes.array.isRequired
+    deleteEndpoint: PropTypes.func.isRequired,
+    newEndpoint: PropTypes.func.isRequired,
+    endpoints: PropTypes.array.isRequired,
+    error: PropTypes.string,
+    loading: PropTypes.bool
 };
 
 const mapStateToProps = function(state) {
     return {
-        filters: state.filters.filters,
-        endpoints: state.endpoints.endpoints
+        endpoints: state.endpoints.endpoints,
+        loading: state.endpoints.loading,
+        error: state.endpoints.error
     };
 };
 
 const mapDispatchToProps = function (dispatch) {
     return bindActionCreators({
-        fetchFilters: actionCreators.fetchFilters,
-        fetchEndpoints: actionCreators.fetchEndpoints
+        fetchEndpoints: actionCreators.fetchEndpoints,
+        deleteEndpoint: actionCreators.deleteEndpoint,
+        newEndpoint: actionCreators.newEndpoint
     }, dispatch);
 };
 

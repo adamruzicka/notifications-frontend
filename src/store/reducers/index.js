@@ -1,11 +1,13 @@
 import {
     FETCH_FILTERS,
-    FETCH_FILTERS_SUCCESS,
-    FETCH_FILTERS_FAILURE,
     FETCH_ENDPOINTS,
-    FETCH_ENDPOINTS_SUCCESS,
-    FETCH_ENDPOINTS_FAILURE,
-    FETCH_ENDPOINT_SUCCESS
+    FETCH_ENDPOINT,
+    DELETE_ENDPOINT,
+    SUBMIT_ENDPOINT,
+    NEW_ENDPOINT,
+    successMessage,
+    failureMessage,
+    pendingMessage
 } from '../actions/index';
 
 const defaultIntialState = {
@@ -19,35 +21,106 @@ const initialStateFor = function (reducerName) {
     return initState;
 };
 
+const normalizeEndpointData = (endpoint) => ({
+    ...endpoint.attributes,
+    id: parseInt(endpoint.id),
+    filtersCount: endpoint.attributes.filter_count
+});
+
+const updateEndpointInEndpoints = (state, endpoint) => {
+    const normalizedEndpoint = normalizeEndpointData(endpoint);
+    const endpoints = state.endpoints.filter(element => element.id !== normalizedEndpoint.id);
+    return {
+        ...state,
+        endpoint: normalizedEndpoint,
+        endpoints: [ ...endpoints, normalizedEndpoint ]
+    };
+
+};
+
 export const endpointReducer = function(state = initialStateFor('endpoints'), action) {
     switch (action.type) {
-        case FETCH_ENDPOINTS:
+        case pendingMessage(FETCH_ENDPOINTS):
             return {
                 ...state,
                 loading: true,
                 error: null
             };
 
-        case FETCH_ENDPOINTS_SUCCESS:
+        case successMessage(FETCH_ENDPOINTS):
             return {
                 ...state,
                 loading: false,
-                endpoints: action.payload.endpoints
+                endpoints: action.payload.data.map(normalizeEndpointData)
             };
 
-        case FETCH_ENDPOINT_SUCCESS:
+        case failureMessage(FETCH_ENDPOINTS):
             return {
                 ...state,
                 loading: false,
-                endpoint: action.payload.endpoint
-            };
-
-        case FETCH_ENDPOINTS_FAILURE:
-            return {
-                ...state,
-                loading: false,
-                error: action.payload.error,
+                error: action.payload.message,
                 endpoints: []
+            };
+
+        case pendingMessage(FETCH_ENDPOINT):
+            return {
+                ...state,
+                loading: true,
+                error: null
+            };
+
+        case successMessage(FETCH_ENDPOINT):
+            return {
+                ...state,
+                error: null,
+                loading: false,
+                endpoint: normalizeEndpointData(action.payload.data)
+            };
+
+        case failureMessage(FETCH_ENDPOINT):
+            return {
+                ...state,
+                loading: false,
+                error: action.payload.message
+            };
+
+        case failureMessage(DELETE_ENDPOINT):
+            return {
+                ...state,
+                error: action.payload.message
+            };
+
+        case successMessage(DELETE_ENDPOINT):
+            return {
+                ...state,
+                endpoints: state.endpoints.filter(element => element.id !== action.payload.id)
+            };
+
+        case pendingMessage(SUBMIT_ENDPOINT):
+            return {
+                ...state,
+                submitting: true
+            };
+
+        case successMessage(SUBMIT_ENDPOINT):
+            return {
+                ...state,
+                ...updateEndpointInEndpoints(state, action.payload.data),
+                submitting: false,
+                message: 'Endpoint saved'
+            };
+
+        case failureMessage(SUBMIT_ENDPOINT):
+            return {
+                ...state,
+                submitting: false,
+                error: action.payload.message
+            };
+
+        case NEW_ENDPOINT:
+            return {
+                ...state,
+                endpoint: null
             };
 
         default:
@@ -64,14 +137,15 @@ export const filterReducer = function(state = initialStateFor('filters'), action
                 error: null
             };
 
-        case FETCH_FILTERS_SUCCESS:
+        case successMessage(FETCH_FILTERS):
             return {
                 ...state,
                 loading: false,
+                error: null,
                 filters: action.payload.filters
             };
 
-        case FETCH_FILTERS_FAILURE:
+        case failureMessage(FETCH_FILTERS):
             return {
                 ...state,
                 loading: false,

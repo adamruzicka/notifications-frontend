@@ -32,6 +32,8 @@ describe('NotificationsIndex', () => {
     const defaultProps = {
         fetchFilters: jest.fn(),
         fetchEndpoints: jest.fn(),
+        deleteEndpoint: jest.fn(),
+        newEndpoint: jest.fn(),
         filters: [],
         endpoints: [],
         store

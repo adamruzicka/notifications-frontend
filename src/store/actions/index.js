@@ -1,67 +1,118 @@
-export const FETCH_FILTERS = 'FETCH_FILTERS';
-export const FETCH_FILTERS_SUCCESS = 'FETCH_FILTERS_SUCCESS';
-export const FETCH_FILTERS_FAILURE = 'FETCH_FILTERS_FAILURE';
+import { create, destroy, get, update } from '../../Utilities/notificationsBackendAPI';
+
+export const FETCH_FILTERS   = 'FETCH_FILTERS';
 export const FETCH_ENDPOINTS = 'FETCH_ENDPOINTS';
-export const FETCH_ENDPOINTS_SUCCESS = 'FETCH_ENDPOINTS_SUCCESS';
-export const FETCH_ENDPOINT_SUCCESS = 'FETCH_ENDPOINT_SUCCESS';
-export const FETCH_ENDPOINTS_FAILURE = 'FETCH_ENDPOINTS_FAILURE';
+export const FETCH_ENDPOINT  = 'FETCH_ENDPOINT';
+export const SUBMIT_ENDPOINT = 'SUBMIT_ENDPOINT';
+export const DELETE_ENDPOINT = 'DELETE_ENDPOINT';
+export const NEW_ENDPOINT    = 'NEW_ENDPOINT';
+
+export const successMessage = (base) => {
+    return base + '_FULFILLED';
+};
+
+export const pendingMessage = (base) => {
+    return base + '_PENDING';
+};
+
+export const failureMessage = (base) => {
+    return base + '_REJECTED';
+};
 
 export const fetchFiltersFailure = error => ({
-    type: FETCH_FILTERS_FAILURE,
-    payload: { error }
-});
-
-export const fetchEndpointsFailure = error => ({
-    type: FETCH_ENDPOINTS_FAILURE,
+    type: failureMessage(FETCH_FILTERS),
     payload: { error }
 });
 
 export const fetchFiltersSuccess = filters => ({
-    type: FETCH_FILTERS_SUCCESS,
+    type: successMessage(FETCH_FILTERS),
     payload: { filters }
 });
 
-export const fetchEndpointsSuccess = endpoints => ({
-    type: FETCH_ENDPOINTS_SUCCESS,
-    payload: { endpoints }
-});
-
-export const fetchEndpointSuccess = endpoint => ({
-    type: FETCH_ENDPOINT_SUCCESS,
-    payload: { endpoint }
-});
-
-export const fetchEndpoints = () => {
-    return fetchEndpointsSuccess([
-        {
-            id: 1,
-            name: 'TEST Endpoint #1',
-            url: 'http://endpoint.com',
-            active: true,
-            filtersCount: 2
-        },
-        {
-            id: 2,
-            name: 'TEST Endpoint #2',
-            url: 'http://endpoint2.com',
-            active: true,
-            filtersCount: 1
-        },
-        {
-            id: 3,
-            name: 'TEST Endpoint #3',
-            url: 'http://endpoint3.com',
-            active: false,
-            filtersCount: 4
+export const fetchEndpoints = () => ({
+    type: FETCH_ENDPOINTS,
+    payload: get('/endpoints'),
+    meta: {
+        notifications: {
+            rejected: {
+                variant: 'danger',
+                title: 'Failed to load endpoints'
+            }
         }
-    ]);
+    }
+});
+
+export const fetchEndpoint = (id) => ({
+    type: FETCH_ENDPOINT,
+    payload: get(`/endpoints/${ id }`),
+    meta: {
+        notifications: {
+            rejected: {
+                variant: 'danger',
+                title: `Failed to load endpoint ${ id }`
+            }
+        }
+    }
+});
+
+export const createEndpoint = (data) => {
+    return {
+        type: SUBMIT_ENDPOINT,
+        payload: create('/endpoints', { endpoint: data }),
+        meta: {
+            notifications: {
+                rejected: {
+                    variant: 'danger',
+                    title: `Failed to create endpoint ${ data.name }`
+                },
+                fulfilled: {
+                    variant: 'success',
+                    title: `Endpoint ${ data.name } created`
+                }
+            }
+        }
+    };
 };
 
-export const fetchEndpoint = (endpointId) => {
-    return fetchEndpointSuccess(fetchEndpoints().payload.endpoints.filter((endpoint) => {
-        return parseInt(endpoint.id) === parseInt(endpointId);
-    })[0]);
+export const updateEndpoint = (id, data) => {
+    return {
+        type: SUBMIT_ENDPOINT,
+        payload: update(`/endpoints/${ id }`, { endpoint: data }),
+        meta: {
+            notifications: {
+                rejected: {
+                    variant: 'danger',
+                    title: `Failed to update endpoint ${ data.name }`
+                },
+                fulfilled: {
+                    variant: 'success',
+                    title: `Endpoint ${ data.name } updated`
+                }
+            }
+        }
+    };
 };
+
+export const deleteEndpoint = (id, name) => ({
+    type: DELETE_ENDPOINT,
+    payload: destroy(`/endpoints/${ id }`).then(() => ({ id })),
+    meta: {
+        notifications: {
+            rejected: {
+                variant: 'danger',
+                title: `Failed to delete endpoint ${ name }`
+            },
+            fulfilled: {
+                variant: 'success',
+                title: `Endpoint ${ name } deleted`
+            }
+        }
+    }
+});
+
+export const newEndpoint = () => ({
+    type: NEW_ENDPOINT
+});
 
 export const fetchFilters = () => {
     return fetchFiltersSuccess([

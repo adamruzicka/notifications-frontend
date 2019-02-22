@@ -27,5 +27,8 @@ services:
       - PLATFORM=linux
       - PORT=8002
       - LOCAL_CHROME=true
+      - LOCAL_API=true
+      - LOCAL_API_SCHEME=http
+      - LOCAL_API_PORT=3000
     volumes:
       - ${LOCAL_CHROME_PATH}:/chrome:Z

@@ -4,6 +4,7 @@ exports[`NotificationEdit expect to render a Form 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <NotificationEdit
+    createEndpoint={[MockFunction]}
     fetchEndpoint={
       [MockFunction] {
         "calls": Array [
@@ -35,6 +36,7 @@ ShallowWrapper {
         Symbol(observable): [Function],
       }
     }
+    updateEndpoint={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -66,6 +68,7 @@ ShallowWrapper {
             noHtml5Validate={false}
             noValidate={false}
             onChange={[Function]}
+            onSubmit={[Function]}
             safeRenderCompletion={false}
             schema={
               Object {
@@ -76,24 +79,32 @@ ShallowWrapper {
                     "type": "boolean",
                   },
                   "name": Object {
-                    "default": "New notification endpoint name",
                     "title": "Name",
                     "type": "string",
                   },
                   "url": Object {
-                    "default": "https://...",
                     "title": "URL",
                     "type": "string",
                   },
                 },
                 "required": Array [
-                  "title",
+                  "name",
+                  "url",
                 ],
                 "title": "Edit Notifications",
                 "type": "object",
               }
             }
-            uiSchema={Object {}}
+            uiSchema={
+              Object {
+                "name": Object {
+                  "ui:placeholder": "New notification endpoint name",
+                },
+                "url": Object {
+                  "ui:placeholder": "https://...",
+                },
+              }
+            }
           />
         </Connect(Main)>,
       ],
@@ -138,6 +149,7 @@ ShallowWrapper {
             noHtml5Validate={false}
             noValidate={false}
             onChange={[Function]}
+            onSubmit={[Function]}
             safeRenderCompletion={false}
             schema={
               Object {
@@ -148,24 +160,32 @@ ShallowWrapper {
                     "type": "boolean",
                   },
                   "name": Object {
-                    "default": "New notification endpoint name",
                     "title": "Name",
                     "type": "string",
                   },
                   "url": Object {
-                    "default": "https://...",
                     "title": "URL",
                     "type": "string",
                   },
                 },
                 "required": Array [
-                  "title",
+                  "name",
+                  "url",
                 ],
                 "title": "Edit Notifications",
                 "type": "object",
               }
             }
-            uiSchema={Object {}}
+            uiSchema={
+              Object {
+                "name": Object {
+                  "ui:placeholder": "New notification endpoint name",
+                },
+                "url": Object {
+                  "ui:placeholder": "https://...",
+                },
+              }
+            }
           />,
         },
         "ref": null,
@@ -183,6 +203,7 @@ ShallowWrapper {
             "noHtml5Validate": false,
             "noValidate": false,
             "onChange": [Function],
+            "onSubmit": [Function],
             "safeRenderCompletion": false,
             "schema": Object {
               "properties": Object {
@@ -192,23 +213,29 @@ ShallowWrapper {
                   "type": "boolean",
                 },
                 "name": Object {
-                  "default": "New notification endpoint name",
                   "title": "Name",
                   "type": "string",
                 },
                 "url": Object {
-                  "default": "https://...",
                   "title": "URL",
                   "type": "string",
                 },
               },
               "required": Array [
-                "title",
+                "name",
+                "url",
               ],
               "title": "Edit Notifications",
               "type": "object",
             },
-            "uiSchema": Object {},
+            "uiSchema": Object {
+              "name": Object {
+                "ui:placeholder": "New notification endpoint name",
+              },
+              "url": Object {
+                "ui:placeholder": "https://...",
+              },
+            },
           },
           "ref": null,
           "rendered": null,
@@ -242,6 +269,7 @@ ShallowWrapper {
               noHtml5Validate={false}
               noValidate={false}
               onChange={[Function]}
+              onSubmit={[Function]}
               safeRenderCompletion={false}
               schema={
                 Object {
@@ -252,24 +280,32 @@ ShallowWrapper {
                       "type": "boolean",
                     },
                     "name": Object {
-                      "default": "New notification endpoint name",
                       "title": "Name",
                       "type": "string",
                     },
                     "url": Object {
-                      "default": "https://...",
                       "title": "URL",
                       "type": "string",
                     },
                   },
                   "required": Array [
-                    "title",
+                    "name",
+                    "url",
                   ],
                   "title": "Edit Notifications",
                   "type": "object",
                 }
               }
-              uiSchema={Object {}}
+              uiSchema={
+                Object {
+                  "name": Object {
+                    "ui:placeholder": "New notification endpoint name",
+                  },
+                  "url": Object {
+                    "ui:placeholder": "https://...",
+                  },
+                }
+              }
             />
           </Connect(Main)>,
         ],
@@ -314,6 +350,7 @@ ShallowWrapper {
               noHtml5Validate={false}
               noValidate={false}
               onChange={[Function]}
+              onSubmit={[Function]}
               safeRenderCompletion={false}
               schema={
                 Object {
@@ -324,24 +361,32 @@ ShallowWrapper {
                       "type": "boolean",
                     },
                     "name": Object {
-                      "default": "New notification endpoint name",
                       "title": "Name",
                       "type": "string",
                     },
                     "url": Object {
-                      "default": "https://...",
                       "title": "URL",
                       "type": "string",
                     },
                   },
                   "required": Array [
-                    "title",
+                    "name",
+                    "url",
                   ],
                   "title": "Edit Notifications",
                   "type": "object",
                 }
               }
-              uiSchema={Object {}}
+              uiSchema={
+                Object {
+                  "name": Object {
+                    "ui:placeholder": "New notification endpoint name",
+                  },
+                  "url": Object {
+                    "ui:placeholder": "https://...",
+                  },
+                }
+              }
             />,
           },
           "ref": null,
@@ -359,6 +404,7 @@ ShallowWrapper {
               "noHtml5Validate": false,
               "noValidate": false,
               "onChange": [Function],
+              "onSubmit": [Function],
               "safeRenderCompletion": false,
               "schema": Object {
                 "properties": Object {
@@ -368,23 +414,29 @@ ShallowWrapper {
                     "type": "boolean",
                   },
                   "name": Object {
-                    "default": "New notification endpoint name",
                     "title": "Name",
                     "type": "string",
                   },
                   "url": Object {
-                    "default": "https://...",
                     "title": "URL",
                     "type": "string",
                   },
                 },
                 "required": Array [
-                  "title",
+                  "name",
+                  "url",
                 ],
                 "title": "Edit Notifications",
                 "type": "object",
               },
-              "uiSchema": Object {},
+              "uiSchema": Object {
+                "name": Object {
+                  "ui:placeholder": "New notification endpoint name",
+                },
+                "url": Object {
+                  "ui:placeholder": "https://...",
+                },
+              },
             },
             "ref": null,
             "rendered": null,
@@ -422,6 +474,7 @@ exports[`NotificationEdit takes an endpoint 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <NotificationEdit
+    createEndpoint={[MockFunction]}
     endpoint={
       Object {
         "active": false,
@@ -469,6 +522,7 @@ ShallowWrapper {
         Symbol(observable): [Function],
       }
     }
+    updateEndpoint={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -506,6 +560,7 @@ ShallowWrapper {
             noHtml5Validate={false}
             noValidate={false}
             onChange={[Function]}
+            onSubmit={[Function]}
             safeRenderCompletion={false}
             schema={
               Object {
@@ -516,24 +571,32 @@ ShallowWrapper {
                     "type": "boolean",
                   },
                   "name": Object {
-                    "default": "New notification endpoint name",
                     "title": "Name",
                     "type": "string",
                   },
                   "url": Object {
-                    "default": "https://...",
                     "title": "URL",
                     "type": "string",
                   },
                 },
                 "required": Array [
-                  "title",
+                  "name",
+                  "url",
                 ],
                 "title": "Edit Notifications",
                 "type": "object",
               }
             }
-            uiSchema={Object {}}
+            uiSchema={
+              Object {
+                "name": Object {
+                  "ui:placeholder": "New notification endpoint name",
+                },
+                "url": Object {
+                  "ui:placeholder": "https://...",
+                },
+              }
+            }
           />
         </Connect(Main)>,
       ],
@@ -584,6 +647,7 @@ ShallowWrapper {
             noHtml5Validate={false}
             noValidate={false}
             onChange={[Function]}
+            onSubmit={[Function]}
             safeRenderCompletion={false}
             schema={
               Object {
@@ -594,24 +658,32 @@ ShallowWrapper {
                     "type": "boolean",
                   },
                   "name": Object {
-                    "default": "New notification endpoint name",
                     "title": "Name",
                     "type": "string",
                   },
                   "url": Object {
-                    "default": "https://...",
                     "title": "URL",
                     "type": "string",
                   },
                 },
                 "required": Array [
-                  "title",
+                  "name",
+                  "url",
                 ],
                 "title": "Edit Notifications",
                 "type": "object",
               }
             }
-            uiSchema={Object {}}
+            uiSchema={
+              Object {
+                "name": Object {
+                  "ui:placeholder": "New notification endpoint name",
+                },
+                "url": Object {
+                  "ui:placeholder": "https://...",
+                },
+              }
+            }
           />,
         },
         "ref": null,
@@ -633,6 +705,7 @@ ShallowWrapper {
             "noHtml5Validate": false,
             "noValidate": false,
             "onChange": [Function],
+            "onSubmit": [Function],
             "safeRenderCompletion": false,
             "schema": Object {
               "properties": Object {
@@ -642,23 +715,29 @@ ShallowWrapper {
                   "type": "boolean",
                 },
                 "name": Object {
-                  "default": "New notification endpoint name",
                   "title": "Name",
                   "type": "string",
                 },
                 "url": Object {
-                  "default": "https://...",
                   "title": "URL",
                   "type": "string",
                 },
               },
               "required": Array [
-                "title",
+                "name",
+                "url",
               ],
               "title": "Edit Notifications",
               "type": "object",
             },
-            "uiSchema": Object {},
+            "uiSchema": Object {
+              "name": Object {
+                "ui:placeholder": "New notification endpoint name",
+              },
+              "url": Object {
+                "ui:placeholder": "https://...",
+              },
+            },
           },
           "ref": null,
           "rendered": null,
@@ -698,6 +777,7 @@ ShallowWrapper {
               noHtml5Validate={false}
               noValidate={false}
               onChange={[Function]}
+              onSubmit={[Function]}
               safeRenderCompletion={false}
               schema={
                 Object {
@@ -708,24 +788,32 @@ ShallowWrapper {
                       "type": "boolean",
                     },
                     "name": Object {
-                      "default": "New notification endpoint name",
                       "title": "Name",
                       "type": "string",
                     },
                     "url": Object {
-                      "default": "https://...",
                       "title": "URL",
                       "type": "string",
                     },
                   },
                   "required": Array [
-                    "title",
+                    "name",
+                    "url",
                   ],
                   "title": "Edit Notifications",
                   "type": "object",
                 }
               }
-              uiSchema={Object {}}
+              uiSchema={
+                Object {
+                  "name": Object {
+                    "ui:placeholder": "New notification endpoint name",
+                  },
+                  "url": Object {
+                    "ui:placeholder": "https://...",
+                  },
+                }
+              }
             />
           </Connect(Main)>,
         ],
@@ -776,6 +864,7 @@ ShallowWrapper {
               noHtml5Validate={false}
               noValidate={false}
               onChange={[Function]}
+              onSubmit={[Function]}
               safeRenderCompletion={false}
               schema={
                 Object {
@@ -786,24 +875,32 @@ ShallowWrapper {
                       "type": "boolean",
                     },
                     "name": Object {
-                      "default": "New notification endpoint name",
                       "title": "Name",
                       "type": "string",
                     },
                     "url": Object {
-                      "default": "https://...",
                       "title": "URL",
                       "type": "string",
                     },
                   },
                   "required": Array [
-                    "title",
+                    "name",
+                    "url",
                   ],
                   "title": "Edit Notifications",
                   "type": "object",
                 }
               }
-              uiSchema={Object {}}
+              uiSchema={
+                Object {
+                  "name": Object {
+                    "ui:placeholder": "New notification endpoint name",
+                  },
+                  "url": Object {
+                    "ui:placeholder": "https://...",
+                  },
+                }
+              }
             />,
           },
           "ref": null,
@@ -825,6 +922,7 @@ ShallowWrapper {
               "noHtml5Validate": false,
               "noValidate": false,
               "onChange": [Function],
+              "onSubmit": [Function],
               "safeRenderCompletion": false,
               "schema": Object {
                 "properties": Object {
@@ -834,23 +932,29 @@ ShallowWrapper {
                     "type": "boolean",
                   },
                   "name": Object {
-                    "default": "New notification endpoint name",
                     "title": "Name",
                     "type": "string",
                   },
                   "url": Object {
-                    "default": "https://...",
                     "title": "URL",
                     "type": "string",
                   },
                 },
                 "required": Array [
-                  "title",
+                  "name",
+                  "url",
                 ],
                 "title": "Edit Notifications",
                 "type": "object",
               },
-              "uiSchema": Object {},
+              "uiSchema": Object {
+                "name": Object {
+                  "ui:placeholder": "New notification endpoint name",
+                },
+                "url": Object {
+                  "ui:placeholder": "https://...",
+                },
+              },
             },
             "ref": null,
             "rendered": null,

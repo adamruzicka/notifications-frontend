@@ -19,7 +19,8 @@ const NotificationEdit = asyncComponent(() =>
 
 const paths = {
     notificationsIndex: '/list',
-    notificationEdit: '/edit/:endpointId'
+    notificationEdit: '/edit/:endpointId',
+    notificationCreate: '/new'
 };
 
 export const Routes = (props) => {
@@ -28,6 +29,7 @@ export const Routes = (props) => {
     return (
         <Switch>
             <Route exact path={ paths.notificationsIndex } component={ NotificationsIndex } />
+            <Route exact path={ paths.notificationCreate } component={ NotificationEdit } />
             <Route path={ paths.notificationEdit } component={ NotificationEdit } />
 
             { /* Finally, catch all unmatched routes */ }

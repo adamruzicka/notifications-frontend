@@ -4,6 +4,7 @@ exports[`NotificationsIndex expect to render a Table 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <NotificationsIndex
+    deleteEndpoint={[MockFunction]}
     endpoints={Array []}
     fetchEndpoints={
       [MockFunction] {
@@ -18,20 +19,9 @@ ShallowWrapper {
         ],
       }
     }
-    fetchFilters={
-      [MockFunction] {
-        "calls": Array [
-          Array [],
-        ],
-        "results": Array [
-          Object {
-            "isThrow": false,
-            "value": undefined,
-          },
-        ],
-      }
-    }
+    fetchFilters={[MockFunction]}
     filters={Array []}
+    newEndpoint={[MockFunction]}
     store={
       Object {
         "dispatch": [Function],
@@ -57,9 +47,28 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <PageHeader>
-          <PageHeaderTitle
-            title="Notifications"
-          />
+          <Split
+            className=""
+            component="div"
+            gutter={null}
+          >
+            <SplitItem
+              className=""
+              isMain={true}
+            >
+              <PageHeaderTitle
+                title="Notifications"
+              />
+            </SplitItem>
+            <SplitItem
+              className=""
+              isMain={false}
+            >
+              <IndexToolbar
+                onClick={[MockFunction]}
+              />
+            </SplitItem>
+          </Split>
         </PageHeader>,
         <Connect(Main)>
           <Table
@@ -88,9 +97,28 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": <PageHeaderTitle
-            title="Notifications"
-          />,
+          "children": <Split
+            className=""
+            component="div"
+            gutter={null}
+          >
+            <SplitItem
+              className=""
+              isMain={true}
+            >
+              <PageHeaderTitle
+                title="Notifications"
+              />
+            </SplitItem>
+            <SplitItem
+              className=""
+              isMain={false}
+            >
+              <IndexToolbar
+                onClick={[MockFunction]}
+              />
+            </SplitItem>
+          </Split>,
         },
         "ref": null,
         "rendered": Object {
@@ -98,10 +126,81 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "title": "Notifications",
+            "children": Array [
+              <SplitItem
+                className=""
+                isMain={true}
+              >
+                <PageHeaderTitle
+                  title="Notifications"
+                />
+              </SplitItem>,
+              <SplitItem
+                className=""
+                isMain={false}
+              >
+                <IndexToolbar
+                  onClick={[MockFunction]}
+                />
+              </SplitItem>,
+            ],
+            "className": "",
+            "component": "div",
+            "gutter": null,
           },
           "ref": null,
-          "rendered": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <PageHeaderTitle
+                  title="Notifications"
+                />,
+                "className": "",
+                "isMain": true,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "title": "Notifications",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <IndexToolbar
+                  onClick={[MockFunction]}
+                />,
+                "className": "",
+                "isMain": false,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "onClick": [MockFunction],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
           "type": [Function],
         },
         "type": [Function],
@@ -185,9 +284,28 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <PageHeader>
-            <PageHeaderTitle
-              title="Notifications"
-            />
+            <Split
+              className=""
+              component="div"
+              gutter={null}
+            >
+              <SplitItem
+                className=""
+                isMain={true}
+              >
+                <PageHeaderTitle
+                  title="Notifications"
+                />
+              </SplitItem>
+              <SplitItem
+                className=""
+                isMain={false}
+              >
+                <IndexToolbar
+                  onClick={[MockFunction]}
+                />
+              </SplitItem>
+            </Split>
           </PageHeader>,
           <Connect(Main)>
             <Table
@@ -216,9 +334,28 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": <PageHeaderTitle
-              title="Notifications"
-            />,
+            "children": <Split
+              className=""
+              component="div"
+              gutter={null}
+            >
+              <SplitItem
+                className=""
+                isMain={true}
+              >
+                <PageHeaderTitle
+                  title="Notifications"
+                />
+              </SplitItem>
+              <SplitItem
+                className=""
+                isMain={false}
+              >
+                <IndexToolbar
+                  onClick={[MockFunction]}
+                />
+              </SplitItem>
+            </Split>,
           },
           "ref": null,
           "rendered": Object {
@@ -226,10 +363,81 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "title": "Notifications",
+              "children": Array [
+                <SplitItem
+                  className=""
+                  isMain={true}
+                >
+                  <PageHeaderTitle
+                    title="Notifications"
+                  />
+                </SplitItem>,
+                <SplitItem
+                  className=""
+                  isMain={false}
+                >
+                  <IndexToolbar
+                    onClick={[MockFunction]}
+                  />
+                </SplitItem>,
+              ],
+              "className": "",
+              "component": "div",
+              "gutter": null,
             },
             "ref": null,
-            "rendered": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <PageHeaderTitle
+                    title="Notifications"
+                  />,
+                  "className": "",
+                  "isMain": true,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "title": "Notifications",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <IndexToolbar
+                    onClick={[MockFunction]}
+                  />,
+                  "className": "",
+                  "isMain": false,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "onClick": [MockFunction],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+            ],
             "type": [Function],
           },
           "type": [Function],
@@ -332,6 +540,7 @@ exports[`NotificationsIndex takes endpoints 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <NotificationsIndex
+    deleteEndpoint={[MockFunction]}
     endpoints={
       Array [
         Object {
@@ -375,25 +584,9 @@ ShallowWrapper {
         ],
       }
     }
-    fetchFilters={
-      [MockFunction] {
-        "calls": Array [
-          Array [],
-          Array [],
-        ],
-        "results": Array [
-          Object {
-            "isThrow": false,
-            "value": undefined,
-          },
-          Object {
-            "isThrow": false,
-            "value": undefined,
-          },
-        ],
-      }
-    }
+    fetchFilters={[MockFunction]}
     filters={Array []}
+    newEndpoint={[MockFunction]}
     store={
       Object {
         "dispatch": [Function],
@@ -419,9 +612,28 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <PageHeader>
-          <PageHeaderTitle
-            title="Notifications"
-          />
+          <Split
+            className=""
+            component="div"
+            gutter={null}
+          >
+            <SplitItem
+              className=""
+              isMain={true}
+            >
+              <PageHeaderTitle
+                title="Notifications"
+              />
+            </SplitItem>
+            <SplitItem
+              className=""
+              isMain={false}
+            >
+              <IndexToolbar
+                onClick={[MockFunction]}
+              />
+            </SplitItem>
+          </Split>
         </PageHeader>,
         <Connect(Main)>
           <Table
@@ -445,6 +657,7 @@ ShallowWrapper {
                     2,
                     <withRouter(NotificationActions)
                       endpointId={1}
+                      onDelete={[Function]}
                     />,
                   ],
                 },
@@ -456,6 +669,7 @@ ShallowWrapper {
                     1,
                     <withRouter(NotificationActions)
                       endpointId={2}
+                      onDelete={[Function]}
                     />,
                   ],
                 },
@@ -467,6 +681,7 @@ ShallowWrapper {
                     4,
                     <withRouter(NotificationActions)
                       endpointId={3}
+                      onDelete={[Function]}
                     />,
                   ],
                 },
@@ -486,9 +701,28 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": <PageHeaderTitle
-            title="Notifications"
-          />,
+          "children": <Split
+            className=""
+            component="div"
+            gutter={null}
+          >
+            <SplitItem
+              className=""
+              isMain={true}
+            >
+              <PageHeaderTitle
+                title="Notifications"
+              />
+            </SplitItem>
+            <SplitItem
+              className=""
+              isMain={false}
+            >
+              <IndexToolbar
+                onClick={[MockFunction]}
+              />
+            </SplitItem>
+          </Split>,
         },
         "ref": null,
         "rendered": Object {
@@ -496,10 +730,81 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "title": "Notifications",
+            "children": Array [
+              <SplitItem
+                className=""
+                isMain={true}
+              >
+                <PageHeaderTitle
+                  title="Notifications"
+                />
+              </SplitItem>,
+              <SplitItem
+                className=""
+                isMain={false}
+              >
+                <IndexToolbar
+                  onClick={[MockFunction]}
+                />
+              </SplitItem>,
+            ],
+            "className": "",
+            "component": "div",
+            "gutter": null,
           },
           "ref": null,
-          "rendered": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <PageHeaderTitle
+                  title="Notifications"
+                />,
+                "className": "",
+                "isMain": true,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "title": "Notifications",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <IndexToolbar
+                  onClick={[MockFunction]}
+                />,
+                "className": "",
+                "isMain": false,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "onClick": [MockFunction],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
           "type": [Function],
         },
         "type": [Function],
@@ -530,6 +835,7 @@ ShallowWrapper {
                     2,
                     <withRouter(NotificationActions)
                       endpointId={1}
+                      onDelete={[Function]}
                     />,
                   ],
                 },
@@ -541,6 +847,7 @@ ShallowWrapper {
                     1,
                     <withRouter(NotificationActions)
                       endpointId={2}
+                      onDelete={[Function]}
                     />,
                   ],
                 },
@@ -552,6 +859,7 @@ ShallowWrapper {
                     4,
                     <withRouter(NotificationActions)
                       endpointId={3}
+                      onDelete={[Function]}
                     />,
                   ],
                 },
@@ -589,6 +897,7 @@ ShallowWrapper {
                   2,
                   <withRouter(NotificationActions)
                     endpointId={1}
+                    onDelete={[Function]}
                   />,
                 ],
               },
@@ -600,6 +909,7 @@ ShallowWrapper {
                   1,
                   <withRouter(NotificationActions)
                     endpointId={2}
+                    onDelete={[Function]}
                   />,
                 ],
               },
@@ -611,6 +921,7 @@ ShallowWrapper {
                   4,
                   <withRouter(NotificationActions)
                     endpointId={3}
+                    onDelete={[Function]}
                   />,
                 ],
               },
@@ -653,9 +964,28 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <PageHeader>
-            <PageHeaderTitle
-              title="Notifications"
-            />
+            <Split
+              className=""
+              component="div"
+              gutter={null}
+            >
+              <SplitItem
+                className=""
+                isMain={true}
+              >
+                <PageHeaderTitle
+                  title="Notifications"
+                />
+              </SplitItem>
+              <SplitItem
+                className=""
+                isMain={false}
+              >
+                <IndexToolbar
+                  onClick={[MockFunction]}
+                />
+              </SplitItem>
+            </Split>
           </PageHeader>,
           <Connect(Main)>
             <Table
@@ -679,6 +1009,7 @@ ShallowWrapper {
                       2,
                       <withRouter(NotificationActions)
                         endpointId={1}
+                        onDelete={[Function]}
                       />,
                     ],
                   },
@@ -690,6 +1021,7 @@ ShallowWrapper {
                       1,
                       <withRouter(NotificationActions)
                         endpointId={2}
+                        onDelete={[Function]}
                       />,
                     ],
                   },
@@ -701,6 +1033,7 @@ ShallowWrapper {
                       4,
                       <withRouter(NotificationActions)
                         endpointId={3}
+                        onDelete={[Function]}
                       />,
                     ],
                   },
@@ -720,9 +1053,28 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": <PageHeaderTitle
-              title="Notifications"
-            />,
+            "children": <Split
+              className=""
+              component="div"
+              gutter={null}
+            >
+              <SplitItem
+                className=""
+                isMain={true}
+              >
+                <PageHeaderTitle
+                  title="Notifications"
+                />
+              </SplitItem>
+              <SplitItem
+                className=""
+                isMain={false}
+              >
+                <IndexToolbar
+                  onClick={[MockFunction]}
+                />
+              </SplitItem>
+            </Split>,
           },
           "ref": null,
           "rendered": Object {
@@ -730,10 +1082,81 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "title": "Notifications",
+              "children": Array [
+                <SplitItem
+                  className=""
+                  isMain={true}
+                >
+                  <PageHeaderTitle
+                    title="Notifications"
+                  />
+                </SplitItem>,
+                <SplitItem
+                  className=""
+                  isMain={false}
+                >
+                  <IndexToolbar
+                    onClick={[MockFunction]}
+                  />
+                </SplitItem>,
+              ],
+              "className": "",
+              "component": "div",
+              "gutter": null,
             },
             "ref": null,
-            "rendered": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <PageHeaderTitle
+                    title="Notifications"
+                  />,
+                  "className": "",
+                  "isMain": true,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "title": "Notifications",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <IndexToolbar
+                    onClick={[MockFunction]}
+                  />,
+                  "className": "",
+                  "isMain": false,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "onClick": [MockFunction],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+            ],
             "type": [Function],
           },
           "type": [Function],
@@ -764,6 +1187,7 @@ ShallowWrapper {
                       2,
                       <withRouter(NotificationActions)
                         endpointId={1}
+                        onDelete={[Function]}
                       />,
                     ],
                   },
@@ -775,6 +1199,7 @@ ShallowWrapper {
                       1,
                       <withRouter(NotificationActions)
                         endpointId={2}
+                        onDelete={[Function]}
                       />,
                     ],
                   },
@@ -786,6 +1211,7 @@ ShallowWrapper {
                       4,
                       <withRouter(NotificationActions)
                         endpointId={3}
+                        onDelete={[Function]}
                       />,
                     ],
                   },
@@ -823,6 +1249,7 @@ ShallowWrapper {
                     2,
                     <withRouter(NotificationActions)
                       endpointId={1}
+                      onDelete={[Function]}
                     />,
                   ],
                 },
@@ -834,6 +1261,7 @@ ShallowWrapper {
                     1,
                     <withRouter(NotificationActions)
                       endpointId={2}
+                      onDelete={[Function]}
                     />,
                   ],
                 },
@@ -845,6 +1273,7 @@ ShallowWrapper {
                     4,
                     <withRouter(NotificationActions)
                       endpointId={3}
+                      onDelete={[Function]}
                     />,
                   ],
                 },

@@ -13,6 +13,8 @@ const testEndpoint = {
 describe('NotificationEdit', () => {
     const store = init(logger).getStore();
     const fetchEndpoint = jest.fn();
+    const createEndpoint = jest.fn();
+    const updateEndpoint = jest.fn();
     const defaultProps = {
         match: {
             params: {
@@ -20,6 +22,8 @@ describe('NotificationEdit', () => {
             }
         },
         fetchEndpoint,
+        createEndpoint,
+        updateEndpoint,
         store
     };
 
