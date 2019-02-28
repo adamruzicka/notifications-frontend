@@ -46,22 +46,30 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "children": <Table
-        aria-label="Notifications list"
-        header={
-          Array [
-            "Name",
-            "URL",
-            "Active",
-            "Filters",
-            "Actions",
-          ]
+      "children": <LoadingState
+        placeholder={
+          <Skeleton
+            size="lg"
+          />
         }
-        rows={Array []}
       >
-        <TableHeader />
-        <TableBody />
-      </Table>,
+        <Table
+          aria-label="Notifications list"
+          header={
+            Array [
+              "Name",
+              "URL",
+              "Active",
+              "Filters",
+              "Actions",
+            ]
+          }
+          rows={Array []}
+        >
+          <TableHeader />
+          <TableBody />
+        </Table>
+      </LoadingState>,
       "rightBar": <IndexToolbar
         onClick={[MockFunction]}
       />,
@@ -69,52 +77,6 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "aria-label": "Notifications list",
-        "children": Array [
-          <TableHeader />,
-          <TableBody />,
-        ],
-        "header": Array [
-          "Name",
-          "URL",
-          "Active",
-          "Filters",
-          "Actions",
-        ],
-        "rows": Array [],
-        "variant": undefined,
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
-      "type": [Function],
-    },
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
       "instance": null,
       "key": undefined,
       "nodeType": "function",
@@ -135,10 +97,10 @@ ShallowWrapper {
           <TableHeader />
           <TableBody />
         </Table>,
-        "rightBar": <IndexToolbar
-          onClick={[MockFunction]}
+        "loading": undefined,
+        "placeholder": <Skeleton
+          size="lg"
         />,
-        "title": "Notifications",
       },
       "ref": null,
       "rendered": Object {
@@ -182,6 +144,118 @@ ShallowWrapper {
             "type": [Function],
           },
         ],
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <LoadingState
+          placeholder={
+            <Skeleton
+              size="lg"
+            />
+          }
+        >
+          <Table
+            aria-label="Notifications list"
+            header={
+              Array [
+                "Name",
+                "URL",
+                "Active",
+                "Filters",
+                "Actions",
+              ]
+            }
+            rows={Array []}
+          >
+            <TableHeader />
+            <TableBody />
+          </Table>
+        </LoadingState>,
+        "rightBar": <IndexToolbar
+          onClick={[MockFunction]}
+        />,
+        "title": "Notifications",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <Table
+            aria-label="Notifications list"
+            header={
+              Array [
+                "Name",
+                "URL",
+                "Active",
+                "Filters",
+                "Actions",
+              ]
+            }
+            rows={Array []}
+          >
+            <TableHeader />
+            <TableBody />
+          </Table>,
+          "loading": undefined,
+          "placeholder": <Skeleton
+            size="lg"
+          />,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "aria-label": "Notifications list",
+            "children": Array [
+              <TableHeader />,
+              <TableBody />,
+            ],
+            "header": Array [
+              "Name",
+              "URL",
+              "Active",
+              "Filters",
+              "Actions",
+            ],
+            "rows": Array [],
+            "variant": undefined,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
         "type": [Function],
       },
       "type": [Function],
@@ -284,73 +358,81 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "children": <Table
-        aria-label="Notifications list"
-        header={
-          Array [
-            "Name",
-            "URL",
-            "Active",
-            "Filters",
-            "Actions",
-          ]
-        }
-        rows={
-          Array [
-            Object {
-              "cells": Array [
-                "TEST Endpoint #1",
-                "http://endpoint.com",
-                <EndpointToggle
-                  active={true}
-                  id={1}
-                  onChange={[Function]}
-                />,
-                2,
-                <withRouter(NotificationActions)
-                  endpointId={1}
-                  onDelete={[Function]}
-                />,
-              ],
-            },
-            Object {
-              "cells": Array [
-                "TEST Endpoint #2",
-                "http://endpoint2.com",
-                <EndpointToggle
-                  active={true}
-                  id={2}
-                  onChange={[Function]}
-                />,
-                1,
-                <withRouter(NotificationActions)
-                  endpointId={2}
-                  onDelete={[Function]}
-                />,
-              ],
-            },
-            Object {
-              "cells": Array [
-                "TEST Endpoint #3",
-                "http://endpoint3.com",
-                <EndpointToggle
-                  active={false}
-                  id={3}
-                  onChange={[Function]}
-                />,
-                4,
-                <withRouter(NotificationActions)
-                  endpointId={3}
-                  onDelete={[Function]}
-                />,
-              ],
-            },
-          ]
+      "children": <LoadingState
+        placeholder={
+          <Skeleton
+            size="lg"
+          />
         }
       >
-        <TableHeader />
-        <TableBody />
-      </Table>,
+        <Table
+          aria-label="Notifications list"
+          header={
+            Array [
+              "Name",
+              "URL",
+              "Active",
+              "Filters",
+              "Actions",
+            ]
+          }
+          rows={
+            Array [
+              Object {
+                "cells": Array [
+                  "TEST Endpoint #1",
+                  "http://endpoint.com",
+                  <EndpointToggle
+                    active={true}
+                    id={1}
+                    onChange={[Function]}
+                  />,
+                  2,
+                  <withRouter(NotificationActions)
+                    endpointId={1}
+                    onDelete={[Function]}
+                  />,
+                ],
+              },
+              Object {
+                "cells": Array [
+                  "TEST Endpoint #2",
+                  "http://endpoint2.com",
+                  <EndpointToggle
+                    active={true}
+                    id={2}
+                    onChange={[Function]}
+                  />,
+                  1,
+                  <withRouter(NotificationActions)
+                    endpointId={2}
+                    onDelete={[Function]}
+                  />,
+                ],
+              },
+              Object {
+                "cells": Array [
+                  "TEST Endpoint #3",
+                  "http://endpoint3.com",
+                  <EndpointToggle
+                    active={false}
+                    id={3}
+                    onChange={[Function]}
+                  />,
+                  4,
+                  <withRouter(NotificationActions)
+                    endpointId={3}
+                    onDelete={[Function]}
+                  />,
+                ],
+              },
+            ]
+          }
+        >
+          <TableHeader />
+          <TableBody />
+        </Table>
+      </LoadingState>,
       "rightBar": <IndexToolbar
         onClick={[MockFunction]}
       />,
@@ -358,101 +440,6 @@ ShallowWrapper {
     },
     "ref": null,
     "rendered": Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "aria-label": "Notifications list",
-        "children": Array [
-          <TableHeader />,
-          <TableBody />,
-        ],
-        "header": Array [
-          "Name",
-          "URL",
-          "Active",
-          "Filters",
-          "Actions",
-        ],
-        "rows": Array [
-          Object {
-            "cells": Array [
-              "TEST Endpoint #1",
-              "http://endpoint.com",
-              <EndpointToggle
-                active={true}
-                id={1}
-                onChange={[Function]}
-              />,
-              2,
-              <withRouter(NotificationActions)
-                endpointId={1}
-                onDelete={[Function]}
-              />,
-            ],
-          },
-          Object {
-            "cells": Array [
-              "TEST Endpoint #2",
-              "http://endpoint2.com",
-              <EndpointToggle
-                active={true}
-                id={2}
-                onChange={[Function]}
-              />,
-              1,
-              <withRouter(NotificationActions)
-                endpointId={2}
-                onDelete={[Function]}
-              />,
-            ],
-          },
-          Object {
-            "cells": Array [
-              "TEST Endpoint #3",
-              "http://endpoint3.com",
-              <EndpointToggle
-                active={false}
-                id={3}
-                onChange={[Function]}
-              />,
-              4,
-              <withRouter(NotificationActions)
-                endpointId={3}
-                onDelete={[Function]}
-              />,
-            ],
-          },
-        ],
-        "variant": undefined,
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {},
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
-      "type": [Function],
-    },
-    "type": [Function],
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
       "instance": null,
       "key": undefined,
       "nodeType": "function",
@@ -524,10 +511,10 @@ ShallowWrapper {
           <TableHeader />
           <TableBody />
         </Table>,
-        "rightBar": <IndexToolbar
-          onClick={[MockFunction]}
+        "loading": undefined,
+        "placeholder": <Skeleton
+          size="lg"
         />,
-        "title": "Notifications",
       },
       "ref": null,
       "rendered": Object {
@@ -620,6 +607,269 @@ ShallowWrapper {
             "type": [Function],
           },
         ],
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <LoadingState
+          placeholder={
+            <Skeleton
+              size="lg"
+            />
+          }
+        >
+          <Table
+            aria-label="Notifications list"
+            header={
+              Array [
+                "Name",
+                "URL",
+                "Active",
+                "Filters",
+                "Actions",
+              ]
+            }
+            rows={
+              Array [
+                Object {
+                  "cells": Array [
+                    "TEST Endpoint #1",
+                    "http://endpoint.com",
+                    <EndpointToggle
+                      active={true}
+                      id={1}
+                      onChange={[Function]}
+                    />,
+                    2,
+                    <withRouter(NotificationActions)
+                      endpointId={1}
+                      onDelete={[Function]}
+                    />,
+                  ],
+                },
+                Object {
+                  "cells": Array [
+                    "TEST Endpoint #2",
+                    "http://endpoint2.com",
+                    <EndpointToggle
+                      active={true}
+                      id={2}
+                      onChange={[Function]}
+                    />,
+                    1,
+                    <withRouter(NotificationActions)
+                      endpointId={2}
+                      onDelete={[Function]}
+                    />,
+                  ],
+                },
+                Object {
+                  "cells": Array [
+                    "TEST Endpoint #3",
+                    "http://endpoint3.com",
+                    <EndpointToggle
+                      active={false}
+                      id={3}
+                      onChange={[Function]}
+                    />,
+                    4,
+                    <withRouter(NotificationActions)
+                      endpointId={3}
+                      onDelete={[Function]}
+                    />,
+                  ],
+                },
+              ]
+            }
+          >
+            <TableHeader />
+            <TableBody />
+          </Table>
+        </LoadingState>,
+        "rightBar": <IndexToolbar
+          onClick={[MockFunction]}
+        />,
+        "title": "Notifications",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <Table
+            aria-label="Notifications list"
+            header={
+              Array [
+                "Name",
+                "URL",
+                "Active",
+                "Filters",
+                "Actions",
+              ]
+            }
+            rows={
+              Array [
+                Object {
+                  "cells": Array [
+                    "TEST Endpoint #1",
+                    "http://endpoint.com",
+                    <EndpointToggle
+                      active={true}
+                      id={1}
+                      onChange={[Function]}
+                    />,
+                    2,
+                    <withRouter(NotificationActions)
+                      endpointId={1}
+                      onDelete={[Function]}
+                    />,
+                  ],
+                },
+                Object {
+                  "cells": Array [
+                    "TEST Endpoint #2",
+                    "http://endpoint2.com",
+                    <EndpointToggle
+                      active={true}
+                      id={2}
+                      onChange={[Function]}
+                    />,
+                    1,
+                    <withRouter(NotificationActions)
+                      endpointId={2}
+                      onDelete={[Function]}
+                    />,
+                  ],
+                },
+                Object {
+                  "cells": Array [
+                    "TEST Endpoint #3",
+                    "http://endpoint3.com",
+                    <EndpointToggle
+                      active={false}
+                      id={3}
+                      onChange={[Function]}
+                    />,
+                    4,
+                    <withRouter(NotificationActions)
+                      endpointId={3}
+                      onDelete={[Function]}
+                    />,
+                  ],
+                },
+              ]
+            }
+          >
+            <TableHeader />
+            <TableBody />
+          </Table>,
+          "loading": undefined,
+          "placeholder": <Skeleton
+            size="lg"
+          />,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "aria-label": "Notifications list",
+            "children": Array [
+              <TableHeader />,
+              <TableBody />,
+            ],
+            "header": Array [
+              "Name",
+              "URL",
+              "Active",
+              "Filters",
+              "Actions",
+            ],
+            "rows": Array [
+              Object {
+                "cells": Array [
+                  "TEST Endpoint #1",
+                  "http://endpoint.com",
+                  <EndpointToggle
+                    active={true}
+                    id={1}
+                    onChange={[Function]}
+                  />,
+                  2,
+                  <withRouter(NotificationActions)
+                    endpointId={1}
+                    onDelete={[Function]}
+                  />,
+                ],
+              },
+              Object {
+                "cells": Array [
+                  "TEST Endpoint #2",
+                  "http://endpoint2.com",
+                  <EndpointToggle
+                    active={true}
+                    id={2}
+                    onChange={[Function]}
+                  />,
+                  1,
+                  <withRouter(NotificationActions)
+                    endpointId={2}
+                    onDelete={[Function]}
+                  />,
+                ],
+              },
+              Object {
+                "cells": Array [
+                  "TEST Endpoint #3",
+                  "http://endpoint3.com",
+                  <EndpointToggle
+                    active={false}
+                    id={3}
+                    onChange={[Function]}
+                  />,
+                  4,
+                  <withRouter(NotificationActions)
+                    endpointId={3}
+                    onDelete={[Function]}
+                  />,
+                ],
+              },
+            ],
+            "variant": undefined,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
         "type": [Function],
       },
       "type": [Function],

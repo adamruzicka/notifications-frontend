@@ -7,7 +7,9 @@ import {
     Table,
     TableHeader,
     TableBody,
-    TableVariant
+    TableVariant,
+    Skeleton,
+    SkeletonSize
 } from '@red-hat-insights/insights-frontend-components';
 import registryDecorator from '@red-hat-insights/insights-frontend-components/Utilities/Registry';
 
@@ -17,6 +19,7 @@ import NotificationActions from '../../PresentationalComponents/NotificationActi
 import IndexToolbar from '../../PresentationalComponents/IndexToolbar/IndexToolbar';
 import EndpointToggle from '../../PresentationalComponents/EndpointToggle/EndpointToggle';
 import NotificationsPage from '../../PresentationalComponents/NotificationsPage/NotificationsPage';
+import LoadingState from '../../PresentationalComponents/LoadingState/LoadingState';
 
 @registryDecorator()
 export class NotificationsIndex extends Component {
@@ -45,21 +48,21 @@ export class NotificationsIndex extends Component {
     render() {
         const tableColumns = [ 'Name', 'URL', 'Active', 'Filters', 'Actions' ];
 
-        if (this.props.loading) {
-            return 'Loading endpoints ...';
-        }
-
         return (
             <NotificationsPage
                 title='Notifications'
                 rightBar={ <IndexToolbar onClick={ this.props.newEndpoint }/> }>
-                <Table aria-label='Notifications list'
-                    variant={ TableVariant.medium }
-                    rows={ this.filtersInRowsAndCells() }
-                    header={ tableColumns }>
-                    <TableHeader />
-                    <TableBody />
-                </Table>
+                <LoadingState
+                    loading={ this.props.loading }
+                    placeholder={ <Skeleton size={ SkeletonSize.lg } /> }>
+                    <Table aria-label='Notifications list'
+                        variant={ TableVariant.medium }
+                        rows={ this.filtersInRowsAndCells() }
+                        header={ tableColumns }>
+                        <TableHeader />
+                        <TableBody />
+                    </Table>
+                </LoadingState>
             </NotificationsPage>
         );
     }
