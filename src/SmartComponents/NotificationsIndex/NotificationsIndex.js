@@ -15,11 +15,13 @@ import registryDecorator from '@red-hat-insights/insights-frontend-components/Ut
 
 import './notifications-index.scss';
 
-import NotificationActions from '../../PresentationalComponents/NotificationActions/NotificationActions';
-import IndexToolbar from '../../PresentationalComponents/IndexToolbar/IndexToolbar';
-import EndpointToggle from '../../PresentationalComponents/EndpointToggle/EndpointToggle';
-import NotificationsPage from '../../PresentationalComponents/NotificationsPage/NotificationsPage';
-import LoadingState from '../../PresentationalComponents/LoadingState/LoadingState';
+import {
+    EndpointToggle,
+    IndexToolbar,
+    LoadingState,
+    NotificationActions,
+    NotificationsPage,
+} from '../../';
 
 @registryDecorator()
 export class NotificationsIndex extends Component {

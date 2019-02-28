@@ -7,8 +7,10 @@ import { fetchEndpoint, createEndpoint, updateEndpoint, newEndpoint } from '../.
 import { connect } from 'react-redux';
 import { Skeleton, SkeletonSize } from '@red-hat-insights/insights-frontend-components';
 import registryDecorator from '@red-hat-insights/insights-frontend-components/Utilities/Registry';
-import NotificationsPage from '../../PresentationalComponents/NotificationsPage/NotificationsPage';
-import LoadingState from '../../PresentationalComponents/LoadingState/LoadingState';
+import {
+    LoadingState,
+    NotificationsPage
+} from '../../';
 
 const schema = {
     title: 'Edit Notifications',
