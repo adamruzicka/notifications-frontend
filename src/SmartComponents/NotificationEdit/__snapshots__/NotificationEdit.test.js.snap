@@ -51,161 +51,131 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "children": Array [
-        <PageHeader>
-          <PageHeaderTitle
-            title="Edit Notification"
-          />
-        </PageHeader>,
-        <Connect(Main)>
-          <Form
-            ErrorList={[Function]}
-            FieldTemplate={[Function]}
-            className="pf-c-form"
-            disabled={false}
-            formData={Object {}}
-            liveValidate={false}
-            noHtml5Validate={false}
-            noValidate={false}
-            onChange={[Function]}
-            onSubmit={[Function]}
-            safeRenderCompletion={false}
-            schema={
-              Object {
-                "properties": Object {
-                  "active": Object {
-                    "default": true,
-                    "title": "Active",
-                    "type": "boolean",
-                  },
-                  "name": Object {
-                    "title": "Name",
-                    "type": "string",
-                  },
-                  "url": Object {
-                    "title": "URL",
-                    "type": "string",
-                  },
-                },
-                "required": Array [
-                  "name",
-                  "url",
-                ],
-                "title": "Edit Notifications",
-                "type": "object",
-              }
-            }
-            uiSchema={
-              Object {
-                "name": Object {
-                  "ui:placeholder": "New notification endpoint name",
-                },
-                "url": Object {
-                  "ui:placeholder": "https://...",
-                },
-              }
-            }
-          />
-        </Connect(Main)>,
-      ],
+      "children": <Form
+        ErrorList={[Function]}
+        FieldTemplate={[Function]}
+        className="pf-c-form"
+        disabled={false}
+        formData={Object {}}
+        liveValidate={false}
+        noHtml5Validate={false}
+        noValidate={false}
+        onChange={[Function]}
+        onSubmit={[Function]}
+        safeRenderCompletion={false}
+        schema={
+          Object {
+            "properties": Object {
+              "active": Object {
+                "default": true,
+                "title": "Active",
+                "type": "boolean",
+              },
+              "name": Object {
+                "title": "Name",
+                "type": "string",
+              },
+              "url": Object {
+                "title": "URL",
+                "type": "string",
+              },
+            },
+            "required": Array [
+              "name",
+              "url",
+            ],
+            "title": "Edit Notifications",
+            "type": "object",
+          }
+        }
+        uiSchema={
+          Object {
+            "name": Object {
+              "ui:placeholder": "New notification endpoint name",
+            },
+            "url": Object {
+              "ui:placeholder": "https://...",
+            },
+          }
+        }
+      />,
+      "title": "Edit Notification",
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "children": <PageHeaderTitle
-            title="Edit Notification"
-          />,
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "title": "Edit Notification",
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "ErrorList": [Function],
+        "FieldTemplate": [Function],
+        "className": "pf-c-form",
+        "disabled": false,
+        "formData": Object {},
+        "liveValidate": false,
+        "noHtml5Validate": false,
+        "noValidate": false,
+        "onChange": [Function],
+        "onSubmit": [Function],
+        "safeRenderCompletion": false,
+        "schema": Object {
+          "properties": Object {
+            "active": Object {
+              "default": true,
+              "title": "Active",
+              "type": "boolean",
+            },
+            "name": Object {
+              "title": "Name",
+              "type": "string",
+            },
+            "url": Object {
+              "title": "URL",
+              "type": "string",
+            },
           },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "required": Array [
+            "name",
+            "url",
+          ],
+          "title": "Edit Notifications",
+          "type": "object",
         },
-        "type": [Function],
+        "uiSchema": Object {
+          "name": Object {
+            "ui:placeholder": "New notification endpoint name",
+          },
+          "url": Object {
+            "ui:placeholder": "https://...",
+          },
+        },
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": <Form
-            ErrorList={[Function]}
-            FieldTemplate={[Function]}
-            className="pf-c-form"
-            disabled={false}
-            formData={Object {}}
-            liveValidate={false}
-            noHtml5Validate={false}
-            noValidate={false}
-            onChange={[Function]}
-            onSubmit={[Function]}
-            safeRenderCompletion={false}
-            schema={
-              Object {
-                "properties": Object {
-                  "active": Object {
-                    "default": true,
-                    "title": "Active",
-                    "type": "boolean",
-                  },
-                  "name": Object {
-                    "title": "Name",
-                    "type": "string",
-                  },
-                  "url": Object {
-                    "title": "URL",
-                    "type": "string",
-                  },
-                },
-                "required": Array [
-                  "name",
-                  "url",
-                ],
-                "title": "Edit Notifications",
-                "type": "object",
-              }
-            }
-            uiSchema={
-              Object {
-                "name": Object {
-                  "ui:placeholder": "New notification endpoint name",
-                },
-                "url": Object {
-                  "ui:placeholder": "https://...",
-                },
-              }
-            }
-          />,
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "ErrorList": [Function],
-            "FieldTemplate": [Function],
-            "className": "pf-c-form",
-            "disabled": false,
-            "formData": Object {},
-            "liveValidate": false,
-            "noHtml5Validate": false,
-            "noValidate": false,
-            "onChange": [Function],
-            "onSubmit": [Function],
-            "safeRenderCompletion": false,
-            "schema": Object {
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <Form
+          ErrorList={[Function]}
+          FieldTemplate={[Function]}
+          className="pf-c-form"
+          disabled={false}
+          formData={Object {}}
+          liveValidate={false}
+          noHtml5Validate={false}
+          noValidate={false}
+          onChange={[Function]}
+          onSubmit={[Function]}
+          safeRenderCompletion={false}
+          schema={
+            Object {
               "properties": Object {
                 "active": Object {
                   "default": true,
@@ -227,225 +197,75 @@ ShallowWrapper {
               ],
               "title": "Edit Notifications",
               "type": "object",
-            },
-            "uiSchema": Object {
+            }
+          }
+          uiSchema={
+            Object {
               "name": Object {
                 "ui:placeholder": "New notification endpoint name",
               },
               "url": Object {
                 "ui:placeholder": "https://...",
               },
-            },
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        "type": [Function],
-      },
-    ],
-    "type": Symbol(react.fragment),
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "children": Array [
-          <PageHeader>
-            <PageHeaderTitle
-              title="Edit Notification"
-            />
-          </PageHeader>,
-          <Connect(Main)>
-            <Form
-              ErrorList={[Function]}
-              FieldTemplate={[Function]}
-              className="pf-c-form"
-              disabled={false}
-              formData={Object {}}
-              liveValidate={false}
-              noHtml5Validate={false}
-              noValidate={false}
-              onChange={[Function]}
-              onSubmit={[Function]}
-              safeRenderCompletion={false}
-              schema={
-                Object {
-                  "properties": Object {
-                    "active": Object {
-                      "default": true,
-                      "title": "Active",
-                      "type": "boolean",
-                    },
-                    "name": Object {
-                      "title": "Name",
-                      "type": "string",
-                    },
-                    "url": Object {
-                      "title": "URL",
-                      "type": "string",
-                    },
-                  },
-                  "required": Array [
-                    "name",
-                    "url",
-                  ],
-                  "title": "Edit Notifications",
-                  "type": "object",
-                }
-              }
-              uiSchema={
-                Object {
-                  "name": Object {
-                    "ui:placeholder": "New notification endpoint name",
-                  },
-                  "url": Object {
-                    "ui:placeholder": "https://...",
-                  },
-                }
-              }
-            />
-          </Connect(Main)>,
-        ],
+            }
+          }
+        />,
+        "title": "Edit Notification",
       },
       "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "children": <PageHeaderTitle
-              title="Edit Notification"
-            />,
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "title": "Edit Notification",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": <Form
-              ErrorList={[Function]}
-              FieldTemplate={[Function]}
-              className="pf-c-form"
-              disabled={false}
-              formData={Object {}}
-              liveValidate={false}
-              noHtml5Validate={false}
-              noValidate={false}
-              onChange={[Function]}
-              onSubmit={[Function]}
-              safeRenderCompletion={false}
-              schema={
-                Object {
-                  "properties": Object {
-                    "active": Object {
-                      "default": true,
-                      "title": "Active",
-                      "type": "boolean",
-                    },
-                    "name": Object {
-                      "title": "Name",
-                      "type": "string",
-                    },
-                    "url": Object {
-                      "title": "URL",
-                      "type": "string",
-                    },
-                  },
-                  "required": Array [
-                    "name",
-                    "url",
-                  ],
-                  "title": "Edit Notifications",
-                  "type": "object",
-                }
-              }
-              uiSchema={
-                Object {
-                  "name": Object {
-                    "ui:placeholder": "New notification endpoint name",
-                  },
-                  "url": Object {
-                    "ui:placeholder": "https://...",
-                  },
-                }
-              }
-            />,
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "ErrorList": [Function],
-              "FieldTemplate": [Function],
-              "className": "pf-c-form",
-              "disabled": false,
-              "formData": Object {},
-              "liveValidate": false,
-              "noHtml5Validate": false,
-              "noValidate": false,
-              "onChange": [Function],
-              "onSubmit": [Function],
-              "safeRenderCompletion": false,
-              "schema": Object {
-                "properties": Object {
-                  "active": Object {
-                    "default": true,
-                    "title": "Active",
-                    "type": "boolean",
-                  },
-                  "name": Object {
-                    "title": "Name",
-                    "type": "string",
-                  },
-                  "url": Object {
-                    "title": "URL",
-                    "type": "string",
-                  },
-                },
-                "required": Array [
-                  "name",
-                  "url",
-                ],
-                "title": "Edit Notifications",
-                "type": "object",
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "ErrorList": [Function],
+          "FieldTemplate": [Function],
+          "className": "pf-c-form",
+          "disabled": false,
+          "formData": Object {},
+          "liveValidate": false,
+          "noHtml5Validate": false,
+          "noValidate": false,
+          "onChange": [Function],
+          "onSubmit": [Function],
+          "safeRenderCompletion": false,
+          "schema": Object {
+            "properties": Object {
+              "active": Object {
+                "default": true,
+                "title": "Active",
+                "type": "boolean",
               },
-              "uiSchema": Object {
-                "name": Object {
-                  "ui:placeholder": "New notification endpoint name",
-                },
-                "url": Object {
-                  "ui:placeholder": "https://...",
-                },
+              "name": Object {
+                "title": "Name",
+                "type": "string",
+              },
+              "url": Object {
+                "title": "URL",
+                "type": "string",
               },
             },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
+            "required": Array [
+              "name",
+              "url",
+            ],
+            "title": "Edit Notifications",
+            "type": "object",
           },
-          "type": [Function],
+          "uiSchema": Object {
+            "name": Object {
+              "ui:placeholder": "New notification endpoint name",
+            },
+            "url": Object {
+              "ui:placeholder": "https://...",
+            },
+          },
         },
-      ],
-      "type": Symbol(react.fragment),
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {
@@ -537,177 +357,147 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "function",
     "props": Object {
-      "children": Array [
-        <PageHeader>
-          <PageHeaderTitle
-            title="Edit Notification"
-          />
-        </PageHeader>,
-        <Connect(Main)>
-          <Form
-            ErrorList={[Function]}
-            FieldTemplate={[Function]}
-            className="pf-c-form"
-            disabled={false}
-            formData={
-              Object {
-                "active": false,
-                "name": "TEST Endpoint #3",
-                "url": "http://endpoint3.com",
-              }
-            }
-            liveValidate={false}
-            noHtml5Validate={false}
-            noValidate={false}
-            onChange={[Function]}
-            onSubmit={[Function]}
-            safeRenderCompletion={false}
-            schema={
-              Object {
-                "properties": Object {
-                  "active": Object {
-                    "default": true,
-                    "title": "Active",
-                    "type": "boolean",
-                  },
-                  "name": Object {
-                    "title": "Name",
-                    "type": "string",
-                  },
-                  "url": Object {
-                    "title": "URL",
-                    "type": "string",
-                  },
-                },
-                "required": Array [
-                  "name",
-                  "url",
-                ],
-                "title": "Edit Notifications",
-                "type": "object",
-              }
-            }
-            uiSchema={
-              Object {
-                "name": Object {
-                  "ui:placeholder": "New notification endpoint name",
-                },
-                "url": Object {
-                  "ui:placeholder": "https://...",
-                },
-              }
-            }
-          />
-        </Connect(Main)>,
-      ],
+      "children": <Form
+        ErrorList={[Function]}
+        FieldTemplate={[Function]}
+        className="pf-c-form"
+        disabled={false}
+        formData={
+          Object {
+            "active": false,
+            "name": "TEST Endpoint #3",
+            "url": "http://endpoint3.com",
+          }
+        }
+        liveValidate={false}
+        noHtml5Validate={false}
+        noValidate={false}
+        onChange={[Function]}
+        onSubmit={[Function]}
+        safeRenderCompletion={false}
+        schema={
+          Object {
+            "properties": Object {
+              "active": Object {
+                "default": true,
+                "title": "Active",
+                "type": "boolean",
+              },
+              "name": Object {
+                "title": "Name",
+                "type": "string",
+              },
+              "url": Object {
+                "title": "URL",
+                "type": "string",
+              },
+            },
+            "required": Array [
+              "name",
+              "url",
+            ],
+            "title": "Edit Notifications",
+            "type": "object",
+          }
+        }
+        uiSchema={
+          Object {
+            "name": Object {
+              "ui:placeholder": "New notification endpoint name",
+            },
+            "url": Object {
+              "ui:placeholder": "https://...",
+            },
+          }
+        }
+      />,
+      "title": "Edit Notification",
     },
     "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "function",
-        "props": Object {
-          "children": <PageHeaderTitle
-            title="Edit Notification"
-          />,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "ErrorList": [Function],
+        "FieldTemplate": [Function],
+        "className": "pf-c-form",
+        "disabled": false,
+        "formData": Object {
+          "active": false,
+          "name": "TEST Endpoint #3",
+          "url": "http://endpoint3.com",
         },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "title": "Edit Notification",
+        "liveValidate": false,
+        "noHtml5Validate": false,
+        "noValidate": false,
+        "onChange": [Function],
+        "onSubmit": [Function],
+        "safeRenderCompletion": false,
+        "schema": Object {
+          "properties": Object {
+            "active": Object {
+              "default": true,
+              "title": "Active",
+              "type": "boolean",
+            },
+            "name": Object {
+              "title": "Name",
+              "type": "string",
+            },
+            "url": Object {
+              "title": "URL",
+              "type": "string",
+            },
           },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
+          "required": Array [
+            "name",
+            "url",
+          ],
+          "title": "Edit Notifications",
+          "type": "object",
         },
-        "type": [Function],
+        "uiSchema": Object {
+          "name": Object {
+            "ui:placeholder": "New notification endpoint name",
+          },
+          "url": Object {
+            "ui:placeholder": "https://...",
+          },
+        },
       },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "children": <Form
-            ErrorList={[Function]}
-            FieldTemplate={[Function]}
-            className="pf-c-form"
-            disabled={false}
-            formData={
-              Object {
-                "active": false,
-                "name": "TEST Endpoint #3",
-                "url": "http://endpoint3.com",
-              }
-            }
-            liveValidate={false}
-            noHtml5Validate={false}
-            noValidate={false}
-            onChange={[Function]}
-            onSubmit={[Function]}
-            safeRenderCompletion={false}
-            schema={
-              Object {
-                "properties": Object {
-                  "active": Object {
-                    "default": true,
-                    "title": "Active",
-                    "type": "boolean",
-                  },
-                  "name": Object {
-                    "title": "Name",
-                    "type": "string",
-                  },
-                  "url": Object {
-                    "title": "URL",
-                    "type": "string",
-                  },
-                },
-                "required": Array [
-                  "name",
-                  "url",
-                ],
-                "title": "Edit Notifications",
-                "type": "object",
-              }
-            }
-            uiSchema={
-              Object {
-                "name": Object {
-                  "ui:placeholder": "New notification endpoint name",
-                },
-                "url": Object {
-                  "ui:placeholder": "https://...",
-                },
-              }
-            }
-          />,
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "ErrorList": [Function],
-            "FieldTemplate": [Function],
-            "className": "pf-c-form",
-            "disabled": false,
-            "formData": Object {
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <Form
+          ErrorList={[Function]}
+          FieldTemplate={[Function]}
+          className="pf-c-form"
+          disabled={false}
+          formData={
+            Object {
               "active": false,
               "name": "TEST Endpoint #3",
               "url": "http://endpoint3.com",
-            },
-            "liveValidate": false,
-            "noHtml5Validate": false,
-            "noValidate": false,
-            "onChange": [Function],
-            "onSubmit": [Function],
-            "safeRenderCompletion": false,
-            "schema": Object {
+            }
+          }
+          liveValidate={false}
+          noHtml5Validate={false}
+          noValidate={false}
+          onChange={[Function]}
+          onSubmit={[Function]}
+          safeRenderCompletion={false}
+          schema={
+            Object {
               "properties": Object {
                 "active": Object {
                   "default": true,
@@ -729,241 +519,79 @@ ShallowWrapper {
               ],
               "title": "Edit Notifications",
               "type": "object",
-            },
-            "uiSchema": Object {
+            }
+          }
+          uiSchema={
+            Object {
               "name": Object {
                 "ui:placeholder": "New notification endpoint name",
               },
               "url": Object {
                 "ui:placeholder": "https://...",
               },
-            },
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        "type": [Function],
-      },
-    ],
-    "type": Symbol(react.fragment),
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "function",
-      "props": Object {
-        "children": Array [
-          <PageHeader>
-            <PageHeaderTitle
-              title="Edit Notification"
-            />
-          </PageHeader>,
-          <Connect(Main)>
-            <Form
-              ErrorList={[Function]}
-              FieldTemplate={[Function]}
-              className="pf-c-form"
-              disabled={false}
-              formData={
-                Object {
-                  "active": false,
-                  "name": "TEST Endpoint #3",
-                  "url": "http://endpoint3.com",
-                }
-              }
-              liveValidate={false}
-              noHtml5Validate={false}
-              noValidate={false}
-              onChange={[Function]}
-              onSubmit={[Function]}
-              safeRenderCompletion={false}
-              schema={
-                Object {
-                  "properties": Object {
-                    "active": Object {
-                      "default": true,
-                      "title": "Active",
-                      "type": "boolean",
-                    },
-                    "name": Object {
-                      "title": "Name",
-                      "type": "string",
-                    },
-                    "url": Object {
-                      "title": "URL",
-                      "type": "string",
-                    },
-                  },
-                  "required": Array [
-                    "name",
-                    "url",
-                  ],
-                  "title": "Edit Notifications",
-                  "type": "object",
-                }
-              }
-              uiSchema={
-                Object {
-                  "name": Object {
-                    "ui:placeholder": "New notification endpoint name",
-                  },
-                  "url": Object {
-                    "ui:placeholder": "https://...",
-                  },
-                }
-              }
-            />
-          </Connect(Main)>,
-        ],
+            }
+          }
+        />,
+        "title": "Edit Notification",
       },
       "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "children": <PageHeaderTitle
-              title="Edit Notification"
-            />,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "ErrorList": [Function],
+          "FieldTemplate": [Function],
+          "className": "pf-c-form",
+          "disabled": false,
+          "formData": Object {
+            "active": false,
+            "name": "TEST Endpoint #3",
+            "url": "http://endpoint3.com",
           },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "title": "Edit Notification",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "children": <Form
-              ErrorList={[Function]}
-              FieldTemplate={[Function]}
-              className="pf-c-form"
-              disabled={false}
-              formData={
-                Object {
-                  "active": false,
-                  "name": "TEST Endpoint #3",
-                  "url": "http://endpoint3.com",
-                }
-              }
-              liveValidate={false}
-              noHtml5Validate={false}
-              noValidate={false}
-              onChange={[Function]}
-              onSubmit={[Function]}
-              safeRenderCompletion={false}
-              schema={
-                Object {
-                  "properties": Object {
-                    "active": Object {
-                      "default": true,
-                      "title": "Active",
-                      "type": "boolean",
-                    },
-                    "name": Object {
-                      "title": "Name",
-                      "type": "string",
-                    },
-                    "url": Object {
-                      "title": "URL",
-                      "type": "string",
-                    },
-                  },
-                  "required": Array [
-                    "name",
-                    "url",
-                  ],
-                  "title": "Edit Notifications",
-                  "type": "object",
-                }
-              }
-              uiSchema={
-                Object {
-                  "name": Object {
-                    "ui:placeholder": "New notification endpoint name",
-                  },
-                  "url": Object {
-                    "ui:placeholder": "https://...",
-                  },
-                }
-              }
-            />,
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "ErrorList": [Function],
-              "FieldTemplate": [Function],
-              "className": "pf-c-form",
-              "disabled": false,
-              "formData": Object {
-                "active": false,
-                "name": "TEST Endpoint #3",
-                "url": "http://endpoint3.com",
+          "liveValidate": false,
+          "noHtml5Validate": false,
+          "noValidate": false,
+          "onChange": [Function],
+          "onSubmit": [Function],
+          "safeRenderCompletion": false,
+          "schema": Object {
+            "properties": Object {
+              "active": Object {
+                "default": true,
+                "title": "Active",
+                "type": "boolean",
               },
-              "liveValidate": false,
-              "noHtml5Validate": false,
-              "noValidate": false,
-              "onChange": [Function],
-              "onSubmit": [Function],
-              "safeRenderCompletion": false,
-              "schema": Object {
-                "properties": Object {
-                  "active": Object {
-                    "default": true,
-                    "title": "Active",
-                    "type": "boolean",
-                  },
-                  "name": Object {
-                    "title": "Name",
-                    "type": "string",
-                  },
-                  "url": Object {
-                    "title": "URL",
-                    "type": "string",
-                  },
-                },
-                "required": Array [
-                  "name",
-                  "url",
-                ],
-                "title": "Edit Notifications",
-                "type": "object",
+              "name": Object {
+                "title": "Name",
+                "type": "string",
               },
-              "uiSchema": Object {
-                "name": Object {
-                  "ui:placeholder": "New notification endpoint name",
-                },
-                "url": Object {
-                  "ui:placeholder": "https://...",
-                },
+              "url": Object {
+                "title": "URL",
+                "type": "string",
               },
             },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
+            "required": Array [
+              "name",
+              "url",
+            ],
+            "title": "Edit Notifications",
+            "type": "object",
           },
-          "type": [Function],
+          "uiSchema": Object {
+            "name": Object {
+              "ui:placeholder": "New notification endpoint name",
+            },
+            "url": Object {
+              "ui:placeholder": "https://...",
+            },
+          },
         },
-      ],
-      "type": Symbol(react.fragment),
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      "type": [Function],
     },
   ],
   Symbol(enzyme.__options__): Object {

@@ -1,28 +1,22 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import * as actionCreators from '../../store/actions';
 import {
-    Main,
-    PageHeader,
-    PageHeaderTitle,
     Table,
     TableHeader,
     TableBody,
     TableVariant
 } from '@red-hat-insights/insights-frontend-components';
 import registryDecorator from '@red-hat-insights/insights-frontend-components/Utilities/Registry';
-import {
-    Split,
-    SplitItem
-} from '@patternfly/react-core';
 
 import './notifications-index.scss';
 
 import NotificationActions from '../../PresentationalComponents/NotificationActions/NotificationActions';
 import IndexToolbar from '../../PresentationalComponents/IndexToolbar/IndexToolbar';
 import EndpointToggle from '../../PresentationalComponents/EndpointToggle/EndpointToggle';
+import NotificationsPage from '../../PresentationalComponents/NotificationsPage/NotificationsPage';
 
 @registryDecorator()
 export class NotificationsIndex extends Component {
@@ -56,25 +50,17 @@ export class NotificationsIndex extends Component {
         }
 
         return (
-            <Fragment>
-                <PageHeader >
-                    <Split>
-                        <SplitItem isMain>
-                            <PageHeaderTitle title='Notifications'/>
-                        </SplitItem>
-                        <SplitItem><IndexToolbar onClick={ this.props.newEndpoint }/></SplitItem>
-                    </Split>
-                </PageHeader>
-                <Main>
-                    <Table aria-label='Notifications list'
-                        variant={ TableVariant.medium }
-                        rows={ this.filtersInRowsAndCells() }
-                        header={ tableColumns }>
-                        <TableHeader />
-                        <TableBody />
-                    </Table>
-                </Main>
-            </Fragment>
+            <NotificationsPage
+                title='Notifications'
+                rightBar={ <IndexToolbar onClick={ this.props.newEndpoint }/> }>
+                <Table aria-label='Notifications list'
+                    variant={ TableVariant.medium }
+                    rows={ this.filtersInRowsAndCells() }
+                    header={ tableColumns }>
+                    <TableHeader />
+                    <TableBody />
+                </Table>
+            </NotificationsPage>
         );
     }
 }
