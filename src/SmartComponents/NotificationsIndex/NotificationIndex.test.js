@@ -33,6 +33,7 @@ describe('NotificationsIndex', () => {
         fetchFilters: jest.fn(),
         fetchEndpoints: jest.fn(),
         deleteEndpoint: jest.fn(),
+        toggleEndpoint: jest.fn(),
         newEndpoint: jest.fn(),
         filters: [],
         endpoints: [],

@@ -93,6 +93,21 @@ export const updateEndpoint = (id, data) => {
     };
 };
 
+export const toggleEndpoint = (id, on) => {
+    return {
+        type: SUBMIT_ENDPOINT,
+        payload: update(`/endpoints/${ id }`, { endpoint: { active: on }}),
+        meta: {
+            notifications: {
+                rejected: {
+                    variant: 'danger',
+                    title: `Failed to toggle endpoint ${ id }`
+                }
+            }
+        }
+    };
+};
+
 export const deleteEndpoint = (id, name) => ({
     type: DELETE_ENDPOINT,
     payload: destroy(`/endpoints/${ id }`).then(() => ({ id })),

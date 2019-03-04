@@ -22,6 +22,7 @@ import './notifications-index.scss';
 
 import NotificationActions from '../../PresentationalComponents/NotificationActions/NotificationActions';
 import IndexToolbar from '../../PresentationalComponents/IndexToolbar/IndexToolbar';
+import EndpointToggle from '../../PresentationalComponents/EndpointToggle/EndpointToggle';
 
 @registryDecorator()
 export class NotificationsIndex extends Component {
@@ -31,14 +32,18 @@ export class NotificationsIndex extends Component {
 
     filtersInRowsAndCells() {
         return this.props.endpoints.map((endpoint) => {
+            const { id, active, name, url, filtersCount } = endpoint;
             return { cells: [
-                endpoint.name,
-                endpoint.url,
-                endpoint.active ? 'true' : 'false',
-                endpoint.filtersCount,
-                <NotificationActions key={ `notification_actions_${endpoint.id}` }
-                    endpointId={ endpoint.id }
-                    onDelete={ (event) => { event.preventDefault(); this.props.deleteEndpoint(endpoint.id, endpoint.name); } } />
+                name,
+                url,
+                <EndpointToggle key={ `notification_switch_${id}` }
+                    id={ id }
+                    active={ active }
+                    onChange={ (checked) => { this.props.toggleEndpoint(id, checked); } } />,
+                filtersCount,
+                <NotificationActions key={ `notification_actions_${id}` }
+                    endpointId={ id }
+                    onDelete={ (event) => { event.preventDefault(); this.props.deleteEndpoint(id, name); } } />
             ]};
         });
     };
@@ -78,6 +83,7 @@ NotificationsIndex.propTypes = {
     fetchEndpoints: PropTypes.func.isRequired,
     deleteEndpoint: PropTypes.func.isRequired,
     newEndpoint: PropTypes.func.isRequired,
+    toggleEndpoint: PropTypes.func.isRequired,
     endpoints: PropTypes.array.isRequired,
     error: PropTypes.string,
     loading: PropTypes.bool
@@ -95,7 +101,8 @@ const mapDispatchToProps = function (dispatch) {
     return bindActionCreators({
         fetchEndpoints: actionCreators.fetchEndpoints,
         deleteEndpoint: actionCreators.deleteEndpoint,
-        newEndpoint: actionCreators.newEndpoint
+        newEndpoint: actionCreators.newEndpoint,
+        toggleEndpoint: actionCreators.toggleEndpoint
     }, dispatch);
 };
 
