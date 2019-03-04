@@ -20,7 +20,7 @@ import {
     IndexToolbar,
     LoadingState,
     NotificationActions,
-    NotificationsPage,
+    NotificationsPage
 } from '../../';
 
 @registryDecorator()
