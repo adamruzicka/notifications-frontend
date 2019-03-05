@@ -1,16 +1,16 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { withRouter, Redirect } from 'react-router-dom';
 import Form from 'react-jsonschema-form';
 import PropTypes from 'prop-types';
 import { fetchEndpoint, createEndpoint, updateEndpoint, newEndpoint } from '../../store/actions';
 import { connect } from 'react-redux';
-import {
-    Main,
-    PageHeader,
-    PageHeaderTitle
-} from '@red-hat-insights/insights-frontend-components';
+import { Skeleton, SkeletonSize } from '@red-hat-insights/insights-frontend-components';
 import registryDecorator from '@red-hat-insights/insights-frontend-components/Utilities/Registry';
+import {
+    LoadingState,
+    NotificationsPage
+} from '../../';
 
 const schema = {
     title: 'Edit Notifications',
@@ -92,9 +92,7 @@ export class NotificationEdit extends Component {
     }
 
     render() {
-        if (this.props.loading) {
-            return 'Loading ...';
-        }
+        const action = this.props.match.params.endpointId ? 'Edit' : 'New';
 
         if (this.props.submitting) {
             return 'Submitting ...';
@@ -105,19 +103,18 @@ export class NotificationEdit extends Component {
         }
 
         return (
-            <Fragment>
-                <PageHeader>
-                    <PageHeaderTitle title='Edit Notification'/>
-                </PageHeader>
-                <Main>
+            <NotificationsPage title={ `${ action } Notification` }>
+                <LoadingState
+                    loading={ this.props.loading }
+                    placeholder={ <Skeleton size={ SkeletonSize.sm } /> }>
                     <Form schema={ schema } className="pf-c-form"
                         uiSchema={ uiSchema }
                         formData={ this.initialFormData() }
                         onChange={ this.formChange }
                         onSubmit={ this.formSubmit }
                         FieldTemplate={ CustomFieldTemplate } />
-                </Main>
-            </Fragment>
+                </LoadingState>
+            </NotificationsPage>
         );
     }
 }

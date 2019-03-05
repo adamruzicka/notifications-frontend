@@ -1,28 +1,27 @@
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import * as actionCreators from '../../store/actions';
 import {
-    Main,
-    PageHeader,
-    PageHeaderTitle,
     Table,
     TableHeader,
     TableBody,
-    TableVariant
+    TableVariant,
+    Skeleton,
+    SkeletonSize
 } from '@red-hat-insights/insights-frontend-components';
 import registryDecorator from '@red-hat-insights/insights-frontend-components/Utilities/Registry';
-import {
-    Split,
-    SplitItem
-} from '@patternfly/react-core';
 
 import './notifications-index.scss';
 
-import NotificationActions from '../../PresentationalComponents/NotificationActions/NotificationActions';
-import IndexToolbar from '../../PresentationalComponents/IndexToolbar/IndexToolbar';
-import EndpointToggle from '../../PresentationalComponents/EndpointToggle/EndpointToggle';
+import {
+    EndpointToggle,
+    IndexToolbar,
+    LoadingState,
+    NotificationActions,
+    NotificationsPage
+} from '../../';
 
 @registryDecorator()
 export class NotificationsIndex extends Component {
@@ -51,21 +50,13 @@ export class NotificationsIndex extends Component {
     render() {
         const tableColumns = [ 'Name', 'URL', 'Active', 'Filters', 'Actions' ];
 
-        if (this.props.loading) {
-            return 'Loading endpoints ...';
-        }
-
         return (
-            <Fragment>
-                <PageHeader >
-                    <Split>
-                        <SplitItem isMain>
-                            <PageHeaderTitle title='Notifications'/>
-                        </SplitItem>
-                        <SplitItem><IndexToolbar onClick={ this.props.newEndpoint }/></SplitItem>
-                    </Split>
-                </PageHeader>
-                <Main>
+            <NotificationsPage
+                title='Notifications'
+                rightBar={ <IndexToolbar onClick={ this.props.newEndpoint }/> }>
+                <LoadingState
+                    loading={ this.props.loading }
+                    placeholder={ <Skeleton size={ SkeletonSize.lg } /> }>
                     <Table aria-label='Notifications list'
                         variant={ TableVariant.medium }
                         rows={ this.filtersInRowsAndCells() }
@@ -73,8 +64,8 @@ export class NotificationsIndex extends Component {
                         <TableHeader />
                         <TableBody />
                     </Table>
-                </Main>
-            </Fragment>
+                </LoadingState>
+            </NotificationsPage>
         );
     }
 }
