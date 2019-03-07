@@ -40,11 +40,11 @@ describe('NotificationsIndex', () => {
         store
     };
 
-    it('expect to render a Table', () => {
+    it('expect to render an EmptyState by default (with no endpoints)', () => {
         const wrapper = shallow(
-            <NotificationsIndex { ...defaultProps }/>
+            <NotificationsIndex { ...defaultProps } />
         );
-        expect(wrapper.find('Table').length).toBe(1);
+        expect(wrapper.find('EmptyState').length).toBe(1);
         expect(wrapper).toMatchSnapshot();
     });
 

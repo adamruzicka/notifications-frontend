@@ -1,4 +1,14 @@
 import React, { Component } from 'react';
+import {
+    Title,
+    Button,
+    Bullseye,
+    EmptyState,
+    EmptyStateIcon,
+    EmptyStateBody
+} from '@patternfly/react-core';
+import { Link } from 'react-router-dom';
+import { CubesIcon } from '@patternfly/react-icons';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -47,9 +57,34 @@ export class NotificationsIndex extends Component {
         });
     };
 
-    render() {
+    noResults = () => {
+        return <Bullseye>
+            <EmptyState>
+                <p>
+                    <EmptyStateIcon icon={ CubesIcon } />
+                </p>
+                <Title size="lg">No Endpoins found</Title>
+                <EmptyStateBody>
+                    There are no endpoints configured yet.
+                </EmptyStateBody>
+                <Button variant="primary" to={ '/new' } component={ Link } onClick={ this.props.newEndpoint }>New endpoint</Button>
+            </EmptyState>
+        </Bullseye>;
+    }
+
+    resultsTable = () => {
         const tableColumns = [ 'Name', 'URL', 'Active', 'Filters', 'Actions' ];
 
+        return <Table aria-label='Notifications list'
+            variant={ TableVariant.medium }
+            rows={ this.filtersInRowsAndCells() }
+            header={ tableColumns }>
+            <TableHeader />
+            <TableBody />
+        </Table>;
+    }
+
+    render() {
         return (
             <NotificationsPage
                 title='Notifications'
@@ -57,13 +92,7 @@ export class NotificationsIndex extends Component {
                 <LoadingState
                     loading={ this.props.loading }
                     placeholder={ <Skeleton size={ SkeletonSize.lg } /> }>
-                    <Table aria-label='Notifications list'
-                        variant={ TableVariant.medium }
-                        rows={ this.filtersInRowsAndCells() }
-                        header={ tableColumns }>
-                        <TableHeader />
-                        <TableBody />
-                    </Table>
+                    { this.props.endpoints.length > 0 ? this.resultsTable() : this.noResults() }
                 </LoadingState>
             </NotificationsPage>
         );

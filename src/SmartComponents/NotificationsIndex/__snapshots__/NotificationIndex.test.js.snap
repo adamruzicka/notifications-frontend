@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`NotificationsIndex expect to render a Table 1`] = `
+exports[`NotificationsIndex expect to render an EmptyState by default (with no endpoints) 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <NotificationsIndex
@@ -53,22 +53,49 @@ ShallowWrapper {
           />
         }
       >
-        <Table
-          aria-label="Notifications list"
-          header={
-            Array [
-              "Name",
-              "URL",
-              "Active",
-              "Filters",
-              "Actions",
-            ]
-          }
-          rows={Array []}
+        <Bullseye
+          className=""
+          component="div"
         >
-          <TableHeader />
-          <TableBody />
-        </Table>
+          <EmptyState
+            className=""
+          >
+            <p>
+              <EmptyStateIcon
+                className=""
+                icon={[Function]}
+              />
+            </p>
+            <Title
+              className=""
+              headingLevel="h1"
+              size="lg"
+            >
+              No Endpoins found
+            </Title>
+            <EmptyStateBody
+              className=""
+            >
+              There are no endpoints configured yet.
+            </EmptyStateBody>
+            <Button
+              aria-label={null}
+              className=""
+              component={[Function]}
+              isActive={false}
+              isBlock={false}
+              isDisabled={false}
+              isFocus={false}
+              isHover={false}
+              onClick={[MockFunction]}
+              to="/new"
+              type="button"
+              variant="primary"
+            >
+              New endpoint
+            </Button>
+          </EmptyState>
+        </Bullseye>
       </LoadingState>,
       "rightBar": <IndexToolbar
         onClick={[MockFunction]}
@@ -81,22 +108,49 @@ ShallowWrapper {
       "key": undefined,
       "nodeType": "function",
       "props": Object {
-        "children": <Table
-          aria-label="Notifications list"
-          header={
-            Array [
-              "Name",
-              "URL",
-              "Active",
-              "Filters",
-              "Actions",
-            ]
-          }
-          rows={Array []}
+        "children": <Bullseye
+          className=""
+          component="div"
         >
-          <TableHeader />
-          <TableBody />
-        </Table>,
+          <EmptyState
+            className=""
+          >
+            <p>
+              <EmptyStateIcon
+                className=""
+                icon={[Function]}
+              />
+            </p>
+            <Title
+              className=""
+              headingLevel="h1"
+              size="lg"
+            >
+              No Endpoins found
+            </Title>
+            <EmptyStateBody
+              className=""
+            >
+              There are no endpoints configured yet.
+            </EmptyStateBody>
+            <Button
+              aria-label={null}
+              className=""
+              component={[Function]}
+              isActive={false}
+              isBlock={false}
+              isDisabled={false}
+              isFocus={false}
+              isHover={false}
+              onClick={[MockFunction]}
+              to="/new"
+              type="button"
+              variant="primary"
+            >
+              New endpoint
+            </Button>
+          </EmptyState>
+        </Bullseye>,
         "loading": undefined,
         "placeholder": <Skeleton
           size="lg"
@@ -108,42 +162,170 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "aria-label": "Notifications list",
-          "children": Array [
-            <TableHeader />,
-            <TableBody />,
-          ],
-          "header": Array [
-            "Name",
-            "URL",
-            "Active",
-            "Filters",
-            "Actions",
-          ],
-          "rows": Array [],
-          "variant": undefined,
+          "children": <EmptyState
+            className=""
+          >
+            <p>
+              <EmptyStateIcon
+                className=""
+                icon={[Function]}
+              />
+            </p>
+            <Title
+              className=""
+              headingLevel="h1"
+              size="lg"
+            >
+              No Endpoins found
+            </Title>
+            <EmptyStateBody
+              className=""
+            >
+              There are no endpoints configured yet.
+            </EmptyStateBody>
+            <Button
+              aria-label={null}
+              className=""
+              component={[Function]}
+              isActive={false}
+              isBlock={false}
+              isDisabled={false}
+              isFocus={false}
+              isHover={false}
+              onClick={[MockFunction]}
+              to="/new"
+              type="button"
+              variant="primary"
+            >
+              New endpoint
+            </Button>
+          </EmptyState>,
+          "className": "",
+          "component": "div",
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {},
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <p>
+                <EmptyStateIcon
+                  className=""
+                  icon={[Function]}
+                />
+              </p>,
+              <Title
+                className=""
+                headingLevel="h1"
+                size="lg"
+              >
+                No Endpoins found
+              </Title>,
+              <EmptyStateBody
+                className=""
+              >
+                There are no endpoints configured yet.
+              </EmptyStateBody>,
+              <Button
+                aria-label={null}
+                className=""
+                component={[Function]}
+                isActive={false}
+                isBlock={false}
+                isDisabled={false}
+                isFocus={false}
+                isHover={false}
+                onClick={[MockFunction]}
+                to="/new"
+                type="button"
+                variant="primary"
+              >
+                New endpoint
+              </Button>,
+            ],
+            "className": "",
           },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {},
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-        ],
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <EmptyStateIcon
+                  className=""
+                  icon={[Function]}
+                />,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "className": "",
+                  "icon": [Function],
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "p",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "No Endpoins found",
+                "className": "",
+                "headingLevel": "h1",
+                "size": "lg",
+              },
+              "ref": null,
+              "rendered": "No Endpoins found",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "There are no endpoints configured yet.",
+                "className": "",
+              },
+              "ref": null,
+              "rendered": "There are no endpoints configured yet.",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "aria-label": null,
+                "children": "New endpoint",
+                "className": "",
+                "component": [Function],
+                "isActive": false,
+                "isBlock": false,
+                "isDisabled": false,
+                "isFocus": false,
+                "isHover": false,
+                "onClick": [MockFunction],
+                "to": "/new",
+                "type": "button",
+                "variant": "primary",
+              },
+              "ref": null,
+              "rendered": "New endpoint",
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
         "type": [Function],
       },
       "type": [Function],
@@ -163,22 +345,49 @@ ShallowWrapper {
             />
           }
         >
-          <Table
-            aria-label="Notifications list"
-            header={
-              Array [
-                "Name",
-                "URL",
-                "Active",
-                "Filters",
-                "Actions",
-              ]
-            }
-            rows={Array []}
+          <Bullseye
+            className=""
+            component="div"
           >
-            <TableHeader />
-            <TableBody />
-          </Table>
+            <EmptyState
+              className=""
+            >
+              <p>
+                <EmptyStateIcon
+                  className=""
+                  icon={[Function]}
+                />
+              </p>
+              <Title
+                className=""
+                headingLevel="h1"
+                size="lg"
+              >
+                No Endpoins found
+              </Title>
+              <EmptyStateBody
+                className=""
+              >
+                There are no endpoints configured yet.
+              </EmptyStateBody>
+              <Button
+                aria-label={null}
+                className=""
+                component={[Function]}
+                isActive={false}
+                isBlock={false}
+                isDisabled={false}
+                isFocus={false}
+                isHover={false}
+                onClick={[MockFunction]}
+                to="/new"
+                type="button"
+                variant="primary"
+              >
+                New endpoint
+              </Button>
+            </EmptyState>
+          </Bullseye>
         </LoadingState>,
         "rightBar": <IndexToolbar
           onClick={[MockFunction]}
@@ -191,22 +400,49 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": <Table
-            aria-label="Notifications list"
-            header={
-              Array [
-                "Name",
-                "URL",
-                "Active",
-                "Filters",
-                "Actions",
-              ]
-            }
-            rows={Array []}
+          "children": <Bullseye
+            className=""
+            component="div"
           >
-            <TableHeader />
-            <TableBody />
-          </Table>,
+            <EmptyState
+              className=""
+            >
+              <p>
+                <EmptyStateIcon
+                  className=""
+                  icon={[Function]}
+                />
+              </p>
+              <Title
+                className=""
+                headingLevel="h1"
+                size="lg"
+              >
+                No Endpoins found
+              </Title>
+              <EmptyStateBody
+                className=""
+              >
+                There are no endpoints configured yet.
+              </EmptyStateBody>
+              <Button
+                aria-label={null}
+                className=""
+                component={[Function]}
+                isActive={false}
+                isBlock={false}
+                isDisabled={false}
+                isFocus={false}
+                isHover={false}
+                onClick={[MockFunction]}
+                to="/new"
+                type="button"
+                variant="primary"
+              >
+                New endpoint
+              </Button>
+            </EmptyState>
+          </Bullseye>,
           "loading": undefined,
           "placeholder": <Skeleton
             size="lg"
@@ -218,42 +454,170 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "aria-label": "Notifications list",
-            "children": Array [
-              <TableHeader />,
-              <TableBody />,
-            ],
-            "header": Array [
-              "Name",
-              "URL",
-              "Active",
-              "Filters",
-              "Actions",
-            ],
-            "rows": Array [],
-            "variant": undefined,
+            "children": <EmptyState
+              className=""
+            >
+              <p>
+                <EmptyStateIcon
+                  className=""
+                  icon={[Function]}
+                />
+              </p>
+              <Title
+                className=""
+                headingLevel="h1"
+                size="lg"
+              >
+                No Endpoins found
+              </Title>
+              <EmptyStateBody
+                className=""
+              >
+                There are no endpoints configured yet.
+              </EmptyStateBody>
+              <Button
+                aria-label={null}
+                className=""
+                component={[Function]}
+                isActive={false}
+                isBlock={false}
+                isDisabled={false}
+                isFocus={false}
+                isHover={false}
+                onClick={[MockFunction]}
+                to="/new"
+                type="button"
+                variant="primary"
+              >
+                New endpoint
+              </Button>
+            </EmptyState>,
+            "className": "",
+            "component": "div",
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {},
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": Array [
+                <p>
+                  <EmptyStateIcon
+                    className=""
+                    icon={[Function]}
+                  />
+                </p>,
+                <Title
+                  className=""
+                  headingLevel="h1"
+                  size="lg"
+                >
+                  No Endpoins found
+                </Title>,
+                <EmptyStateBody
+                  className=""
+                >
+                  There are no endpoints configured yet.
+                </EmptyStateBody>,
+                <Button
+                  aria-label={null}
+                  className=""
+                  component={[Function]}
+                  isActive={false}
+                  isBlock={false}
+                  isDisabled={false}
+                  isFocus={false}
+                  isHover={false}
+                  onClick={[MockFunction]}
+                  to="/new"
+                  type="button"
+                  variant="primary"
+                >
+                  New endpoint
+                </Button>,
+              ],
+              "className": "",
             },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {},
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-          ],
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <EmptyStateIcon
+                    className=""
+                    icon={[Function]}
+                  />,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "className": "",
+                    "icon": [Function],
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "No Endpoins found",
+                  "className": "",
+                  "headingLevel": "h1",
+                  "size": "lg",
+                },
+                "ref": null,
+                "rendered": "No Endpoins found",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "There are no endpoints configured yet.",
+                  "className": "",
+                },
+                "ref": null,
+                "rendered": "There are no endpoints configured yet.",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "aria-label": null,
+                  "children": "New endpoint",
+                  "className": "",
+                  "component": [Function],
+                  "isActive": false,
+                  "isBlock": false,
+                  "isDisabled": false,
+                  "isFocus": false,
+                  "isHover": false,
+                  "onClick": [MockFunction],
+                  "to": "/new",
+                  "type": "button",
+                  "variant": "primary",
+                },
+                "ref": null,
+                "rendered": "New endpoint",
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
           "type": [Function],
         },
         "type": [Function],
