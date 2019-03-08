@@ -1,10 +1,14 @@
 import { endpointReducer, filterReducer } from './index';
 import {
     DELETE_ENDPOINT,
-    FETCH_ENDPOINTS,
-    failureMessage,
-    successMessage
+    FETCH_ENDPOINTS
 } from '../actions/index';
+import {
+    successMessage,
+    failureMessage
+} from './reducerHelper';
+
+import endpoints from '../../__fixtures__/endpoints';
 
 const initialState = {
     error: null,
@@ -33,12 +37,9 @@ describe('endpoint reducer', () => {
     };
 
     const exampleEndpoint = {
-        id: '1',
+        id: endpoints[0].id,
         attributes: {
-            name: 'Endpoint 1',
-            url: 'http://something.somewhere.com',
-            active: false,
-            filter_count: 5
+            ...endpoints[0]
         }
     };
 

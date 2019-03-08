@@ -1,15 +1,29 @@
 import React, { Component } from 'react';
+import { Button } from '@patternfly/react-core';
+
 import { bindActionCreators } from 'redux';
 import { withRouter, Redirect } from 'react-router-dom';
 import Form from 'react-jsonschema-form';
 import PropTypes from 'prop-types';
-import { fetchEndpoint, createEndpoint, updateEndpoint, newEndpoint } from '../../store/actions';
 import { connect } from 'react-redux';
-import { Skeleton, SkeletonSize } from '@red-hat-insights/insights-frontend-components';
+
+import {
+    fetchEndpoint,
+    createEndpoint,
+    updateEndpoint,
+    newEndpoint,
+    fetchFilters,
+    fetchApps
+} from '../../store/actions';
+import {
+    Skeleton,
+    SkeletonSize
+} from '@red-hat-insights/insights-frontend-components';
 import registryDecorator from '@red-hat-insights/insights-frontend-components/Utilities/Registry';
 import {
     LoadingState,
-    NotificationsPage
+    NotificationsPage,
+    FilterList
 } from '../../';
 
 const schema = {
@@ -60,28 +74,59 @@ CustomFieldTemplate.propTypes = {
 
 @registryDecorator()
 export class NotificationEdit extends Component {
-    componentDidMount() {
-        let id = this.props.match.params.endpointId;
-        if (id) {
-            this.props.fetchEndpoint(id);
-        }
+    constructor(props) {
+        super(props);
+        this.filterList = React.createRef();
+        this.fetchData();
     }
-
-    formChange = () => {}
 
     formSubmit = (data) => {
         let { active, name, url } = data.formData;
+        let filters = [{
+            app_ids: this.filterList.current.props.selectedAppEventTypes.appIds,
+            event_type_ids: this.filterList.current.props.selectedAppEventTypes.eventTypeIds,
+            severity_filters: []
+        }];
         let payload = {
             active,
             name,
-            url
+            url,
+            filters
         };
+
         if (this.props.endpoint) {
-            this.props.updateEndpoint(this.props.endpoint.id, payload);
+            this.props.updateEndpoint(this.props.endpoint.id, payload).then(this.toIndex);
         } else {
-            this.props.createEndpoint(payload);
+            this.props.createEndpoint(payload).then(this.toIndex);
         }
     };
+
+    fetchData = () => {
+        let id = this.props.match.params.endpointId;
+
+        if (id) {
+            this.props.fetchEndpoint(id);
+            this.props.fetchFilters(id);
+        }
+
+        this.props.fetchApps();
+    }
+
+    selectedAppEventTypes = () => {
+        if (this.props.filters && this.props.filters.length > 0) {
+            return {
+                appIds: this.props.filters.map((filter) =>
+                    filter.relationships.apps.data.map((app) => parseInt(app.id))).flat(),
+                eventTypeIds: this.props.filters.map((filter) =>
+                    filter.relationships.event_types.data.map((eventType) => parseInt(eventType.id))).flat()
+            };
+        } else {
+            return {
+                appIds: [],
+                eventTypeIds: []
+            };
+        }
+    }
 
     initialFormData = () => {
         return this.props.endpoint ? {
@@ -91,12 +136,12 @@ export class NotificationEdit extends Component {
         } : {};
     }
 
+    toIndex = () => {
+        this.props.history.push('/list');
+    }
+
     render() {
         const action = this.props.match.params.endpointId ? 'Edit' : 'New';
-
-        if (this.props.submitting) {
-            return 'Submitting ...';
-        }
 
         if (this.props.endpoint && !this.props.match.params.endpointId) {
             return <Redirect to={ `/edit/${ this.props.endpoint.id }` } />;
@@ -110,9 +155,18 @@ export class NotificationEdit extends Component {
                     <Form schema={ schema } className="pf-c-form"
                         uiSchema={ uiSchema }
                         formData={ this.initialFormData() }
-                        onChange={ this.formChange }
                         onSubmit={ this.formSubmit }
-                        FieldTemplate={ CustomFieldTemplate } />
+                        FieldTemplate={ CustomFieldTemplate }>
+
+                        <FilterList ref={ this.filterList }
+                            apps={ this.props.apps }
+                            selectedAppEventTypes={ this.selectedAppEventTypes() } />
+
+                        <div>
+                            <Button type='submit' variant="primary">Submit</Button>
+                            <Button onClick={ this.toIndex } variant="secondary">Cancel</Button>
+                        </div>
+                    </Form>
                 </LoadingState>
             </NotificationsPage>
         );
@@ -122,20 +176,32 @@ export class NotificationEdit extends Component {
 NotificationEdit.propTypes = {
     endpointId: PropTypes.number,
     endpoint: PropTypes.object,
+    filters: PropTypes.array.isRequired,
+    apps: PropTypes.array.isRequired,
     fetchEndpoint: PropTypes.func.isRequired,
     createEndpoint: PropTypes.func.isRequired,
     updateEndpoint: PropTypes.func.isRequired,
+    fetchFilters: PropTypes.func.isRequired,
+    fetchApps: PropTypes.func.isRequired,
     match: PropTypes.object,
+    history: PropTypes.object,
     loading: PropTypes.bool,
     submitting: PropTypes.bool
 };
 
 const mapStateToProps = function(state) {
     let { endpoint, loading, submitting } = state.endpoints;
+    let { apps, loading: appsLoading } = state.apps;
+    let { filters, loading: filtersLoading } = state.filters;
+
     return {
         endpoint,
+        apps,
+        filters,
         loading,
-        submitting
+        submitting,
+        appsLoading,
+        filtersLoading
     };
 };
 
@@ -144,7 +210,9 @@ const mapDispatchToProps = function (dispatch) {
         fetchEndpoint,
         createEndpoint,
         updateEndpoint,
-        newEndpoint
+        newEndpoint,
+        fetchFilters,
+        fetchApps
     }, dispatch);
 };
 

@@ -15,6 +15,9 @@ describe('NotificationEdit', () => {
     const fetchEndpoint = jest.fn();
     const createEndpoint = jest.fn();
     const updateEndpoint = jest.fn();
+    const fetchFilters = jest.fn();
+    const fetchApps = jest.fn();
+
     const defaultProps = {
         match: {
             params: {
@@ -24,12 +27,14 @@ describe('NotificationEdit', () => {
         fetchEndpoint,
         createEndpoint,
         updateEndpoint,
+        fetchFilters,
+        fetchApps,
         store
     };
 
     it('expect to render a Form', () => {
         const wrapper = shallow(
-            <NotificationEdit { ...defaultProps }/>
+            <NotificationEdit { ...defaultProps } filters={ [] } apps={ [] } />
         );
         expect(wrapper.find('Form').length).toBe(1);
         expect(wrapper).toMatchSnapshot();
@@ -37,7 +42,7 @@ describe('NotificationEdit', () => {
 
     it('takes an endpoint', () => {
         const wrapper = shallow(
-            <NotificationEdit { ...defaultProps } endpoint={ testEndpoint }/>
+            <NotificationEdit { ...defaultProps } endpoint={ testEndpoint } filters={ [] } apps={ [] } />
         );
         expect(wrapper).toMatchSnapshot();
     });
