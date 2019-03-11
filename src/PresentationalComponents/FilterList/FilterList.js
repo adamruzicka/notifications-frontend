@@ -15,25 +15,17 @@ export class FilterList extends Component {
         })
     };
 
-    eventTypeCheckboxChange = (id, appId) => {
+    eventTypeCheckboxChange = (id, appId) =>
         this.props = {
             ...this.props,
             selectedAppEventTypes: {
                 appIds: this.removeOrAddId(this.props.selectedAppEventTypes.appIds, appId),
                 eventTypeIds: this.removeOrAddId(this.props.selectedAppEventTypes.eventTypeIds, id)
             }
-        };
-    }
-
-    removeOrAddId = (array, id) => {
-        if (!array) { array = []; }
-
-        if (array.indexOf(id) !== -1) {
-            return array.filter((currentId) => currentId !== id);
-        } else {
-            return [ ...array, id ];
         }
-    }
+
+    removeOrAddId = (array: [], id) =>
+        array.indexOf(id) !== -1 ? array.filter((currentId) => currentId !== id) : [ ...array, id ]
 
     isEventTypeEnabled = (eventTypeId) =>
         this.props.selectedAppEventTypes.eventTypeIds.indexOf(parseInt(eventTypeId)) !== -1
@@ -46,7 +38,7 @@ export class FilterList extends Component {
                 aria-label={ eventType.name }
                 onChange={ () => this.eventTypeCheckboxChange(eventType.id, appId) }
                 isChecked={ this.isEventTypeEnabled(eventType.id) } />
-        </ListItem>;
+        </ListItem>
 
     eventTypesList = (eventTypes, appId) =>
         eventTypes && eventTypes.length > 0 ?
@@ -54,10 +46,10 @@ export class FilterList extends Component {
                 { eventTypes.map((eventType) =>
                     this.eventTypesListItem(eventType, appId)
                 ) }
-            </List> : '';
+            </List> : ''
 
-    render = () =>
-        <List>
+    render() {
+        return <List>
             { this.props.apps.map((app) =>
                 <ListItem key={ `app-${ app.id }` }>
                     <strong>{ app.name }</strong>
@@ -65,6 +57,7 @@ export class FilterList extends Component {
                 </ListItem>
             ) }
         </List>;
+    }
 }
 
 export default FilterList;

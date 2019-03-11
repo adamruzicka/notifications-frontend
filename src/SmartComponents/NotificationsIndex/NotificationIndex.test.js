@@ -1,4 +1,4 @@
-import { init } from '../../store';
+import { init } from 'Store';
 import logger from 'redux-logger';
 
 import { NotificationsIndex } from './NotificationsIndex';

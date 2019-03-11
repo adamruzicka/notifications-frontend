@@ -381,9 +381,7 @@ ShallowWrapper {
                 "eventTypeIds": Array [],
               },
             },
-            "ref": Object {
-              "current": null,
-            },
+            "ref": null,
             "rendered": null,
             "type": [Function],
           },
@@ -785,9 +783,7 @@ ShallowWrapper {
                   "eventTypeIds": Array [],
                 },
               },
-              "ref": Object {
-                "current": null,
-              },
+              "ref": null,
               "rendered": null,
               "type": [Function],
             },
@@ -1331,9 +1327,7 @@ ShallowWrapper {
                 "eventTypeIds": Array [],
               },
             },
-            "ref": Object {
-              "current": null,
-            },
+            "ref": null,
             "rendered": null,
             "type": [Function],
           },
@@ -1751,9 +1745,7 @@ ShallowWrapper {
                   "eventTypeIds": Array [],
                 },
               },
-              "ref": Object {
-                "current": null,
-              },
+              "ref": null,
               "rendered": null,
               "type": [Function],
             },

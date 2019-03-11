@@ -10,23 +10,20 @@ import {
 } from '@patternfly/react-core';
 import PropTypes from 'prop-types';
 
-export const NotificationsPage = ({ children, title, rightBar }) => {
-    return (
-        <Fragment>
-            <PageHeader>
-                <Split>
-                    <SplitItem isMain>
-                        <PageHeaderTitle title={ title } />
-                    </SplitItem>
-                    <SplitItem>{ rightBar }</SplitItem>
-                </Split>
-            </PageHeader>
-            <Main>
-                { children }
-            </Main>
-        </Fragment>
-    );
-};
+export const NotificationsPage = ({ children, title, rightBar }) =>
+    <Fragment>
+        <PageHeader>
+            <Split>
+                <SplitItem isMain>
+                    <PageHeaderTitle title={ title } />
+                </SplitItem>
+                <SplitItem>{ rightBar }</SplitItem>
+            </Split>
+        </PageHeader>
+        <Main>
+            { children }
+        </Main>
+    </Fragment>;
 
 NotificationsPage.propTypes = {
     title: PropTypes.string.isRequired,

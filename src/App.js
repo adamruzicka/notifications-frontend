@@ -9,7 +9,7 @@ import './App.scss';
 
 class App extends Component {
 
-    componentDidMount () {
+    componentDidMount() {
         insights.chrome.init();
         insights.chrome.identifyApp('notifications');
         insights.chrome.navigation(buildNavigation());

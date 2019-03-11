@@ -1,6 +1,6 @@
 import {
     FETCH_APPS
-} from '../actions/index';
+} from 'Store/actions/index';
 import {
     successMessage,
     failureMessage,

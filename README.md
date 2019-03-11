@@ -28,6 +28,22 @@ _* At this time the insights-chrome need to have an new entry to find the notifi
 }
 ```
 
+## Code preferences
+
+  * Use same form of defining components
+  	* Use function style components for PresentationalComponents
+  	* Class-style for SmartComponents
+  	* Prefer proptype definitions defined as static property in class-style components
+  * Have Only one component per file
+  * Avoid relative paths for Components
+  * Use implicit return when possible
+  * Have one reducer per file and resource-type
+  * Avoid long definitions in props
+  	* Pass a function or the return of it instead
+  	* Use a const for strings, JSX or long object-paths
+  * Avoid semi-colons
+  	* Unless eslint asks for one
+
 
 ### Testing
 

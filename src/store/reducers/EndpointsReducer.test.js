@@ -1,8 +1,8 @@
-import { endpointReducer, filterReducer } from './index';
+import { endpointsReducer } from './EndpointsReducer';
 import {
     DELETE_ENDPOINT,
     FETCH_ENDPOINTS
-} from '../actions/index';
+} from 'Store/actions/index';
 import {
     successMessage,
     failureMessage
@@ -20,16 +20,6 @@ const fromRequest = (type, payload) => ({
     payload
 });
 
-describe('filter reducer', () => {
-    const filterInitialState = {
-        ...initialState,
-        filters: []
-    };
-    it('should return the initial state', () => {
-        expect(filterReducer(undefined, {})).toEqual(filterInitialState);
-    });
-});
-
 describe('endpoint reducer', () => {
     const endpointInitialState = {
         ...initialState,
@@ -44,7 +34,7 @@ describe('endpoint reducer', () => {
     };
 
     it('should return the initial state', () => {
-        expect(endpointReducer(undefined, {})).toEqual(endpointInitialState);
+        expect(endpointsReducer(undefined, {})).toEqual(endpointInitialState);
 
     });
 
@@ -59,13 +49,13 @@ describe('endpoint reducer', () => {
                 filtersCount: exampleEndpoint.attributes.filter_count
             }]
         };
-        const newState = endpointReducer(endpointInitialState, fromRequest(successMessage(FETCH_ENDPOINTS), { data: [ exampleEndpoint ]}));
+        const newState = endpointsReducer(endpointInitialState, fromRequest(successMessage(FETCH_ENDPOINTS), { data: [ exampleEndpoint ]}));
         expect(newState).toEqual(expectation);
     });
 
     it('should handle FETCH_ENDPOINTS_FAILURE', () => {
         const error = 'It broke';
-        const newState = endpointReducer(
+        const newState = endpointsReducer(
             endpointInitialState,
             fromRequest(failureMessage(FETCH_ENDPOINTS), { message: error })
         );
@@ -79,7 +69,7 @@ describe('endpoint reducer', () => {
     it('should handle DELETE_ENDPOINT_SUCCESS', () => {
         const elements = (ids) => ids.map(id => ({ id }));
         const action = fromRequest(successMessage(DELETE_ENDPOINT), { id: 2 });
-        const newState = endpointReducer({ ...endpointInitialState, endpoints: elements([ 1, 2, 3 ]) }, action);
+        const newState = endpointsReducer({ ...endpointInitialState, endpoints: elements([ 1, 2, 3 ]) }, action);
         expect(newState).toEqual({
             ...endpointInitialState,
             endpoints: elements([ 1, 3 ])

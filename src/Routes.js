@@ -1,7 +1,7 @@
 import { Route, Switch, Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import React from 'react';
-import asyncComponent from './Utilities/asyncComponent';
+import asyncComponent from 'Utilities/asyncComponent';
 import some from 'lodash/some';
 
 /**
@@ -12,10 +12,10 @@ import some from 'lodash/some';
  **/
 
 const NotificationsIndex = asyncComponent(() =>
-  import(/* webpackChunkName: "NotificationsIndex" */ './SmartComponents/NotificationsIndex/NotificationsIndex'));
+  import(/* webpackChunkName: "NotificationsIndex" */ 'SmartComponents/NotificationsIndex/NotificationsIndex'));
 
 const NotificationEdit = asyncComponent(() =>
-  import(/* webpackChunkName: "NotificationEdit" */ './SmartComponents/NotificationEdit/NotificationEdit'));
+  import(/* webpackChunkName: "NotificationEdit" */ 'SmartComponents/NotificationEdit/NotificationEdit'));
 
 const paths = {
     notificationsIndex: '/list',

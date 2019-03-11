@@ -1,4 +1,4 @@
-import { create, destroy, get, update } from '../../Utilities/notificationsBackendAPI';
+import { create, destroy, get, update } from 'Utilities/notificationsBackendAPI';
 
 export const FETCH_FILTERS   = 'FETCH_FILTERS';
 export const FETCH_ENDPOINTS = 'FETCH_ENDPOINTS';

@@ -14,7 +14,7 @@ import {
     newEndpoint,
     fetchFilters,
     fetchApps
-} from '../../store/actions';
+} from 'Store/actions';
 import {
     Skeleton,
     SkeletonSize
@@ -23,8 +23,9 @@ import registryDecorator from '@red-hat-insights/insights-frontend-components/Ut
 import {
     LoadingState,
     NotificationsPage,
+    CustomFieldTemplate,
     FilterList
-} from '../../';
+} from 'PresentationalComponents';
 
 const schema = {
     title: 'Edit Notifications',
@@ -46,36 +47,25 @@ const uiSchema = {
     }
 };
 
-function CustomFieldTemplate(props) {
-    const { id, classNames, label, help, required, description, errors, children } = props;
-    let allClassNames = classNames.concat([ ' pf-c-form__group' ]);
-
-    return (
-        <div className={ allClassNames }>
-            <label htmlFor={ id }>{ label } { required ? '*' : null }</label>
-            { description }
-            { children }
-            { errors }
-            { help }
-        </div>
-    );
-}
-
-CustomFieldTemplate.propTypes = {
-    id: PropTypes.string,
-    classNames: PropTypes.string,
-    label: PropTypes.string,
-    help: PropTypes.object,
-    required: PropTypes.bool,
-    description: PropTypes.object,
-    errors: PropTypes.object,
-    children: PropTypes.array
-};
-
 @registryDecorator()
 export class NotificationEdit extends Component {
-    constructor(props) {
-        super(props);
+    static propTypes = {
+        endpointId: PropTypes.number,
+        endpoint: PropTypes.object,
+        filters: PropTypes.array.isRequired,
+        apps: PropTypes.array.isRequired,
+        fetchEndpoint: PropTypes.func.isRequired,
+        createEndpoint: PropTypes.func.isRequired,
+        updateEndpoint: PropTypes.func.isRequired,
+        fetchFilters: PropTypes.func.isRequired,
+        fetchApps: PropTypes.func.isRequired,
+        match: PropTypes.object,
+        history: PropTypes.object,
+        loading: PropTypes.bool,
+        submitting: PropTypes.bool
+    }
+
+    componentDidMount() {
         this.filterList = React.createRef();
         this.fetchData();
     }
@@ -99,7 +89,7 @@ export class NotificationEdit extends Component {
         } else {
             this.props.createEndpoint(payload).then(this.toIndex);
         }
-    };
+    }
 
     fetchData = () => {
         let id = this.props.match.params.endpointId;
@@ -112,33 +102,26 @@ export class NotificationEdit extends Component {
         this.props.fetchApps();
     }
 
-    selectedAppEventTypes = () => {
-        if (this.props.filters && this.props.filters.length > 0) {
-            return {
-                appIds: this.props.filters.map((filter) =>
-                    filter.relationships.apps.data.map((app) => parseInt(app.id))).flat(),
-                eventTypeIds: this.props.filters.map((filter) =>
-                    filter.relationships.event_types.data.map((eventType) => parseInt(eventType.id))).flat()
-            };
-        } else {
-            return {
-                appIds: [],
-                eventTypeIds: []
-            };
+    selectedAppEventTypes = () =>
+        this.props.filters && this.props.filters.length > 0 ? {
+            appIds: this.props.filters.map((filter) =>
+                filter.relationships.apps.data.map((app) => parseInt(app.id))).flat(),
+            eventTypeIds: this.props.filters.map((filter) =>
+                filter.relationships.event_types.data.map((eventType) => parseInt(eventType.id))).flat()
+        } : {
+            appIds: [],
+            eventTypeIds: []
         }
-    }
 
-    initialFormData = () => {
-        return this.props.endpoint ? {
+    initialFormData = () =>
+        this.props.endpoint ? {
             name: this.props.endpoint.name,
             url: this.props.endpoint.url,
             active: this.props.endpoint.active
-        } : {};
-    }
+        } : {}
 
-    toIndex = () => {
-        this.props.history.push('/list');
-    }
+    toIndex = () =>
+        this.props.history.push('/list')
 
     render() {
         const action = this.props.match.params.endpointId ? 'Edit' : 'New';
@@ -173,23 +156,7 @@ export class NotificationEdit extends Component {
     }
 }
 
-NotificationEdit.propTypes = {
-    endpointId: PropTypes.number,
-    endpoint: PropTypes.object,
-    filters: PropTypes.array.isRequired,
-    apps: PropTypes.array.isRequired,
-    fetchEndpoint: PropTypes.func.isRequired,
-    createEndpoint: PropTypes.func.isRequired,
-    updateEndpoint: PropTypes.func.isRequired,
-    fetchFilters: PropTypes.func.isRequired,
-    fetchApps: PropTypes.func.isRequired,
-    match: PropTypes.object,
-    history: PropTypes.object,
-    loading: PropTypes.bool,
-    submitting: PropTypes.bool
-};
-
-const mapStateToProps = function(state) {
+const mapStateToProps = (state)  => {
     let { endpoint, loading, submitting } = state.endpoints;
     let { apps, loading: appsLoading } = state.apps;
     let { filters, loading: filtersLoading } = state.filters;
@@ -205,7 +172,7 @@ const mapStateToProps = function(state) {
     };
 };
 
-const mapDispatchToProps = function (dispatch) {
+const mapDispatchToProps = (dispatch) => {
     return bindActionCreators({
         fetchEndpoint,
         createEndpoint,
