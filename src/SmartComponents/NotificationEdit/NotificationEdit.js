@@ -120,18 +120,15 @@ export class NotificationEdit extends Component {
             active: this.props.endpoint.active
         } : {}
 
-    toIndex = () =>
-        this.props.history.push('/list')
-
     render() {
-        const action = this.props.match.params.endpointId ? 'Edit' : 'New';
+        let action = this.props.match.params.endpointId && this.props.endpoint ? this.props.endpoint.name : 'New Notification';
 
         if (this.props.endpoint && !this.props.match.params.endpointId) {
             return <Redirect to={ `/edit/${ this.props.endpoint.id }` } />;
         }
 
         return (
-            <NotificationsPage title={ `${ action } Notification` }>
+            <NotificationsPage title={ action }>
                 <LoadingState
                     loading={ this.props.loading }
                     placeholder={ <Skeleton size={ SkeletonSize.sm } /> }>
@@ -147,7 +144,7 @@ export class NotificationEdit extends Component {
 
                         <div>
                             <Button type='submit' variant="primary">Submit</Button>
-                            <Button onClick={ this.toIndex } variant="secondary">Cancel</Button>
+                            <Button onClick={ this.props.history.goBack } variant="secondary">Cancel</Button>
                         </div>
                     </Form>
                 </LoadingState>

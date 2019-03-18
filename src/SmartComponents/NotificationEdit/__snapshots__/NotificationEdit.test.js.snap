@@ -50,6 +50,11 @@ ShallowWrapper {
       }
     }
     filters={Array []}
+    history={
+      Object {
+        "goBack": [MockFunction],
+      }
+    }
     match={
       Object {
         "params": Object {
@@ -168,7 +173,7 @@ ShallowWrapper {
               isDisabled={false}
               isFocus={false}
               isHover={false}
-              onClick={[Function]}
+              onClick={[MockFunction]}
               type="button"
               variant="secondary"
             >
@@ -177,7 +182,7 @@ ShallowWrapper {
           </div>
         </Form>
       </LoadingState>,
-      "title": "Edit Notification",
+      "title": "New Notification",
     },
     "ref": null,
     "rendered": Object {
@@ -265,7 +270,7 @@ ShallowWrapper {
               isDisabled={false}
               isFocus={false}
               isHover={false}
-              onClick={[Function]}
+              onClick={[MockFunction]}
               type="button"
               variant="secondary"
             >
@@ -320,7 +325,7 @@ ShallowWrapper {
                 isDisabled={false}
                 isFocus={false}
                 isHover={false}
-                onClick={[Function]}
+                onClick={[MockFunction]}
                 type="button"
                 variant="secondary"
               >
@@ -414,7 +419,7 @@ ShallowWrapper {
                   isDisabled={false}
                   isFocus={false}
                   isHover={false}
-                  onClick={[Function]}
+                  onClick={[MockFunction]}
                   type="button"
                   variant="secondary"
                 >
@@ -459,7 +464,7 @@ ShallowWrapper {
                   "isDisabled": false,
                   "isFocus": false,
                   "isHover": false,
-                  "onClick": [Function],
+                  "onClick": [MockFunction],
                   "type": "button",
                   "variant": "secondary",
                 },
@@ -570,7 +575,7 @@ ShallowWrapper {
                 isDisabled={false}
                 isFocus={false}
                 isHover={false}
-                onClick={[Function]}
+                onClick={[MockFunction]}
                 type="button"
                 variant="secondary"
               >
@@ -579,7 +584,7 @@ ShallowWrapper {
             </div>
           </Form>
         </LoadingState>,
-        "title": "Edit Notification",
+        "title": "New Notification",
       },
       "ref": null,
       "rendered": Object {
@@ -667,7 +672,7 @@ ShallowWrapper {
                 isDisabled={false}
                 isFocus={false}
                 isHover={false}
-                onClick={[Function]}
+                onClick={[MockFunction]}
                 type="button"
                 variant="secondary"
               >
@@ -722,7 +727,7 @@ ShallowWrapper {
                   isDisabled={false}
                   isFocus={false}
                   isHover={false}
-                  onClick={[Function]}
+                  onClick={[MockFunction]}
                   type="button"
                   variant="secondary"
                 >
@@ -816,7 +821,7 @@ ShallowWrapper {
                     isDisabled={false}
                     isFocus={false}
                     isHover={false}
-                    onClick={[Function]}
+                    onClick={[MockFunction]}
                     type="button"
                     variant="secondary"
                   >
@@ -861,7 +866,7 @@ ShallowWrapper {
                     "isDisabled": false,
                     "isFocus": false,
                     "isHover": false,
-                    "onClick": [Function],
+                    "onClick": [MockFunction],
                     "type": "button",
                     "variant": "secondary",
                   },
@@ -980,6 +985,11 @@ ShallowWrapper {
       }
     }
     filters={Array []}
+    history={
+      Object {
+        "goBack": [MockFunction],
+      }
+    }
     match={
       Object {
         "params": Object {
@@ -1104,7 +1114,7 @@ ShallowWrapper {
               isDisabled={false}
               isFocus={false}
               isHover={false}
-              onClick={[Function]}
+              onClick={[MockFunction]}
               type="button"
               variant="secondary"
             >
@@ -1113,7 +1123,7 @@ ShallowWrapper {
           </div>
         </Form>
       </LoadingState>,
-      "title": "Edit Notification",
+      "title": "TEST Endpoint #3",
     },
     "ref": null,
     "rendered": Object {
@@ -1207,7 +1217,7 @@ ShallowWrapper {
               isDisabled={false}
               isFocus={false}
               isHover={false}
-              onClick={[Function]}
+              onClick={[MockFunction]}
               type="button"
               variant="secondary"
             >
@@ -1262,7 +1272,7 @@ ShallowWrapper {
                 isDisabled={false}
                 isFocus={false}
                 isHover={false}
-                onClick={[Function]}
+                onClick={[MockFunction]}
                 type="button"
                 variant="secondary"
               >
@@ -1360,7 +1370,7 @@ ShallowWrapper {
                   isDisabled={false}
                   isFocus={false}
                   isHover={false}
-                  onClick={[Function]}
+                  onClick={[MockFunction]}
                   type="button"
                   variant="secondary"
                 >
@@ -1405,7 +1415,7 @@ ShallowWrapper {
                   "isDisabled": false,
                   "isFocus": false,
                   "isHover": false,
-                  "onClick": [Function],
+                  "onClick": [MockFunction],
                   "type": "button",
                   "variant": "secondary",
                 },
@@ -1522,7 +1532,7 @@ ShallowWrapper {
                 isDisabled={false}
                 isFocus={false}
                 isHover={false}
-                onClick={[Function]}
+                onClick={[MockFunction]}
                 type="button"
                 variant="secondary"
               >
@@ -1531,7 +1541,7 @@ ShallowWrapper {
             </div>
           </Form>
         </LoadingState>,
-        "title": "Edit Notification",
+        "title": "TEST Endpoint #3",
       },
       "ref": null,
       "rendered": Object {
@@ -1625,7 +1635,7 @@ ShallowWrapper {
                 isDisabled={false}
                 isFocus={false}
                 isHover={false}
-                onClick={[Function]}
+                onClick={[MockFunction]}
                 type="button"
                 variant="secondary"
               >
@@ -1680,7 +1690,7 @@ ShallowWrapper {
                   isDisabled={false}
                   isFocus={false}
                   isHover={false}
-                  onClick={[Function]}
+                  onClick={[MockFunction]}
                   type="button"
                   variant="secondary"
                 >
@@ -1778,7 +1788,7 @@ ShallowWrapper {
                     isDisabled={false}
                     isFocus={false}
                     isHover={false}
-                    onClick={[Function]}
+                    onClick={[MockFunction]}
                     type="button"
                     variant="secondary"
                   >
@@ -1823,7 +1833,7 @@ ShallowWrapper {
                     "isDisabled": false,
                     "isFocus": false,
                     "isHover": false,
-                    "onClick": [Function],
+                    "onClick": [MockFunction],
                     "type": "button",
                     "variant": "secondary",
                   },

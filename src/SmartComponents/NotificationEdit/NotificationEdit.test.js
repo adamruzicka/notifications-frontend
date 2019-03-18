@@ -17,12 +17,16 @@ describe('NotificationEdit', () => {
     const updateEndpoint = jest.fn();
     const fetchFilters = jest.fn();
     const fetchApps = jest.fn();
+    const goBack = jest.fn();
 
     const defaultProps = {
         match: {
             params: {
                 endpointId: '1'
             }
+        },
+        history: {
+            goBack
         },
         fetchEndpoint,
         createEndpoint,

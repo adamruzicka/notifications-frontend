@@ -33,6 +33,21 @@ ShallowWrapper {
               className=""
               isMain={true}
             >
+              <Breadcrumb
+                aria-label="Breadcrumb"
+                className=""
+              >
+                
+                <BreadcrumbItem
+                  className=""
+                  component="a"
+                  isActive={true}
+                  target={null}
+                  to={null}
+                >
+                  Something
+                </BreadcrumbItem>
+              </Breadcrumb>
               <PageHeaderTitle
                 title="Something"
               />
@@ -66,6 +81,21 @@ ShallowWrapper {
               className=""
               isMain={true}
             >
+              <Breadcrumb
+                aria-label="Breadcrumb"
+                className=""
+              >
+                
+                <BreadcrumbItem
+                  className=""
+                  component="a"
+                  isActive={true}
+                  target={null}
+                  to={null}
+                >
+                  Something
+                </BreadcrumbItem>
+              </Breadcrumb>
               <PageHeaderTitle
                 title="Something"
               />
@@ -89,6 +119,21 @@ ShallowWrapper {
                 className=""
                 isMain={true}
               >
+                <Breadcrumb
+                  aria-label="Breadcrumb"
+                  className=""
+                >
+                  
+                  <BreadcrumbItem
+                    className=""
+                    component="a"
+                    isActive={true}
+                    target={null}
+                    to={null}
+                  >
+                    Something
+                  </BreadcrumbItem>
+                </Breadcrumb>
                 <PageHeaderTitle
                   title="Something"
                 />
@@ -111,24 +156,85 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "children": <PageHeaderTitle
-                  title="Something"
-                />,
+                "children": Array [
+                  <Breadcrumb
+                    aria-label="Breadcrumb"
+                    className=""
+                  >
+                    
+                    <BreadcrumbItem
+                      className=""
+                      component="a"
+                      isActive={true}
+                      target={null}
+                      to={null}
+                    >
+                      Something
+                    </BreadcrumbItem>
+                  </Breadcrumb>,
+                  <PageHeaderTitle
+                    title="Something"
+                  />,
+                ],
                 "className": "",
                 "isMain": true,
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "title": "Something",
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "aria-label": "Breadcrumb",
+                    "children": Array [
+                      "",
+                      <BreadcrumbItem
+                        className=""
+                        component="a"
+                        isActive={true}
+                        target={null}
+                        to={null}
+                      >
+                        Something
+                      </BreadcrumbItem>,
+                    ],
+                    "className": "",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    "",
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "children": "Something",
+                        "className": "",
+                        "component": "a",
+                        "isActive": true,
+                        "target": null,
+                        "to": null,
+                      },
+                      "ref": null,
+                      "rendered": "Something",
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
                 },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "title": "Something",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
               "type": [Function],
             },
             Object {
@@ -180,6 +286,21 @@ ShallowWrapper {
                 className=""
                 isMain={true}
               >
+                <Breadcrumb
+                  aria-label="Breadcrumb"
+                  className=""
+                >
+                  
+                  <BreadcrumbItem
+                    className=""
+                    component="a"
+                    isActive={true}
+                    target={null}
+                    to={null}
+                  >
+                    Something
+                  </BreadcrumbItem>
+                </Breadcrumb>
                 <PageHeaderTitle
                   title="Something"
                 />
@@ -213,6 +334,21 @@ ShallowWrapper {
                 className=""
                 isMain={true}
               >
+                <Breadcrumb
+                  aria-label="Breadcrumb"
+                  className=""
+                >
+                  
+                  <BreadcrumbItem
+                    className=""
+                    component="a"
+                    isActive={true}
+                    target={null}
+                    to={null}
+                  >
+                    Something
+                  </BreadcrumbItem>
+                </Breadcrumb>
                 <PageHeaderTitle
                   title="Something"
                 />
@@ -236,6 +372,21 @@ ShallowWrapper {
                   className=""
                   isMain={true}
                 >
+                  <Breadcrumb
+                    aria-label="Breadcrumb"
+                    className=""
+                  >
+                    
+                    <BreadcrumbItem
+                      className=""
+                      component="a"
+                      isActive={true}
+                      target={null}
+                      to={null}
+                    >
+                      Something
+                    </BreadcrumbItem>
+                  </Breadcrumb>
                   <PageHeaderTitle
                     title="Something"
                   />
@@ -258,24 +409,85 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "children": <PageHeaderTitle
-                    title="Something"
-                  />,
+                  "children": Array [
+                    <Breadcrumb
+                      aria-label="Breadcrumb"
+                      className=""
+                    >
+                      
+                      <BreadcrumbItem
+                        className=""
+                        component="a"
+                        isActive={true}
+                        target={null}
+                        to={null}
+                      >
+                        Something
+                      </BreadcrumbItem>
+                    </Breadcrumb>,
+                    <PageHeaderTitle
+                      title="Something"
+                    />,
+                  ],
                   "className": "",
                   "isMain": true,
                 },
                 "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "title": "Something",
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "aria-label": "Breadcrumb",
+                      "children": Array [
+                        "",
+                        <BreadcrumbItem
+                          className=""
+                          component="a"
+                          isActive={true}
+                          target={null}
+                          to={null}
+                        >
+                          Something
+                        </BreadcrumbItem>,
+                      ],
+                      "className": "",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      "",
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {
+                          "children": "Something",
+                          "className": "",
+                          "component": "a",
+                          "isActive": true,
+                          "target": null,
+                          "to": null,
+                        },
+                        "ref": null,
+                        "rendered": "Something",
+                        "type": [Function],
+                      },
+                    ],
+                    "type": [Function],
                   },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "title": "Something",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
                 "type": [Function],
               },
               Object {
