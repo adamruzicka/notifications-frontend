@@ -47,9 +47,13 @@ describe('endpoint reducer', () => {
                 type: exampleEndpoint.type,
                 ...exampleEndpoint.attributes,
                 filtersCount: exampleEndpoint.attributes.filter_count
-            }]
+            }],
+            total: 10
         };
-        const newState = endpointsReducer(endpointInitialState, fromRequest(successMessage(FETCH_ENDPOINTS), { data: [ exampleEndpoint ]}));
+        const newState = endpointsReducer(
+            endpointInitialState,
+            fromRequest(successMessage(FETCH_ENDPOINTS), { data: [ exampleEndpoint ], meta: { total: 10 }})
+        );
         expect(newState).toEqual(expectation);
     });
 
