@@ -41,7 +41,8 @@ export const endpointsReducer = function(state = initialStateFor('endpoints'), a
             return {
                 ...state,
                 loading: false,
-                endpoints: action.payload.data.map(normalizeEndpointData)
+                endpoints: action.payload.data.map(normalizeEndpointData),
+                total: action.payload.meta.total
             };
 
         case failureMessage(FETCH_ENDPOINTS):

@@ -18,10 +18,12 @@ import {
     TableHeader,
     TableBody,
     TableVariant,
+    Pagination,
     Skeleton,
     SkeletonSize
 } from '@red-hat-insights/insights-frontend-components';
 import registryDecorator from '@red-hat-insights/insights-frontend-components/Utilities/Registry';
+import debounce from 'lodash/debounce';
 
 import './notifications-index.scss';
 
@@ -36,7 +38,32 @@ import {
 @registryDecorator()
 export class NotificationsIndex extends Component {
     componentDidMount() {
-        this.props.fetchEndpoints();
+        this.refreshData();
+    }
+
+    changePage = debounce(() => { this.refreshData(false); }, 800);
+
+    state = {
+        page: 1,
+        perPage: 10
+    }
+
+    onSetPage = (page, shouldDebounce) => {
+        this.setState({ page });
+        if (shouldDebounce) {
+            this.changePage();
+        } else {
+            this.refreshData(page);
+        }
+    }
+
+    refreshData = (page, perPage) => {
+        this.props.fetchEndpoints(page || this.state.page, perPage || this.state.perPage);
+    }
+
+    onPerPageSelect = (perPage) => {
+        this.setState({ perPage });
+        this.refreshData(null, perPage);
     }
 
     filtersInRowsAndCells = () =>
@@ -76,14 +103,23 @@ export class NotificationsIndex extends Component {
 
     resultsTable = () => {
         const tableColumns = [ 'Name', 'URL', 'Active', 'Filters', 'Actions' ];
-
-        return <Table aria-label='Notifications list'
-            variant={ TableVariant.medium }
-            rows={ this.filtersInRowsAndCells() }
-            header={ tableColumns }>
-            <TableHeader />
-            <TableBody />
-        </Table>;
+        const { perPage, page } = this.state;
+        return <div>
+            <Table aria-label='Notifications list'
+                variant={ TableVariant.medium }
+                rows={ this.filtersInRowsAndCells() }
+                header={ tableColumns }>
+                <TableHeader />
+                <TableBody />
+            </Table>
+            <Pagination
+                numberOfItems={ this.props.total }
+                itemsPerPage={ perPage }
+                page={ page }
+                onSetPage={ this.onSetPage }
+                onPerPageSelect={ this.onPerPageSelect }
+                useNext={ true } />
+        </div>;
     }
 
     render() {
@@ -109,13 +145,15 @@ NotificationsIndex.propTypes = {
     toggleEndpoint: PropTypes.func.isRequired,
     endpoints: PropTypes.array.isRequired,
     error: PropTypes.string,
-    loading: PropTypes.bool
+    loading: PropTypes.bool,
+    total: PropTypes.number
 };
 
-const mapStateToProps = ({ endpoints: { endpoints, loading, error }}) => ({
+const mapStateToProps = ({ endpoints: { endpoints, loading, error, total }}) => ({
     endpoints,
     loading,
-    error
+    error,
+    total
 });
 
 const mapDispatchToProps = (dispatch) =>
