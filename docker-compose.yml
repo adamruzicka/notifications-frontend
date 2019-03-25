@@ -32,3 +32,4 @@ services:
       - LOCAL_API_PORT=3000
     volumes:
       - ${LOCAL_CHROME_PATH}:/chrome:Z
+      - ./config/spandx.config.js:/config/spandx.config.js

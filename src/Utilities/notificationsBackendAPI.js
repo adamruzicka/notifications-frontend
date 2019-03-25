@@ -1,4 +1,4 @@
-export const NOTIFICATIONS_API_ROOT = '/r/insights/platform/notifications';
+export const NOTIFICATIONS_API_ROOT = '/api/webhooks';
 
 export const API_HEADERS = {
     'Content-Type': 'application/json',

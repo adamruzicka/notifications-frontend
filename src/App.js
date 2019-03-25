@@ -11,7 +11,7 @@ class App extends Component {
 
     componentDidMount() {
         insights.chrome.init();
-        insights.chrome.identifyApp('notifications');
+        insights.chrome.identifyApp('webhooks');
         insights.chrome.navigation(buildNavigation());
 
         this.appNav = insights.chrome.on('APP_NAVIGATION', event => this.props.history.push(`/${event.navId}`));
