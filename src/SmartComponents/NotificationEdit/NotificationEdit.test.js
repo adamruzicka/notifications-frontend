@@ -38,7 +38,7 @@ describe('NotificationEdit', () => {
 
     it('expect to render a Form', () => {
         const wrapper = shallow(
-            <NotificationEdit { ...defaultProps } filters={ [] } apps={ [] } />
+            <NotificationEdit { ...defaultProps } filters={ {} } apps={ {} } />
         );
         expect(wrapper.find('Form').length).toBe(1);
         expect(wrapper).toMatchSnapshot();
@@ -46,7 +46,7 @@ describe('NotificationEdit', () => {
 
     it('takes an endpoint', () => {
         const wrapper = shallow(
-            <NotificationEdit { ...defaultProps } endpoint={ testEndpoint } filters={ [] } apps={ [] } />
+            <NotificationEdit { ...defaultProps } endpoint={ testEndpoint } filters={ {} } apps={ {} } />
         );
         expect(wrapper).toMatchSnapshot();
     });

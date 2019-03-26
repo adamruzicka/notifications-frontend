@@ -4,27 +4,14 @@ import {
 import {
     successMessage,
     failureMessage,
-    initialStateFor
+    initialStateFor,
+    normalizePayload
 } from './reducerHelper';
 
-const filterIncluded = (payload, id, type) =>
-    payload.included.find(item => (item.id === id && item.type === type));
-
-const normalizeAppData = (app) => ({
-    ...app.attributes,
-    id: parseInt(app.id)
-});
-
 export const normalizeAppsData = (payload) =>
-    payload.data.map((app) => {
-        let eventTypes = app.relationships.event_types.data.map((eventType) => {
-            let additionalInfo = filterIncluded(payload, eventType.id, 'event_type');
-            return additionalInfo ? { ...eventType, ...additionalInfo.attributes } : eventType;
-        });
-        return { ...normalizeAppData(app), event_types: eventTypes };
-    });
+    normalizePayload(payload).app;
 
-export const appsReducer = function(state = initialStateFor('apps'), action) {
+export const appsReducer = function(state = initialStateFor('apps', {}), action) {
     switch (action.type) {
         case FETCH_APPS:
             return {
@@ -46,7 +33,7 @@ export const appsReducer = function(state = initialStateFor('apps'), action) {
                 ...state,
                 loading: false,
                 error: action.payload.message,
-                apps: []
+                apps: {}
             };
 
         default:

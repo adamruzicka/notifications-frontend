@@ -8,7 +8,7 @@ const initialState = {
 describe('filter reducer', () => {
     const filterInitialState = {
         ...initialState,
-        filters: []
+        filters: {}
     };
     it('should return the initial state', () => {
         expect(filtersReducer(undefined, {})).toEqual(filterInitialState);

@@ -11,6 +11,7 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "classnames": "^2.2.5",
     "create-react-class": "^15.6.3",
+    "json-api-normalizer": "^0.4.14",
     "lodash": "^4.17.11",
     "react-jsonschema-form": "^1.2.0",
     "schema-utils": "^1.0.0"

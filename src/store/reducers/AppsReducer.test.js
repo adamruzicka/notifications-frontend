@@ -22,7 +22,7 @@ const fromRequest = (type, payload) => ({
 describe('AppsReducer', () => {
     const appsInitialState = {
         ...initialState,
-        apps: []
+        apps: {}
     };
 
     it('should return the initial state', () => {

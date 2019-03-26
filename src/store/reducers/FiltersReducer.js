@@ -4,10 +4,15 @@ import {
 import {
     successMessage,
     failureMessage,
-    initialStateFor
+    initialStateFor,
+    normalizePayload
 } from './reducerHelper';
 
-export const filtersReducer = function(state = initialStateFor('filters'), action) {
+export const normalizeFilterData = (payload) => {
+    return normalizePayload(payload).filter;
+};
+
+export const filtersReducer = function(state = initialStateFor('filters', {}), action) {
     switch (action.type) {
         case FETCH_FILTERS:
             return {
@@ -21,7 +26,7 @@ export const filtersReducer = function(state = initialStateFor('filters'), actio
                 ...state,
                 loading: false,
                 error: null,
-                filters: action.payload.data
+                filters: normalizeFilterData(action.payload)
             };
 
         case failureMessage(FETCH_FILTERS):
@@ -29,7 +34,7 @@ export const filtersReducer = function(state = initialStateFor('filters'), actio
                 ...state,
                 loading: false,
                 error: action.payload.error,
-                filters: []
+                filters: {}
             };
 
         default:

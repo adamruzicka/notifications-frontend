@@ -4,7 +4,7 @@ exports[`NotificationEdit expect to render a Form 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <NotificationEdit
-    apps={Array []}
+    apps={Object {}}
     createEndpoint={[MockFunction]}
     fetchApps={
       [MockFunction] {
@@ -49,7 +49,7 @@ ShallowWrapper {
         ],
       }
     }
-    filters={Array []}
+    filters={Object {}}
     history={
       Object {
         "goBack": [MockFunction],
@@ -141,13 +141,7 @@ ShallowWrapper {
           }
         >
           <FilterList
-            apps={Array []}
-            selectedAppEventTypes={
-              Object {
-                "appIds": Array [],
-                "eventTypeIds": Array [],
-              }
-            }
+            apps={Object {}}
           />
           <div>
             <Button
@@ -173,7 +167,7 @@ ShallowWrapper {
               isDisabled={false}
               isFocus={false}
               isHover={false}
-              onClick={[MockFunction]}
+              onClick={[Function]}
               type="button"
               variant="secondary"
             >
@@ -238,13 +232,7 @@ ShallowWrapper {
           }
         >
           <FilterList
-            apps={Array []}
-            selectedAppEventTypes={
-              Object {
-                "appIds": Array [],
-                "eventTypeIds": Array [],
-              }
-            }
+            apps={Object {}}
           />
           <div>
             <Button
@@ -270,7 +258,7 @@ ShallowWrapper {
               isDisabled={false}
               isFocus={false}
               isHover={false}
-              onClick={[MockFunction]}
+              onClick={[Function]}
               type="button"
               variant="secondary"
             >
@@ -293,13 +281,7 @@ ShallowWrapper {
           "FieldTemplate": [Function],
           "children": Array [
             <FilterList
-              apps={Array []}
-              selectedAppEventTypes={
-                Object {
-                  "appIds": Array [],
-                  "eventTypeIds": Array [],
-                }
-              }
+              apps={Object {}}
             />,
             <div>
               <Button
@@ -325,7 +307,7 @@ ShallowWrapper {
                 isDisabled={false}
                 isFocus={false}
                 isHover={false}
-                onClick={[MockFunction]}
+                onClick={[Function]}
                 type="button"
                 variant="secondary"
               >
@@ -380,11 +362,8 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "apps": Array [],
-              "selectedAppEventTypes": Object {
-                "appIds": Array [],
-                "eventTypeIds": Array [],
-              },
+              "apps": Object {},
+              "filter": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -419,7 +398,7 @@ ShallowWrapper {
                   isDisabled={false}
                   isFocus={false}
                   isHover={false}
-                  onClick={[MockFunction]}
+                  onClick={[Function]}
                   type="button"
                   variant="secondary"
                 >
@@ -464,7 +443,7 @@ ShallowWrapper {
                   "isDisabled": false,
                   "isFocus": false,
                   "isHover": false,
-                  "onClick": [MockFunction],
+                  "onClick": [Function],
                   "type": "button",
                   "variant": "secondary",
                 },
@@ -543,13 +522,7 @@ ShallowWrapper {
             }
           >
             <FilterList
-              apps={Array []}
-              selectedAppEventTypes={
-                Object {
-                  "appIds": Array [],
-                  "eventTypeIds": Array [],
-                }
-              }
+              apps={Object {}}
             />
             <div>
               <Button
@@ -575,7 +548,7 @@ ShallowWrapper {
                 isDisabled={false}
                 isFocus={false}
                 isHover={false}
-                onClick={[MockFunction]}
+                onClick={[Function]}
                 type="button"
                 variant="secondary"
               >
@@ -640,13 +613,7 @@ ShallowWrapper {
             }
           >
             <FilterList
-              apps={Array []}
-              selectedAppEventTypes={
-                Object {
-                  "appIds": Array [],
-                  "eventTypeIds": Array [],
-                }
-              }
+              apps={Object {}}
             />
             <div>
               <Button
@@ -672,7 +639,7 @@ ShallowWrapper {
                 isDisabled={false}
                 isFocus={false}
                 isHover={false}
-                onClick={[MockFunction]}
+                onClick={[Function]}
                 type="button"
                 variant="secondary"
               >
@@ -695,13 +662,7 @@ ShallowWrapper {
             "FieldTemplate": [Function],
             "children": Array [
               <FilterList
-                apps={Array []}
-                selectedAppEventTypes={
-                  Object {
-                    "appIds": Array [],
-                    "eventTypeIds": Array [],
-                  }
-                }
+                apps={Object {}}
               />,
               <div>
                 <Button
@@ -727,7 +688,7 @@ ShallowWrapper {
                   isDisabled={false}
                   isFocus={false}
                   isHover={false}
-                  onClick={[MockFunction]}
+                  onClick={[Function]}
                   type="button"
                   variant="secondary"
                 >
@@ -782,11 +743,8 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "apps": Array [],
-                "selectedAppEventTypes": Object {
-                  "appIds": Array [],
-                  "eventTypeIds": Array [],
-                },
+                "apps": Object {},
+                "filter": undefined,
               },
               "ref": null,
               "rendered": null,
@@ -821,7 +779,7 @@ ShallowWrapper {
                     isDisabled={false}
                     isFocus={false}
                     isHover={false}
-                    onClick={[MockFunction]}
+                    onClick={[Function]}
                     type="button"
                     variant="secondary"
                   >
@@ -866,7 +824,7 @@ ShallowWrapper {
                     "isDisabled": false,
                     "isFocus": false,
                     "isHover": false,
-                    "onClick": [MockFunction],
+                    "onClick": [Function],
                     "type": "button",
                     "variant": "secondary",
                   },
@@ -911,7 +869,7 @@ exports[`NotificationEdit takes an endpoint 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <NotificationEdit
-    apps={Array []}
+    apps={Object {}}
     createEndpoint={[MockFunction]}
     endpoint={
       Object {
@@ -984,7 +942,7 @@ ShallowWrapper {
         ],
       }
     }
-    filters={Array []}
+    filters={Object {}}
     history={
       Object {
         "goBack": [MockFunction],
@@ -1082,13 +1040,7 @@ ShallowWrapper {
           }
         >
           <FilterList
-            apps={Array []}
-            selectedAppEventTypes={
-              Object {
-                "appIds": Array [],
-                "eventTypeIds": Array [],
-              }
-            }
+            apps={Object {}}
           />
           <div>
             <Button
@@ -1114,7 +1066,7 @@ ShallowWrapper {
               isDisabled={false}
               isFocus={false}
               isHover={false}
-              onClick={[MockFunction]}
+              onClick={[Function]}
               type="button"
               variant="secondary"
             >
@@ -1185,13 +1137,7 @@ ShallowWrapper {
           }
         >
           <FilterList
-            apps={Array []}
-            selectedAppEventTypes={
-              Object {
-                "appIds": Array [],
-                "eventTypeIds": Array [],
-              }
-            }
+            apps={Object {}}
           />
           <div>
             <Button
@@ -1217,7 +1163,7 @@ ShallowWrapper {
               isDisabled={false}
               isFocus={false}
               isHover={false}
-              onClick={[MockFunction]}
+              onClick={[Function]}
               type="button"
               variant="secondary"
             >
@@ -1240,13 +1186,7 @@ ShallowWrapper {
           "FieldTemplate": [Function],
           "children": Array [
             <FilterList
-              apps={Array []}
-              selectedAppEventTypes={
-                Object {
-                  "appIds": Array [],
-                  "eventTypeIds": Array [],
-                }
-              }
+              apps={Object {}}
             />,
             <div>
               <Button
@@ -1272,7 +1212,7 @@ ShallowWrapper {
                 isDisabled={false}
                 isFocus={false}
                 isHover={false}
-                onClick={[MockFunction]}
+                onClick={[Function]}
                 type="button"
                 variant="secondary"
               >
@@ -1331,11 +1271,8 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "apps": Array [],
-              "selectedAppEventTypes": Object {
-                "appIds": Array [],
-                "eventTypeIds": Array [],
-              },
+              "apps": Object {},
+              "filter": undefined,
             },
             "ref": null,
             "rendered": null,
@@ -1370,7 +1307,7 @@ ShallowWrapper {
                   isDisabled={false}
                   isFocus={false}
                   isHover={false}
-                  onClick={[MockFunction]}
+                  onClick={[Function]}
                   type="button"
                   variant="secondary"
                 >
@@ -1415,7 +1352,7 @@ ShallowWrapper {
                   "isDisabled": false,
                   "isFocus": false,
                   "isHover": false,
-                  "onClick": [MockFunction],
+                  "onClick": [Function],
                   "type": "button",
                   "variant": "secondary",
                 },
@@ -1500,13 +1437,7 @@ ShallowWrapper {
             }
           >
             <FilterList
-              apps={Array []}
-              selectedAppEventTypes={
-                Object {
-                  "appIds": Array [],
-                  "eventTypeIds": Array [],
-                }
-              }
+              apps={Object {}}
             />
             <div>
               <Button
@@ -1532,7 +1463,7 @@ ShallowWrapper {
                 isDisabled={false}
                 isFocus={false}
                 isHover={false}
-                onClick={[MockFunction]}
+                onClick={[Function]}
                 type="button"
                 variant="secondary"
               >
@@ -1603,13 +1534,7 @@ ShallowWrapper {
             }
           >
             <FilterList
-              apps={Array []}
-              selectedAppEventTypes={
-                Object {
-                  "appIds": Array [],
-                  "eventTypeIds": Array [],
-                }
-              }
+              apps={Object {}}
             />
             <div>
               <Button
@@ -1635,7 +1560,7 @@ ShallowWrapper {
                 isDisabled={false}
                 isFocus={false}
                 isHover={false}
-                onClick={[MockFunction]}
+                onClick={[Function]}
                 type="button"
                 variant="secondary"
               >
@@ -1658,13 +1583,7 @@ ShallowWrapper {
             "FieldTemplate": [Function],
             "children": Array [
               <FilterList
-                apps={Array []}
-                selectedAppEventTypes={
-                  Object {
-                    "appIds": Array [],
-                    "eventTypeIds": Array [],
-                  }
-                }
+                apps={Object {}}
               />,
               <div>
                 <Button
@@ -1690,7 +1609,7 @@ ShallowWrapper {
                   isDisabled={false}
                   isFocus={false}
                   isHover={false}
-                  onClick={[MockFunction]}
+                  onClick={[Function]}
                   type="button"
                   variant="secondary"
                 >
@@ -1749,11 +1668,8 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "apps": Array [],
-                "selectedAppEventTypes": Object {
-                  "appIds": Array [],
-                  "eventTypeIds": Array [],
-                },
+                "apps": Object {},
+                "filter": undefined,
               },
               "ref": null,
               "rendered": null,
@@ -1788,7 +1704,7 @@ ShallowWrapper {
                     isDisabled={false}
                     isFocus={false}
                     isHover={false}
-                    onClick={[MockFunction]}
+                    onClick={[Function]}
                     type="button"
                     variant="secondary"
                   >
@@ -1833,7 +1749,7 @@ ShallowWrapper {
                     "isDisabled": false,
                     "isFocus": false,
                     "isHover": false,
-                    "onClick": [MockFunction],
+                    "onClick": [Function],
                     "type": "button",
                     "variant": "secondary",
                   },
