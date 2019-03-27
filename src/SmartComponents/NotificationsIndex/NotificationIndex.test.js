@@ -14,6 +14,7 @@ describe('NotificationsIndex', () => {
         newEndpoint: jest.fn(),
         filters: [],
         endpoints: [],
+        total: 0,
         store
     };
 

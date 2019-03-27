@@ -8,18 +8,29 @@ export const DELETE_ENDPOINT = 'DELETE_ENDPOINT';
 export const NEW_ENDPOINT    = 'NEW_ENDPOINT';
 export const FETCH_APPS      = 'FETCH_APPS';
 
-export const fetchEndpoints = () => ({
-    type: FETCH_ENDPOINTS,
-    payload: get('/endpoints'),
-    meta: {
-        notifications: {
-            rejected: {
-                variant: 'danger',
-                title: 'Failed to load endpoints'
+export const fetchEndpoints = (page, perPage) => {
+    let query = [];
+    if (page) {
+        query.push(`page=${ page }`);
+    }
+
+    if (perPage) {
+        query.push(`per_page=${ perPage }`);
+    }
+
+    return {
+        type: FETCH_ENDPOINTS,
+        payload: get(`/endpoints?${ query.join('&') }`),
+        meta: {
+            notifications: {
+                rejected: {
+                    variant: 'danger',
+                    title: 'Failed to load endpoints'
+                }
             }
         }
-    }
-});
+    };
+};
 
 export const fetchEndpoint = (id) => ({
     type: FETCH_ENDPOINT,
