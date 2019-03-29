@@ -1,3 +1,5 @@
+import _ from 'lodash';
+
 import {
     FETCH_ENDPOINTS,
     FETCH_ENDPOINT,
@@ -20,11 +22,13 @@ const normalizeEndpointData = (endpoint) => ({
 
 const updateEndpointInEndpoints = (state, endpoint) => {
     const normalizedEndpoint = normalizeEndpointData(endpoint);
-    const endpoints = state.endpoints.filter(element => element.id !== normalizedEndpoint.id);
+    const position = _.findIndex(state.endpoints, element => element.id === normalizedEndpoint.id);
+    const before = _.slice(state.endpoints, 0, position);
+    const after = position !== -1 ? _.slice(state.endpoints, position + 1) : [];
     return {
         ...state,
         endpoint: normalizedEndpoint,
-        endpoints: [ ...endpoints, normalizedEndpoint ]
+        endpoints: [ ...before, normalizedEndpoint, ...after ]
     };
 };
 
