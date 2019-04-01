@@ -6,14 +6,9 @@ import { normalizePayload } from 'Store/reducers/reducerHelper';
 
 describe('FilterList', () => {
     it('expect to render', () => {
-        const selectedAppEventTypes = {
-            appIds: [ 1 ],
-            eventTypeIds: [ 11 ],
-            levelIds: []
-        };
         const wrapper = shallow(
             <FilterList filters={ normalizePayload(filters).filter }
-                apps={ normalizePayload(apps).app } selectedAppEventTypes={ selectedAppEventTypes } />
+                apps={ normalizePayload(apps).app } />
         );
 
         expect(wrapper.render()).toMatchSnapshot();

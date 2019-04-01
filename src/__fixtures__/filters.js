@@ -20,11 +20,20 @@ const filters = {
                         {
                             id: '3',
                             type: 'app'
+                        },
+                        {
+                            id: '4',
+                            type: 'app'
                         }
                     ]
                 },
                 event_types: {
-                    data: []
+                    data: [
+                        {
+                            id: '17',
+                            type: 'event_type'
+                        }
+                    ]
                 },
                 levels: {
                     data: []
