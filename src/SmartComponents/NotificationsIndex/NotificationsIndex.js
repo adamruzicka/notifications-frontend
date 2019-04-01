@@ -32,7 +32,8 @@ import {
     IndexToolbar,
     LoadingState,
     NotificationActions,
-    NotificationsPage
+    NotificationsPage,
+    StatusIcon
 } from 'PresentationalComponents';
 
 @registryDecorator()
@@ -67,15 +68,16 @@ export class NotificationsIndex extends Component {
     }
 
     filtersInRowsAndCells = () =>
-        this.props.endpoints.map(({ id, active, name, url, filtersCount }) => ({
+        this.props.endpoints.map(({ id, active, name, url }) => ({
             cells: [
                 name,
                 url,
+                'HTTP',
+                <StatusIcon key={ `notification_status_${id}` } status={ true } />,
                 <EndpointToggle key={ `notification_switch_${id}` }
                     id={ id }
                     active={ active }
                     onChange={ (checked) => { this.props.toggleEndpoint(id, checked); } } />,
-                filtersCount,
                 <NotificationActions key={ `notification_actions_${id}` }
                     endpointId={ id }
                     onDelete={ this.onDelete(id, name) } />
@@ -102,7 +104,7 @@ export class NotificationsIndex extends Component {
         </Bullseye>
 
     resultsTable = () => {
-        const tableColumns = [ 'Name', 'URL', 'Active', 'Filters', 'Actions' ];
+        const tableColumns = [ 'Name', 'Type', 'Path', 'Status', 'Active',  '' ];
         const { perPage, page } = this.state;
         return <div>
             <Table aria-label='Notifications list'
