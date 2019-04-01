@@ -71,8 +71,8 @@ export class NotificationsIndex extends Component {
         this.props.endpoints.map(({ id, active, name, url }) => ({
             cells: [
                 name,
-                url,
                 'HTTP',
+                url,
                 <StatusIcon key={ `notification_status_${id}` } status={ true } />,
                 <EndpointToggle key={ `notification_switch_${id}` }
                     id={ id }
