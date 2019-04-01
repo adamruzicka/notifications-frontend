@@ -758,8 +758,8 @@ ShallowWrapper {
                 Object {
                   "cells": Array [
                     "TEST Endpoint #1",
-                    "http://endpoint.com",
                     "HTTP",
+                    "http://endpoint.com",
                     <StatusIcon
                       status={true}
                     />,
@@ -777,8 +777,8 @@ ShallowWrapper {
                 Object {
                   "cells": Array [
                     "TEST Endpoint #2",
-                    "http://endpoint2.com",
                     "HTTP",
+                    "http://endpoint2.com",
                     <StatusIcon
                       status={true}
                     />,
@@ -796,8 +796,8 @@ ShallowWrapper {
                 Object {
                   "cells": Array [
                     "TEST Endpoint #3",
-                    "http://endpoint3.com",
                     "HTTP",
+                    "http://endpoint3.com",
                     <StatusIcon
                       status={true}
                     />,
@@ -857,8 +857,8 @@ ShallowWrapper {
                 Object {
                   "cells": Array [
                     "TEST Endpoint #1",
-                    "http://endpoint.com",
                     "HTTP",
+                    "http://endpoint.com",
                     <StatusIcon
                       status={true}
                     />,
@@ -876,8 +876,8 @@ ShallowWrapper {
                 Object {
                   "cells": Array [
                     "TEST Endpoint #2",
-                    "http://endpoint2.com",
                     "HTTP",
+                    "http://endpoint2.com",
                     <StatusIcon
                       status={true}
                     />,
@@ -895,8 +895,8 @@ ShallowWrapper {
                 Object {
                   "cells": Array [
                     "TEST Endpoint #3",
-                    "http://endpoint3.com",
                     "HTTP",
+                    "http://endpoint3.com",
                     <StatusIcon
                       status={true}
                     />,
@@ -955,8 +955,8 @@ ShallowWrapper {
                   Object {
                     "cells": Array [
                       "TEST Endpoint #1",
-                      "http://endpoint.com",
                       "HTTP",
+                      "http://endpoint.com",
                       <StatusIcon
                         status={true}
                       />,
@@ -974,8 +974,8 @@ ShallowWrapper {
                   Object {
                     "cells": Array [
                       "TEST Endpoint #2",
-                      "http://endpoint2.com",
                       "HTTP",
+                      "http://endpoint2.com",
                       <StatusIcon
                         status={true}
                       />,
@@ -993,8 +993,8 @@ ShallowWrapper {
                   Object {
                     "cells": Array [
                       "TEST Endpoint #3",
-                      "http://endpoint3.com",
                       "HTTP",
+                      "http://endpoint3.com",
                       <StatusIcon
                         status={true}
                       />,
@@ -1049,8 +1049,8 @@ ShallowWrapper {
                 Object {
                   "cells": Array [
                     "TEST Endpoint #1",
-                    "http://endpoint.com",
                     "HTTP",
+                    "http://endpoint.com",
                     <StatusIcon
                       status={true}
                     />,
@@ -1068,8 +1068,8 @@ ShallowWrapper {
                 Object {
                   "cells": Array [
                     "TEST Endpoint #2",
-                    "http://endpoint2.com",
                     "HTTP",
+                    "http://endpoint2.com",
                     <StatusIcon
                       status={true}
                     />,
@@ -1087,8 +1087,8 @@ ShallowWrapper {
                 Object {
                   "cells": Array [
                     "TEST Endpoint #3",
-                    "http://endpoint3.com",
                     "HTTP",
+                    "http://endpoint3.com",
                     <StatusIcon
                       status={true}
                     />,
@@ -1183,8 +1183,8 @@ ShallowWrapper {
                   Object {
                     "cells": Array [
                       "TEST Endpoint #1",
-                      "http://endpoint.com",
                       "HTTP",
+                      "http://endpoint.com",
                       <StatusIcon
                         status={true}
                       />,
@@ -1202,8 +1202,8 @@ ShallowWrapper {
                   Object {
                     "cells": Array [
                       "TEST Endpoint #2",
-                      "http://endpoint2.com",
                       "HTTP",
+                      "http://endpoint2.com",
                       <StatusIcon
                         status={true}
                       />,
@@ -1221,8 +1221,8 @@ ShallowWrapper {
                   Object {
                     "cells": Array [
                       "TEST Endpoint #3",
-                      "http://endpoint3.com",
                       "HTTP",
+                      "http://endpoint3.com",
                       <StatusIcon
                         status={true}
                       />,
@@ -1282,8 +1282,8 @@ ShallowWrapper {
                   Object {
                     "cells": Array [
                       "TEST Endpoint #1",
-                      "http://endpoint.com",
                       "HTTP",
+                      "http://endpoint.com",
                       <StatusIcon
                         status={true}
                       />,
@@ -1301,8 +1301,8 @@ ShallowWrapper {
                   Object {
                     "cells": Array [
                       "TEST Endpoint #2",
-                      "http://endpoint2.com",
                       "HTTP",
+                      "http://endpoint2.com",
                       <StatusIcon
                         status={true}
                       />,
@@ -1320,8 +1320,8 @@ ShallowWrapper {
                   Object {
                     "cells": Array [
                       "TEST Endpoint #3",
-                      "http://endpoint3.com",
                       "HTTP",
+                      "http://endpoint3.com",
                       <StatusIcon
                         status={true}
                       />,
@@ -1380,8 +1380,8 @@ ShallowWrapper {
                     Object {
                       "cells": Array [
                         "TEST Endpoint #1",
-                        "http://endpoint.com",
                         "HTTP",
+                        "http://endpoint.com",
                         <StatusIcon
                           status={true}
                         />,
@@ -1399,8 +1399,8 @@ ShallowWrapper {
                     Object {
                       "cells": Array [
                         "TEST Endpoint #2",
-                        "http://endpoint2.com",
                         "HTTP",
+                        "http://endpoint2.com",
                         <StatusIcon
                           status={true}
                         />,
@@ -1418,8 +1418,8 @@ ShallowWrapper {
                     Object {
                       "cells": Array [
                         "TEST Endpoint #3",
-                        "http://endpoint3.com",
                         "HTTP",
+                        "http://endpoint3.com",
                         <StatusIcon
                           status={true}
                         />,
@@ -1474,8 +1474,8 @@ ShallowWrapper {
                   Object {
                     "cells": Array [
                       "TEST Endpoint #1",
-                      "http://endpoint.com",
                       "HTTP",
+                      "http://endpoint.com",
                       <StatusIcon
                         status={true}
                       />,
@@ -1493,8 +1493,8 @@ ShallowWrapper {
                   Object {
                     "cells": Array [
                       "TEST Endpoint #2",
-                      "http://endpoint2.com",
                       "HTTP",
+                      "http://endpoint2.com",
                       <StatusIcon
                         status={true}
                       />,
@@ -1512,8 +1512,8 @@ ShallowWrapper {
                   Object {
                     "cells": Array [
                       "TEST Endpoint #3",
-                      "http://endpoint3.com",
                       "HTTP",
+                      "http://endpoint3.com",
                       <StatusIcon
                         status={true}
                       />,
