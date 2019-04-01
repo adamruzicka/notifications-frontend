@@ -7,3 +7,4 @@ export * from './LoadingState/LoadingState';
 export * from './FilterList/FilterList';
 export * from './CustomFieldTemplate/CustomFieldTemplate';
 export * from './RadioToggle/RadioToggle';
+export * from './StatusIcon/StatusIcon';

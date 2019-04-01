@@ -746,10 +746,11 @@ ShallowWrapper {
             header={
               Array [
                 "Name",
-                "URL",
+                "Type",
+                "Path",
+                "Status",
                 "Active",
-                "Filters",
-                "Actions",
+                "",
               ]
             }
             rows={
@@ -757,13 +758,16 @@ ShallowWrapper {
                 Object {
                   "cells": Array [
                     "TEST Endpoint #1",
+                    "HTTP",
                     "http://endpoint.com",
+                    <StatusIcon
+                      status={true}
+                    />,
                     <EndpointToggle
                       active={true}
                       id={1}
                       onChange={[Function]}
                     />,
-                    2,
                     <withRouter(NotificationActions)
                       endpointId={1}
                       onDelete={[Function]}
@@ -773,13 +777,16 @@ ShallowWrapper {
                 Object {
                   "cells": Array [
                     "TEST Endpoint #2",
+                    "HTTP",
                     "http://endpoint2.com",
+                    <StatusIcon
+                      status={true}
+                    />,
                     <EndpointToggle
                       active={true}
                       id={2}
                       onChange={[Function]}
                     />,
-                    1,
                     <withRouter(NotificationActions)
                       endpointId={2}
                       onDelete={[Function]}
@@ -789,13 +796,16 @@ ShallowWrapper {
                 Object {
                   "cells": Array [
                     "TEST Endpoint #3",
+                    "HTTP",
                     "http://endpoint3.com",
+                    <StatusIcon
+                      status={true}
+                    />,
                     <EndpointToggle
                       active={false}
                       id={3}
                       onChange={[Function]}
                     />,
-                    4,
                     <withRouter(NotificationActions)
                       endpointId={3}
                       onDelete={[Function]}
@@ -835,10 +845,11 @@ ShallowWrapper {
             header={
               Array [
                 "Name",
-                "URL",
+                "Type",
+                "Path",
+                "Status",
                 "Active",
-                "Filters",
-                "Actions",
+                "",
               ]
             }
             rows={
@@ -846,13 +857,16 @@ ShallowWrapper {
                 Object {
                   "cells": Array [
                     "TEST Endpoint #1",
+                    "HTTP",
                     "http://endpoint.com",
+                    <StatusIcon
+                      status={true}
+                    />,
                     <EndpointToggle
                       active={true}
                       id={1}
                       onChange={[Function]}
                     />,
-                    2,
                     <withRouter(NotificationActions)
                       endpointId={1}
                       onDelete={[Function]}
@@ -862,13 +876,16 @@ ShallowWrapper {
                 Object {
                   "cells": Array [
                     "TEST Endpoint #2",
+                    "HTTP",
                     "http://endpoint2.com",
+                    <StatusIcon
+                      status={true}
+                    />,
                     <EndpointToggle
                       active={true}
                       id={2}
                       onChange={[Function]}
                     />,
-                    1,
                     <withRouter(NotificationActions)
                       endpointId={2}
                       onDelete={[Function]}
@@ -878,13 +895,16 @@ ShallowWrapper {
                 Object {
                   "cells": Array [
                     "TEST Endpoint #3",
+                    "HTTP",
                     "http://endpoint3.com",
+                    <StatusIcon
+                      status={true}
+                    />,
                     <EndpointToggle
                       active={false}
                       id={3}
                       onChange={[Function]}
                     />,
-                    4,
                     <withRouter(NotificationActions)
                       endpointId={3}
                       onDelete={[Function]}
@@ -923,10 +943,11 @@ ShallowWrapper {
               header={
                 Array [
                   "Name",
-                  "URL",
+                  "Type",
+                  "Path",
+                  "Status",
                   "Active",
-                  "Filters",
-                  "Actions",
+                  "",
                 ]
               }
               rows={
@@ -934,13 +955,16 @@ ShallowWrapper {
                   Object {
                     "cells": Array [
                       "TEST Endpoint #1",
+                      "HTTP",
                       "http://endpoint.com",
+                      <StatusIcon
+                        status={true}
+                      />,
                       <EndpointToggle
                         active={true}
                         id={1}
                         onChange={[Function]}
                       />,
-                      2,
                       <withRouter(NotificationActions)
                         endpointId={1}
                         onDelete={[Function]}
@@ -950,13 +974,16 @@ ShallowWrapper {
                   Object {
                     "cells": Array [
                       "TEST Endpoint #2",
+                      "HTTP",
                       "http://endpoint2.com",
+                      <StatusIcon
+                        status={true}
+                      />,
                       <EndpointToggle
                         active={true}
                         id={2}
                         onChange={[Function]}
                       />,
-                      1,
                       <withRouter(NotificationActions)
                         endpointId={2}
                         onDelete={[Function]}
@@ -966,13 +993,16 @@ ShallowWrapper {
                   Object {
                     "cells": Array [
                       "TEST Endpoint #3",
+                      "HTTP",
                       "http://endpoint3.com",
+                      <StatusIcon
+                        status={true}
+                      />,
                       <EndpointToggle
                         active={false}
                         id={3}
                         onChange={[Function]}
                       />,
-                      4,
                       <withRouter(NotificationActions)
                         endpointId={3}
                         onDelete={[Function]}
@@ -1009,22 +1039,26 @@ ShallowWrapper {
               ],
               "header": Array [
                 "Name",
-                "URL",
+                "Type",
+                "Path",
+                "Status",
                 "Active",
-                "Filters",
-                "Actions",
+                "",
               ],
               "rows": Array [
                 Object {
                   "cells": Array [
                     "TEST Endpoint #1",
+                    "HTTP",
                     "http://endpoint.com",
+                    <StatusIcon
+                      status={true}
+                    />,
                     <EndpointToggle
                       active={true}
                       id={1}
                       onChange={[Function]}
                     />,
-                    2,
                     <withRouter(NotificationActions)
                       endpointId={1}
                       onDelete={[Function]}
@@ -1034,13 +1068,16 @@ ShallowWrapper {
                 Object {
                   "cells": Array [
                     "TEST Endpoint #2",
+                    "HTTP",
                     "http://endpoint2.com",
+                    <StatusIcon
+                      status={true}
+                    />,
                     <EndpointToggle
                       active={true}
                       id={2}
                       onChange={[Function]}
                     />,
-                    1,
                     <withRouter(NotificationActions)
                       endpointId={2}
                       onDelete={[Function]}
@@ -1050,13 +1087,16 @@ ShallowWrapper {
                 Object {
                   "cells": Array [
                     "TEST Endpoint #3",
+                    "HTTP",
                     "http://endpoint3.com",
+                    <StatusIcon
+                      status={true}
+                    />,
                     <EndpointToggle
                       active={false}
                       id={3}
                       onChange={[Function]}
                     />,
-                    4,
                     <withRouter(NotificationActions)
                       endpointId={3}
                       onDelete={[Function]}
@@ -1131,10 +1171,11 @@ ShallowWrapper {
               header={
                 Array [
                   "Name",
-                  "URL",
+                  "Type",
+                  "Path",
+                  "Status",
                   "Active",
-                  "Filters",
-                  "Actions",
+                  "",
                 ]
               }
               rows={
@@ -1142,13 +1183,16 @@ ShallowWrapper {
                   Object {
                     "cells": Array [
                       "TEST Endpoint #1",
+                      "HTTP",
                       "http://endpoint.com",
+                      <StatusIcon
+                        status={true}
+                      />,
                       <EndpointToggle
                         active={true}
                         id={1}
                         onChange={[Function]}
                       />,
-                      2,
                       <withRouter(NotificationActions)
                         endpointId={1}
                         onDelete={[Function]}
@@ -1158,13 +1202,16 @@ ShallowWrapper {
                   Object {
                     "cells": Array [
                       "TEST Endpoint #2",
+                      "HTTP",
                       "http://endpoint2.com",
+                      <StatusIcon
+                        status={true}
+                      />,
                       <EndpointToggle
                         active={true}
                         id={2}
                         onChange={[Function]}
                       />,
-                      1,
                       <withRouter(NotificationActions)
                         endpointId={2}
                         onDelete={[Function]}
@@ -1174,13 +1221,16 @@ ShallowWrapper {
                   Object {
                     "cells": Array [
                       "TEST Endpoint #3",
+                      "HTTP",
                       "http://endpoint3.com",
+                      <StatusIcon
+                        status={true}
+                      />,
                       <EndpointToggle
                         active={false}
                         id={3}
                         onChange={[Function]}
                       />,
-                      4,
                       <withRouter(NotificationActions)
                         endpointId={3}
                         onDelete={[Function]}
@@ -1220,10 +1270,11 @@ ShallowWrapper {
               header={
                 Array [
                   "Name",
-                  "URL",
+                  "Type",
+                  "Path",
+                  "Status",
                   "Active",
-                  "Filters",
-                  "Actions",
+                  "",
                 ]
               }
               rows={
@@ -1231,13 +1282,16 @@ ShallowWrapper {
                   Object {
                     "cells": Array [
                       "TEST Endpoint #1",
+                      "HTTP",
                       "http://endpoint.com",
+                      <StatusIcon
+                        status={true}
+                      />,
                       <EndpointToggle
                         active={true}
                         id={1}
                         onChange={[Function]}
                       />,
-                      2,
                       <withRouter(NotificationActions)
                         endpointId={1}
                         onDelete={[Function]}
@@ -1247,13 +1301,16 @@ ShallowWrapper {
                   Object {
                     "cells": Array [
                       "TEST Endpoint #2",
+                      "HTTP",
                       "http://endpoint2.com",
+                      <StatusIcon
+                        status={true}
+                      />,
                       <EndpointToggle
                         active={true}
                         id={2}
                         onChange={[Function]}
                       />,
-                      1,
                       <withRouter(NotificationActions)
                         endpointId={2}
                         onDelete={[Function]}
@@ -1263,13 +1320,16 @@ ShallowWrapper {
                   Object {
                     "cells": Array [
                       "TEST Endpoint #3",
+                      "HTTP",
                       "http://endpoint3.com",
+                      <StatusIcon
+                        status={true}
+                      />,
                       <EndpointToggle
                         active={false}
                         id={3}
                         onChange={[Function]}
                       />,
-                      4,
                       <withRouter(NotificationActions)
                         endpointId={3}
                         onDelete={[Function]}
@@ -1308,10 +1368,11 @@ ShallowWrapper {
                 header={
                   Array [
                     "Name",
-                    "URL",
+                    "Type",
+                    "Path",
+                    "Status",
                     "Active",
-                    "Filters",
-                    "Actions",
+                    "",
                   ]
                 }
                 rows={
@@ -1319,13 +1380,16 @@ ShallowWrapper {
                     Object {
                       "cells": Array [
                         "TEST Endpoint #1",
+                        "HTTP",
                         "http://endpoint.com",
+                        <StatusIcon
+                          status={true}
+                        />,
                         <EndpointToggle
                           active={true}
                           id={1}
                           onChange={[Function]}
                         />,
-                        2,
                         <withRouter(NotificationActions)
                           endpointId={1}
                           onDelete={[Function]}
@@ -1335,13 +1399,16 @@ ShallowWrapper {
                     Object {
                       "cells": Array [
                         "TEST Endpoint #2",
+                        "HTTP",
                         "http://endpoint2.com",
+                        <StatusIcon
+                          status={true}
+                        />,
                         <EndpointToggle
                           active={true}
                           id={2}
                           onChange={[Function]}
                         />,
-                        1,
                         <withRouter(NotificationActions)
                           endpointId={2}
                           onDelete={[Function]}
@@ -1351,13 +1418,16 @@ ShallowWrapper {
                     Object {
                       "cells": Array [
                         "TEST Endpoint #3",
+                        "HTTP",
                         "http://endpoint3.com",
+                        <StatusIcon
+                          status={true}
+                        />,
                         <EndpointToggle
                           active={false}
                           id={3}
                           onChange={[Function]}
                         />,
-                        4,
                         <withRouter(NotificationActions)
                           endpointId={3}
                           onDelete={[Function]}
@@ -1394,22 +1464,26 @@ ShallowWrapper {
                 ],
                 "header": Array [
                   "Name",
-                  "URL",
+                  "Type",
+                  "Path",
+                  "Status",
                   "Active",
-                  "Filters",
-                  "Actions",
+                  "",
                 ],
                 "rows": Array [
                   Object {
                     "cells": Array [
                       "TEST Endpoint #1",
+                      "HTTP",
                       "http://endpoint.com",
+                      <StatusIcon
+                        status={true}
+                      />,
                       <EndpointToggle
                         active={true}
                         id={1}
                         onChange={[Function]}
                       />,
-                      2,
                       <withRouter(NotificationActions)
                         endpointId={1}
                         onDelete={[Function]}
@@ -1419,13 +1493,16 @@ ShallowWrapper {
                   Object {
                     "cells": Array [
                       "TEST Endpoint #2",
+                      "HTTP",
                       "http://endpoint2.com",
+                      <StatusIcon
+                        status={true}
+                      />,
                       <EndpointToggle
                         active={true}
                         id={2}
                         onChange={[Function]}
                       />,
-                      1,
                       <withRouter(NotificationActions)
                         endpointId={2}
                         onDelete={[Function]}
@@ -1435,13 +1512,16 @@ ShallowWrapper {
                   Object {
                     "cells": Array [
                       "TEST Endpoint #3",
+                      "HTTP",
                       "http://endpoint3.com",
+                      <StatusIcon
+                        status={true}
+                      />,
                       <EndpointToggle
                         active={false}
                         id={3}
                         onChange={[Function]}
                       />,
-                      4,
                       <withRouter(NotificationActions)
                         endpointId={3}
                         onDelete={[Function]}
