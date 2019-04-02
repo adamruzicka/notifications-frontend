@@ -5,12 +5,11 @@ import {
     successMessage,
     failureMessage,
     initialStateFor,
-    normalizePayload
+    normalizeData
 } from './reducerHelper';
 
-export const normalizeFilterData = (payload) => {
-    return normalizePayload(payload).filter;
-};
+export const normalizeFilterData = (payload) =>
+    normalizeData(payload, 'filter');
 
 export const filtersReducer = function(state = initialStateFor('filters', {}), action) {
     switch (action.type) {

@@ -10,11 +10,12 @@ import {
     failureMessage,
     pendingMessage,
     initialStateFor,
-    normalizePayload
+    normalizePayload,
+    normalizeData
 } from './reducerHelper';
 
 export const normalizeEndpointData = (payload) =>
-    normalizePayload(payload).endpoint;
+    normalizeData(payload, 'endpoint');
 
 const updateEndpointInEndpoints = (state, endpoint) => {
     const normalizedEndpoint = Object.values(endpoint.endpoint)[0];

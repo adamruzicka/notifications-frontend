@@ -88,3 +88,8 @@ export const includeRelationships = (normalizedPayload) => {
 
 export const normalizePayload = (payload) =>
     includeRelationships(normalize(payload));
+
+export const normalizeData = (data, property) => {
+    const normalizedData = normalizePayload(data)[property];
+    return normalizedData ? normalizedData : {};
+};
