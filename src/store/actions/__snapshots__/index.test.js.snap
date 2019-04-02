@@ -1,0 +1,145 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`createEndpoint returns a state object 1`] = `
+Object {
+  "meta": Object {
+    "data": Object {
+      "name": "Endpoint name",
+    },
+    "notifications": Object {
+      "fulfilled": Object {
+        "title": "Endpoint Endpoint name created",
+        "variant": "success",
+      },
+      "rejected": Object {
+        "title": "Failed to create endpoint Endpoint name",
+        "variant": "danger",
+      },
+    },
+  },
+  "payload": Promise {},
+  "type": "SUBMIT_ENDPOINT",
+}
+`;
+
+exports[`deleteEndpoint returns a state object 1`] = `
+Object {
+  "meta": Object {
+    "notifications": Object {
+      "fulfilled": Object {
+        "title": "Endpoint Endpoint name deleted",
+        "variant": "success",
+      },
+      "rejected": Object {
+        "title": "Failed to delete endpoint Endpoint name",
+        "variant": "danger",
+      },
+    },
+  },
+  "payload": Promise {},
+  "type": "DELETE_ENDPOINT",
+}
+`;
+
+exports[`fetchApps returns a state object 1`] = `
+Object {
+  "meta": Object {
+    "notifications": Object {
+      "rejected": Object {
+        "title": "Failed to load apps",
+        "variant": "danger",
+      },
+    },
+  },
+  "payload": Promise {},
+  "type": "FETCH_APPS",
+}
+`;
+
+exports[`fetchEndpoint returns a state object 1`] = `
+Object {
+  "meta": Object {
+    "notifications": Object {
+      "rejected": Object {
+        "title": "Failed to load endpoint 1",
+        "variant": "danger",
+      },
+    },
+  },
+  "payload": Promise {},
+  "type": "FETCH_ENDPOINT",
+}
+`;
+
+exports[`fetchEndpoints returns a state object 1`] = `
+Object {
+  "meta": Object {
+    "notifications": Object {
+      "rejected": Object {
+        "title": "Failed to load endpoints",
+        "variant": "danger",
+      },
+    },
+  },
+  "payload": Promise {},
+  "type": "FETCH_ENDPOINTS",
+}
+`;
+
+exports[`fetchFilters returns a state object 1`] = `
+Object {
+  "meta": Object {
+    "notifications": Object {
+      "rejected": Object {
+        "title": "Failed to load filters",
+        "variant": "danger",
+      },
+    },
+  },
+  "payload": Promise {},
+  "type": "FETCH_FILTERS",
+}
+`;
+
+exports[`newEndpoint returns a state object 1`] = `
+Object {
+  "type": "NEW_ENDPOINT",
+}
+`;
+
+exports[`toggleEndpoint returns a state object 1`] = `
+Object {
+  "meta": Object {
+    "notifications": Object {
+      "rejected": Object {
+        "title": "Failed to toggle endpoint 1",
+        "variant": "danger",
+      },
+    },
+  },
+  "payload": Promise {},
+  "type": "SUBMIT_ENDPOINT",
+}
+`;
+
+exports[`updateEndpoint() returns a state object 1`] = `
+Object {
+  "meta": Object {
+    "data": Object {
+      "name": "Endpoint name",
+    },
+    "notifications": Object {
+      "fulfilled": Object {
+        "title": "Endpoint Endpoint name updated",
+        "variant": "success",
+      },
+      "rejected": Object {
+        "title": "Failed to update endpoint Endpoint name",
+        "variant": "danger",
+      },
+    },
+  },
+  "payload": Promise {},
+  "type": "SUBMIT_ENDPOINT",
+}
+`;

@@ -9,26 +9,25 @@ import {
     successMessage,
     failureMessage,
     pendingMessage,
-    initialStateFor
+    initialStateFor,
+    normalizePayload
 } from './reducerHelper';
 
-const normalizeEndpointData = (endpoint) => ({
-    ...endpoint.attributes,
-    id: parseInt(endpoint.id),
-    filtersCount: endpoint.attributes.filter_count
-});
+export const normalizeEndpointData = (payload) =>
+    normalizePayload(payload).endpoint;
 
 const updateEndpointInEndpoints = (state, endpoint) => {
-    const normalizedEndpoint = normalizeEndpointData(endpoint);
-    const endpoints = state.endpoints.filter(element => element.id !== normalizedEndpoint.id);
+    const normalizedEndpoint = Object.values(endpoint.endpoint)[0];
+    let updatedEndpoint = {};
+    updatedEndpoint[normalizedEndpoint.id] = normalizedEndpoint;
     return {
         ...state,
         endpoint: normalizedEndpoint,
-        endpoints: [ ...endpoints, normalizedEndpoint ]
+        endpoints: Object.assign(state.endpoints, updatedEndpoint)
     };
 };
 
-export const endpointsReducer = function(state = initialStateFor('endpoints'), action) {
+export const endpointsReducer = function(state = initialStateFor('endpoints', {}), action) {
     switch (action.type) {
         case pendingMessage(FETCH_ENDPOINTS):
             return {
@@ -41,7 +40,7 @@ export const endpointsReducer = function(state = initialStateFor('endpoints'), a
             return {
                 ...state,
                 loading: false,
-                endpoints: action.payload.data.map(normalizeEndpointData),
+                endpoints: normalizeEndpointData(action.payload),
                 total: action.payload.meta.total
             };
 
@@ -50,7 +49,7 @@ export const endpointsReducer = function(state = initialStateFor('endpoints'), a
                 ...state,
                 loading: false,
                 error: action.payload.message,
-                endpoints: []
+                endpoints: {}
             };
 
         case pendingMessage(FETCH_ENDPOINT):
@@ -65,7 +64,7 @@ export const endpointsReducer = function(state = initialStateFor('endpoints'), a
                 ...state,
                 error: null,
                 loading: false,
-                endpoint: normalizeEndpointData(action.payload.data)
+                endpoint: normalizeEndpointData(action.payload)
             };
 
         case failureMessage(FETCH_ENDPOINT):
@@ -84,7 +83,7 @@ export const endpointsReducer = function(state = initialStateFor('endpoints'), a
         case successMessage(DELETE_ENDPOINT):
             return {
                 ...state,
-                endpoints: state.endpoints.filter(element => element.id !== action.payload.id)
+                endpoints: state.endpoints.filter((item) => item.id !== action.payload.id)
             };
 
         case pendingMessage(SUBMIT_ENDPOINT):
@@ -96,7 +95,7 @@ export const endpointsReducer = function(state = initialStateFor('endpoints'), a
         case successMessage(SUBMIT_ENDPOINT):
             return {
                 ...state,
-                ...updateEndpointInEndpoints(state, action.payload.data),
+                ...updateEndpointInEndpoints(state, normalizePayload(action.payload)),
                 submitting: false,
                 message: 'Endpoint saved'
             };

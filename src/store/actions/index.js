@@ -1,4 +1,4 @@
-import { create, destroy, get, update } from 'Utilities/notificationsBackendAPI';
+import ApiClient from 'Utilities/notificationsBackendAPI';
 
 export const FETCH_FILTERS   = 'FETCH_FILTERS';
 export const FETCH_ENDPOINTS = 'FETCH_ENDPOINTS';
@@ -20,7 +20,7 @@ export const fetchEndpoints = (page, perPage) => {
 
     return {
         type: FETCH_ENDPOINTS,
-        payload: get(`/endpoints?${ query.join('&') }`),
+        payload: ApiClient.get(`/endpoints?${ query.join('&') }`),
         meta: {
             notifications: {
                 rejected: {
@@ -34,7 +34,7 @@ export const fetchEndpoints = (page, perPage) => {
 
 export const fetchEndpoint = (id) => ({
     type: FETCH_ENDPOINT,
-    payload: get(`/endpoints/${ id }`),
+    payload: ApiClient.get(`/endpoints/${ id }`),
     meta: {
         notifications: {
             rejected: {
@@ -48,7 +48,7 @@ export const fetchEndpoint = (id) => ({
 export const createEndpoint = (data) => {
     return {
         type: SUBMIT_ENDPOINT,
-        payload: create('/endpoints', { endpoint: data }),
+        payload: ApiClient.create('/endpoints', { endpoint: data }),
         meta: {
             data,
             notifications: {
@@ -68,7 +68,7 @@ export const createEndpoint = (data) => {
 export const updateEndpoint = (id, data) => {
     return {
         type: SUBMIT_ENDPOINT,
-        payload: update(`/endpoints/${ id }`, { endpoint: data }),
+        payload: ApiClient.update(`/endpoints/${ id }`, { endpoint: data }),
         meta: {
             data,
             notifications: {
@@ -88,7 +88,7 @@ export const updateEndpoint = (id, data) => {
 export const toggleEndpoint = (id, on) => {
     return {
         type: SUBMIT_ENDPOINT,
-        payload: update(`/endpoints/${ id }`, { endpoint: { active: on }}),
+        payload: ApiClient.update(`/endpoints/${ id }`, { endpoint: { active: on }}),
         meta: {
             notifications: {
                 rejected: {
@@ -102,7 +102,7 @@ export const toggleEndpoint = (id, on) => {
 
 export const deleteEndpoint = (id, name) => ({
     type: DELETE_ENDPOINT,
-    payload: destroy(`/endpoints/${ id }`).then(() => ({ id })),
+    payload: ApiClient.destroy(`/endpoints/${ id }`).then(() => ({ id })),
     meta: {
         notifications: {
             rejected: {
@@ -123,7 +123,7 @@ export const newEndpoint = () => ({
 
 export const fetchFilters = (endpointId) => ({
     type: FETCH_FILTERS,
-    payload: get(`/endpoints/${ endpointId }/filters`),
+    payload: ApiClient.get(`/endpoints/${ endpointId }/filters`),
     meta: {
         notifications: {
             rejected: {
@@ -136,7 +136,7 @@ export const fetchFilters = (endpointId) => ({
 
 export const fetchApps = () => ({
     type: FETCH_APPS,
-    payload: get('/apps'),
+    payload: ApiClient.get('/apps'),
     meta: {
         notifications: {
             rejected: {

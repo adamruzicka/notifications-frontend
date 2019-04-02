@@ -1,25 +1,45 @@
-const endpoints = [
-    {
-        id: 1,
-        name: 'TEST Endpoint #1',
-        url: 'http://endpoint.com',
-        active: true,
-        filtersCount: 2
-    },
-    {
-        id: 2,
-        name: 'TEST Endpoint #2',
-        url: 'http://endpoint2.com',
-        active: true,
-        filtersCount: 1
-    },
-    {
-        id: 3,
-        name: 'TEST Endpoint #3',
-        url: 'http://endpoint3.com',
-        active: false,
-        filtersCount: 4
+const endpoints = {
+    data: [
+        {
+            id: '36',
+            type: 'endpoint',
+            attributes: {
+                name: 'Test 1',
+                url: 'http://whatever.com',
+                active: true,
+                filter_count: 1
+            }
+        },
+        {
+            id: '37',
+            type: 'endpoint',
+            attributes: {
+                name: 'Test 2',
+                url: 'http://whatever1.com',
+                active: true,
+                filter_count: 1
+            }
+        },
+        {
+            id: '38',
+            type: 'endpoint',
+            attributes: {
+                name: 'Test 3',
+                url: 'http://whatever2.com',
+                active: true,
+                filter_count: 1
+            }
+        }
+    ],
+    meta: {
+        total: 3,
+        per_page: 10,
+        page: 1
     }
-];
+};
+
+export const endpoint = {
+    data: [ endpoints.data[0] ]
+};
 
 export default endpoints;

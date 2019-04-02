@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import normalize from 'json-api-normalizer';
 
 export const defaultIntialState = {
@@ -26,6 +27,11 @@ export const failureMessage = (base) => {
 export const findItemById = (id, array) =>
     array.find((item) => parseInt(item.id) === parseInt(id));
 
+export const ensureIdIsNumber = (item) =>
+    _.mapValues(item, (value, key) =>
+        key === 'id' ? parseInt(value) : value
+    );
+
 export const findIncluded = (payload, id, type) => {
     let singleType = type.slice(0, -1);
     let singleTypePayload = payload[singleType];
@@ -52,13 +58,13 @@ export const includeItemRelationships = (item, fullPayload) => {
             let itemData = includeItemRelationships(findItemById(id, relatedResourcesData), fullPayload);
             let additionalData = includeItemRelationships(findIncluded(fullPayload, id, relatedResourceKind), fullPayload);
 
-            relatedResources[relatedResourceKind][id] = {
+            relatedResources[relatedResourceKind][id] = ensureIdIsNumber({
                 ...itemData,
                 ...additionalData
-            };
+            });
         });
     });
-    return Object.assign(item, relatedResources);
+    return ensureIdIsNumber(Object.assign(item, relatedResources));
 };
 
 export const includeRelationships = (normalizedPayload) => {

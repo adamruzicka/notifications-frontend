@@ -1,837 +1,788 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FilterList expect to render 1`] = `
-initialize {
-  "0": Object {
-    "attribs": Object {
-      "class": "pf-l-stack pf-m-gutter",
-    },
-    "children": Array [
-      Object {
-        "attribs": Object {
-          "class": "pf-l-stack__item",
-        },
-        "children": Array [
-          Object {
-            "attribs": Object {
-              "class": "pf-c-card",
-            },
-            "children": Array [
-              Object {
-                "attribs": Object {
-                  "class": "pf-c-card__header",
-                },
-                "children": Array [
-                  Object {
-                    "attribs": Object {
-                      "class": "pf-c-check",
-                    },
-                    "children": Array [
-                      Object {
-                        "attribs": Object {
-                          "aria-invalid": "false",
-                          "aria-label": "seed-app-0",
-                          "class": "pf-c-check__input",
-                          "data-event-type-id": "4",
-                          "id": "app-check-4",
-                          "type": "checkbox",
-                        },
-                        "children": Array [],
-                        "name": "input",
-                        "namespace": "http://www.w3.org/1999/xhtml",
-                        "next": Object {
-                          "attribs": Object {
-                            "class": "pf-c-check__label",
-                            "for": "app-check-4",
-                          },
-                          "children": Array [
-                            Object {
-                              "data": "seed-app-0",
-                              "next": null,
-                              "parent": [Circular],
-                              "prev": null,
-                              "type": "text",
-                            },
-                          ],
-                          "name": "label",
-                          "namespace": "http://www.w3.org/1999/xhtml",
-                          "next": null,
-                          "parent": [Circular],
-                          "prev": [Circular],
-                          "type": "tag",
-                          "x-attribsNamespace": Object {
-                            "class": undefined,
-                            "for": undefined,
-                          },
-                          "x-attribsPrefix": Object {
-                            "class": undefined,
-                            "for": undefined,
-                          },
-                        },
-                        "parent": [Circular],
-                        "prev": null,
-                        "type": "tag",
-                        "x-attribsNamespace": Object {
-                          "aria-invalid": undefined,
-                          "aria-label": undefined,
-                          "class": undefined,
-                          "data-event-type-id": undefined,
-                          "id": undefined,
-                          "type": undefined,
-                        },
-                        "x-attribsPrefix": Object {
-                          "aria-invalid": undefined,
-                          "aria-label": undefined,
-                          "class": undefined,
-                          "data-event-type-id": undefined,
-                          "id": undefined,
-                          "type": undefined,
-                        },
-                      },
-                      Object {
-                        "attribs": Object {
-                          "class": "pf-c-check__label",
-                          "for": "app-check-4",
-                        },
-                        "children": Array [
-                          Object {
-                            "data": "seed-app-0",
-                            "next": null,
-                            "parent": [Circular],
-                            "prev": null,
-                            "type": "text",
-                          },
-                        ],
-                        "name": "label",
-                        "namespace": "http://www.w3.org/1999/xhtml",
-                        "next": null,
-                        "parent": [Circular],
-                        "prev": Object {
-                          "attribs": Object {
-                            "aria-invalid": "false",
-                            "aria-label": "seed-app-0",
-                            "class": "pf-c-check__input",
-                            "data-event-type-id": "4",
-                            "id": "app-check-4",
-                            "type": "checkbox",
-                          },
-                          "children": Array [],
-                          "name": "input",
-                          "namespace": "http://www.w3.org/1999/xhtml",
-                          "next": [Circular],
-                          "parent": [Circular],
-                          "prev": null,
-                          "type": "tag",
-                          "x-attribsNamespace": Object {
-                            "aria-invalid": undefined,
-                            "aria-label": undefined,
-                            "class": undefined,
-                            "data-event-type-id": undefined,
-                            "id": undefined,
-                            "type": undefined,
-                          },
-                          "x-attribsPrefix": Object {
-                            "aria-invalid": undefined,
-                            "aria-label": undefined,
-                            "class": undefined,
-                            "data-event-type-id": undefined,
-                            "id": undefined,
-                            "type": undefined,
-                          },
-                        },
-                        "type": "tag",
-                        "x-attribsNamespace": Object {
-                          "class": undefined,
-                          "for": undefined,
-                        },
-                        "x-attribsPrefix": Object {
-                          "class": undefined,
-                          "for": undefined,
-                        },
-                      },
-                    ],
-                    "name": "div",
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                    "next": null,
-                    "parent": [Circular],
-                    "prev": null,
-                    "type": "tag",
-                    "x-attribsNamespace": Object {
-                      "class": undefined,
-                    },
-                    "x-attribsPrefix": Object {
-                      "class": undefined,
-                    },
-                  },
-                ],
-                "name": "div",
-                "namespace": "http://www.w3.org/1999/xhtml",
-                "next": null,
-                "parent": [Circular],
-                "prev": null,
-                "type": "tag",
-                "x-attribsNamespace": Object {
-                  "class": undefined,
-                },
-                "x-attribsPrefix": Object {
-                  "class": undefined,
-                },
-              },
-            ],
-            "name": "article",
-            "namespace": "http://www.w3.org/1999/xhtml",
-            "next": null,
-            "parent": [Circular],
-            "prev": null,
-            "type": "tag",
-            "x-attribsNamespace": Object {
-              "class": undefined,
-            },
-            "x-attribsPrefix": Object {
-              "class": undefined,
-            },
-          },
-        ],
-        "name": "div",
-        "namespace": "http://www.w3.org/1999/xhtml",
-        "next": Object {
-          "attribs": Object {
-            "class": "pf-l-stack__item",
-          },
-          "children": Array [
-            Object {
-              "attribs": Object {
-                "class": "pf-c-card",
-              },
-              "children": Array [
-                Object {
-                  "attribs": Object {
-                    "class": "pf-c-card__header",
-                  },
-                  "children": Array [
-                    Object {
-                      "attribs": Object {
-                        "class": "pf-c-check",
-                      },
-                      "children": Array [
-                        Object {
-                          "attribs": Object {
-                            "aria-invalid": "false",
-                            "aria-label": "seed-app-1",
-                            "class": "pf-c-check__input",
-                            "data-event-type-id": "5",
-                            "id": "app-check-5",
-                            "type": "checkbox",
-                          },
-                          "children": Array [],
-                          "name": "input",
-                          "namespace": "http://www.w3.org/1999/xhtml",
-                          "next": Object {
-                            "attribs": Object {
-                              "class": "pf-c-check__label",
-                              "for": "app-check-5",
-                            },
-                            "children": Array [
-                              Object {
-                                "data": "seed-app-1",
-                                "next": null,
-                                "parent": [Circular],
-                                "prev": null,
-                                "type": "text",
-                              },
-                            ],
-                            "name": "label",
-                            "namespace": "http://www.w3.org/1999/xhtml",
-                            "next": null,
-                            "parent": [Circular],
-                            "prev": [Circular],
-                            "type": "tag",
-                            "x-attribsNamespace": Object {
-                              "class": undefined,
-                              "for": undefined,
-                            },
-                            "x-attribsPrefix": Object {
-                              "class": undefined,
-                              "for": undefined,
-                            },
-                          },
-                          "parent": [Circular],
-                          "prev": null,
-                          "type": "tag",
-                          "x-attribsNamespace": Object {
-                            "aria-invalid": undefined,
-                            "aria-label": undefined,
-                            "class": undefined,
-                            "data-event-type-id": undefined,
-                            "id": undefined,
-                            "type": undefined,
-                          },
-                          "x-attribsPrefix": Object {
-                            "aria-invalid": undefined,
-                            "aria-label": undefined,
-                            "class": undefined,
-                            "data-event-type-id": undefined,
-                            "id": undefined,
-                            "type": undefined,
-                          },
-                        },
-                        Object {
-                          "attribs": Object {
-                            "class": "pf-c-check__label",
-                            "for": "app-check-5",
-                          },
-                          "children": Array [
-                            Object {
-                              "data": "seed-app-1",
-                              "next": null,
-                              "parent": [Circular],
-                              "prev": null,
-                              "type": "text",
-                            },
-                          ],
-                          "name": "label",
-                          "namespace": "http://www.w3.org/1999/xhtml",
-                          "next": null,
-                          "parent": [Circular],
-                          "prev": Object {
-                            "attribs": Object {
-                              "aria-invalid": "false",
-                              "aria-label": "seed-app-1",
-                              "class": "pf-c-check__input",
-                              "data-event-type-id": "5",
-                              "id": "app-check-5",
-                              "type": "checkbox",
-                            },
-                            "children": Array [],
-                            "name": "input",
-                            "namespace": "http://www.w3.org/1999/xhtml",
-                            "next": [Circular],
-                            "parent": [Circular],
-                            "prev": null,
-                            "type": "tag",
-                            "x-attribsNamespace": Object {
-                              "aria-invalid": undefined,
-                              "aria-label": undefined,
-                              "class": undefined,
-                              "data-event-type-id": undefined,
-                              "id": undefined,
-                              "type": undefined,
-                            },
-                            "x-attribsPrefix": Object {
-                              "aria-invalid": undefined,
-                              "aria-label": undefined,
-                              "class": undefined,
-                              "data-event-type-id": undefined,
-                              "id": undefined,
-                              "type": undefined,
-                            },
-                          },
-                          "type": "tag",
-                          "x-attribsNamespace": Object {
-                            "class": undefined,
-                            "for": undefined,
-                          },
-                          "x-attribsPrefix": Object {
-                            "class": undefined,
-                            "for": undefined,
-                          },
-                        },
-                      ],
-                      "name": "div",
-                      "namespace": "http://www.w3.org/1999/xhtml",
-                      "next": null,
-                      "parent": [Circular],
-                      "prev": null,
-                      "type": "tag",
-                      "x-attribsNamespace": Object {
-                        "class": undefined,
-                      },
-                      "x-attribsPrefix": Object {
-                        "class": undefined,
-                      },
-                    },
-                  ],
-                  "name": "div",
-                  "namespace": "http://www.w3.org/1999/xhtml",
-                  "next": null,
-                  "parent": [Circular],
-                  "prev": null,
-                  "type": "tag",
-                  "x-attribsNamespace": Object {
-                    "class": undefined,
-                  },
-                  "x-attribsPrefix": Object {
-                    "class": undefined,
-                  },
-                },
-              ],
-              "name": "article",
-              "namespace": "http://www.w3.org/1999/xhtml",
-              "next": null,
-              "parent": [Circular],
-              "prev": null,
-              "type": "tag",
-              "x-attribsNamespace": Object {
-                "class": undefined,
-              },
-              "x-attribsPrefix": Object {
-                "class": undefined,
-              },
-            },
-          ],
-          "name": "div",
-          "namespace": "http://www.w3.org/1999/xhtml",
-          "next": null,
-          "parent": [Circular],
-          "prev": [Circular],
-          "type": "tag",
-          "x-attribsNamespace": Object {
-            "class": undefined,
-          },
-          "x-attribsPrefix": Object {
-            "class": undefined,
-          },
-        },
-        "parent": [Circular],
-        "prev": null,
-        "type": "tag",
-        "x-attribsNamespace": Object {
-          "class": undefined,
-        },
-        "x-attribsPrefix": Object {
-          "class": undefined,
-        },
-      },
-      Object {
-        "attribs": Object {
-          "class": "pf-l-stack__item",
-        },
-        "children": Array [
-          Object {
-            "attribs": Object {
-              "class": "pf-c-card",
-            },
-            "children": Array [
-              Object {
-                "attribs": Object {
-                  "class": "pf-c-card__header",
-                },
-                "children": Array [
-                  Object {
-                    "attribs": Object {
-                      "class": "pf-c-check",
-                    },
-                    "children": Array [
-                      Object {
-                        "attribs": Object {
-                          "aria-invalid": "false",
-                          "aria-label": "seed-app-1",
-                          "class": "pf-c-check__input",
-                          "data-event-type-id": "5",
-                          "id": "app-check-5",
-                          "type": "checkbox",
-                        },
-                        "children": Array [],
-                        "name": "input",
-                        "namespace": "http://www.w3.org/1999/xhtml",
-                        "next": Object {
-                          "attribs": Object {
-                            "class": "pf-c-check__label",
-                            "for": "app-check-5",
-                          },
-                          "children": Array [
-                            Object {
-                              "data": "seed-app-1",
-                              "next": null,
-                              "parent": [Circular],
-                              "prev": null,
-                              "type": "text",
-                            },
-                          ],
-                          "name": "label",
-                          "namespace": "http://www.w3.org/1999/xhtml",
-                          "next": null,
-                          "parent": [Circular],
-                          "prev": [Circular],
-                          "type": "tag",
-                          "x-attribsNamespace": Object {
-                            "class": undefined,
-                            "for": undefined,
-                          },
-                          "x-attribsPrefix": Object {
-                            "class": undefined,
-                            "for": undefined,
-                          },
-                        },
-                        "parent": [Circular],
-                        "prev": null,
-                        "type": "tag",
-                        "x-attribsNamespace": Object {
-                          "aria-invalid": undefined,
-                          "aria-label": undefined,
-                          "class": undefined,
-                          "data-event-type-id": undefined,
-                          "id": undefined,
-                          "type": undefined,
-                        },
-                        "x-attribsPrefix": Object {
-                          "aria-invalid": undefined,
-                          "aria-label": undefined,
-                          "class": undefined,
-                          "data-event-type-id": undefined,
-                          "id": undefined,
-                          "type": undefined,
-                        },
-                      },
-                      Object {
-                        "attribs": Object {
-                          "class": "pf-c-check__label",
-                          "for": "app-check-5",
-                        },
-                        "children": Array [
-                          Object {
-                            "data": "seed-app-1",
-                            "next": null,
-                            "parent": [Circular],
-                            "prev": null,
-                            "type": "text",
-                          },
-                        ],
-                        "name": "label",
-                        "namespace": "http://www.w3.org/1999/xhtml",
-                        "next": null,
-                        "parent": [Circular],
-                        "prev": Object {
-                          "attribs": Object {
-                            "aria-invalid": "false",
-                            "aria-label": "seed-app-1",
-                            "class": "pf-c-check__input",
-                            "data-event-type-id": "5",
-                            "id": "app-check-5",
-                            "type": "checkbox",
-                          },
-                          "children": Array [],
-                          "name": "input",
-                          "namespace": "http://www.w3.org/1999/xhtml",
-                          "next": [Circular],
-                          "parent": [Circular],
-                          "prev": null,
-                          "type": "tag",
-                          "x-attribsNamespace": Object {
-                            "aria-invalid": undefined,
-                            "aria-label": undefined,
-                            "class": undefined,
-                            "data-event-type-id": undefined,
-                            "id": undefined,
-                            "type": undefined,
-                          },
-                          "x-attribsPrefix": Object {
-                            "aria-invalid": undefined,
-                            "aria-label": undefined,
-                            "class": undefined,
-                            "data-event-type-id": undefined,
-                            "id": undefined,
-                            "type": undefined,
-                          },
-                        },
-                        "type": "tag",
-                        "x-attribsNamespace": Object {
-                          "class": undefined,
-                          "for": undefined,
-                        },
-                        "x-attribsPrefix": Object {
-                          "class": undefined,
-                          "for": undefined,
-                        },
-                      },
-                    ],
-                    "name": "div",
-                    "namespace": "http://www.w3.org/1999/xhtml",
-                    "next": null,
-                    "parent": [Circular],
-                    "prev": null,
-                    "type": "tag",
-                    "x-attribsNamespace": Object {
-                      "class": undefined,
-                    },
-                    "x-attribsPrefix": Object {
-                      "class": undefined,
-                    },
-                  },
-                ],
-                "name": "div",
-                "namespace": "http://www.w3.org/1999/xhtml",
-                "next": null,
-                "parent": [Circular],
-                "prev": null,
-                "type": "tag",
-                "x-attribsNamespace": Object {
-                  "class": undefined,
-                },
-                "x-attribsPrefix": Object {
-                  "class": undefined,
-                },
-              },
-            ],
-            "name": "article",
-            "namespace": "http://www.w3.org/1999/xhtml",
-            "next": null,
-            "parent": [Circular],
-            "prev": null,
-            "type": "tag",
-            "x-attribsNamespace": Object {
-              "class": undefined,
-            },
-            "x-attribsPrefix": Object {
-              "class": undefined,
-            },
-          },
-        ],
-        "name": "div",
-        "namespace": "http://www.w3.org/1999/xhtml",
-        "next": null,
-        "parent": [Circular],
-        "prev": Object {
-          "attribs": Object {
-            "class": "pf-l-stack__item",
-          },
-          "children": Array [
-            Object {
-              "attribs": Object {
-                "class": "pf-c-card",
-              },
-              "children": Array [
-                Object {
-                  "attribs": Object {
-                    "class": "pf-c-card__header",
-                  },
-                  "children": Array [
-                    Object {
-                      "attribs": Object {
-                        "class": "pf-c-check",
-                      },
-                      "children": Array [
-                        Object {
-                          "attribs": Object {
-                            "aria-invalid": "false",
-                            "aria-label": "seed-app-0",
-                            "class": "pf-c-check__input",
-                            "data-event-type-id": "4",
-                            "id": "app-check-4",
-                            "type": "checkbox",
-                          },
-                          "children": Array [],
-                          "name": "input",
-                          "namespace": "http://www.w3.org/1999/xhtml",
-                          "next": Object {
-                            "attribs": Object {
-                              "class": "pf-c-check__label",
-                              "for": "app-check-4",
-                            },
-                            "children": Array [
-                              Object {
-                                "data": "seed-app-0",
-                                "next": null,
-                                "parent": [Circular],
-                                "prev": null,
-                                "type": "text",
-                              },
-                            ],
-                            "name": "label",
-                            "namespace": "http://www.w3.org/1999/xhtml",
-                            "next": null,
-                            "parent": [Circular],
-                            "prev": [Circular],
-                            "type": "tag",
-                            "x-attribsNamespace": Object {
-                              "class": undefined,
-                              "for": undefined,
-                            },
-                            "x-attribsPrefix": Object {
-                              "class": undefined,
-                              "for": undefined,
-                            },
-                          },
-                          "parent": [Circular],
-                          "prev": null,
-                          "type": "tag",
-                          "x-attribsNamespace": Object {
-                            "aria-invalid": undefined,
-                            "aria-label": undefined,
-                            "class": undefined,
-                            "data-event-type-id": undefined,
-                            "id": undefined,
-                            "type": undefined,
-                          },
-                          "x-attribsPrefix": Object {
-                            "aria-invalid": undefined,
-                            "aria-label": undefined,
-                            "class": undefined,
-                            "data-event-type-id": undefined,
-                            "id": undefined,
-                            "type": undefined,
-                          },
-                        },
-                        Object {
-                          "attribs": Object {
-                            "class": "pf-c-check__label",
-                            "for": "app-check-4",
-                          },
-                          "children": Array [
-                            Object {
-                              "data": "seed-app-0",
-                              "next": null,
-                              "parent": [Circular],
-                              "prev": null,
-                              "type": "text",
-                            },
-                          ],
-                          "name": "label",
-                          "namespace": "http://www.w3.org/1999/xhtml",
-                          "next": null,
-                          "parent": [Circular],
-                          "prev": Object {
-                            "attribs": Object {
-                              "aria-invalid": "false",
-                              "aria-label": "seed-app-0",
-                              "class": "pf-c-check__input",
-                              "data-event-type-id": "4",
-                              "id": "app-check-4",
-                              "type": "checkbox",
-                            },
-                            "children": Array [],
-                            "name": "input",
-                            "namespace": "http://www.w3.org/1999/xhtml",
-                            "next": [Circular],
-                            "parent": [Circular],
-                            "prev": null,
-                            "type": "tag",
-                            "x-attribsNamespace": Object {
-                              "aria-invalid": undefined,
-                              "aria-label": undefined,
-                              "class": undefined,
-                              "data-event-type-id": undefined,
-                              "id": undefined,
-                              "type": undefined,
-                            },
-                            "x-attribsPrefix": Object {
-                              "aria-invalid": undefined,
-                              "aria-label": undefined,
-                              "class": undefined,
-                              "data-event-type-id": undefined,
-                              "id": undefined,
-                              "type": undefined,
-                            },
-                          },
-                          "type": "tag",
-                          "x-attribsNamespace": Object {
-                            "class": undefined,
-                            "for": undefined,
-                          },
-                          "x-attribsPrefix": Object {
-                            "class": undefined,
-                            "for": undefined,
-                          },
-                        },
-                      ],
-                      "name": "div",
-                      "namespace": "http://www.w3.org/1999/xhtml",
-                      "next": null,
-                      "parent": [Circular],
-                      "prev": null,
-                      "type": "tag",
-                      "x-attribsNamespace": Object {
-                        "class": undefined,
-                      },
-                      "x-attribsPrefix": Object {
-                        "class": undefined,
-                      },
-                    },
-                  ],
-                  "name": "div",
-                  "namespace": "http://www.w3.org/1999/xhtml",
-                  "next": null,
-                  "parent": [Circular],
-                  "prev": null,
-                  "type": "tag",
-                  "x-attribsNamespace": Object {
-                    "class": undefined,
-                  },
-                  "x-attribsPrefix": Object {
-                    "class": undefined,
-                  },
-                },
-              ],
-              "name": "article",
-              "namespace": "http://www.w3.org/1999/xhtml",
-              "next": null,
-              "parent": [Circular],
-              "prev": null,
-              "type": "tag",
-              "x-attribsNamespace": Object {
-                "class": undefined,
-              },
-              "x-attribsPrefix": Object {
-                "class": undefined,
-              },
-            },
-          ],
-          "name": "div",
-          "namespace": "http://www.w3.org/1999/xhtml",
-          "next": [Circular],
-          "parent": [Circular],
-          "prev": null,
-          "type": "tag",
-          "x-attribsNamespace": Object {
-            "class": undefined,
-          },
-          "x-attribsPrefix": Object {
-            "class": undefined,
-          },
-        },
-        "type": "tag",
-        "x-attribsNamespace": Object {
-          "class": undefined,
-        },
-        "x-attribsPrefix": Object {
-          "class": undefined,
-        },
-      },
-    ],
-    "name": "div",
-    "namespace": "http://www.w3.org/1999/xhtml",
-    "next": null,
-    "parent": null,
-    "prev": null,
-    "root": Object {
-      "attribs": Object {},
-      "children": Array [
-        [Circular],
-      ],
-      "name": "root",
-      "namespace": "http://www.w3.org/1999/xhtml",
-      "next": null,
-      "parent": null,
-      "prev": null,
-      "type": "root",
-      "x-attribsNamespace": Object {},
-      "x-attribsPrefix": Object {},
-    },
-    "type": "tag",
-    "x-attribsNamespace": Object {
-      "class": undefined,
-    },
-    "x-attribsPrefix": Object {
-      "class": undefined,
-    },
-  },
-  "_root": [Circular],
-  "length": 1,
-  "options": Object {
-    "decodeEntities": true,
-    "normalizeWhitespace": false,
-    "withDomLvl1": true,
-    "xml": false,
-  },
-}
+<div
+  class="pf-l-stack pf-m-gutter"
+>
+  <div
+    class="pf-l-stack__item"
+  >
+    <article
+      class="pf-c-card"
+    >
+      <div
+        class="pf-c-card__header"
+      >
+        <div
+          class="pf-c-check"
+        >
+          <input
+            aria-invalid="false"
+            aria-label="seed-app-0"
+            checked=""
+            class="pf-c-check__input"
+            data-event-type-id="1"
+            id="app-check-1"
+            type="checkbox"
+          />
+          <label
+            class="pf-c-check__label"
+            for="app-check-1"
+          >
+            seed-app-0
+          </label>
+        </div>
+      </div>
+      <div
+        class="pf-c-card__body"
+      >
+        <div
+          class="pf-c-radio"
+        >
+          <input
+            aria-invalid="false"
+            checked=""
+            class="pf-c-radio__input"
+            id="app-1-radio-all"
+            name="app-1-event-type-radio"
+            type="radio"
+            value="all"
+          />
+          <label
+            class="pf-c-radio__label"
+            for="app-1-radio-all"
+          >
+            All event types
+          </label>
+        </div>
+      </div>
+    </article>
+  </div>
+  <div
+    class="pf-l-stack__item"
+  >
+    <article
+      class="pf-c-card"
+    >
+      <div
+        class="pf-c-card__header"
+      >
+        <div
+          class="pf-c-check"
+        >
+          <input
+            aria-invalid="false"
+            aria-label="seed-app-1"
+            class="pf-c-check__input"
+            data-event-type-id="2"
+            id="app-check-2"
+            type="checkbox"
+          />
+          <label
+            class="pf-c-check__label"
+            for="app-check-2"
+          >
+            seed-app-1
+          </label>
+        </div>
+      </div>
+    </article>
+  </div>
+  <div
+    class="pf-l-stack__item"
+  >
+    <article
+      class="pf-c-card"
+    >
+      <div
+        class="pf-c-card__header"
+      >
+        <div
+          class="pf-c-check"
+        >
+          <input
+            aria-invalid="false"
+            aria-label="seed-app-2"
+            checked=""
+            class="pf-c-check__input"
+            data-event-type-id="3"
+            id="app-check-3"
+            type="checkbox"
+          />
+          <label
+            class="pf-c-check__label"
+            for="app-check-3"
+          >
+            seed-app-2
+          </label>
+        </div>
+      </div>
+      <div
+        class="pf-c-card__body"
+      >
+        <div
+          class="pf-c-radio"
+        >
+          <input
+            aria-invalid="false"
+            class="pf-c-radio__input"
+            id="app-3-radio-all"
+            name="app-3-event-type-radio"
+            type="radio"
+            value="all"
+          />
+          <label
+            class="pf-c-radio__label"
+            for="app-3-radio-all"
+          >
+            All event types
+          </label>
+        </div>
+        <div
+          class="pf-c-radio"
+        >
+          <input
+            aria-invalid="false"
+            checked=""
+            class="pf-c-radio__input"
+            id="app-3-radio-selected"
+            name="app-3-event-type-radio"
+            type="radio"
+            value="selected-only"
+          />
+          <label
+            class="pf-c-radio__label"
+            for="app-3-radio-selected"
+          >
+            Only selected event types
+          </label>
+        </div>
+        <ul
+          class="pf-c-list"
+        >
+          <li>
+            <div
+              class="pf-c-check"
+            >
+              <input
+                aria-invalid="false"
+                aria-label="seed-type-0"
+                checked=""
+                class="pf-c-check__input"
+                data-event-type-id="1"
+                id="event-type-check-1"
+                type="checkbox"
+              />
+              <label
+                class="pf-c-check__label"
+                for="event-type-check-1"
+              >
+                seed-type-0
+              </label>
+            </div>
+            <ul
+              class="pf-c-list"
+            >
+              <li>
+                <div
+                  class="pf-c-check"
+                >
+                  <input
+                    aria-invalid="false"
+                    aria-label="level-0"
+                    checked=""
+                    class="pf-c-check__input"
+                    data-event-type-id="1"
+                    id="level-check-1"
+                    type="checkbox"
+                  />
+                  <label
+                    class="pf-c-check__label"
+                    for="level-check-1"
+                  >
+                    level-0
+                  </label>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div
+              class="pf-c-check"
+            >
+              <input
+                aria-invalid="false"
+                aria-label="seed-type-1"
+                class="pf-c-check__input"
+                data-event-type-id="2"
+                id="event-type-check-2"
+                type="checkbox"
+              />
+              <label
+                class="pf-c-check__label"
+                for="event-type-check-2"
+              >
+                seed-type-1
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </article>
+  </div>
+  <div
+    class="pf-l-stack__item"
+  >
+    <article
+      class="pf-c-card"
+    >
+      <div
+        class="pf-c-card__header"
+      >
+        <div
+          class="pf-c-check"
+        >
+          <input
+            aria-invalid="false"
+            aria-label="seed-app-3"
+            checked=""
+            class="pf-c-check__input"
+            data-event-type-id="4"
+            id="app-check-4"
+            type="checkbox"
+          />
+          <label
+            class="pf-c-check__label"
+            for="app-check-4"
+          >
+            seed-app-3
+          </label>
+        </div>
+      </div>
+      <div
+        class="pf-c-card__body"
+      >
+        <div
+          class="pf-c-radio"
+        >
+          <input
+            aria-invalid="false"
+            class="pf-c-radio__input"
+            id="app-4-radio-all"
+            name="app-4-event-type-radio"
+            type="radio"
+            value="all"
+          />
+          <label
+            class="pf-c-radio__label"
+            for="app-4-radio-all"
+          >
+            All event types
+          </label>
+        </div>
+        <div
+          class="pf-c-radio"
+        >
+          <input
+            aria-invalid="false"
+            checked=""
+            class="pf-c-radio__input"
+            id="app-4-radio-selected"
+            name="app-4-event-type-radio"
+            type="radio"
+            value="selected-only"
+          />
+          <label
+            class="pf-c-radio__label"
+            for="app-4-radio-selected"
+          >
+            Only selected event types
+          </label>
+        </div>
+        <ul
+          class="pf-c-list"
+        >
+          <li>
+            <div
+              class="pf-c-check"
+            >
+              <input
+                aria-invalid="false"
+                aria-label="seed-type-0"
+                checked=""
+                class="pf-c-check__input"
+                data-event-type-id="3"
+                id="event-type-check-3"
+                type="checkbox"
+              />
+              <label
+                class="pf-c-check__label"
+                for="event-type-check-3"
+              >
+                seed-type-0
+              </label>
+            </div>
+            <ul
+              class="pf-c-list"
+            >
+              <li>
+                <div
+                  class="pf-c-check"
+                >
+                  <input
+                    aria-invalid="false"
+                    aria-label="level-0"
+                    class="pf-c-check__input"
+                    data-event-type-id="3"
+                    id="level-check-3"
+                    type="checkbox"
+                  />
+                  <label
+                    class="pf-c-check__label"
+                    for="level-check-3"
+                  >
+                    level-0
+                  </label>
+                </div>
+              </li>
+              <li>
+                <div
+                  class="pf-c-check"
+                >
+                  <input
+                    aria-invalid="false"
+                    aria-label="level-1"
+                    checked=""
+                    class="pf-c-check__input"
+                    data-event-type-id="4"
+                    id="level-check-4"
+                    type="checkbox"
+                  />
+                  <label
+                    class="pf-c-check__label"
+                    for="level-check-4"
+                  >
+                    level-1
+                  </label>
+                </div>
+              </li>
+              <li>
+                <div
+                  class="pf-c-check"
+                >
+                  <input
+                    aria-invalid="false"
+                    aria-label="level-2"
+                    class="pf-c-check__input"
+                    data-event-type-id="5"
+                    id="level-check-5"
+                    type="checkbox"
+                  />
+                  <label
+                    class="pf-c-check__label"
+                    for="level-check-5"
+                  >
+                    level-2
+                  </label>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div
+              class="pf-c-check"
+            >
+              <input
+                aria-invalid="false"
+                aria-label="seed-type-1"
+                class="pf-c-check__input"
+                data-event-type-id="4"
+                id="event-type-check-4"
+                type="checkbox"
+              />
+              <label
+                class="pf-c-check__label"
+                for="event-type-check-4"
+              >
+                seed-type-1
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </article>
+  </div>
+  <div
+    class="pf-l-stack__item"
+  >
+    <article
+      class="pf-c-card"
+    >
+      <div
+        class="pf-c-card__header"
+      >
+        <div
+          class="pf-c-check"
+        >
+          <input
+            aria-invalid="false"
+            aria-label="seed-app-4"
+            class="pf-c-check__input"
+            data-event-type-id="5"
+            id="app-check-5"
+            type="checkbox"
+          />
+          <label
+            class="pf-c-check__label"
+            for="app-check-5"
+          >
+            seed-app-4
+          </label>
+        </div>
+      </div>
+    </article>
+  </div>
+  <div
+    class="pf-l-stack__item"
+  >
+    <article
+      class="pf-c-card"
+    >
+      <div
+        class="pf-c-card__header"
+      >
+        <div
+          class="pf-c-check"
+        >
+          <input
+            aria-invalid="false"
+            aria-label="seed-app-5"
+            class="pf-c-check__input"
+            data-event-type-id="6"
+            id="app-check-6"
+            type="checkbox"
+          />
+          <label
+            class="pf-c-check__label"
+            for="app-check-6"
+          >
+            seed-app-5
+          </label>
+        </div>
+      </div>
+    </article>
+  </div>
+  <div
+    class="pf-l-stack__item"
+  >
+    <article
+      class="pf-c-card"
+    >
+      <div
+        class="pf-c-card__header"
+      >
+        <div
+          class="pf-c-check"
+        >
+          <input
+            aria-invalid="false"
+            aria-label="seed-app-6"
+            class="pf-c-check__input"
+            data-event-type-id="7"
+            id="app-check-7"
+            type="checkbox"
+          />
+          <label
+            class="pf-c-check__label"
+            for="app-check-7"
+          >
+            seed-app-6
+          </label>
+        </div>
+      </div>
+    </article>
+  </div>
+  <div
+    class="pf-l-stack__item"
+  >
+    <article
+      class="pf-c-card"
+    >
+      <div
+        class="pf-c-card__header"
+      >
+        <div
+          class="pf-c-check"
+        >
+          <input
+            aria-invalid="false"
+            aria-label="seed-app-7"
+            checked=""
+            class="pf-c-check__input"
+            data-event-type-id="8"
+            id="app-check-8"
+            type="checkbox"
+          />
+          <label
+            class="pf-c-check__label"
+            for="app-check-8"
+          >
+            seed-app-7
+          </label>
+        </div>
+      </div>
+      <div
+        class="pf-c-card__body"
+      >
+        <div
+          class="pf-c-radio"
+        >
+          <input
+            aria-invalid="false"
+            class="pf-c-radio__input"
+            id="app-8-radio-all"
+            name="app-8-event-type-radio"
+            type="radio"
+            value="all"
+          />
+          <label
+            class="pf-c-radio__label"
+            for="app-8-radio-all"
+          >
+            All event types
+          </label>
+        </div>
+        <div
+          class="pf-c-radio"
+        >
+          <input
+            aria-invalid="false"
+            checked=""
+            class="pf-c-radio__input"
+            id="app-8-radio-selected"
+            name="app-8-event-type-radio"
+            type="radio"
+            value="selected-only"
+          />
+          <label
+            class="pf-c-radio__label"
+            for="app-8-radio-selected"
+          >
+            Only selected event types
+          </label>
+        </div>
+        <ul
+          class="pf-c-list"
+        >
+          <li>
+            <div
+              class="pf-c-check"
+            >
+              <input
+                aria-invalid="false"
+                aria-label="seed-type-0"
+                checked=""
+                class="pf-c-check__input"
+                data-event-type-id="8"
+                id="event-type-check-8"
+                type="checkbox"
+              />
+              <label
+                class="pf-c-check__label"
+                for="event-type-check-8"
+              >
+                seed-type-0
+              </label>
+            </div>
+            <ul
+              class="pf-c-list"
+            >
+              <li>
+                <div
+                  class="pf-c-check"
+                >
+                  <input
+                    aria-invalid="false"
+                    aria-label="level-0"
+                    class="pf-c-check__input"
+                    data-event-type-id="21"
+                    id="level-check-21"
+                    type="checkbox"
+                  />
+                  <label
+                    class="pf-c-check__label"
+                    for="level-check-21"
+                  >
+                    level-0
+                  </label>
+                </div>
+              </li>
+              <li>
+                <div
+                  class="pf-c-check"
+                >
+                  <input
+                    aria-invalid="false"
+                    aria-label="level-1"
+                    checked=""
+                    class="pf-c-check__input"
+                    data-event-type-id="22"
+                    id="level-check-22"
+                    type="checkbox"
+                  />
+                  <label
+                    class="pf-c-check__label"
+                    for="level-check-22"
+                  >
+                    level-1
+                  </label>
+                </div>
+              </li>
+              <li>
+                <div
+                  class="pf-c-check"
+                >
+                  <input
+                    aria-invalid="false"
+                    aria-label="level-2"
+                    class="pf-c-check__input"
+                    data-event-type-id="23"
+                    id="level-check-23"
+                    type="checkbox"
+                  />
+                  <label
+                    class="pf-c-check__label"
+                    for="level-check-23"
+                  >
+                    level-2
+                  </label>
+                </div>
+              </li>
+              <li>
+                <div
+                  class="pf-c-check"
+                >
+                  <input
+                    aria-invalid="false"
+                    aria-label="level-3"
+                    class="pf-c-check__input"
+                    data-event-type-id="24"
+                    id="level-check-24"
+                    type="checkbox"
+                  />
+                  <label
+                    class="pf-c-check__label"
+                    for="level-check-24"
+                  >
+                    level-3
+                  </label>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <div
+              class="pf-c-check"
+            >
+              <input
+                aria-invalid="false"
+                aria-label="seed-type-1"
+                class="pf-c-check__input"
+                data-event-type-id="9"
+                id="event-type-check-9"
+                type="checkbox"
+              />
+              <label
+                class="pf-c-check__label"
+                for="event-type-check-9"
+              >
+                seed-type-1
+              </label>
+            </div>
+          </li>
+          <li>
+            <div
+              class="pf-c-check"
+            >
+              <input
+                aria-invalid="false"
+                aria-label="seed-type-2"
+                class="pf-c-check__input"
+                data-event-type-id="10"
+                id="event-type-check-10"
+                type="checkbox"
+              />
+              <label
+                class="pf-c-check__label"
+                for="event-type-check-10"
+              >
+                seed-type-2
+              </label>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </article>
+  </div>
+  <div
+    class="pf-l-stack__item"
+  >
+    <article
+      class="pf-c-card"
+    >
+      <div
+        class="pf-c-card__header"
+      >
+        <div
+          class="pf-c-check"
+        >
+          <input
+            aria-invalid="false"
+            aria-label="seed-app-8"
+            class="pf-c-check__input"
+            data-event-type-id="9"
+            id="app-check-9"
+            type="checkbox"
+          />
+          <label
+            class="pf-c-check__label"
+            for="app-check-9"
+          >
+            seed-app-8
+          </label>
+        </div>
+      </div>
+    </article>
+  </div>
+  <div
+    class="pf-l-stack__item"
+  >
+    <article
+      class="pf-c-card"
+    >
+      <div
+        class="pf-c-card__header"
+      >
+        <div
+          class="pf-c-check"
+        >
+          <input
+            aria-invalid="false"
+            aria-label="seed-app-9"
+            class="pf-c-check__input"
+            data-event-type-id="10"
+            id="app-check-10"
+            type="checkbox"
+          />
+          <label
+            class="pf-c-check__label"
+            for="app-check-10"
+          >
+            seed-app-9
+          </label>
+        </div>
+      </div>
+    </article>
+  </div>
+</div>
 `;

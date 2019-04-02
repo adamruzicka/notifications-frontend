@@ -1,14 +1,13 @@
 import { init } from 'Store';
 import logger from 'redux-logger';
 import { NotificationEdit } from './NotificationEdit';
+import toJson from 'enzyme-to-json';
 
-const testEndpoint = {
-    id: 3,
-    name: 'TEST Endpoint #3',
-    url: 'http://endpoint3.com',
-    active: false,
-    filtersCount: 4
-};
+import endpoints from '../../__fixtures__/endpoints';
+import filters from '../../__fixtures__/filters';
+import apps from '../../__fixtures__/apps';
+
+import { normalizePayload } from 'Store/reducers/reducerHelper';
 
 describe('NotificationEdit', () => {
     const store = init(logger).getStore();
@@ -28,6 +27,8 @@ describe('NotificationEdit', () => {
         history: {
             goBack
         },
+        apps: normalizePayload(apps).app,
+        filters: normalizePayload(filters).filter,
         fetchEndpoint,
         createEndpoint,
         updateEndpoint,
@@ -38,16 +39,17 @@ describe('NotificationEdit', () => {
 
     it('expect to render a Form', () => {
         const wrapper = shallow(
-            <NotificationEdit { ...defaultProps } filters={ {} } apps={ {} } />
+            <NotificationEdit { ...defaultProps } />
         );
         expect(wrapper.find('Form').length).toBe(1);
-        expect(wrapper).toMatchSnapshot();
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('takes an endpoint', () => {
+        const testEndpoint = Object.values(normalizePayload(endpoints).endpoint)[0];
         const wrapper = shallow(
-            <NotificationEdit { ...defaultProps } endpoint={ testEndpoint } filters={ {} } apps={ {} } />
+            <NotificationEdit { ...defaultProps } endpoint={ testEndpoint } />
         );
-        expect(wrapper).toMatchSnapshot();
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import logger from 'redux-logger';
 import { init } from './store';
 import App from './App';
 
@@ -14,7 +15,7 @@ if (pathName[0] === 'beta') {
 }
 
 ReactDOM.render(
-    <Provider store={ init().getStore() }>
+    <Provider store={ init(logger).getStore() }>
         <Router basename={ `${release}${pathName[0]}/${pathName[1]}` }>
             <App />
         </Router>

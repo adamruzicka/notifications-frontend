@@ -96,8 +96,9 @@ export class NotificationEdit extends Component {
             filters
         };
 
-        if (this.props.endpoint) {
-            this.props.updateEndpoint(this.props.endpoint.id, payload).then(this.toIndex);
+        const endpoint = this.singleEndpoint();
+        if (endpoint) {
+            this.props.updateEndpoint(endpoint.id, payload).then(this.toIndex);
         } else {
             this.props.createEndpoint(payload).then(this.toIndex);
         }
@@ -113,12 +114,17 @@ export class NotificationEdit extends Component {
         }
     }
 
-    initialFormData = () =>
-        this.props.endpoint ? {
-            name: this.props.endpoint.name,
-            url: this.props.endpoint.url,
-            active: this.props.endpoint.active
-        } : {}
+    singleEndpoint = () =>
+        this.props.endpoint ? this.props.endpoint[this.props.match.params.endpointId] : null;
+
+    initialFormData = () => {
+        const endpoint = this.singleEndpoint();
+        return endpoint ? {
+            name: endpoint.attributes.name,
+            url: endpoint.attributes.url,
+            active: endpoint.attributes.active
+        } : {};
+    }
 
     toIndex = () =>
         this.props.history.push('/list')
@@ -127,11 +133,12 @@ export class NotificationEdit extends Component {
         Object.values(this.props.filters)[0]
 
     render() {
-        let action = this.props.match.params.endpointId && this.props.endpoint ? this.props.endpoint.name : 'New Notification';
+        const endpoint = this.singleEndpoint();
+        let action = this.props.match.params.endpointId && endpoint ? endpoint.attributes.name : 'New Notification';
         const filter = this.props.match.params.endpointId ? this.firstFilter() : {};
 
-        if (this.props.endpoint && !this.props.match.params.endpointId) {
-            return <Redirect to={ `/edit/${ this.props.endpoint.id }` } />;
+        if (endpoint && !this.props.match.params.endpointId) {
+            return <Redirect to={ `/edit/${ endpoint.id }` } />;
         }
 
         return <NotificationsPage title={ `${ action }` }>

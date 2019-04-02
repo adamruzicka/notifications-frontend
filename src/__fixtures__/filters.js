@@ -1,7 +1,7 @@
 const filters = {
     data: [
         {
-            id: '11',
+            id: '13',
             type: 'filter',
             attributes: {
                 enabled: true
@@ -14,11 +14,15 @@ const filters = {
                             type: 'app'
                         },
                         {
-                            id: '2',
+                            id: '3',
                             type: 'app'
                         },
                         {
-                            id: '3',
+                            id: '4',
+                            type: 'app'
+                        },
+                        {
+                            id: '8',
                             type: 'app'
                         },
                         {
@@ -30,25 +34,51 @@ const filters = {
                 event_types: {
                     data: [
                         {
-                            id: '17',
+                            id: '1',
+                            type: 'event_type'
+                        },
+                        {
+                            id: '3',
+                            type: 'event_type'
+                        },
+                        {
+                            id: '8',
                             type: 'event_type'
                         }
                     ]
                 },
                 levels: {
-                    data: []
+                    data: [
+                        {
+                            id: '1',
+                            type: 'level'
+                        },
+                        {
+                            id: '4',
+                            type: 'level'
+                        },
+                        {
+                            id: '22',
+                            type: 'level'
+                        }
+                    ]
                 },
                 endpoints: {
                     data: [
                         {
-                            id: '11',
+                            id: '36',
                             type: 'endpoint'
                         }
                     ]
                 }
             }
         }
-    ]
+    ],
+    meta: {
+        total: 1,
+        per_page: 10,
+        page: 1
+    }
 };
 
 export default filters;
