@@ -82,13 +82,20 @@ export class NotificationsIndex extends Component {
                     } } />,
                 <NotificationActions key={ `notification_actions_${id}` }
                     endpointId={ parseInt(id) }
-                    onDelete={ this.onDelete(id, name) } />
+                    onDelete={ this.onDelete(id, name) }
+                    onTest={ this.onTest(id) } />
             ]}));
 
     onDelete = (id, name) =>
         event => {
             event.preventDefault();
             this.props.deleteEndpoint(id, name);
+        }
+
+    onTest = (id) =>
+        event => {
+            event.preventDefault();
+            this.props.testEndpoint(id);
         }
 
     noResults = () =>
@@ -148,6 +155,7 @@ NotificationsIndex.propTypes = {
     deleteEndpoint: PropTypes.func.isRequired,
     newEndpoint: PropTypes.func.isRequired,
     toggleEndpoint: PropTypes.func.isRequired,
+    testEndpoint: PropTypes.func.isRequired,
     endpoints: PropTypes.object.isRequired,
     error: PropTypes.string,
     loading: PropTypes.bool,
@@ -166,7 +174,8 @@ const mapDispatchToProps = (dispatch) =>
         fetchEndpoints: actionCreators.fetchEndpoints,
         deleteEndpoint: actionCreators.deleteEndpoint,
         newEndpoint: actionCreators.newEndpoint,
-        toggleEndpoint: actionCreators.toggleEndpoint
+        toggleEndpoint: actionCreators.toggleEndpoint,
+        testEndpoint: actionCreators.testEndpoint
     }, dispatch);
 
 export default connect(mapStateToProps, mapDispatchToProps)(NotificationsIndex);
