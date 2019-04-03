@@ -19,13 +19,17 @@ export const normalizeEndpointData = (payload) =>
 
 const updateEndpointInEndpoints = (state, endpoint) => {
     const normalizedEndpoint = Object.values(endpoint.endpoint)[0];
-    let updatedEndpoint = {};
-    updatedEndpoint[normalizedEndpoint.id] = normalizedEndpoint;
+    let updatedEndpoint = { [normalizedEndpoint.id]: normalizedEndpoint };
     return {
         ...state,
         endpoint: normalizedEndpoint,
         endpoints: Object.assign(state.endpoints, updatedEndpoint)
     };
+};
+
+const deleteEndpointInCollectionObject = (object, id) => {
+    const { [id]: removed, ...remaining } = object;
+    return { remaining, removed };
 };
 
 export const endpointsReducer = function(state = initialStateFor('endpoints', {}), action) {
@@ -84,7 +88,7 @@ export const endpointsReducer = function(state = initialStateFor('endpoints', {}
         case successMessage(DELETE_ENDPOINT):
             return {
                 ...state,
-                endpoints: state.endpoints.filter((item) => item.id !== action.payload.id)
+                endpoints: deleteEndpointInCollectionObject(state.endpoints, action.payload.id).remaining
             };
 
         case pendingMessage(SUBMIT_ENDPOINT):
