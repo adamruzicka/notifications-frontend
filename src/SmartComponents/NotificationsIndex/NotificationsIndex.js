@@ -43,7 +43,7 @@ export class NotificationsIndex extends Component {
         this.refreshData();
     }
 
-    changePage = debounce(() => { this.refreshData(false); }, 800);
+    changePage = debounce(() => { this.refreshData(); }, 800);
 
     state = {
         page: 1,
