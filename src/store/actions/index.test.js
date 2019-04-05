@@ -60,3 +60,9 @@ describe('fetchApps', () => {
         expect(actionGenerator.fetchApps()).toMatchSnapshot();
     });
 });
+
+describe('testEndpoint', () => {
+    it('returns a state object', () => {
+        expect(actionGenerator.testEndpoint(1)).toMatchSnapshot();
+    });
+});

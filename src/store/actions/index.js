@@ -6,6 +6,7 @@ export const FETCH_ENDPOINT  = 'FETCH_ENDPOINT';
 export const SUBMIT_ENDPOINT = 'SUBMIT_ENDPOINT';
 export const DELETE_ENDPOINT = 'DELETE_ENDPOINT';
 export const NEW_ENDPOINT    = 'NEW_ENDPOINT';
+export const TEST_ENDPOINT   = 'TEST_ENDPOINT';
 export const FETCH_APPS      = 'FETCH_APPS';
 
 export const fetchEndpoints = (page, perPage) => {
@@ -119,6 +120,23 @@ export const deleteEndpoint = (id, name) => ({
 
 export const newEndpoint = () => ({
     type: NEW_ENDPOINT
+});
+
+export const testEndpoint = (endpointId) => ({
+    type: TEST_ENDPOINT,
+    payload: ApiClient.create(`/endpoints/${ endpointId }/test`, {}),
+    meta: {
+        notifications: {
+            rejected: {
+                variant: 'warning',
+                title: 'Test event delivery failed'
+            },
+            fulfilled: {
+                variant: 'success',
+                title: 'Test event delivery successful'
+            }
+        }
+    }
 });
 
 export const fetchFilters = (endpointId) => ({

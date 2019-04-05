@@ -107,6 +107,25 @@ Object {
 }
 `;
 
+exports[`testEndpoint returns a state object 1`] = `
+Object {
+  "meta": Object {
+    "notifications": Object {
+      "fulfilled": Object {
+        "title": "Test event delivery successful",
+        "variant": "success",
+      },
+      "rejected": Object {
+        "title": "Test event delivery failed",
+        "variant": "warning",
+      },
+    },
+  },
+  "payload": Promise {},
+  "type": "TEST_ENDPOINT",
+}
+`;
+
 exports[`toggleEndpoint returns a state object 1`] = `
 Object {
   "meta": Object {

@@ -18,7 +18,8 @@ export class NotificationActions extends React.Component {
         location: PropTypes.object.isRequired,
         history: PropTypes.object.isRequired,
         endpointId: PropTypes.number.isRequired,
-        onDelete: PropTypes.func
+        onDelete: PropTypes.func,
+        onTest: PropTypes.func
     }
 
     onToggle = isOpen => {
@@ -30,6 +31,9 @@ export class NotificationActions extends React.Component {
     dropdownItems = () => ([
         <DropdownItem key="edit" component={ Link } to={ `/edit/${ this.props.endpointId }` }>
             Edit
+        </DropdownItem>,
+        <DropdownItem key="test" href="#test" onClick={ this.props.onTest }>
+            Test
         </DropdownItem>,
         <DropdownItem key="delete" href="#delete" onClick={ this.props.onDelete }>
             Delete

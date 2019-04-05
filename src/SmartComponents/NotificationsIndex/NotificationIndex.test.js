@@ -15,6 +15,7 @@ describe('NotificationsIndex', () => {
         deleteEndpoint: jest.fn(),
         toggleEndpoint: jest.fn(),
         newEndpoint: jest.fn(),
+        testEndpoint: jest.fn(),
         endpoints: {},
         total: 0,
         store

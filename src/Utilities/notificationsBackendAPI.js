@@ -19,7 +19,7 @@ class BackendAPIClient {
                 throw new Error(response.statusText);
             }
 
-            return (method !== 'delete') ? response.json() : {};
+            return (response.status !== 204) ? response.json() : {};
         });
     }
 
