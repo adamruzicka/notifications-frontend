@@ -4,7 +4,8 @@ const apps = {
             id: '1',
             type: 'app',
             attributes: {
-                name: 'seed-app-0'
+                name: 'seed-app-0',
+                title: 'Seed App 0'
             },
             relationships: {
                 event_types: {
@@ -16,7 +17,8 @@ const apps = {
             id: '2',
             type: 'app',
             attributes: {
-                name: 'seed-app-1'
+                name: 'seed-app-1',
+                title: 'Seed App 1'
             },
             relationships: {
                 event_types: {
@@ -28,7 +30,8 @@ const apps = {
             id: '3',
             type: 'app',
             attributes: {
-                name: 'seed-app-2'
+                name: 'seed-app-2',
+                title: 'Seed App 2'
             },
             relationships: {
                 event_types: {
@@ -49,7 +52,8 @@ const apps = {
             id: '4',
             type: 'app',
             attributes: {
-                name: 'seed-app-3'
+                name: 'seed-app-3',
+                title: 'Seed App 3'
             },
             relationships: {
                 event_types: {
@@ -70,7 +74,8 @@ const apps = {
             id: '5',
             type: 'app',
             attributes: {
-                name: 'seed-app-4'
+                name: 'seed-app-4',
+                title: 'Seed App 4'
             },
             relationships: {
                 event_types: {
@@ -82,7 +87,8 @@ const apps = {
             id: '6',
             type: 'app',
             attributes: {
-                name: 'seed-app-5'
+                name: 'seed-app-5',
+                title: 'Seed App 5'
             },
             relationships: {
                 event_types: {
@@ -107,7 +113,8 @@ const apps = {
             id: '7',
             type: 'app',
             attributes: {
-                name: 'seed-app-6'
+                name: 'seed-app-6',
+                title: 'Seed App 6'
             },
             relationships: {
                 event_types: {
@@ -119,7 +126,8 @@ const apps = {
             id: '8',
             type: 'app',
             attributes: {
-                name: 'seed-app-7'
+                name: 'seed-app-7',
+                title: 'Seed App 7'
             },
             relationships: {
                 event_types: {
@@ -144,7 +152,8 @@ const apps = {
             id: '9',
             type: 'app',
             attributes: {
-                name: 'seed-app-8'
+                name: 'seed-app-8',
+                title: 'Seed App 8'
             },
             relationships: {
                 event_types: {
@@ -173,7 +182,8 @@ const apps = {
             id: '10',
             type: 'app',
             attributes: {
-                name: 'seed-app-9'
+                name: 'seed-app-9',
+                title: 'Seed App 9'
             },
             relationships: {
                 event_types: {
@@ -204,7 +214,7 @@ const apps = {
             id: '1',
             type: 'event_type',
             attributes: {
-                title: 'seed-type-0',
+                title: 'Seed Type 0',
                 name: 'seed-type-0'
             },
             relationships: {
@@ -222,7 +232,7 @@ const apps = {
             id: '2',
             type: 'event_type',
             attributes: {
-                title: 'seed-type-1',
+                title: 'Seed Type 1',
                 name: 'seed-type-1'
             },
             relationships: {
@@ -254,7 +264,7 @@ const apps = {
             id: '3',
             type: 'event_type',
             attributes: {
-                title: 'seed-type-0',
+                title: 'Seed Type 0',
                 name: 'seed-type-0'
             },
             relationships: {
@@ -280,7 +290,7 @@ const apps = {
             id: '4',
             type: 'event_type',
             attributes: {
-                title: 'seed-type-1',
+                title: 'Seed Type 1',
                 name: 'seed-type-1'
             },
             relationships: {
@@ -348,7 +358,7 @@ const apps = {
             id: '5',
             type: 'event_type',
             attributes: {
-                title: 'seed-type-0',
+                title: 'Seed Type 0',
                 name: 'seed-type-0'
             },
             relationships: {
@@ -378,7 +388,7 @@ const apps = {
             id: '6',
             type: 'event_type',
             attributes: {
-                title: 'seed-type-1',
+                title: 'Seed Type 1',
                 name: 'seed-type-1'
             },
             relationships: {
@@ -408,7 +418,7 @@ const apps = {
             id: '7',
             type: 'event_type',
             attributes: {
-                title: 'seed-type-2',
+                title: 'Seed Type 2',
                 name: 'seed-type-2'
             },
             relationships: {
@@ -522,7 +532,7 @@ const apps = {
             id: '8',
             type: 'event_type',
             attributes: {
-                title: 'seed-type-0',
+                title: 'Seed Type 0',
                 name: 'seed-type-0'
             },
             relationships: {
@@ -552,7 +562,7 @@ const apps = {
             id: '9',
             type: 'event_type',
             attributes: {
-                title: 'seed-type-1',
+                title: 'Seed Type 1',
                 name: 'seed-type-1'
             },
             relationships: {
@@ -582,7 +592,7 @@ const apps = {
             id: '10',
             type: 'event_type',
             attributes: {
-                title: 'seed-type-2',
+                title: 'Seed Type 2',
                 name: 'seed-type-2'
             },
             relationships: {
@@ -696,7 +706,7 @@ const apps = {
             id: '11',
             type: 'event_type',
             attributes: {
-                title: 'seed-type-0',
+                title: 'Seed Type 0',
                 name: 'seed-type-0'
             },
             relationships: {
@@ -709,7 +719,7 @@ const apps = {
             id: '12',
             type: 'event_type',
             attributes: {
-                title: 'seed-type-1',
+                title: 'Seed Type 1',
                 name: 'seed-type-1'
             },
             relationships: {
@@ -722,7 +732,7 @@ const apps = {
             id: '13',
             type: 'event_type',
             attributes: {
-                title: 'seed-type-2',
+                title: 'Seed Type 2',
                 name: 'seed-type-2'
             },
             relationships: {
@@ -735,7 +745,7 @@ const apps = {
             id: '14',
             type: 'event_type',
             attributes: {
-                title: 'seed-type-3',
+                title: 'Seed Type 3',
                 name: 'seed-type-3'
             },
             relationships: {
@@ -748,7 +758,7 @@ const apps = {
             id: '15',
             type: 'event_type',
             attributes: {
-                title: 'seed-type-0',
+                title: 'Seed Type 0',
                 name: 'seed-type-0'
             },
             relationships: {
@@ -778,7 +788,7 @@ const apps = {
             id: '16',
             type: 'event_type',
             attributes: {
-                title: 'seed-type-1',
+                title: 'Seed Type 1',
                 name: 'seed-type-1'
             },
             relationships: {
@@ -808,7 +818,7 @@ const apps = {
             id: '17',
             type: 'event_type',
             attributes: {
-                title: 'seed-type-2',
+                title: 'Seed Type 2',
                 name: 'seed-type-2'
             },
             relationships: {
@@ -838,7 +848,7 @@ const apps = {
             id: '18',
             type: 'event_type',
             attributes: {
-                title: 'seed-type-3',
+                title: 'Seed Type 3',
                 name: 'seed-type-3'
             },
             relationships: {
