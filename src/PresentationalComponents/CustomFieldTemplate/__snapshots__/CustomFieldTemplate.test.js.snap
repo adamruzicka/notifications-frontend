@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomFieldTemplate expect to render 1`] = `
+<div>
+  <div
+    key="test-div"
+  />
+  <span />
+  <div
+    key="error-test-div"
+  />
+</div>
+`;

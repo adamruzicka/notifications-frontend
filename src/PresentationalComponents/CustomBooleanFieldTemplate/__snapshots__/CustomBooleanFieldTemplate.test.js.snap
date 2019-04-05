@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomBooleanFieldTemplate expect to render 1`] = `
+<FormGroup
+  className=""
+  fieldId="custom-checkbox-test-input-field"
+  isInline={false}
+  isRequired={true}
+  isValid={true}
+>
+  <Checkbox
+    aria-label="Test Input Field"
+    className=""
+    defaultChecked={true}
+    id="custom-checkbox-test-input-field"
+    isChecked={null}
+    isDisabled={false}
+    isValid={true}
+    key="custom-checkbox-test-input-field-key"
+    label="Test Input Field"
+    onChange={[Function]}
+  />
+</FormGroup>
+`;

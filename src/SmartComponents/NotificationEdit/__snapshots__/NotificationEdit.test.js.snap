@@ -14,8 +14,15 @@ exports[`NotificationEdit expect to render a Form 1`] = `
     <Form
       ErrorList={[Function]}
       FieldTemplate={[Function]}
+      ObjectFieldTemplate={[Function]}
       className="pf-c-form"
       disabled={false}
+      fields={
+        Object {
+          "BooleanField": [Function],
+          "StringField": [Function],
+        }
+      }
       formData={Object {}}
       liveValidate={false}
       noHtml5Validate={false}
@@ -43,7 +50,7 @@ exports[`NotificationEdit expect to render a Form 1`] = `
             "name",
             "url",
           ],
-          "title": "Edit Notifications",
+          "title": "Edit Notification",
           "type": "object",
         }
       }
@@ -1263,8 +1270,15 @@ exports[`NotificationEdit takes an endpoint 1`] = `
     <Form
       ErrorList={[Function]}
       FieldTemplate={[Function]}
+      ObjectFieldTemplate={[Function]}
       className="pf-c-form"
       disabled={false}
+      fields={
+        Object {
+          "BooleanField": [Function],
+          "StringField": [Function],
+        }
+      }
       formData={Object {}}
       liveValidate={false}
       noHtml5Validate={false}
@@ -1292,7 +1306,7 @@ exports[`NotificationEdit takes an endpoint 1`] = `
             "name",
             "url",
           ],
-          "title": "Edit Notifications",
+          "title": "Edit Notification",
           "type": "object",
         }
       }

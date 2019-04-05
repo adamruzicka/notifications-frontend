@@ -23,18 +23,21 @@ import registryDecorator from '@red-hat-insights/insights-frontend-components/Ut
 import {
     LoadingState,
     NotificationsPage,
-    CustomFieldTemplate,
-    FilterList
+    FilterList,
+    CustomInputFieldTemplate,
+    CustomObjectFieldTemplate,
+    CustomBooleanFieldTemplate,
+    CustomFieldTemplate
 } from 'PresentationalComponents';
 
 const schema = {
-    title: 'Edit Notifications',
+    title: 'Edit Notification',
     type: 'object',
     required: [ 'name', 'url' ],
     properties: {
         name: { type: 'string', title: 'Name' },
-        active: { type: 'boolean', title: 'Active', default: true },
-        url: { type: 'string', title: 'URL' }
+        url: { type: 'string', title: 'URL' },
+        active: { type: 'boolean', title: 'Active', default: true }
     }
 };
 
@@ -45,6 +48,11 @@ const uiSchema = {
     url: {
         'ui:placeholder': 'https://...'
     }
+};
+
+const fields = {
+    StringField: CustomInputFieldTemplate,
+    BooleanField: CustomBooleanFieldTemplate
 };
 
 const getTrueKeys = (obj) => {
@@ -147,9 +155,11 @@ export class NotificationEdit extends Component {
                 placeholder={ <Skeleton size={ SkeletonSize.sm } /> }>
                 <Form schema={ schema } className="pf-c-form"
                     uiSchema={ uiSchema }
+                    fields={ fields }
+                    ObjectFieldTemplate={ CustomObjectFieldTemplate }
+                    FieldTemplate={ CustomFieldTemplate }
                     formData={ this.initialFormData() }
-                    onSubmit={ this.formSubmit }
-                    FieldTemplate={ CustomFieldTemplate }>
+                    onSubmit={ this.formSubmit } >
 
                     <FilterList ref={ this.filterList }
                         apps={ this.props.apps }
