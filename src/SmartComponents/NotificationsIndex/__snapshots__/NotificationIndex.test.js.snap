@@ -30,8 +30,6 @@ exports[`NotificationsIndex expect to render an EmptyState by default (with no e
           />
         </p>
         <Title
-          className=""
-          headingLevel="h1"
           size="lg"
         >
           No Endpoins found
@@ -82,6 +80,58 @@ exports[`NotificationsIndex takes endpoints 1`] = `
     <div>
       <Table
         aria-label="Notifications list"
+        footer={
+          <Pagination
+            dropDirection="down"
+            itemCount={0}
+            onFirstClick={[Function]}
+            onLastClick={[Function]}
+            onNextClick={[Function]}
+            onPageInput={[Function]}
+            onPerPageSelect={[Function]}
+            onPreviousClick={[Function]}
+            onSetPage={[Function]}
+            page={1}
+            perPage={10}
+            perPageOptions={
+              Array [
+                Object {
+                  "title": "10",
+                  "value": 10,
+                },
+                Object {
+                  "title": "20",
+                  "value": 20,
+                },
+                Object {
+                  "title": "50",
+                  "value": 50,
+                },
+                Object {
+                  "title": "100",
+                  "value": 100,
+                },
+              ]
+            }
+            titles={
+              Object {
+                "currPage": "Current page",
+                "items": "items",
+                "itemsPerPage": "Items per page",
+                "optionsToggle": "Select",
+                "pages": "pages",
+                "paginationTitle": "Pagination",
+                "toFirstPage": "Go to first page",
+                "toLastPage": "Go to last page",
+                "toNextPage": "Go to next page",
+                "toPreviousPage": "Go to previous page",
+              }
+            }
+            toggleTemplate={[Function]}
+            variant="bottom"
+            widgetId="pagination-options-menu-bottom"
+          />
+        }
         header={
           Array [
             "Name",
@@ -160,14 +210,6 @@ exports[`NotificationsIndex takes endpoints 1`] = `
         <TableHeader />
         <TableBody />
       </Table>
-      <Pagination
-        itemsPerPage={10}
-        numberOfItems={0}
-        onPerPageSelect={[Function]}
-        onSetPage={[Function]}
-        page={1}
-        useNext={true}
-      />
     </div>
   </LoadingState>
 </withRouter(NotificationsPage)>

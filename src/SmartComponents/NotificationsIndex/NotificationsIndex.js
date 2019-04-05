@@ -5,7 +5,9 @@ import {
     Bullseye,
     EmptyState,
     EmptyStateIcon,
-    EmptyStateBody
+    EmptyStateBody,
+    Pagination,
+    PaginationVariant
 } from '@patternfly/react-core';
 import { Link } from 'react-router-dom';
 import { CubesIcon } from '@patternfly/react-icons';
@@ -18,7 +20,6 @@ import {
     TableHeader,
     TableBody,
     TableVariant,
-    Pagination,
     Skeleton,
     SkeletonSize
 } from '@red-hat-insights/insights-frontend-components';
@@ -49,7 +50,7 @@ export class NotificationsIndex extends Component {
         perPage: 10
     }
 
-    onSetPage = (page, shouldDebounce) => {
+    onPageChange = (_event, page, shouldDebounce) => {
         this.setState({ page });
         if (shouldDebounce) {
             this.changePage();
@@ -58,11 +59,17 @@ export class NotificationsIndex extends Component {
         }
     }
 
+    onPageInput = (event, page) =>
+        this.onPageChange(event, page, true)
+
+    onSetPage = (event, page) =>
+        event.target.className === 'pf-c-form-control' || this.onPageChange(event, page, false)
+
     refreshData = (page = this.state.page, perPage = this.state.perPage) => {
         this.props.fetchEndpoints(page, perPage);
     }
 
-    onPerPageSelect = (perPage) => {
+    onPerPageSelect = (_event, perPage) => {
         this.setState({ perPage });
         this.refreshData(null, perPage);
     }
@@ -115,21 +122,24 @@ export class NotificationsIndex extends Component {
     resultsTable = (endpoints) => {
         const tableColumns = [ 'Name', 'Type', 'Path', 'Status', 'Active',  '' ];
         const { perPage, page } = this.state;
+        const pagination = <Pagination
+            itemCount={ this.props.total }
+            widgetId="pagination-options-menu-bottom"
+            variant={ PaginationVariant.bottom }
+            perPage={ perPage }
+            page={ page }
+            onSetPage={ this.onSetPage }
+            onPageInput={ this.onPageInput }
+            onPerPageSelect={ this.onPerPageSelect } />;
         return <div>
             <Table aria-label='Notifications list'
                 variant={ TableVariant.medium }
                 rows={ this.filtersInRowsAndCells(Object.values(endpoints)) }
-                header={ tableColumns }>
+                header={ tableColumns }
+                footer={ pagination } >
                 <TableHeader />
                 <TableBody />
             </Table>
-            <Pagination
-                numberOfItems={ this.props.total }
-                itemsPerPage={ perPage }
-                page={ page }
-                onSetPage={ this.onSetPage }
-                onPerPageSelect={ this.onPerPageSelect }
-                useNext={ true } />
         </div>;
     }
 
