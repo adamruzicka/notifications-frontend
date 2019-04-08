@@ -6,7 +6,7 @@
     "@babel/runtime": "^7.1.2",
     "@patternfly/patternfly-next": "^1.0.175",
     "@patternfly/react-core": "^2.10.9",
-    "@patternfly/react-table": "^0.4.4",
+    "@patternfly/react-table": "^1.4.10",
     "@red-hat-insights/insights-frontend-components": "^3.34.9",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "classnames": "^2.2.5",

@@ -16,13 +16,14 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import * as actionCreators from 'Store/actions';
 import {
-    Table,
-    TableHeader,
-    TableBody,
-    TableVariant,
     Skeleton,
     SkeletonSize
 } from '@red-hat-insights/insights-frontend-components';
+import {
+    Table,
+    TableHeader,
+    TableBody
+} from '@patternfly/react-table';
 import registryDecorator from '@red-hat-insights/insights-frontend-components/Utilities/Registry';
 import debounce from 'lodash/debounce';
 
@@ -47,7 +48,8 @@ export class NotificationsIndex extends Component {
 
     state = {
         page: 1,
-        perPage: 10
+        perPage: 10,
+        rows: []
     }
 
     onPageChange = (_event, page, shouldDebounce) => {
@@ -66,7 +68,9 @@ export class NotificationsIndex extends Component {
         event.target.className === 'pf-c-form-control' || this.onPageChange(event, page, false)
 
     refreshData = (page = this.state.page, perPage = this.state.perPage) => {
-        this.props.fetchEndpoints(page, perPage);
+        this.props.fetchEndpoints(page, perPage).then(() =>
+            this.filtersInRowsAndCells()
+        );
     }
 
     onPerPageSelect = (_event, perPage) => {
@@ -74,29 +78,36 @@ export class NotificationsIndex extends Component {
         this.refreshData(null, perPage);
     }
 
-    filtersInRowsAndCells = (endpoints) =>
-        endpoints.map(({ id, attributes: { active, name, url }}) => ({
-            cells: [
-                name,
-                'HTTP',
-                url,
-                <StatusIcon key={ `notification_status_${id}` } status={ true } />,
-                <EndpointToggle key={ `notification_switch_${id}` }
-                    id={ parseInt(id) }
-                    active={ active }
-                    onChange={ (checked) => {
-                        this.props.toggleEndpoint(id, checked).then(() => this.forceUpdate());
-                    } } />,
-                <NotificationActions key={ `notification_actions_${id}` }
-                    endpointId={ parseInt(id) }
-                    onDelete={ this.onDelete(id, name) }
-                    onTest={ this.onTest(id) } />
-            ]}));
+    filtersInRowsAndCells = () => {
+        const endpoints = Object.values(this.props.endpoints);
+        let rows = [];
+        if (endpoints.length > 0) {
+            rows = endpoints.map(({ id, attributes: { active, name, url }}) => (
+                [
+                    { title: name },
+                    { title: 'HTTP' },
+                    { title: url },
+                    { title: <StatusIcon key={ `notification_status_${id}` } status={ true } /> },
+                    { title: <EndpointToggle key={ `notification_switch_${id}` }
+                        id={ parseInt(id) }
+                        active={ active }
+                        onChange={ (checked) => {
+                            this.props.toggleEndpoint(id, checked).then(() => this.filtersInRowsAndCells());
+                        } } /> },
+                    { title: <NotificationActions key={ `notification_actions_${id}` }
+                        endpointId={ parseInt(id) }
+                        onDelete={ this.onDelete(id, name) }
+                        onTest={ this.onTest(id) } /> }
+                ]));
+        }
+
+        this.setState({ rows });
+    }
 
     onDelete = (id, name) =>
         event => {
             event.preventDefault();
-            this.props.deleteEndpoint(id, name);
+            this.props.deleteEndpoint(id, name).then(() => this.filtersInRowsAndCells());
         }
 
     onTest = (id) =>
@@ -119,26 +130,27 @@ export class NotificationsIndex extends Component {
             </EmptyState>
         </Bullseye>
 
-    resultsTable = (endpoints) => {
+    resultsTable = () => {
         const tableColumns = [ 'Name', 'Type', 'Path', 'Status', 'Active',  '' ];
-        const { perPage, page } = this.state;
-        const pagination = <Pagination
-            itemCount={ this.props.total }
-            widgetId="pagination-options-menu-bottom"
-            variant={ PaginationVariant.bottom }
-            perPage={ perPage }
-            page={ page }
-            onSetPage={ this.onSetPage }
-            onPageInput={ this.onPageInput }
-            onPerPageSelect={ this.onPerPageSelect } />;
+        const { perPage, page, rows } = this.state;
+
         return <div>
             <Table aria-label='Notifications list'
-                variant={ TableVariant.medium }
-                rows={ this.filtersInRowsAndCells(Object.values(endpoints)) }
-                header={ tableColumns }
-                footer={ pagination } >
+                rows={ rows }
+                cells={ tableColumns }>
                 <TableHeader />
                 <TableBody />
+                <tfoot><tr><td colSpan='6'>
+                    <Pagination
+                        itemCount={ this.props.total }
+                        widgetId="pagination-options-menu-bottom"
+                        variant={ PaginationVariant.bottom }
+                        perPage={ perPage }
+                        page={ page }
+                        onSetPage={ this.onSetPage }
+                        onPageInput={ this.onPageInput }
+                        onPerPageSelect={ this.onPerPageSelect } />
+                </td></tr></tfoot>
             </Table>
         </div>;
     }
@@ -153,7 +165,7 @@ export class NotificationsIndex extends Component {
                 <LoadingState
                     loading={ this.props.loading }
                     placeholder={ placeholder } >
-                    { Object.values(this.props.endpoints).length > 0 ? this.resultsTable(this.props.endpoints) : this.noResults() }
+                    { this.state.rows.length > 0 ? this.resultsTable() : this.noResults() }
                 </LoadingState>
             </NotificationsPage>
         );

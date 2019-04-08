@@ -11,7 +11,7 @@ describe('NotificationsIndex', () => {
     const store = init(logger).getStore();
     const defaultProps = {
         fetchFilters: jest.fn(),
-        fetchEndpoints: jest.fn(),
+        fetchEndpoints: jest.fn(() => Promise.resolve({ endpoints: []})),
         deleteEndpoint: jest.fn(),
         toggleEndpoint: jest.fn(),
         newEndpoint: jest.fn(),
@@ -32,8 +32,20 @@ describe('NotificationsIndex', () => {
     it('takes endpoints', () => {
         const testEndpoints = normalizePayload(endpoints).endpoint;
         const wrapper = shallow(
-            <NotificationsIndex { ...defaultProps } endpoints={ testEndpoints }/>
+            <NotificationsIndex { ...defaultProps } />
         );
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const rows = Object.values(testEndpoints).map(({ attributes: { active, name, url }}) => (
+            [
+                { title: name },
+                { title: 'HTTP' },
+                { title: url },
+                { title: 'true' },
+                { title: `${active}` },
+                { title: 'actions' }
+            ]));
+
+        const wrapperWithState = wrapper.setState({ rows });
+        expect(wrapperWithState.find('Table').length).toBe(1);
+        expect(toJson(wrapperWithState)).toMatchSnapshot();
     });
 });

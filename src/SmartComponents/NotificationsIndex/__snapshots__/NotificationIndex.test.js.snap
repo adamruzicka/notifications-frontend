@@ -80,59 +80,7 @@ exports[`NotificationsIndex takes endpoints 1`] = `
     <div>
       <Table
         aria-label="Notifications list"
-        footer={
-          <Pagination
-            dropDirection="down"
-            itemCount={0}
-            onFirstClick={[Function]}
-            onLastClick={[Function]}
-            onNextClick={[Function]}
-            onPageInput={[Function]}
-            onPerPageSelect={[Function]}
-            onPreviousClick={[Function]}
-            onSetPage={[Function]}
-            page={1}
-            perPage={10}
-            perPageOptions={
-              Array [
-                Object {
-                  "title": "10",
-                  "value": 10,
-                },
-                Object {
-                  "title": "20",
-                  "value": 20,
-                },
-                Object {
-                  "title": "50",
-                  "value": 50,
-                },
-                Object {
-                  "title": "100",
-                  "value": 100,
-                },
-              ]
-            }
-            titles={
-              Object {
-                "currPage": "Current page",
-                "items": "items",
-                "itemsPerPage": "Items per page",
-                "optionsToggle": "Select",
-                "pages": "pages",
-                "paginationTitle": "Pagination",
-                "toFirstPage": "Go to first page",
-                "toLastPage": "Go to last page",
-                "toNextPage": "Go to next page",
-                "toPreviousPage": "Go to previous page",
-              }
-            }
-            toggleTemplate={[Function]}
-            variant="bottom"
-            widgetId="pagination-options-menu-bottom"
-          />
-        }
-        header={
+        cells={
           Array [
             "Name",
             "Type",
@@ -142,73 +90,146 @@ exports[`NotificationsIndex takes endpoints 1`] = `
             "",
           ]
         }
+        className=""
+        contentId="expanded-content"
+        dropdownDirection="down"
+        dropdownPosition="right"
+        expandId="expandable-toggle"
+        gridBreakPoint="grid-md"
+        onCollapse={null}
+        rowLabeledBy="simple-node"
         rows={
           Array [
-            Object {
-              "cells": Array [
-                "Test 1",
-                "HTTP",
-                "http://whatever.com",
-                <StatusIcon
-                  status={true}
-                />,
-                <EndpointToggle
-                  active={true}
-                  id={36}
-                  onChange={[Function]}
-                />,
-                <withRouter(NotificationActions)
-                  endpointId={36}
-                  onDelete={[Function]}
-                  onTest={[Function]}
-                />,
-              ],
-            },
-            Object {
-              "cells": Array [
-                "Test 2",
-                "HTTP",
-                "http://whatever1.com",
-                <StatusIcon
-                  status={true}
-                />,
-                <EndpointToggle
-                  active={true}
-                  id={37}
-                  onChange={[Function]}
-                />,
-                <withRouter(NotificationActions)
-                  endpointId={37}
-                  onDelete={[Function]}
-                  onTest={[Function]}
-                />,
-              ],
-            },
-            Object {
-              "cells": Array [
-                "Test 3",
-                "HTTP",
-                "http://whatever2.com",
-                <StatusIcon
-                  status={true}
-                />,
-                <EndpointToggle
-                  active={true}
-                  id={38}
-                  onChange={[Function]}
-                />,
-                <withRouter(NotificationActions)
-                  endpointId={38}
-                  onDelete={[Function]}
-                  onTest={[Function]}
-                />,
-              ],
-            },
+            Array [
+              Object {
+                "title": "Test 1",
+              },
+              Object {
+                "title": "HTTP",
+              },
+              Object {
+                "title": "http://whatever.com",
+              },
+              Object {
+                "title": "true",
+              },
+              Object {
+                "title": "true",
+              },
+              Object {
+                "title": "actions",
+              },
+            ],
+            Array [
+              Object {
+                "title": "Test 2",
+              },
+              Object {
+                "title": "HTTP",
+              },
+              Object {
+                "title": "http://whatever1.com",
+              },
+              Object {
+                "title": "true",
+              },
+              Object {
+                "title": "true",
+              },
+              Object {
+                "title": "actions",
+              },
+            ],
+            Array [
+              Object {
+                "title": "Test 3",
+              },
+              Object {
+                "title": "HTTP",
+              },
+              Object {
+                "title": "http://whatever2.com",
+              },
+              Object {
+                "title": "true",
+              },
+              Object {
+                "title": "true",
+              },
+              Object {
+                "title": "actions",
+              },
+            ],
           ]
         }
+        variant={null}
       >
-        <TableHeader />
-        <TableBody />
+        <TableHeader
+          className=""
+        />
+        <TableBody
+          className=""
+          onRowClick={[Function]}
+          rowKey="id"
+        />
+        <tfoot>
+          <tr>
+            <td
+              colSpan="6"
+            >
+              <Pagination
+                dropDirection="down"
+                itemCount={0}
+                onFirstClick={[Function]}
+                onLastClick={[Function]}
+                onNextClick={[Function]}
+                onPageInput={[Function]}
+                onPerPageSelect={[Function]}
+                onPreviousClick={[Function]}
+                onSetPage={[Function]}
+                page={1}
+                perPage={10}
+                perPageOptions={
+                  Array [
+                    Object {
+                      "title": "10",
+                      "value": 10,
+                    },
+                    Object {
+                      "title": "20",
+                      "value": 20,
+                    },
+                    Object {
+                      "title": "50",
+                      "value": 50,
+                    },
+                    Object {
+                      "title": "100",
+                      "value": 100,
+                    },
+                  ]
+                }
+                titles={
+                  Object {
+                    "currPage": "Current page",
+                    "items": "items",
+                    "itemsPerPage": "Items per page",
+                    "optionsToggle": "Select",
+                    "pages": "pages",
+                    "paginationTitle": "Pagination",
+                    "toFirstPage": "Go to first page",
+                    "toLastPage": "Go to last page",
+                    "toNextPage": "Go to next page",
+                    "toPreviousPage": "Go to previous page",
+                  }
+                }
+                toggleTemplate={[Function]}
+                variant="bottom"
+                widgetId="pagination-options-menu-bottom"
+              />
+            </td>
+          </tr>
+        </tfoot>
       </Table>
     </div>
   </LoadingState>
