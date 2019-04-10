@@ -1,5 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`CustomInputFieldTemplate expect to call onChange handler 1`] = `
+<FormGroup
+  className=""
+  fieldId="custom-input-test-input-field"
+  isInline={false}
+  isRequired={true}
+  isValid={true}
+  label="Test Input Field"
+>
+  <TextInput
+    aria-label="Test Input Field"
+    className=""
+    isDisabled={false}
+    isReadOnly={false}
+    isRequired={false}
+    isValid={true}
+    onChange={[Function]}
+    placeholder="Placeholder text"
+    type="text"
+    value="Test Input"
+  />
+</FormGroup>
+`;
+
 exports[`CustomInputFieldTemplate expect to render 1`] = `
 <FormGroup
   className=""
