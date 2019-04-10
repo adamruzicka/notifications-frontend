@@ -4,7 +4,7 @@ import { NotificationEdit } from './NotificationEdit';
 import toJson from 'enzyme-to-json';
 
 import endpoints from '../../__fixtures__/endpoints';
-import filters from '../../__fixtures__/filters';
+import filter from '../../__fixtures__/filters';
 import apps from '../../__fixtures__/apps';
 
 import { normalizePayload } from 'Store/reducers/reducerHelper';
@@ -14,7 +14,7 @@ describe('NotificationEdit', () => {
     const fetchEndpoint = jest.fn();
     const createEndpoint = jest.fn();
     const updateEndpoint = jest.fn();
-    const fetchFilters = jest.fn();
+    const fetchFilter = jest.fn();
     const fetchApps = jest.fn();
     const goBack = jest.fn();
 
@@ -28,11 +28,11 @@ describe('NotificationEdit', () => {
             goBack
         },
         apps: normalizePayload(apps).app,
-        filters: normalizePayload(filters).filter,
+        filter: normalizePayload(filter).filter,
         fetchEndpoint,
         createEndpoint,
         updateEndpoint,
-        fetchFilters,
+        fetchFilter,
         fetchApps,
         store
     };

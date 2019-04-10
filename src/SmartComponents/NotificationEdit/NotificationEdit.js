@@ -12,7 +12,7 @@ import {
     createEndpoint,
     updateEndpoint,
     newEndpoint,
-    fetchFilters,
+    fetchFilter,
     fetchApps
 } from 'Store/actions';
 import {
@@ -65,17 +65,17 @@ export class NotificationEdit extends Component {
     static propTypes = {
         endpointId: PropTypes.number,
         endpoint: PropTypes.object,
-        filters: PropTypes.object.isRequired,
+        filter: PropTypes.object.isRequired,
         apps: PropTypes.object.isRequired,
         fetchEndpoint: PropTypes.func.isRequired,
         createEndpoint: PropTypes.func.isRequired,
         updateEndpoint: PropTypes.func.isRequired,
-        fetchFilters: PropTypes.func.isRequired,
+        fetchFilter: PropTypes.func.isRequired,
         fetchApps: PropTypes.func.isRequired,
         match: PropTypes.object,
         history: PropTypes.object,
         loading: PropTypes.bool,
-        filtersLoading: PropTypes.bool,
+        filterLoading: PropTypes.bool,
         submitting: PropTypes.bool
     }
 
@@ -92,16 +92,11 @@ export class NotificationEdit extends Component {
             level_ids: getTrueKeys(this.filterList.current.state.selected.levelIds)
         };
 
-        if (this.firstFilter()) {
-            filter.id = this.firstFilter().id;
-        }
-
-        let filters = [ filter ];
         let payload = {
             active,
             name,
             url,
-            filters
+            filter
         };
 
         const endpoint = this.singleEndpoint();
@@ -118,7 +113,7 @@ export class NotificationEdit extends Component {
 
         if (id) {
             this.props.fetchEndpoint(id);
-            this.props.fetchFilters(id);
+            this.props.fetchFilter(id);
         }
     }
 
@@ -137,13 +132,10 @@ export class NotificationEdit extends Component {
     toIndex = () =>
         this.props.history.push('/list')
 
-    firstFilter = () =>
-        Object.values(this.props.filters)[0]
-
     render() {
         const endpoint = this.singleEndpoint();
         let action = this.props.match.params.endpointId && endpoint ? endpoint.attributes.name : 'New Notification';
-        const filter = this.props.match.params.endpointId ? this.firstFilter() : {};
+        const filter = this.props.match.params.endpointId ? this.props.filter : {};
 
         if (endpoint && !this.props.match.params.endpointId) {
             return <Redirect to={ `/edit/${ endpoint.id }` } />;
@@ -178,16 +170,16 @@ export class NotificationEdit extends Component {
 const mapStateToProps = (state)  => {
     let { endpoint, loading, submitting } = state.endpoints;
     let { apps, loading: appsLoading } = state.apps;
-    let { filters, loading: filtersLoading } = state.filters;
+    let { filter, loading: filterLoading } = state.filter;
 
     return {
         endpoint,
         apps,
-        filters,
+        filter,
         loading,
         submitting,
         appsLoading,
-        filtersLoading
+        filterLoading
     };
 };
 
@@ -197,7 +189,7 @@ const mapDispatchToProps = (dispatch) => {
         createEndpoint,
         updateEndpoint,
         newEndpoint,
-        fetchFilters,
+        fetchFilter,
         fetchApps
     }, dispatch);
 };

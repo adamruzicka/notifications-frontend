@@ -1,3 +1,3 @@
 export * from './AppsReducer';
-export * from './FiltersReducer';
+export * from './FilterReducer';
 export * from './EndpointsReducer';

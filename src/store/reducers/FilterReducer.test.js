@@ -1,4 +1,4 @@
-import { filtersReducer } from './FiltersReducer';
+import { filterReducer } from './FilterReducer';
 
 const initialState = {
     error: null,
@@ -8,9 +8,9 @@ const initialState = {
 describe('filter reducer', () => {
     const filterInitialState = {
         ...initialState,
-        filters: {}
+        filter: {}
     };
     it('should return the initial state', () => {
-        expect(filtersReducer(undefined, {})).toEqual(filterInitialState);
+        expect(filterReducer(undefined, {})).toEqual(filterInitialState);
     });
 });

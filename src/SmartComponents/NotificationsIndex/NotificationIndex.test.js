@@ -10,7 +10,7 @@ import toJson from 'enzyme-to-json';
 describe('NotificationsIndex', () => {
     const store = init(logger).getStore();
     const defaultProps = {
-        fetchFilters: jest.fn(),
+        fetchFilter: jest.fn(),
         fetchEndpoints: jest.fn(() => Promise.resolve({ endpoints: []})),
         deleteEndpoint: jest.fn(),
         toggleEndpoint: jest.fn(),

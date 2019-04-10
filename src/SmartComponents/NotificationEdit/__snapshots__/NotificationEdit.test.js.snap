@@ -1094,129 +1094,131 @@ exports[`NotificationEdit expect to render a Form 1`] = `
         }
         filter={
           Object {
-            "apps": Object {
-              "1": Object {
-                "id": 1,
-                "type": "app",
-              },
-              "3": Object {
-                "id": 3,
-                "type": "app",
-              },
-              "4": Object {
-                "id": 4,
-                "type": "app",
-              },
-              "8": Object {
-                "id": 8,
-                "type": "app",
-              },
-            },
-            "attributes": Object {
-              "enabled": true,
-            },
-            "endpoints": Object {
-              "36": Object {
-                "id": 36,
-                "type": "endpoint",
-              },
-            },
-            "eventTypes": Object {
-              "1": Object {
-                "id": 1,
-                "type": "eventType",
-              },
-              "3": Object {
-                "id": 3,
-                "type": "eventType",
-              },
-              "8": Object {
-                "id": 8,
-                "type": "eventType",
-              },
-            },
-            "id": 13,
-            "levels": Object {
-              "1": Object {
-                "id": 1,
-                "type": "level",
-              },
-              "22": Object {
-                "id": 22,
-                "type": "level",
-              },
-              "4": Object {
-                "id": 4,
-                "type": "level",
-              },
-            },
-            "relationships": Object {
+            "13": Object {
               "apps": Object {
-                "data": Array [
-                  Object {
-                    "id": "1",
-                    "type": "app",
-                  },
-                  Object {
-                    "id": "3",
-                    "type": "app",
-                  },
-                  Object {
-                    "id": "4",
-                    "type": "app",
-                  },
-                  Object {
-                    "id": "8",
-                    "type": "app",
-                  },
-                  Object {
-                    "id": "4",
-                    "type": "app",
-                  },
-                ],
+                "1": Object {
+                  "id": 1,
+                  "type": "app",
+                },
+                "3": Object {
+                  "id": 3,
+                  "type": "app",
+                },
+                "4": Object {
+                  "id": 4,
+                  "type": "app",
+                },
+                "8": Object {
+                  "id": 8,
+                  "type": "app",
+                },
+              },
+              "attributes": Object {
+                "enabled": true,
               },
               "endpoints": Object {
-                "data": Array [
-                  Object {
-                    "id": "36",
-                    "type": "endpoint",
-                  },
-                ],
+                "36": Object {
+                  "id": 36,
+                  "type": "endpoint",
+                },
               },
               "eventTypes": Object {
-                "data": Array [
-                  Object {
-                    "id": "1",
-                    "type": "eventType",
-                  },
-                  Object {
-                    "id": "3",
-                    "type": "eventType",
-                  },
-                  Object {
-                    "id": "8",
-                    "type": "eventType",
-                  },
-                ],
+                "1": Object {
+                  "id": 1,
+                  "type": "eventType",
+                },
+                "3": Object {
+                  "id": 3,
+                  "type": "eventType",
+                },
+                "8": Object {
+                  "id": 8,
+                  "type": "eventType",
+                },
               },
+              "id": 13,
               "levels": Object {
-                "data": Array [
-                  Object {
-                    "id": "1",
-                    "type": "level",
-                  },
-                  Object {
-                    "id": "4",
-                    "type": "level",
-                  },
-                  Object {
-                    "id": "22",
-                    "type": "level",
-                  },
-                ],
+                "1": Object {
+                  "id": 1,
+                  "type": "level",
+                },
+                "22": Object {
+                  "id": 22,
+                  "type": "level",
+                },
+                "4": Object {
+                  "id": 4,
+                  "type": "level",
+                },
               },
+              "relationships": Object {
+                "apps": Object {
+                  "data": Array [
+                    Object {
+                      "id": "1",
+                      "type": "app",
+                    },
+                    Object {
+                      "id": "3",
+                      "type": "app",
+                    },
+                    Object {
+                      "id": "4",
+                      "type": "app",
+                    },
+                    Object {
+                      "id": "8",
+                      "type": "app",
+                    },
+                    Object {
+                      "id": "4",
+                      "type": "app",
+                    },
+                  ],
+                },
+                "endpoints": Object {
+                  "data": Array [
+                    Object {
+                      "id": "36",
+                      "type": "endpoint",
+                    },
+                  ],
+                },
+                "eventTypes": Object {
+                  "data": Array [
+                    Object {
+                      "id": "1",
+                      "type": "eventType",
+                    },
+                    Object {
+                      "id": "3",
+                      "type": "eventType",
+                    },
+                    Object {
+                      "id": "8",
+                      "type": "eventType",
+                    },
+                  ],
+                },
+                "levels": Object {
+                  "data": Array [
+                    Object {
+                      "id": "1",
+                      "type": "level",
+                    },
+                    Object {
+                      "id": "4",
+                      "type": "level",
+                    },
+                    Object {
+                      "id": "22",
+                      "type": "level",
+                    },
+                  ],
+                },
+              },
+              "type": "filter",
             },
-            "type": "filter",
           }
         }
       />
@@ -2350,129 +2352,131 @@ exports[`NotificationEdit takes an endpoint 1`] = `
         }
         filter={
           Object {
-            "apps": Object {
-              "1": Object {
-                "id": 1,
-                "type": "app",
-              },
-              "3": Object {
-                "id": 3,
-                "type": "app",
-              },
-              "4": Object {
-                "id": 4,
-                "type": "app",
-              },
-              "8": Object {
-                "id": 8,
-                "type": "app",
-              },
-            },
-            "attributes": Object {
-              "enabled": true,
-            },
-            "endpoints": Object {
-              "36": Object {
-                "id": 36,
-                "type": "endpoint",
-              },
-            },
-            "eventTypes": Object {
-              "1": Object {
-                "id": 1,
-                "type": "eventType",
-              },
-              "3": Object {
-                "id": 3,
-                "type": "eventType",
-              },
-              "8": Object {
-                "id": 8,
-                "type": "eventType",
-              },
-            },
-            "id": 13,
-            "levels": Object {
-              "1": Object {
-                "id": 1,
-                "type": "level",
-              },
-              "22": Object {
-                "id": 22,
-                "type": "level",
-              },
-              "4": Object {
-                "id": 4,
-                "type": "level",
-              },
-            },
-            "relationships": Object {
+            "13": Object {
               "apps": Object {
-                "data": Array [
-                  Object {
-                    "id": "1",
-                    "type": "app",
-                  },
-                  Object {
-                    "id": "3",
-                    "type": "app",
-                  },
-                  Object {
-                    "id": "4",
-                    "type": "app",
-                  },
-                  Object {
-                    "id": "8",
-                    "type": "app",
-                  },
-                  Object {
-                    "id": "4",
-                    "type": "app",
-                  },
-                ],
+                "1": Object {
+                  "id": 1,
+                  "type": "app",
+                },
+                "3": Object {
+                  "id": 3,
+                  "type": "app",
+                },
+                "4": Object {
+                  "id": 4,
+                  "type": "app",
+                },
+                "8": Object {
+                  "id": 8,
+                  "type": "app",
+                },
+              },
+              "attributes": Object {
+                "enabled": true,
               },
               "endpoints": Object {
-                "data": Array [
-                  Object {
-                    "id": "36",
-                    "type": "endpoint",
-                  },
-                ],
+                "36": Object {
+                  "id": 36,
+                  "type": "endpoint",
+                },
               },
               "eventTypes": Object {
-                "data": Array [
-                  Object {
-                    "id": "1",
-                    "type": "eventType",
-                  },
-                  Object {
-                    "id": "3",
-                    "type": "eventType",
-                  },
-                  Object {
-                    "id": "8",
-                    "type": "eventType",
-                  },
-                ],
+                "1": Object {
+                  "id": 1,
+                  "type": "eventType",
+                },
+                "3": Object {
+                  "id": 3,
+                  "type": "eventType",
+                },
+                "8": Object {
+                  "id": 8,
+                  "type": "eventType",
+                },
               },
+              "id": 13,
               "levels": Object {
-                "data": Array [
-                  Object {
-                    "id": "1",
-                    "type": "level",
-                  },
-                  Object {
-                    "id": "4",
-                    "type": "level",
-                  },
-                  Object {
-                    "id": "22",
-                    "type": "level",
-                  },
-                ],
+                "1": Object {
+                  "id": 1,
+                  "type": "level",
+                },
+                "22": Object {
+                  "id": 22,
+                  "type": "level",
+                },
+                "4": Object {
+                  "id": 4,
+                  "type": "level",
+                },
               },
+              "relationships": Object {
+                "apps": Object {
+                  "data": Array [
+                    Object {
+                      "id": "1",
+                      "type": "app",
+                    },
+                    Object {
+                      "id": "3",
+                      "type": "app",
+                    },
+                    Object {
+                      "id": "4",
+                      "type": "app",
+                    },
+                    Object {
+                      "id": "8",
+                      "type": "app",
+                    },
+                    Object {
+                      "id": "4",
+                      "type": "app",
+                    },
+                  ],
+                },
+                "endpoints": Object {
+                  "data": Array [
+                    Object {
+                      "id": "36",
+                      "type": "endpoint",
+                    },
+                  ],
+                },
+                "eventTypes": Object {
+                  "data": Array [
+                    Object {
+                      "id": "1",
+                      "type": "eventType",
+                    },
+                    Object {
+                      "id": "3",
+                      "type": "eventType",
+                    },
+                    Object {
+                      "id": "8",
+                      "type": "eventType",
+                    },
+                  ],
+                },
+                "levels": Object {
+                  "data": Array [
+                    Object {
+                      "id": "1",
+                      "type": "level",
+                    },
+                    Object {
+                      "id": "4",
+                      "type": "level",
+                    },
+                    Object {
+                      "id": "22",
+                      "type": "level",
+                    },
+                  ],
+                },
+              },
+              "type": "filter",
             },
-            "type": "filter",
           }
         }
       />

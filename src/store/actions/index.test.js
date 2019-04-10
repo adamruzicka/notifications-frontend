@@ -49,9 +49,9 @@ describe('newEndpoint', () => {
     });
 });
 
-describe('fetchFilters', () => {
+describe('fetchFilter', () => {
     it('returns a state object', () => {
-        expect(actionGenerator.fetchFilters(1)).toMatchSnapshot();
+        expect(actionGenerator.fetchFilter(1)).toMatchSnapshot();
     });
 });
 

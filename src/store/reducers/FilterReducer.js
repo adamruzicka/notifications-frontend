@@ -1,39 +1,41 @@
 import {
-    FETCH_FILTERS
+    FETCH_FILTER
 } from 'Store/actions/index';
 import {
     successMessage,
     failureMessage,
+    pendingMessage,
     initialStateFor,
     normalizeData
 } from './reducerHelper';
 
 export const normalizeFilterData = (payload) =>
-    normalizeData(payload, 'filter');
+    normalizeData(payload, 'filter')[payload.data.id];
 
-export const filtersReducer = function(state = initialStateFor('filters', {}), action) {
+export const filterReducer = function(state = initialStateFor('filter', {}), action) {
     switch (action.type) {
-        case FETCH_FILTERS:
+        case pendingMessage(FETCH_FILTER):
             return {
                 ...state,
+                filter: {},
                 loading: true,
                 error: null
             };
 
-        case successMessage(FETCH_FILTERS):
+        case successMessage(FETCH_FILTER):
             return {
                 ...state,
                 loading: false,
                 error: null,
-                filters: normalizeFilterData(action.payload)
+                filter: normalizeFilterData(action.payload)
             };
 
-        case failureMessage(FETCH_FILTERS):
+        case failureMessage(FETCH_FILTER):
             return {
                 ...state,
                 loading: false,
                 error: action.payload.error,
-                filters: {}
+                filter: {}
             };
 
         default:

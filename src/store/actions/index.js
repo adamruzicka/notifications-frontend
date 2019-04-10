@@ -1,6 +1,6 @@
 import ApiClient from 'Utilities/notificationsBackendAPI';
 
-export const FETCH_FILTERS   = 'FETCH_FILTERS';
+export const FETCH_FILTER    = 'FETCH_FILTER';
 export const FETCH_ENDPOINTS = 'FETCH_ENDPOINTS';
 export const FETCH_ENDPOINT  = 'FETCH_ENDPOINT';
 export const SUBMIT_ENDPOINT = 'SUBMIT_ENDPOINT';
@@ -139,14 +139,14 @@ export const testEndpoint = (endpointId) => ({
     }
 });
 
-export const fetchFilters = (endpointId) => ({
-    type: FETCH_FILTERS,
-    payload: ApiClient.get(`/endpoints/${ endpointId }/filters`),
+export const fetchFilter = (endpointId) => ({
+    type: FETCH_FILTER,
+    payload: ApiClient.get(`/endpoints/${ endpointId }/filter`),
     meta: {
         notifications: {
             rejected: {
                 variant: 'danger',
-                title: 'Failed to load filters'
+                title: 'Failed to load filter'
             }
         }
     }
