@@ -8,10 +8,6 @@ export class CustomBooleanFieldTemplate extends React.Component {
         this.state = { value: props.formData };
     }
 
-    state = {
-        value: false
-    };
-
     handleCheckboxToggle = value => {
         this.props.onChange(value);
         this.setState({ value });
@@ -25,7 +21,7 @@ export class CustomBooleanFieldTemplate extends React.Component {
                 label={ this.props.schema.title }
                 aria-label={ this.props.schema.title }
                 defaultChecked={ value }
-                onChange={ this.handleTextInputChange }
+                onChange={ this.handleCheckboxToggle }
                 id={ `custom-checkbox-${ this.props.name }` }
                 key={ `custom-checkbox-${ this.props.name }-key` }
             />
