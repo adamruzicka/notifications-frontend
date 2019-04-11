@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import {
     FETCH_ENDPOINTS,
     FETCH_ENDPOINT,
@@ -14,12 +15,13 @@ import {
     normalizeData
 } from './reducerHelper';
 
-export const normalizeEndpointData = (payload) =>
-    normalizeData(payload, 'endpoint');
+export const normalizeEndpointData = (payload, endpoint, sortBy) =>
+    normalizeData(payload, 'endpoint', endpoint, sortBy);
 
 const updateEndpointInEndpoints = (state, endpoint) => {
     const normalizedEndpoint = Object.values(endpoint.endpoint)[0];
-    let updatedEndpoint = { [normalizedEndpoint.id]: normalizedEndpoint };
+    const endpointKey = _.findKey(state.endpoints, (item) => item.id === normalizedEndpoint.id);
+    let updatedEndpoint = { [endpointKey]: normalizedEndpoint };
     return {
         ...state,
         endpoint: normalizedEndpoint,
@@ -28,7 +30,8 @@ const updateEndpointInEndpoints = (state, endpoint) => {
 };
 
 const deleteEndpointInCollectionObject = (object, id) => {
-    const { [id]: removed, ...remaining } = object;
+    const key = _.findKey(object, (item) => item.id === id);
+    const { [key]: removed, ...remaining } = object;
     return { remaining, removed };
 };
 
@@ -45,7 +48,7 @@ export const endpointsReducer = function(state = initialStateFor('endpoints', {}
             return {
                 ...state,
                 loading: false,
-                endpoints: normalizeEndpointData(action.payload),
+                endpoints: normalizeEndpointData(action.payload, action.meta.endpoint, action.meta.sortBy),
                 total: action.payload.meta.total
             };
 

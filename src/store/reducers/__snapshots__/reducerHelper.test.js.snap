@@ -2176,3 +2176,191 @@ Object {
   },
 }
 `;
+
+exports[`normalizeData normalizes API data 1`] = `
+Object {
+  "36": Object {
+    "active": true,
+    "attributes": Object {
+      "active": true,
+      "filterCount": 1,
+      "name": "Test 1",
+      "url": "http://whatever.com",
+    },
+    "filterCount": 1,
+    "id": "36",
+    "name": "Test 1",
+    "type": "endpoint",
+    "url": "http://whatever.com",
+  },
+  "37": Object {
+    "active": true,
+    "attributes": Object {
+      "active": true,
+      "filterCount": 1,
+      "name": "Test 2",
+      "url": "http://whatever1.com",
+    },
+    "filterCount": 1,
+    "id": "37",
+    "name": "Test 2",
+    "type": "endpoint",
+    "url": "http://whatever1.com",
+  },
+  "38": Object {
+    "active": true,
+    "attributes": Object {
+      "active": true,
+      "filterCount": 1,
+      "name": "Test 3",
+      "url": "http://whatever2.com",
+    },
+    "filterCount": 1,
+    "id": "38",
+    "name": "Test 3",
+    "type": "endpoint",
+    "url": "http://whatever2.com",
+  },
+}
+`;
+
+exports[`normalizeData skips sorting when column is not known 1`] = `
+Object {
+  "0": Object {
+    "active": true,
+    "attributes": Object {
+      "active": true,
+      "filterCount": 1,
+      "name": "Test 1",
+      "url": "http://whatever.com",
+    },
+    "filterCount": 1,
+    "id": "36",
+    "name": "Test 1",
+    "type": "endpoint",
+    "url": "http://whatever.com",
+  },
+  "1": Object {
+    "active": true,
+    "attributes": Object {
+      "active": true,
+      "filterCount": 1,
+      "name": "Test 2",
+      "url": "http://whatever1.com",
+    },
+    "filterCount": 1,
+    "id": "37",
+    "name": "Test 2",
+    "type": "endpoint",
+    "url": "http://whatever1.com",
+  },
+  "2": Object {
+    "active": true,
+    "attributes": Object {
+      "active": true,
+      "filterCount": 1,
+      "name": "Test 3",
+      "url": "http://whatever2.com",
+    },
+    "filterCount": 1,
+    "id": "38",
+    "name": "Test 3",
+    "type": "endpoint",
+    "url": "http://whatever2.com",
+  },
+}
+`;
+
+exports[`normalizeData sorts it asc when sortBy is given 1`] = `
+Object {
+  "0": Object {
+    "active": true,
+    "attributes": Object {
+      "active": true,
+      "filterCount": 1,
+      "name": "Test 1",
+      "url": "http://whatever.com",
+    },
+    "filterCount": 1,
+    "id": "36",
+    "name": "Test 1",
+    "type": "endpoint",
+    "url": "http://whatever.com",
+  },
+  "1": Object {
+    "active": true,
+    "attributes": Object {
+      "active": true,
+      "filterCount": 1,
+      "name": "Test 2",
+      "url": "http://whatever1.com",
+    },
+    "filterCount": 1,
+    "id": "37",
+    "name": "Test 2",
+    "type": "endpoint",
+    "url": "http://whatever1.com",
+  },
+  "2": Object {
+    "active": true,
+    "attributes": Object {
+      "active": true,
+      "filterCount": 1,
+      "name": "Test 3",
+      "url": "http://whatever2.com",
+    },
+    "filterCount": 1,
+    "id": "38",
+    "name": "Test 3",
+    "type": "endpoint",
+    "url": "http://whatever2.com",
+  },
+}
+`;
+
+exports[`normalizeData sorts it when sortBy is given 1`] = `
+Object {
+  "0": Object {
+    "active": true,
+    "attributes": Object {
+      "active": true,
+      "filterCount": 1,
+      "name": "Test 3",
+      "url": "http://whatever2.com",
+    },
+    "filterCount": 1,
+    "id": "38",
+    "name": "Test 3",
+    "type": "endpoint",
+    "url": "http://whatever2.com",
+  },
+  "1": Object {
+    "active": true,
+    "attributes": Object {
+      "active": true,
+      "filterCount": 1,
+      "name": "Test 2",
+      "url": "http://whatever1.com",
+    },
+    "filterCount": 1,
+    "id": "37",
+    "name": "Test 2",
+    "type": "endpoint",
+    "url": "http://whatever1.com",
+  },
+  "2": Object {
+    "active": true,
+    "attributes": Object {
+      "active": true,
+      "filterCount": 1,
+      "name": "Test 1",
+      "url": "http://whatever.com",
+    },
+    "filterCount": 1,
+    "id": "36",
+    "name": "Test 1",
+    "type": "endpoint",
+    "url": "http://whatever.com",
+  },
+}
+`;

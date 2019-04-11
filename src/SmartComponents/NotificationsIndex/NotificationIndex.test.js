@@ -8,6 +8,7 @@ import { normalizePayload } from 'Store/reducers/reducerHelper';
 import toJson from 'enzyme-to-json';
 
 describe('NotificationsIndex', () => {
+    const testEndpoints = normalizePayload(endpoints).endpoint;
     const store = init(logger).getStore();
     const defaultProps = {
         fetchFilter: jest.fn(),
@@ -30,7 +31,6 @@ describe('NotificationsIndex', () => {
     });
 
     it('takes endpoints', () => {
-        const testEndpoints = normalizePayload(endpoints).endpoint;
         const wrapper = shallow(
             <NotificationsIndex { ...defaultProps } />
         );
@@ -47,5 +47,22 @@ describe('NotificationsIndex', () => {
         const wrapperWithState = wrapper.setState({ rows });
         expect(wrapperWithState.find('Table').length).toBe(1);
         expect(toJson(wrapperWithState)).toMatchSnapshot();
+    });
+
+    it('onSort', () => {
+        const wrapperProps = {
+            ...defaultProps,
+            fetchEndpoints: jest.fn(() => Promise.resolve({ endpoints: testEndpoints })),
+            endpoints: testEndpoints
+        };
+        const wrapper = shallow(
+            <NotificationsIndex { ...wrapperProps } />
+        );
+        const instance = wrapper.instance();
+        instance.filtersInRowsAndCells();
+        instance.onSort(null, 0, 'desc');
+        expect(wrapperProps.fetchEndpoints).toHaveBeenCalledWith(1, 10, 'name desc');
+        instance.onSort(null, 2, 'desc');
+        expect(wrapperProps.fetchEndpoints).toHaveBeenCalledWith(1, 10, 'url desc');
     });
 });

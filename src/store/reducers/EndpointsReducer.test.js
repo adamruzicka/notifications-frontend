@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import { endpointsReducer } from './EndpointsReducer';
 import {
     DELETE_ENDPOINT,
@@ -78,22 +79,26 @@ describe('endpoint reducer', () => {
         const expectation = {
             ...endpointInitialState,
             loading: false,
-            endpoints: normalizePayload(endpoints).endpoint,
+            endpoints: _.mapValues(normalizePayload(endpoints).endpoint, (item) => ({ ...item, ...item.attributes })),
             total: 3
         };
         const newState = endpointsReducer(
             endpointInitialState,
-            fromRequest(successMessage(FETCH_ENDPOINTS), endpoints)
+            fromRequest(successMessage(FETCH_ENDPOINTS), endpoints, { endpoint: '' })
         );
         expect(newState).toEqual(expectation);
     });
 
     it('should handle FETCH_ENDPOINT_SUCCESS', () => {
-        const testEndpoint = normalizePayload(endpoint).endpoint;
+        let testEndpoint = Object.values(normalizePayload(endpoint).endpoint)[0];
+        testEndpoint = _.assign(testEndpoint, testEndpoint.attributes);
+
         const expectation = {
             ...endpointInitialState,
             loading: false,
-            endpoint: testEndpoint
+            endpoint: {
+                [testEndpoint.id]: testEndpoint
+            }
         };
         const newState = endpointsReducer(
             endpointInitialState,

@@ -82,11 +82,29 @@ exports[`NotificationsIndex takes endpoints 1`] = `
         aria-label="Notifications list"
         cells={
           Array [
-            "Name",
+            Object {
+              "key": "name",
+              "title": "Name",
+              "transforms": Array [
+                [Function],
+              ],
+            },
             "Type",
-            "Path",
+            Object {
+              "key": "url",
+              "title": "Path",
+              "transforms": Array [
+                [Function],
+              ],
+            },
             "Status",
-            "Active",
+            Object {
+              "key": "active",
+              "title": "Active",
+              "transforms": Array [
+                [Function],
+              ],
+            },
             "",
           ]
         }
@@ -97,6 +115,7 @@ exports[`NotificationsIndex takes endpoints 1`] = `
         expandId="expandable-toggle"
         gridBreakPoint="grid-md"
         onCollapse={null}
+        onSort={[Function]}
         rowLabeledBy="simple-node"
         rows={
           Array [
@@ -161,6 +180,12 @@ exports[`NotificationsIndex takes endpoints 1`] = `
               },
             ],
           ]
+        }
+        sortBy={
+          Object {
+            "direction": "asc",
+            "index": 0,
+          }
         }
         variant={null}
       >

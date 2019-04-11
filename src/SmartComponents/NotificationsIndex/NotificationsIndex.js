@@ -22,7 +22,8 @@ import {
 import {
     Table,
     TableHeader,
-    TableBody
+    TableBody,
+    sortable
 } from '@patternfly/react-table';
 import registryDecorator from '@red-hat-insights/insights-frontend-components/Utilities/Registry';
 import debounce from 'lodash/debounce';
@@ -40,17 +41,42 @@ import {
 
 @registryDecorator()
 export class NotificationsIndex extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            page: 1,
+            perPage: 10,
+            rows: [ ],
+            sortBy: {
+                index: 0,
+                direction: 'asc'
+            },
+            columns: [
+                { title: 'Name', key: 'name', transforms: [ sortable ]},
+                'Type',
+                { title: 'Path', key: 'url', transforms: [ sortable ]},
+                'Status',
+                { title: 'Active', key: 'active', transforms: [ sortable ]},
+                ''
+            ]
+        };
+
+        this.onSort = this.onSort.bind(this);
+    }
+
+    onSort(_event, index, direction) {
+        const column = this.state.columns[index].key;
+        this.props.fetchEndpoints(this.state.page, this.state.perPage, `${column} ${direction}`).then(() => {
+            this.setState({ sortBy: { index, direction }});
+            this.filtersInRowsAndCells();
+        });
+    }
+
     componentDidMount() {
         this.refreshData();
     }
 
     changePage = debounce(() => { this.refreshData(); }, 800);
-
-    state = {
-        page: 1,
-        perPage: 10,
-        rows: []
-    }
 
     onPageChange = (_event, page, shouldDebounce) => {
         this.setState({ page });
@@ -80,6 +106,7 @@ export class NotificationsIndex extends Component {
 
     filtersInRowsAndCells = () => {
         const endpoints = Object.values(this.props.endpoints);
+
         let rows = [];
         if (endpoints.length > 0) {
             rows = endpoints.map(({ id, attributes: { active, name, url }}) => (
@@ -131,13 +158,14 @@ export class NotificationsIndex extends Component {
         </Bullseye>
 
     resultsTable = () => {
-        const tableColumns = [ 'Name', 'Type', 'Path', 'Status', 'Active',  '' ];
-        const { perPage, page, rows } = this.state;
+        const { perPage, page, rows, columns, sortBy } = this.state;
 
         return <div>
             <Table aria-label='Notifications list'
                 rows={ rows }
-                cells={ tableColumns }>
+                cells={ columns }
+                sortBy={ sortBy }
+                onSort={ this.onSort }>
                 <TableHeader />
                 <TableBody />
                 <tfoot><tr><td colSpan='6'>

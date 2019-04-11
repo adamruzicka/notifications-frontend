@@ -9,7 +9,7 @@ export const NEW_ENDPOINT    = 'NEW_ENDPOINT';
 export const TEST_ENDPOINT   = 'TEST_ENDPOINT';
 export const FETCH_APPS      = 'FETCH_APPS';
 
-export const fetchEndpoints = (page, perPage) => {
+export const fetchEndpoints = (page, perPage, sortBy = 'name asc') => {
     let query = [];
     if (page) {
         query.push(`page=${ page }`);
@@ -19,10 +19,18 @@ export const fetchEndpoints = (page, perPage) => {
         query.push(`per_page=${ perPage }`);
     }
 
+    if (sortBy) {
+        query.push(`order=${sortBy}`);
+    }
+
+    const url = `/endpoints?${ query.join('&') }`;
+
     return {
         type: FETCH_ENDPOINTS,
-        payload: ApiClient.get(`/endpoints?${ query.join('&') }`),
+        payload: ApiClient.get(url),
         meta: {
+            endpoint: url,
+            sortBy,
             notifications: {
                 rejected: {
                     variant: 'danger',
