@@ -9,19 +9,16 @@ export const NEW_ENDPOINT    = 'NEW_ENDPOINT';
 export const TEST_ENDPOINT   = 'TEST_ENDPOINT';
 export const FETCH_APPS      = 'FETCH_APPS';
 
-export const fetchEndpoints = (page, perPage, sortBy = 'name asc') => {
+export const fetchEndpoints = (limit, offset, sortBy = 'name asc') => {
+    const params = { limit, offset, sort_by: sortBy };
     let query = [];
-    if (page) {
-        query.push(`page=${ page }`);
-    }
 
-    if (perPage) {
-        query.push(`per_page=${ perPage }`);
-    }
-
-    if (sortBy) {
-        query.push(`order=${sortBy}`);
-    }
+    Object.keys(params).map(function(key) {
+        const value = params[key];
+        if (value !== undefined) {
+            query.push(`${ key }=${ value }`);
+        }
+    });
 
     const url = `/endpoints?${ query.join('&') }`;
 

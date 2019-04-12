@@ -32,7 +32,7 @@ describe('NotificationsIndex', () => {
 
     it('takes endpoints', () => {
         const wrapper = shallow(
-            <NotificationsIndex { ...defaultProps } />
+            <NotificationsIndex { ...defaultProps } total={ 1 } />
         );
         const rows = Object.values(testEndpoints).map(({ attributes: { active, name, url }}) => (
             [
@@ -64,5 +64,23 @@ describe('NotificationsIndex', () => {
         expect(wrapperProps.fetchEndpoints).toHaveBeenCalledWith(1, 10, 'name desc');
         instance.onSort(null, 2, 'desc');
         expect(wrapperProps.fetchEndpoints).toHaveBeenCalledWith(1, 10, 'url desc');
+    });
+
+    it('does not allow to paginate beyond total on perPage change', () => {
+        const wrapperProps = {
+            ...defaultProps,
+            fetchEndpoints: jest.fn(() => Promise.resolve({ endpoints: testEndpoints })),
+            endpoints: testEndpoints,
+            total: 51
+        };
+        const wrapper = shallow(
+            <NotificationsIndex { ...wrapperProps } />
+        );
+        const instance = wrapper.instance();
+        expect(wrapperProps.fetchEndpoints).toHaveBeenCalledWith(10, 0);
+        instance.onPageChange(null, 4, false);
+        expect(wrapperProps.fetchEndpoints).toHaveBeenCalledWith(10, 30);
+        instance.onPerPageSelect(null, 100);
+        expect(wrapperProps.fetchEndpoints).toHaveBeenCalledWith(100, 0);
     });
 });

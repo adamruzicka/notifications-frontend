@@ -179,10 +179,11 @@ describe('endpoint reducer', () => {
     it('should handle DELETE_ENDPOINT_SUCCESS', () => {
         const elements = (ids) => Object.assign(...ids.map(id => ({ [id]: { id }})));
         const action = fromRequest(successMessage(DELETE_ENDPOINT), { id: 2 });
-        const newState = endpointsReducer({ ...endpointInitialState, endpoints: elements([ 1, 2, 3 ]) }, action);
+        const newState = endpointsReducer({ ...endpointInitialState, endpoints: elements([ 1, 2, 3 ]), total: 3 }, action);
         expect(newState).toEqual({
             ...endpointInitialState,
-            endpoints: elements([ 1, 3 ])
+            endpoints: elements([ 1, 3 ]),
+            total: 2
         });
     });
 

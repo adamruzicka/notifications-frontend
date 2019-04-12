@@ -94,14 +94,23 @@ export class NotificationsIndex extends Component {
         event.target.className === 'pf-c-form-control' || this.onPageChange(event, page, false)
 
     refreshData = (page = this.state.page, perPage = this.state.perPage) => {
-        this.props.fetchEndpoints(page, perPage).then(() =>
+        const limit = perPage;
+        const offset = (page - 1) * perPage;
+        this.props.fetchEndpoints(limit, offset).then(() =>
             this.filtersInRowsAndCells()
         );
     }
 
     onPerPageSelect = (_event, perPage) => {
-        this.setState({ perPage });
-        this.refreshData(null, perPage);
+        let page = this.state.page;
+        const total = this.props.total;
+        // If current page and perPage would request data beyond total, show last available page
+        if (page * perPage > total) {
+            page = Math.floor(total / perPage) + 1;
+        }
+
+        this.setState({ page, perPage });
+        this.refreshData(page, perPage);
     }
 
     filtersInRowsAndCells = () => {
@@ -185,15 +194,16 @@ export class NotificationsIndex extends Component {
 
     render() {
         const placeholder = <Skeleton size={ SkeletonSize.lg } />;
+        const { loading, newEndpoint, total } = this.props;
 
         return (
             <NotificationsPage
                 title='Notifications'
-                rightBar={ <IndexToolbar onClick={ this.props.newEndpoint }/> }>
+                rightBar={ <IndexToolbar onClick={ newEndpoint }/> }>
                 <LoadingState
-                    loading={ this.props.loading }
+                    loading={ loading }
                     placeholder={ placeholder } >
-                    { this.state.rows.length > 0 ? this.resultsTable() : this.noResults() }
+                    { total > 0 ? this.resultsTable() : this.noResults() }
                 </LoadingState>
             </NotificationsPage>
         );

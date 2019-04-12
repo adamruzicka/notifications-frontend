@@ -204,7 +204,7 @@ exports[`NotificationsIndex takes endpoints 1`] = `
             >
               <Pagination
                 dropDirection="down"
-                itemCount={0}
+                itemCount={1}
                 onFirstClick={[Function]}
                 onLastClick={[Function]}
                 onNextClick={[Function]}

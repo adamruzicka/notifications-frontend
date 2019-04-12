@@ -91,7 +91,8 @@ export const endpointsReducer = function(state = initialStateFor('endpoints', {}
         case successMessage(DELETE_ENDPOINT):
             return {
                 ...state,
-                endpoints: deleteEndpointInCollectionObject(state.endpoints, action.payload.id).remaining
+                endpoints: deleteEndpointInCollectionObject(state.endpoints, action.payload.id).remaining,
+                total: state.total - 1
             };
 
         case pendingMessage(SUBMIT_ENDPOINT):
