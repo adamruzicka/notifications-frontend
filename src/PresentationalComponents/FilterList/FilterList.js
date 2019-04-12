@@ -85,8 +85,8 @@ export class FilterList extends Component {
             <ListItem key={ `event-type-${ eventType.id}` }>
                 <Checkbox id={ `event-type-check-${ eventType.id}` }
                     data-event-type-id={ eventType.id }
-                    label={ eventType.attributes.name }
-                    aria-label={ eventType.attributes.name }
+                    label={ eventType.attributes.title }
+                    aria-label={ eventType.attributes.title }
                     onChange={ () => this.selectFilter('eventTypeIds', eventType.id) }
                     defaultChecked={ this.state.selected.eventTypeIds[eventType.id] } />
                 { this.state.selected.eventTypeIds[eventType.id] &&
@@ -119,8 +119,8 @@ export class FilterList extends Component {
                         <CardHeader>
                             <Checkbox id={ `app-check-${ app.id}` }
                                 data-event-type-id={ app.id }
-                                label={ app.attributes.name }
-                                aria-label={ app.attributes.name }
+                                label={ app.attributes.title }
+                                aria-label={ app.attributes.title }
                                 onChange={ () => this.selectFilter('appIds', app.id) }
                                 defaultChecked={ this.state.selected.appIds[app.id]  } />
                         </CardHeader>

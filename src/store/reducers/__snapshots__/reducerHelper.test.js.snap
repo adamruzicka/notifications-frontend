@@ -6,6 +6,7 @@ Object {
     "1": Object {
       "attributes": Object {
         "name": "seed-app-0",
+        "title": "Seed App 0",
       },
       "eventTypes": Object {},
       "id": 1,
@@ -19,12 +20,13 @@ Object {
     "10": Object {
       "attributes": Object {
         "name": "seed-app-9",
+        "title": "Seed App 9",
       },
       "eventTypes": Object {
         "15": Object {
           "attributes": Object {
             "name": "seed-type-0",
-            "title": "seed-type-0",
+            "title": "Seed Type 0",
           },
           "id": 15,
           "levels": Object {
@@ -84,7 +86,7 @@ Object {
         "16": Object {
           "attributes": Object {
             "name": "seed-type-1",
-            "title": "seed-type-1",
+            "title": "Seed Type 1",
           },
           "id": 16,
           "levels": Object {
@@ -144,7 +146,7 @@ Object {
         "17": Object {
           "attributes": Object {
             "name": "seed-type-2",
-            "title": "seed-type-2",
+            "title": "Seed Type 2",
           },
           "id": 17,
           "levels": Object {
@@ -204,7 +206,7 @@ Object {
         "18": Object {
           "attributes": Object {
             "name": "seed-type-3",
-            "title": "seed-type-3",
+            "title": "Seed Type 3",
           },
           "id": 18,
           "levels": Object {
@@ -290,6 +292,7 @@ Object {
     "2": Object {
       "attributes": Object {
         "name": "seed-app-1",
+        "title": "Seed App 1",
       },
       "eventTypes": Object {},
       "id": 2,
@@ -303,12 +306,13 @@ Object {
     "3": Object {
       "attributes": Object {
         "name": "seed-app-2",
+        "title": "Seed App 2",
       },
       "eventTypes": Object {
         "1": Object {
           "attributes": Object {
             "name": "seed-type-0",
-            "title": "seed-type-0",
+            "title": "Seed Type 0",
           },
           "id": 1,
           "levels": Object {
@@ -335,7 +339,7 @@ Object {
         "2": Object {
           "attributes": Object {
             "name": "seed-type-1",
-            "title": "seed-type-1",
+            "title": "Seed Type 1",
           },
           "id": 2,
           "levels": Object {
@@ -380,12 +384,13 @@ Object {
     "4": Object {
       "attributes": Object {
         "name": "seed-app-3",
+        "title": "Seed App 3",
       },
       "eventTypes": Object {
         "3": Object {
           "attributes": Object {
             "name": "seed-type-0",
-            "title": "seed-type-0",
+            "title": "Seed Type 0",
           },
           "id": 3,
           "levels": Object {
@@ -434,7 +439,7 @@ Object {
         "4": Object {
           "attributes": Object {
             "name": "seed-type-1",
-            "title": "seed-type-1",
+            "title": "Seed Type 1",
           },
           "id": 4,
           "levels": Object {
@@ -501,6 +506,7 @@ Object {
     "5": Object {
       "attributes": Object {
         "name": "seed-app-4",
+        "title": "Seed App 4",
       },
       "eventTypes": Object {},
       "id": 5,
@@ -514,12 +520,13 @@ Object {
     "6": Object {
       "attributes": Object {
         "name": "seed-app-5",
+        "title": "Seed App 5",
       },
       "eventTypes": Object {
         "5": Object {
           "attributes": Object {
             "name": "seed-type-0",
-            "title": "seed-type-0",
+            "title": "Seed Type 0",
           },
           "id": 5,
           "levels": Object {
@@ -579,7 +586,7 @@ Object {
         "6": Object {
           "attributes": Object {
             "name": "seed-type-1",
-            "title": "seed-type-1",
+            "title": "Seed Type 1",
           },
           "id": 6,
           "levels": Object {
@@ -639,7 +646,7 @@ Object {
         "7": Object {
           "attributes": Object {
             "name": "seed-type-2",
-            "title": "seed-type-2",
+            "title": "Seed Type 2",
           },
           "id": 7,
           "levels": Object {
@@ -721,6 +728,7 @@ Object {
     "7": Object {
       "attributes": Object {
         "name": "seed-app-6",
+        "title": "Seed App 6",
       },
       "eventTypes": Object {},
       "id": 7,
@@ -734,12 +742,13 @@ Object {
     "8": Object {
       "attributes": Object {
         "name": "seed-app-7",
+        "title": "Seed App 7",
       },
       "eventTypes": Object {
         "10": Object {
           "attributes": Object {
             "name": "seed-type-2",
-            "title": "seed-type-2",
+            "title": "Seed Type 2",
           },
           "id": 10,
           "levels": Object {
@@ -799,7 +808,7 @@ Object {
         "8": Object {
           "attributes": Object {
             "name": "seed-type-0",
-            "title": "seed-type-0",
+            "title": "Seed Type 0",
           },
           "id": 8,
           "levels": Object {
@@ -859,7 +868,7 @@ Object {
         "9": Object {
           "attributes": Object {
             "name": "seed-type-1",
-            "title": "seed-type-1",
+            "title": "Seed Type 1",
           },
           "id": 9,
           "levels": Object {
@@ -941,12 +950,13 @@ Object {
     "9": Object {
       "attributes": Object {
         "name": "seed-app-8",
+        "title": "Seed App 8",
       },
       "eventTypes": Object {
         "11": Object {
           "attributes": Object {
             "name": "seed-type-0",
-            "title": "seed-type-0",
+            "title": "Seed Type 0",
           },
           "id": 11,
           "levels": Object {},
@@ -960,7 +970,7 @@ Object {
         "12": Object {
           "attributes": Object {
             "name": "seed-type-1",
-            "title": "seed-type-1",
+            "title": "Seed Type 1",
           },
           "id": 12,
           "levels": Object {},
@@ -974,7 +984,7 @@ Object {
         "13": Object {
           "attributes": Object {
             "name": "seed-type-2",
-            "title": "seed-type-2",
+            "title": "Seed Type 2",
           },
           "id": 13,
           "levels": Object {},
@@ -988,7 +998,7 @@ Object {
         "14": Object {
           "attributes": Object {
             "name": "seed-type-3",
-            "title": "seed-type-3",
+            "title": "Seed Type 3",
           },
           "id": 14,
           "levels": Object {},
@@ -1030,7 +1040,7 @@ Object {
     "1": Object {
       "attributes": Object {
         "name": "seed-type-0",
-        "title": "seed-type-0",
+        "title": "Seed Type 0",
       },
       "id": 1,
       "levels": Object {
@@ -1057,7 +1067,7 @@ Object {
     "10": Object {
       "attributes": Object {
         "name": "seed-type-2",
-        "title": "seed-type-2",
+        "title": "Seed Type 2",
       },
       "id": 10,
       "levels": Object {
@@ -1117,7 +1127,7 @@ Object {
     "11": Object {
       "attributes": Object {
         "name": "seed-type-0",
-        "title": "seed-type-0",
+        "title": "Seed Type 0",
       },
       "id": 11,
       "levels": Object {},
@@ -1131,7 +1141,7 @@ Object {
     "12": Object {
       "attributes": Object {
         "name": "seed-type-1",
-        "title": "seed-type-1",
+        "title": "Seed Type 1",
       },
       "id": 12,
       "levels": Object {},
@@ -1145,7 +1155,7 @@ Object {
     "13": Object {
       "attributes": Object {
         "name": "seed-type-2",
-        "title": "seed-type-2",
+        "title": "Seed Type 2",
       },
       "id": 13,
       "levels": Object {},
@@ -1159,7 +1169,7 @@ Object {
     "14": Object {
       "attributes": Object {
         "name": "seed-type-3",
-        "title": "seed-type-3",
+        "title": "Seed Type 3",
       },
       "id": 14,
       "levels": Object {},
@@ -1173,7 +1183,7 @@ Object {
     "15": Object {
       "attributes": Object {
         "name": "seed-type-0",
-        "title": "seed-type-0",
+        "title": "Seed Type 0",
       },
       "id": 15,
       "levels": Object {
@@ -1233,7 +1243,7 @@ Object {
     "16": Object {
       "attributes": Object {
         "name": "seed-type-1",
-        "title": "seed-type-1",
+        "title": "Seed Type 1",
       },
       "id": 16,
       "levels": Object {
@@ -1293,7 +1303,7 @@ Object {
     "17": Object {
       "attributes": Object {
         "name": "seed-type-2",
-        "title": "seed-type-2",
+        "title": "Seed Type 2",
       },
       "id": 17,
       "levels": Object {
@@ -1353,7 +1363,7 @@ Object {
     "18": Object {
       "attributes": Object {
         "name": "seed-type-3",
-        "title": "seed-type-3",
+        "title": "Seed Type 3",
       },
       "id": 18,
       "levels": Object {
@@ -1413,7 +1423,7 @@ Object {
     "2": Object {
       "attributes": Object {
         "name": "seed-type-1",
-        "title": "seed-type-1",
+        "title": "Seed Type 1",
       },
       "id": 2,
       "levels": Object {
@@ -1440,7 +1450,7 @@ Object {
     "3": Object {
       "attributes": Object {
         "name": "seed-type-0",
-        "title": "seed-type-0",
+        "title": "Seed Type 0",
       },
       "id": 3,
       "levels": Object {
@@ -1489,7 +1499,7 @@ Object {
     "4": Object {
       "attributes": Object {
         "name": "seed-type-1",
-        "title": "seed-type-1",
+        "title": "Seed Type 1",
       },
       "id": 4,
       "levels": Object {
@@ -1538,7 +1548,7 @@ Object {
     "5": Object {
       "attributes": Object {
         "name": "seed-type-0",
-        "title": "seed-type-0",
+        "title": "Seed Type 0",
       },
       "id": 5,
       "levels": Object {
@@ -1598,7 +1608,7 @@ Object {
     "6": Object {
       "attributes": Object {
         "name": "seed-type-1",
-        "title": "seed-type-1",
+        "title": "Seed Type 1",
       },
       "id": 6,
       "levels": Object {
@@ -1658,7 +1668,7 @@ Object {
     "7": Object {
       "attributes": Object {
         "name": "seed-type-2",
-        "title": "seed-type-2",
+        "title": "Seed Type 2",
       },
       "id": 7,
       "levels": Object {
@@ -1718,7 +1728,7 @@ Object {
     "8": Object {
       "attributes": Object {
         "name": "seed-type-0",
-        "title": "seed-type-0",
+        "title": "Seed Type 0",
       },
       "id": 8,
       "levels": Object {
@@ -1778,7 +1788,7 @@ Object {
     "9": Object {
       "attributes": Object {
         "name": "seed-type-1",
-        "title": "seed-type-1",
+        "title": "Seed Type 1",
       },
       "id": 9,
       "levels": Object {

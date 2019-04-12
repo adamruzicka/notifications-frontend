@@ -18,7 +18,7 @@ exports[`FilterList expect to render 1`] = `
         >
           <input
             aria-invalid="false"
-            aria-label="seed-app-0"
+            aria-label="Seed App 0"
             checked=""
             class="pf-c-check__input"
             data-event-type-id="1"
@@ -29,7 +29,7 @@ exports[`FilterList expect to render 1`] = `
             class="pf-c-check__label"
             for="app-check-1"
           >
-            seed-app-0
+            Seed App 0
           </label>
         </div>
       </div>
@@ -72,7 +72,7 @@ exports[`FilterList expect to render 1`] = `
         >
           <input
             aria-invalid="false"
-            aria-label="seed-app-1"
+            aria-label="Seed App 1"
             class="pf-c-check__input"
             data-event-type-id="2"
             id="app-check-2"
@@ -82,7 +82,7 @@ exports[`FilterList expect to render 1`] = `
             class="pf-c-check__label"
             for="app-check-2"
           >
-            seed-app-1
+            Seed App 1
           </label>
         </div>
       </div>
@@ -102,7 +102,7 @@ exports[`FilterList expect to render 1`] = `
         >
           <input
             aria-invalid="false"
-            aria-label="seed-app-2"
+            aria-label="Seed App 2"
             checked=""
             class="pf-c-check__input"
             data-event-type-id="3"
@@ -113,7 +113,7 @@ exports[`FilterList expect to render 1`] = `
             class="pf-c-check__label"
             for="app-check-3"
           >
-            seed-app-2
+            Seed App 2
           </label>
         </div>
       </div>
@@ -166,7 +166,7 @@ exports[`FilterList expect to render 1`] = `
             >
               <input
                 aria-invalid="false"
-                aria-label="seed-type-0"
+                aria-label="Seed Type 0"
                 checked=""
                 class="pf-c-check__input"
                 data-event-type-id="1"
@@ -177,7 +177,7 @@ exports[`FilterList expect to render 1`] = `
                 class="pf-c-check__label"
                 for="event-type-check-1"
               >
-                seed-type-0
+                Seed Type 0
               </label>
             </div>
             <ul
@@ -212,7 +212,7 @@ exports[`FilterList expect to render 1`] = `
             >
               <input
                 aria-invalid="false"
-                aria-label="seed-type-1"
+                aria-label="Seed Type 1"
                 class="pf-c-check__input"
                 data-event-type-id="2"
                 id="event-type-check-2"
@@ -222,7 +222,7 @@ exports[`FilterList expect to render 1`] = `
                 class="pf-c-check__label"
                 for="event-type-check-2"
               >
-                seed-type-1
+                Seed Type 1
               </label>
             </div>
           </li>
@@ -244,7 +244,7 @@ exports[`FilterList expect to render 1`] = `
         >
           <input
             aria-invalid="false"
-            aria-label="seed-app-3"
+            aria-label="Seed App 3"
             checked=""
             class="pf-c-check__input"
             data-event-type-id="4"
@@ -255,7 +255,7 @@ exports[`FilterList expect to render 1`] = `
             class="pf-c-check__label"
             for="app-check-4"
           >
-            seed-app-3
+            Seed App 3
           </label>
         </div>
       </div>
@@ -308,7 +308,7 @@ exports[`FilterList expect to render 1`] = `
             >
               <input
                 aria-invalid="false"
-                aria-label="seed-type-0"
+                aria-label="Seed Type 0"
                 checked=""
                 class="pf-c-check__input"
                 data-event-type-id="3"
@@ -319,7 +319,7 @@ exports[`FilterList expect to render 1`] = `
                 class="pf-c-check__label"
                 for="event-type-check-3"
               >
-                seed-type-0
+                Seed Type 0
               </label>
             </div>
             <ul
@@ -394,7 +394,7 @@ exports[`FilterList expect to render 1`] = `
             >
               <input
                 aria-invalid="false"
-                aria-label="seed-type-1"
+                aria-label="Seed Type 1"
                 class="pf-c-check__input"
                 data-event-type-id="4"
                 id="event-type-check-4"
@@ -404,7 +404,7 @@ exports[`FilterList expect to render 1`] = `
                 class="pf-c-check__label"
                 for="event-type-check-4"
               >
-                seed-type-1
+                Seed Type 1
               </label>
             </div>
           </li>
@@ -426,7 +426,7 @@ exports[`FilterList expect to render 1`] = `
         >
           <input
             aria-invalid="false"
-            aria-label="seed-app-4"
+            aria-label="Seed App 4"
             class="pf-c-check__input"
             data-event-type-id="5"
             id="app-check-5"
@@ -436,7 +436,7 @@ exports[`FilterList expect to render 1`] = `
             class="pf-c-check__label"
             for="app-check-5"
           >
-            seed-app-4
+            Seed App 4
           </label>
         </div>
       </div>
@@ -456,7 +456,7 @@ exports[`FilterList expect to render 1`] = `
         >
           <input
             aria-invalid="false"
-            aria-label="seed-app-5"
+            aria-label="Seed App 5"
             class="pf-c-check__input"
             data-event-type-id="6"
             id="app-check-6"
@@ -466,7 +466,7 @@ exports[`FilterList expect to render 1`] = `
             class="pf-c-check__label"
             for="app-check-6"
           >
-            seed-app-5
+            Seed App 5
           </label>
         </div>
       </div>
@@ -486,7 +486,7 @@ exports[`FilterList expect to render 1`] = `
         >
           <input
             aria-invalid="false"
-            aria-label="seed-app-6"
+            aria-label="Seed App 6"
             class="pf-c-check__input"
             data-event-type-id="7"
             id="app-check-7"
@@ -496,7 +496,7 @@ exports[`FilterList expect to render 1`] = `
             class="pf-c-check__label"
             for="app-check-7"
           >
-            seed-app-6
+            Seed App 6
           </label>
         </div>
       </div>
@@ -516,7 +516,7 @@ exports[`FilterList expect to render 1`] = `
         >
           <input
             aria-invalid="false"
-            aria-label="seed-app-7"
+            aria-label="Seed App 7"
             checked=""
             class="pf-c-check__input"
             data-event-type-id="8"
@@ -527,7 +527,7 @@ exports[`FilterList expect to render 1`] = `
             class="pf-c-check__label"
             for="app-check-8"
           >
-            seed-app-7
+            Seed App 7
           </label>
         </div>
       </div>
@@ -580,7 +580,7 @@ exports[`FilterList expect to render 1`] = `
             >
               <input
                 aria-invalid="false"
-                aria-label="seed-type-0"
+                aria-label="Seed Type 0"
                 checked=""
                 class="pf-c-check__input"
                 data-event-type-id="8"
@@ -591,7 +591,7 @@ exports[`FilterList expect to render 1`] = `
                 class="pf-c-check__label"
                 for="event-type-check-8"
               >
-                seed-type-0
+                Seed Type 0
               </label>
             </div>
             <ul
@@ -686,7 +686,7 @@ exports[`FilterList expect to render 1`] = `
             >
               <input
                 aria-invalid="false"
-                aria-label="seed-type-1"
+                aria-label="Seed Type 1"
                 class="pf-c-check__input"
                 data-event-type-id="9"
                 id="event-type-check-9"
@@ -696,7 +696,7 @@ exports[`FilterList expect to render 1`] = `
                 class="pf-c-check__label"
                 for="event-type-check-9"
               >
-                seed-type-1
+                Seed Type 1
               </label>
             </div>
           </li>
@@ -706,7 +706,7 @@ exports[`FilterList expect to render 1`] = `
             >
               <input
                 aria-invalid="false"
-                aria-label="seed-type-2"
+                aria-label="Seed Type 2"
                 class="pf-c-check__input"
                 data-event-type-id="10"
                 id="event-type-check-10"
@@ -716,7 +716,7 @@ exports[`FilterList expect to render 1`] = `
                 class="pf-c-check__label"
                 for="event-type-check-10"
               >
-                seed-type-2
+                Seed Type 2
               </label>
             </div>
           </li>
@@ -738,7 +738,7 @@ exports[`FilterList expect to render 1`] = `
         >
           <input
             aria-invalid="false"
-            aria-label="seed-app-8"
+            aria-label="Seed App 8"
             class="pf-c-check__input"
             data-event-type-id="9"
             id="app-check-9"
@@ -748,7 +748,7 @@ exports[`FilterList expect to render 1`] = `
             class="pf-c-check__label"
             for="app-check-9"
           >
-            seed-app-8
+            Seed App 8
           </label>
         </div>
       </div>
@@ -768,7 +768,7 @@ exports[`FilterList expect to render 1`] = `
         >
           <input
             aria-invalid="false"
-            aria-label="seed-app-9"
+            aria-label="Seed App 9"
             class="pf-c-check__input"
             data-event-type-id="10"
             id="app-check-10"
@@ -778,7 +778,7 @@ exports[`FilterList expect to render 1`] = `
             class="pf-c-check__label"
             for="app-check-10"
           >
-            seed-app-9
+            Seed App 9
           </label>
         </div>
       </div>
