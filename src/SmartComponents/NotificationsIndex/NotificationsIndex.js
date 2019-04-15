@@ -117,12 +117,13 @@ export class NotificationsIndex extends Component {
 
         let rows = [];
         if (endpoints.length > 0) {
-            rows = endpoints.map(({ id, attributes: { active, name, url }}) => (
+            rows = endpoints.map(({ id, attributes: { active, name, url, lastDeliveryStatus }}) => (
                 [
                     { title: name },
                     { title: 'HTTP' },
                     { title: url },
-                    { title: <StatusIcon key={ `notification_status_${id}` } status={ true } /> },
+                    { title: <StatusIcon key={ `notification_status_${id}` }
+                        status={ lastDeliveryStatus == null ? 'unknown' : lastDeliveryStatus } /> },
                     { title: <EndpointToggle key={ `notification_switch_${id}` }
                         id={ parseInt(id) }
                         active={ active }

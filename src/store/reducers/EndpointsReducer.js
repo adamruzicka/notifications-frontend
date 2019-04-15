@@ -4,6 +4,7 @@ import {
     FETCH_ENDPOINT,
     DELETE_ENDPOINT,
     SUBMIT_ENDPOINT,
+    TEST_ENDPOINT,
     NEW_ENDPOINT
 } from 'Store/actions/index';
 import {
@@ -26,6 +27,15 @@ const updateEndpointInEndpoints = (state, endpoint) => {
         ...state,
         endpoint: normalizedEndpoint,
         endpoints: Object.assign(state.endpoints, updatedEndpoint)
+    };
+};
+
+const setEndpointStatus = (state, id, status) => {
+    const endpointKey = _.findKey(state.endpoints, (item) => item.id === id);
+    const updatedEndpoint = { ...state.endpoints[endpointKey], lastDeliveryStatus: status };
+    return {
+        ...state,
+        endpoints: Object.assign(state.endpoints, { [endpointKey]: updatedEndpoint })
     };
 };
 
@@ -122,6 +132,12 @@ export const endpointsReducer = function(state = initialStateFor('endpoints', {}
                 ...state,
                 endpoint: null
             };
+
+        case failureMessage(TEST_ENDPOINT):
+            return setEndpointStatus(state, action.meta.endpointId, 'failure');
+
+        case successMessage(TEST_ENDPOINT):
+            return setEndpointStatus(state, action.meta.endpointId, 'success');
 
         default:
             return state;
