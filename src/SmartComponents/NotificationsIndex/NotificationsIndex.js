@@ -93,10 +93,9 @@ export class NotificationsIndex extends Component {
     onSetPage = (event, page) =>
         event.target.className === 'pf-c-form-control' || this.onPageChange(event, page, false)
 
-    refreshData = (page = this.state.page, perPage = this.state.perPage) => {
-        const limit = perPage;
-        const offset = (page - 1) * perPage;
-        this.props.fetchEndpoints(limit, offset).then(() =>
+    refreshData = (page = this.state.page, perPage = this.state.perPage, { direction, index } = this.state.sortBy) => {
+        const column = this.state.columns[index].key;
+        this.props.fetchEndpoints(page, perPage, `${column} ${direction}`).then(() =>
             this.filtersInRowsAndCells()
         );
     }
