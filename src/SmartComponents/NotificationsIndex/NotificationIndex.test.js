@@ -77,10 +77,11 @@ describe('NotificationsIndex', () => {
             <NotificationsIndex { ...wrapperProps } />
         );
         const instance = wrapper.instance();
-        expect(wrapperProps.fetchEndpoints).toHaveBeenCalledWith(10, 0);
+        const sort = 'name asc';
+        expect(wrapperProps.fetchEndpoints).toHaveBeenCalledWith(1, 10, sort);
         instance.onPageChange(null, 4, false);
-        expect(wrapperProps.fetchEndpoints).toHaveBeenCalledWith(10, 30);
+        expect(wrapperProps.fetchEndpoints).toHaveBeenCalledWith(4, 10, sort);
         instance.onPerPageSelect(null, 100);
-        expect(wrapperProps.fetchEndpoints).toHaveBeenCalledWith(100, 0);
+        expect(wrapperProps.fetchEndpoints).toHaveBeenCalledWith(1, 100, sort);
     });
 });
