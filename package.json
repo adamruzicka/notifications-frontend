@@ -122,6 +122,6 @@
     "verify": "npm-run-all build lint test"
   },
   "insights": {
-    "appname": "webhooks"
+    "appname": "hooks"
   }
 }

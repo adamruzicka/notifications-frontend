@@ -7,7 +7,7 @@ exports[`NotificationsIndex expect to render an EmptyState by default (with no e
       onClick={[MockFunction]}
     />
   }
-  title="Notifications"
+  title="Hooks"
 >
   <LoadingState
     placeholder={
@@ -32,12 +32,12 @@ exports[`NotificationsIndex expect to render an EmptyState by default (with no e
         <Title
           size="lg"
         >
-          No Endpoins found
+          No Hooks found
         </Title>
         <EmptyStateBody
           className=""
         >
-          There are no endpoints configured yet.
+          There are no hooks configured yet.
         </EmptyStateBody>
         <Button
           aria-label={null}
@@ -53,7 +53,7 @@ exports[`NotificationsIndex expect to render an EmptyState by default (with no e
           type="button"
           variant="primary"
         >
-          New endpoint
+          New hook
         </Button>
       </EmptyState>
     </Bullseye>
@@ -68,7 +68,7 @@ exports[`NotificationsIndex takes endpoints 1`] = `
       onClick={[MockFunction]}
     />
   }
-  title="Notifications"
+  title="Hooks"
 >
   <LoadingState
     placeholder={
@@ -79,7 +79,7 @@ exports[`NotificationsIndex takes endpoints 1`] = `
   >
     <div>
       <Table
-        aria-label="Notifications list"
+        aria-label="Hooks list"
         cells={
           Array [
             Object {

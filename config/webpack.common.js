@@ -19,7 +19,7 @@ if (process.env.NODE_ENV === 'production' && betaBranch) {
     deploymentEnv = 'beta/apps';
 }
 
-const publicPath = `/${deploymentEnv}/webhooks/`;
+const publicPath = `/${deploymentEnv}/hooks/`;
 
 module.exports = {
     paths: {

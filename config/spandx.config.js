@@ -4,8 +4,8 @@ const localhost = (process.env.PLATFORM === 'linux') ? 'localhost' : 'host.docke
 
 module.exports = {
     routes: {
-        '/apps/webhooks': { host: `http://${localhost}:8002` },
-        '/insights/webhooks': { host: `http://${localhost}:8002` },
-        '/api/webhooks': { host: `http://${localhost}:3000` }
+        '/apps/hooks': { host: `http://${localhost}:8002` },
+        '/insights/hooks': { host: `http://${localhost}:8002` },
+        '/api/hooks': { host: `http://${localhost}:3000` }
     }
 };

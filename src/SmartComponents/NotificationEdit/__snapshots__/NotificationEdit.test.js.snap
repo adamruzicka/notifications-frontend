@@ -2,7 +2,7 @@
 
 exports[`NotificationEdit expect to render a Form 1`] = `
 <withRouter(NotificationsPage)
-  title="New Notification"
+  title="New Hook"
 >
   <LoadingState
     placeholder={
@@ -50,14 +50,14 @@ exports[`NotificationEdit expect to render a Form 1`] = `
             "name",
             "url",
           ],
-          "title": "Edit Notification",
+          "title": "Edit Hook",
           "type": "object",
         }
       }
       uiSchema={
         Object {
           "name": Object {
-            "ui:placeholder": "New notification endpoint name",
+            "ui:placeholder": "New hook endpoint name",
           },
           "url": Object {
             "ui:placeholder": "https://...",
@@ -1270,7 +1270,7 @@ exports[`NotificationEdit expect to render a Form 1`] = `
 
 exports[`NotificationEdit takes an endpoint 1`] = `
 <withRouter(NotificationsPage)
-  title="New Notification"
+  title="New Hook"
 >
   <LoadingState
     placeholder={
@@ -1318,14 +1318,14 @@ exports[`NotificationEdit takes an endpoint 1`] = `
             "name",
             "url",
           ],
-          "title": "Edit Notification",
+          "title": "Edit Hook",
           "type": "object",
         }
       }
       uiSchema={
         Object {
           "name": Object {
-            "ui:placeholder": "New notification endpoint name",
+            "ui:placeholder": "New hook endpoint name",
           },
           "url": Object {
             "ui:placeholder": "https://...",

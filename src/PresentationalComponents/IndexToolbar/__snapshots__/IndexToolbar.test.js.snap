@@ -23,7 +23,7 @@ initialize {
                 },
                 "children": Array [
                   Object {
-                    "data": "New endpoint",
+                    "data": "New hook",
                     "next": null,
                     "parent": [Circular],
                     "prev": null,

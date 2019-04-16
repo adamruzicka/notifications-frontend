@@ -9,7 +9,7 @@ describe('IndexToolbar', () => {
             </Router>
         );
 
-        expect(wrapper.render().find('a[href="/new"]').text()).toBe('New endpoint');
+        expect(wrapper.render().find('a[href="/new"]').text()).toBe('New hook');
         expect(wrapper.render()).toMatchSnapshot();
     });
 });

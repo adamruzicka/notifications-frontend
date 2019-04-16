@@ -20,7 +20,7 @@ describe('request', () => {
         // Oddly this does not give the expected result, even though it has to call the
         // spy in order to get objectResolver as an expected result above.
         //
-        //  expect(window.fetch).toHaveBeenCalledWith('/api/webhooks/path');
+        //  expect(window.fetch).toHaveBeenCalledWith('/api/hooks/path');
     });
 
     afterAll(() => {

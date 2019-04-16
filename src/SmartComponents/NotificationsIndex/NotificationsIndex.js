@@ -158,11 +158,11 @@ export class NotificationsIndex extends Component {
                 <p>
                     <EmptyStateIcon icon={ CubesIcon } />
                 </p>
-                <Title size="lg">No Endpoins found</Title>
+                <Title size="lg">No Hooks found</Title>
                 <EmptyStateBody>
-                    There are no endpoints configured yet.
+                    There are no hooks configured yet.
                 </EmptyStateBody>
-                <Button variant="primary" to={ '/new' } component={ Link } onClick={ this.props.newEndpoint }>New endpoint</Button>
+                <Button variant="primary" to={ '/new' } component={ Link } onClick={ this.props.newEndpoint }>New hook</Button>
             </EmptyState>
         </Bullseye>
 
@@ -170,7 +170,7 @@ export class NotificationsIndex extends Component {
         const { perPage, page, rows, columns, sortBy } = this.state;
 
         return <div>
-            <Table aria-label='Notifications list'
+            <Table aria-label='Hooks list'
                 rows={ rows }
                 cells={ columns }
                 sortBy={ sortBy }
@@ -198,7 +198,7 @@ export class NotificationsIndex extends Component {
 
         return (
             <NotificationsPage
-                title='Notifications'
+                title='Hooks'
                 rightBar={ <IndexToolbar onClick={ newEndpoint }/> }>
                 <LoadingState
                     loading={ loading }

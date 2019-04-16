@@ -23,7 +23,7 @@ export class NotificationsPage extends Component {
 
     showRootLink = () =>
         this.props.history && this.props.history.location.pathname !== '/list' ?
-            <BreadcrumbItem to='#' onClick={ this.toIndex }>Notifications</BreadcrumbItem>
+            <BreadcrumbItem to='#' onClick={ this.toIndex }>Hooks</BreadcrumbItem>
             : '';
 
     render() {

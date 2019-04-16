@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 export const IndexToolbar = ({ onClick }) =>
     <Toolbar>
         <ToolbarGroup>
-            <ToolbarItem><Link to={ '/new' } onClick={ onClick }>New endpoint</Link></ToolbarItem>
+            <ToolbarItem><Link to={ '/new' } onClick={ onClick }>New hook</Link></ToolbarItem>
         </ToolbarGroup>
     </Toolbar>;
 
