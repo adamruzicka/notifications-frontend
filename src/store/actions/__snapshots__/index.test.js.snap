@@ -112,6 +112,7 @@ Object {
 exports[`testEndpoint returns a state object 1`] = `
 Object {
   "meta": Object {
+    "endpointId": 1,
     "notifications": Object {
       "fulfilled": Object {
         "title": "Test event delivery successful",

@@ -5,7 +5,8 @@ import {
     FETCH_ENDPOINTS,
     FETCH_ENDPOINT,
     NEW_ENDPOINT,
-    SUBMIT_ENDPOINT
+    SUBMIT_ENDPOINT,
+    TEST_ENDPOINT
 } from 'Store/actions/index';
 import {
     successMessage,
@@ -196,5 +197,33 @@ describe('endpoint reducer', () => {
             loading: false,
             error
         });
+    });
+
+    it('should handle TEST_ENDPOINT_SUCCESS', () => {
+        const initialState = {
+            ...endpointInitialState,
+            loading: false,
+            endpoints: _.mapValues(normalizePayload(endpoints).endpoint, (item) => ({ ...item, ...item.attributes })),
+            total: 3
+        };
+        const id = '36';
+        const action = fromRequest(successMessage(TEST_ENDPOINT), {}, { endpointId: id });
+        const newState = endpointsReducer(initialState, action);
+        const updatedState = newState.endpoints[id].lastDeliveryStatus;
+        expect(updatedState).toEqual('success');
+    });
+
+    it('should handle TEST_ENDPOINT_FAILURE', () => {
+        const initialState = {
+            ...endpointInitialState,
+            loading: false,
+            endpoints: _.mapValues(normalizePayload(endpoints).endpoint, (item) => ({ ...item, ...item.attributes })),
+            total: 3
+        };
+        const id = '36';
+        const action = fromRequest(failureMessage(TEST_ENDPOINT), {}, { endpointId: id });
+        const newState = endpointsReducer(initialState, action);
+        const updatedState = newState.endpoints[id].lastDeliveryStatus;
+        expect(updatedState).toEqual('failure');
     });
 });
