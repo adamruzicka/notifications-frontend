@@ -140,7 +140,7 @@ export class NotificationsIndex extends Component {
                     { title: <NotificationActions key={ `notification_actions_${id}` }
                         endpointId={ parseInt(id) }
                         onDelete={ this.onDelete(id, name) }
-                        onTest={ (event) => { this.onTest(event, id).then(() => this.filtersInRowsAndCells()); } } /> }
+                        onTest={ this.onTest(id) } /> }
                 ]));
         }
 
@@ -153,10 +153,11 @@ export class NotificationsIndex extends Component {
             this.props.deleteEndpoint(id, name).then(() => this.filtersInRowsAndCells());
         }
 
-    onTest = (event, id) => {
-        event.preventDefault();
-        this.props.testEndpoint(id);
-    }
+    onTest = (id) =>
+        event => {
+            event.preventDefault();
+            this.props.testEndpoint(id).then(() => this.filtersInRowsAndCells());
+        }
 
     noResults = () =>
         <Bullseye>
