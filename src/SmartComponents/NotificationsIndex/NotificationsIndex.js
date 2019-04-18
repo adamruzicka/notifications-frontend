@@ -156,7 +156,8 @@ export class NotificationsIndex extends Component {
     onTest = (id) =>
         event => {
             event.preventDefault();
-            this.props.testEndpoint(id).then(() => this.filtersInRowsAndCells());
+            const next = () => this.filtersInRowsAndCells();
+            this.props.testEndpoint(id).then(next, next);
         }
 
     noResults = () =>
