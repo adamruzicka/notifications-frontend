@@ -47,8 +47,8 @@ export default withRouter (connect()(App));
 function buildNavigation () {
     const currentPath = window.location.pathname.split('/').slice(-1)[0];
     return [{
-        title: 'Notifications',
-        id: 'notifications'
+        title: 'Hooks',
+        id: 'hooks'
     }].map(item => ({
         ...item,
         active: item.id === currentPath
