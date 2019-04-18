@@ -11,6 +11,7 @@ describe('CustomInputFieldTemplate', () => {
         uiSchema: {
             'ui:placeholder': 'Placeholder text'
         },
+        errorSchema: {},
         onChange: jest.fn(),
         name: 'test-input-field',
         required: true

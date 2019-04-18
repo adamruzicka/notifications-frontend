@@ -26,7 +26,7 @@ exports[`NotificationEdit expect to render a Form 1`] = `
       formData={Object {}}
       liveValidate={false}
       noHtml5Validate={false}
-      noValidate={false}
+      noValidate={true}
       onSubmit={[Function]}
       safeRenderCompletion={false}
       schema={
@@ -54,6 +54,7 @@ exports[`NotificationEdit expect to render a Form 1`] = `
           "type": "object",
         }
       }
+      showErrorList={false}
       uiSchema={
         Object {
           "name": Object {
@@ -1294,7 +1295,7 @@ exports[`NotificationEdit takes an endpoint 1`] = `
       formData={Object {}}
       liveValidate={false}
       noHtml5Validate={false}
-      noValidate={false}
+      noValidate={true}
       onSubmit={[Function]}
       safeRenderCompletion={false}
       schema={
@@ -1322,6 +1323,7 @@ exports[`NotificationEdit takes an endpoint 1`] = `
           "type": "object",
         }
       }
+      showErrorList={false}
       uiSchema={
         Object {
           "name": Object {

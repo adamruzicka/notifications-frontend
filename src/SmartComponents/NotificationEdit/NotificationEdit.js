@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { Component } from 'react';
 import { Button } from '@patternfly/react-core';
 
@@ -76,11 +77,13 @@ export class NotificationEdit extends Component {
         history: PropTypes.object,
         loading: PropTypes.bool,
         filterLoading: PropTypes.bool,
+        endpointErrors: PropTypes.object,
         submitting: PropTypes.bool
     }
 
     componentDidMount() {
         this.filterList = React.createRef();
+        this.form = React.createRef();
         this.fetchData();
     }
 
@@ -100,11 +103,15 @@ export class NotificationEdit extends Component {
         };
 
         const endpoint = this.singleEndpoint();
-        if (endpoint) {
-            this.props.updateEndpoint(endpoint.id, payload).then(this.toIndex);
-        } else {
-            this.props.createEndpoint(payload).then(this.toIndex);
-        }
+        ((endpoint) ? this.props.updateEndpoint(endpoint.id, payload) : this.props.createEndpoint(payload))
+        .then(this.toIndex)
+        .catch(() => {
+            const errors = _.mapValues(this.props.endpointErrors.errors, (value) => ({ errors: value }));
+            this.form.current.setState({
+                errors,
+                errorSchema: errors
+            });
+        });
     }
 
     fetchData = () => {
@@ -145,12 +152,14 @@ export class NotificationEdit extends Component {
             <LoadingState
                 loading={ this.props.loading }
                 placeholder={ <Skeleton size={ SkeletonSize.sm } /> }>
-                <Form schema={ schema } className="pf-c-form"
+                <Form ref={ this.form } schema={ schema } className="pf-c-form"
                     uiSchema={ uiSchema }
                     fields={ fields }
                     ObjectFieldTemplate={ CustomObjectFieldTemplate }
                     FieldTemplate={ CustomFieldTemplate }
                     formData={ this.initialFormData() }
+                    noValidate={ true }
+                    showErrorList={ false }
                     onSubmit={ this.formSubmit } >
 
                     <FilterList ref={ this.filterList }
@@ -168,7 +177,7 @@ export class NotificationEdit extends Component {
 }
 
 const mapStateToProps = (state)  => {
-    let { endpoint, loading, submitting } = state.endpoints;
+    let { endpoint, loading, submitting, errors: endpointErrors } = state.endpoints;
     let { apps, loading: appsLoading } = state.apps;
     let { filter, loading: filterLoading } = state.filter;
 
@@ -179,7 +188,8 @@ const mapStateToProps = (state)  => {
         loading,
         submitting,
         appsLoading,
-        filterLoading
+        filterLoading,
+        endpointErrors
     };
 };
 

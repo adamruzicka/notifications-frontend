@@ -4,6 +4,7 @@ exports[`CustomInputFieldTemplate expect to call onChange handler 1`] = `
 <FormGroup
   className=""
   fieldId="custom-input-test-input-field"
+  helperTextInvalid=""
   isInline={false}
   isRequired={true}
   isValid={true}
@@ -28,6 +29,7 @@ exports[`CustomInputFieldTemplate expect to render 1`] = `
 <FormGroup
   className=""
   fieldId="custom-input-test-input-field"
+  helperTextInvalid=""
   isInline={false}
   isRequired={true}
   isValid={true}

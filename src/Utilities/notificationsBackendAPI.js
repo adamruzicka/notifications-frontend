@@ -15,8 +15,14 @@ class BackendAPIClient {
                 body: JSON.stringify(apiProps)
             });
         }).then((response) => {
-            if (!response.ok) {
+            if (!response.ok && response.status !== 422) {
                 throw new Error(response.statusText);
+            }
+
+            if (response.status === 422) {
+                return response.clone()
+                .json()
+                .then((json) => Promise.reject(json));
             }
 
             return (response.status !== 204) ? response.json() : {};

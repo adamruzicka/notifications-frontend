@@ -172,7 +172,10 @@ describe('endpoint reducer', () => {
             loading: false,
             submitting: false,
             endpoint: {},
-            error
+            error,
+            errors: {
+                message: error
+            }
         });
     });
 
