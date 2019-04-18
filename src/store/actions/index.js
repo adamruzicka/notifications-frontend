@@ -147,7 +147,14 @@ export const testEndpoint = (endpointId) => ({
 
 export const fetchFilter = (endpointId) => ({
     type: FETCH_FILTER,
-    payload: ApiClient.get(`/endpoints/${ endpointId }/filter`),
+    payload: ApiClient.get(`/endpoints/${ endpointId }/filter`)
+    .catch((error) => {
+        if (error.message === 'Not Found') {
+            return { data: null };
+        } else {
+            throw error;
+        }
+    }),
     meta: {
         notifications: {
             rejected: {

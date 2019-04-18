@@ -9,8 +9,10 @@ import {
     normalizeData
 } from './reducerHelper';
 
-export const normalizeFilterData = (payload) =>
-    normalizeData(payload, 'filter')[payload.data.id];
+export const normalizeFilterData = (payload) => {
+    return payload.data === null ? {}
+        : normalizeData(payload, 'filter')[payload.data.id];
+};
 
 export const filterReducer = function(state = initialStateFor('filter', {}), action) {
     switch (action.type) {
@@ -34,7 +36,7 @@ export const filterReducer = function(state = initialStateFor('filter', {}), act
             return {
                 ...state,
                 loading: false,
-                error: action.payload.error,
+                error: action.payload.errors,
                 filter: {}
             };
 
