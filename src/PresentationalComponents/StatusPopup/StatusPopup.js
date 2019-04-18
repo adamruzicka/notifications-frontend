@@ -3,21 +3,23 @@ import { Tooltip } from '@patternfly/react-core';
 import PropTypes from 'prop-types';
 
 export const StatusPopup = ({ children, status, lastAttempt, lastFailure }) => {
-    let lines = [];
+    let content = 'No delivery attemps so far';
     if (status === 'success') {
-        lines.push(`Last delivery attempt: ${ lastAttempt }`);
+        content = `Last delivery attempt: ${ lastAttempt }`;
     } else if (status === 'failure') {
-        lines.push(`Last delivery attempt: ${ lastAttempt }`);
-        lines.push(<br />);
-        lines.push(`Failed at: ${ lastFailure }`);
-    } else {
-        lines.push('No delivery attemps so far');
+        content = (
+            <div>
+              Last delivery attempt: { lastAttempt }
+                <br />
+              Failed at: { lastFailure }
+            </div>
+        );
     }
 
     return (
         <Fragment>
             <Tooltip
-                content={ <div>lines</div> } >
+                content={ content } >
                 <span>
                     { children }
                 </span>
