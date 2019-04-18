@@ -208,9 +208,11 @@ describe('endpoint reducer', () => {
         };
         const id = '36';
         const action = fromRequest(successMessage(TEST_ENDPOINT), {}, { endpointId: id });
+        jest.spyOn(Date, 'now').mockImplementation(() => 1555583053066);
         const newState = endpointsReducer(initialState, action);
-        const updatedState = newState.endpoints[id].lastDeliveryStatus;
-        expect(updatedState).toEqual('success');
+        const endpoint = newState.endpoints[id];
+        expect(endpoint.lastDeliveryStatus).toEqual('success');
+        expect(endpoint.lastDeliveryTime).toEqual('2019-04-18T10:24:13.066Z');
     });
 
     it('should handle TEST_ENDPOINT_FAILURE', () => {
@@ -222,8 +224,11 @@ describe('endpoint reducer', () => {
         };
         const id = '36';
         const action = fromRequest(failureMessage(TEST_ENDPOINT), {}, { endpointId: id });
+        jest.spyOn(Date, 'now').mockImplementation(() => 1555583053066);
         const newState = endpointsReducer(initialState, action);
-        const updatedState = newState.endpoints[id].lastDeliveryStatus;
-        expect(updatedState).toEqual('failure');
+        const endpoint = newState.endpoints[id];
+        expect(endpoint.lastDeliveryStatus).toEqual('failure');
+        expect(endpoint.lastDeliveryTime).toEqual('2019-04-18T10:24:13.066Z');
+        expect(endpoint.firstFailureTime).toEqual('2019-04-18T10:24:13.066Z');
     });
 });

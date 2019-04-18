@@ -32,10 +32,16 @@ const updateEndpointInEndpoints = (state, endpoint) => {
 
 const setEndpointStatus = (state, id, status) => {
     const endpointKey = _.findKey(state.endpoints, (item) => item.id === id);
-    const updatedEndpoint = { ...state.endpoints[endpointKey], lastDeliveryStatus: status };
+    const endpoint = state.endpoints[endpointKey];
+    const timestamp = (new Date(Date.now())).toISOString();
+    const updates = { lastDeliveryStatus: status, lastDeliveryTime: timestamp };
+    if (status === 'failure' && endpoint.status !== 'failure') {
+        updates.firstFailureTime = timestamp;
+    }
+
     return {
         ...state,
-        endpoints: Object.assign(state.endpoints, { [endpointKey]: updatedEndpoint })
+        endpoints: Object.assign(state.endpoints, { [endpointKey]: { ...endpoint, ...updates }})
     };
 };
 
