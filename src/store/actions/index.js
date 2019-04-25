@@ -9,7 +9,7 @@ export const NEW_ENDPOINT    = 'NEW_ENDPOINT';
 export const TEST_ENDPOINT   = 'TEST_ENDPOINT';
 export const FETCH_APPS      = 'FETCH_APPS';
 
-export const fetchEndpoints = (page, perPage, sortBy = 'name asc') => {
+export const fetchEndpoints = (page, perPage, sortBy = 'name asc', partial = false) => {
     const offset = (page - 1) * perPage;
     const params = { offset, limit: perPage, sort_by: sortBy };
     let query = [];
@@ -29,6 +29,7 @@ export const fetchEndpoints = (page, perPage, sortBy = 'name asc') => {
         meta: {
             endpoint: url,
             sortBy,
+            partial,
             notifications: {
                 rejected: {
                     variant: 'danger',

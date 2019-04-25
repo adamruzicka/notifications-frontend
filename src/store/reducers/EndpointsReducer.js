@@ -12,7 +12,8 @@ import {
     pendingMessage,
     initialStateFor,
     normalizePayload,
-    normalizeData
+    normalizeData,
+    sortData
 } from './reducerHelper';
 
 export const normalizeEndpointData = (payload, endpoint, sortBy) =>
@@ -35,22 +36,32 @@ const deleteEndpointInCollectionObject = (object, id) => {
     return { remaining, removed };
 };
 
+const handleFetchEndpointsSuccess = (state, action) => {
+    let normalizedData = normalizeEndpointData(action.payload, action.meta.endpoint, action.meta.sortBy);
+    if (action.meta.partial) {
+        const data = Object.values(normalizedData)[0];
+        normalizedData = sortData({ ...state.endpoints, new: data }, action.meta.sortBy);
+    }
+
+    return {
+        ...state,
+        loading: false,
+        endpoints: normalizedData,
+        total: action.payload.meta.total
+    };
+};
+
 export const endpointsReducer = function(state = initialStateFor('endpoints', {}), action) {
     switch (action.type) {
         case pendingMessage(FETCH_ENDPOINTS):
             return {
                 ...state,
-                loading: true,
+                loading: !action.meta.partial,
                 error: null
             };
 
         case successMessage(FETCH_ENDPOINTS):
-            return {
-                ...state,
-                loading: false,
-                endpoints: normalizeEndpointData(action.payload, action.meta.endpoint, action.meta.sortBy),
-                total: action.payload.meta.total
-            };
+            return handleFetchEndpointsSuccess(state, action);
 
         case failureMessage(FETCH_ENDPOINTS):
             return {

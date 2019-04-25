@@ -10,7 +10,8 @@ import {
 import {
     successMessage,
     failureMessage,
-    pendingMessage
+    pendingMessage,
+    sortData
 } from './reducerHelper';
 
 import endpoints, { endpoint } from '../../__fixtures__/endpoints';
@@ -24,7 +25,7 @@ const initialState = {
 const fromRequest = (type, payload, meta: {}) => ({
     type,
     payload,
-    meta
+    meta: { partial: false, ...meta }
 });
 
 describe('endpoint reducer', () => {
@@ -85,6 +86,23 @@ describe('endpoint reducer', () => {
         const newState = endpointsReducer(
             endpointInitialState,
             fromRequest(successMessage(FETCH_ENDPOINTS), endpoints, { endpoint: '' })
+        );
+        expect(newState).toEqual(expectation);
+    });
+
+    it('should handle FETCH_ENDPOINTS_SUCCESS with partial update', () => {
+        const normalized = _.mapValues(normalizePayload(endpoints).endpoint, (item) => ({ ...item, ...item.attributes }));
+        const normalizedEndpoints = sortData(normalized, 'id asc');
+        const expectation = {
+            ...endpointInitialState,
+            loading: false,
+            endpoints: normalizedEndpoints,
+            total: 3
+        };
+        const data = [ endpoints.data[1] ];
+        const newState = endpointsReducer(
+            { ...endpointInitialState, endpoints: { 0: expectation.endpoints[0], [2]: expectation.endpoints[2] }},
+            fromRequest(successMessage(FETCH_ENDPOINTS), { ...endpoints, data }, { partial: true, sortBy: 'id asc' })
         );
         expect(newState).toEqual(expectation);
     });

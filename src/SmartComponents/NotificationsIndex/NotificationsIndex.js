@@ -100,6 +100,12 @@ export class NotificationsIndex extends Component {
         );
     }
 
+    getNextEndpoint = () => {
+        const { direction, index } = this.state.sortBy;
+        const column = this.state.columns[index].key;
+        return this.props.fetchEndpoints(this.state.perPage * (this.state.page + 1), 1, `${column} ${direction}`, true);
+    }
+
     onPerPageSelect = (_event, perPage) => {
         let page = this.state.page;
         const total = this.props.total;
@@ -142,7 +148,12 @@ export class NotificationsIndex extends Component {
     onDelete = (id, name) =>
         event => {
             event.preventDefault();
-            this.props.deleteEndpoint(id, name).then(() => this.filtersInRowsAndCells());
+            this.props.deleteEndpoint(id, name).then(() => {
+                this.filtersInRowsAndCells();
+                this.getNextEndpoint();
+            }).then(() => {
+                this.filtersInRowsAndCells();
+            });
         }
 
     onTest = (id) =>

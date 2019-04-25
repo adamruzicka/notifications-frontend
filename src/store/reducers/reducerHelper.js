@@ -109,15 +109,19 @@ function compareValues(key, order = 'asc') {
     };
 }
 
+export const sortData = (data, sortBy) => {
+    if (data && sortBy) {
+        const sort = sortBy.split(' ');
+        const sortedValues = _.values(data).sort(compareValues(sort[0], sort[1]));
+        data = _.assign({}, sortedValues);
+    }
+
+    return data ? data : {};
+};
+
 export const normalizeData = (data, property, endpoint, sortBy) => {
     let normalizedData = normalizePayload(data, endpoint)[property];
     normalizedData = _.mapValues(normalizedData, (item) => ({ ...item, ...item.attributes }));
 
-    if (normalizedData && sortBy) {
-        const sort = sortBy.split(' ');
-        const sortedValues = _.values(normalizedData).sort(compareValues(sort[0], sort[1]));
-        normalizedData = _.assign({}, sortedValues);
-    }
-
-    return normalizedData ? normalizedData : {};
+    return sortData(normalizedData, sortBy);
 };
