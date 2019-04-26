@@ -17,6 +17,7 @@ const lowerRadioStyle = {
 export class RadioToggle extends Component {
     static propTypes = {
         children: PropTypes.node,
+        subject: PropTypes.string.isRequired,
         scope: PropTypes.string.isRequired,
         initial: PropTypes.oneOf([ ALL, SELECTED ]).isRequired,
         selectable: PropTypes.bool.isRequired
@@ -33,22 +34,21 @@ export class RadioToggle extends Component {
     }
 
     render() {
-        const { children, scope, selectable } = this.props;
-        const group = `${ scope }-event-type-radio`;
-
+        const { children, scope, selectable, subject } = this.props;
+        const group = `${ scope }-${ subject.replace(' ', '-') }-radio`;
         return (
             <React.Fragment>
                 <Radio value={ ALL }
                     defaultChecked={ !selectable || this.state.value === ALL }
                     onChange={ this.handleChange }
-                    label="All event types"
+                    label={ `All ${ subject }s` }
                     id={ `${ scope }-radio-all` }
                     name={ group } style={ radioStyle } />
                 { selectable &&
                   <Radio value={ SELECTED }
                       defaultChecked={ this.state.value === SELECTED }
                       onChange={ this.handleChange }
-                      label="Only selected event types"
+                      label={ `Only selected ${ subject }s` }
                       id={ `${ scope }-radio-selected` }
                       name={ group } style={ lowerRadioStyle } /> }
                 { selectable && this.state.value === SELECTED && children }

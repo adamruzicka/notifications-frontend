@@ -67,14 +67,20 @@ export class FilterList extends Component {
                     defaultChecked={ this.state.selected.levelIds[level.id] } />
             </ListItem>;
 
-    renderLevels = (levels) => {
+    renderLevels = (eventType, levels) => {
         const levelsArray = _.values(levels);
-        return levelsArray.length > 0 &&
-            <BulletlessList>
-                { levelsArray.map((level) =>
-                    this.renderLevel(level)
-                ) }
-            </BulletlessList>;
+
+        return (
+            <RadioToggle
+                scope={ `event-type-${ eventType.id }` }
+                selectable={ levelsArray.length > 0 }
+                subject="level"
+                initial={ Object.keys(levels).some((id) => this.state.selected.levelIds[id]) ? SELECTED : ALL }>
+                <BulletlessList>
+                    { levelsArray.map(this.renderLevel) }
+                </BulletlessList>
+            </RadioToggle>
+        );
     }
 
     eventTypesListItem = (eventType) =>
@@ -87,7 +93,7 @@ export class FilterList extends Component {
                     onChange={ () => this.selectFilter('eventTypeIds', eventType.id) }
                     defaultChecked={ this.state.selected.eventTypeIds[eventType.id] } />
                 { this.state.selected.eventTypeIds[eventType.id] &&
-                      this.renderLevels(eventType.levels) }
+                      this.renderLevels(eventType, eventType.levels) }
             </ListItem>;
 
     eventTypesList = (eventTypes) => {
@@ -126,6 +132,7 @@ export class FilterList extends Component {
                             <RadioToggle
                                 scope={ `app-${ app.id }` }
                                 selectable={ Object.keys(app.eventTypes).length > 0 }
+                                subject="event type"
                                 initial={ Object.keys(app.eventTypes).some((id) => this.state.selected.eventTypeIds[id]) ? SELECTED : ALL }>
                                 { this.eventTypesList(app.eventTypes, app.id) }
                             </RadioToggle>
