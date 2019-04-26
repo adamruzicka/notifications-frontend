@@ -158,7 +158,7 @@ export class NotificationsIndex extends Component {
             event.preventDefault();
             this.props.deleteEndpoint(id, name).then(() => {
                 this.filtersInRowsAndCells();
-                this.getNextEndpoint();
+                return this.getNextEndpoint();
             }).then(() => {
                 this.filtersInRowsAndCells();
             });
