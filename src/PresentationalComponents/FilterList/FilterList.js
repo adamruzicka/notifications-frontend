@@ -14,6 +14,15 @@ import {
 import { RadioToggle, ALL, SELECTED } from 'PresentationalComponents';
 import _ from 'lodash';
 
+const BulletlessList = ({ children }) =>
+    <List style={ { listStyle: 'none' } }>
+        { children }
+    </List>;
+
+BulletlessList.propTypes = {
+    children: PropTypes.node
+};
+
 export class FilterList extends Component {
     static propTypes = {
         apps: PropTypes.object.isRequired,
@@ -73,11 +82,11 @@ export class FilterList extends Component {
     renderLevels = (levels) => {
         const levelsArray = _.values(levels);
         return levelsArray.length > 0 &&
-            <List>
+            <BulletlessList>
                 { levelsArray.map((level) =>
                     this.renderLevel(level)
                 ) }
-            </List>;
+            </BulletlessList>;
     }
 
     eventTypesListItem = (eventType) =>
@@ -96,11 +105,11 @@ export class FilterList extends Component {
     eventTypesList = (eventTypes) => {
         const eventTypesArray = _.values(eventTypes);
         return eventTypesArray.length > 0 &&
-            <List>
+            <BulletlessList>
                 { eventTypesArray.map((eventType) =>
                     this.eventTypesListItem(eventType)
                 ) }
-            </List>;
+            </BulletlessList>;
     }
 
     selectFilter = (arrayName, id) => {
