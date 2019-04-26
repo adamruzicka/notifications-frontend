@@ -86,6 +86,7 @@ export class NotificationEdit extends Component {
 
     formSubmit = (data) => {
         let { active, name, url } = data.formData;
+        const type = 'Endpoints::HttpEndpoint';
         let filter = {
             app_ids: getTrueKeys(this.filterList.current.state.selected.appIds),
             event_type_ids: getTrueKeys(this.filterList.current.state.selected.eventTypeIds),
@@ -96,7 +97,8 @@ export class NotificationEdit extends Component {
             active,
             name,
             url,
-            filter
+            filter,
+            type
         };
 
         const endpoint = this.singleEndpoint();
