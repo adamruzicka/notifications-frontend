@@ -36,7 +36,8 @@ import {
     LoadingState,
     NotificationActions,
     NotificationsPage,
-    StatusIcon
+    StatusIcon,
+    StatusPopup
 } from 'PresentationalComponents';
 
 @registryDecorator()
@@ -123,12 +124,19 @@ export class NotificationsIndex extends Component {
 
         let rows = [];
         if (endpoints.length > 0) {
-            rows = endpoints.map(({ id, attributes: { active, name, url }}) => (
+            rows = endpoints.map(({ id, lastDeliveryStatus, lastDeliveryTime, firstFailureTime, attributes: { active, name, url }}) => (
                 [
                     { title: name },
                     { title: 'HTTP' },
                     { title: url },
-                    { title: <StatusIcon key={ `notification_status_${id}` } status={ true } /> },
+                    { title: <StatusPopup
+                        lastAttempt={ lastDeliveryTime }
+                        lastFailure={ firstFailureTime }
+                        status={ lastDeliveryStatus || 'unknown' } >
+                        <StatusIcon key={ `notification_status_${id}` }
+                            status={ lastDeliveryStatus || 'unknown' } />
+                    </StatusPopup>
+                    },
                     { title: <EndpointToggle key={ `notification_switch_${id}` }
                         id={ parseInt(id) }
                         active={ active }
@@ -159,7 +167,8 @@ export class NotificationsIndex extends Component {
     onTest = (id) =>
         event => {
             event.preventDefault();
-            this.props.testEndpoint(id);
+            const next = () => this.filtersInRowsAndCells();
+            this.props.testEndpoint(id).then(next, next);
         }
 
     noResults = () =>

@@ -5,7 +5,8 @@ import {
     FETCH_ENDPOINTS,
     FETCH_ENDPOINT,
     NEW_ENDPOINT,
-    SUBMIT_ENDPOINT
+    SUBMIT_ENDPOINT,
+    TEST_ENDPOINT
 } from 'Store/actions/index';
 import {
     successMessage,
@@ -217,5 +218,38 @@ describe('endpoint reducer', () => {
             loading: false,
             error
         });
+    });
+
+    it('should handle TEST_ENDPOINT_SUCCESS', () => {
+        const initialState = {
+            ...endpointInitialState,
+            loading: false,
+            endpoints: _.mapValues(normalizePayload(endpoints).endpoint, (item) => ({ ...item, ...item.attributes })),
+            total: 3
+        };
+        const id = '36';
+        const action = fromRequest(successMessage(TEST_ENDPOINT), {}, { endpointId: id });
+        jest.spyOn(Date, 'now').mockImplementation(() => 1555583053066);
+        const newState = endpointsReducer(initialState, action);
+        const endpoint = newState.endpoints[id];
+        expect(endpoint.lastDeliveryStatus).toEqual('success');
+        expect(endpoint.lastDeliveryTime).toEqual('2019-04-18T10:24:13.066Z');
+    });
+
+    it('should handle TEST_ENDPOINT_FAILURE', () => {
+        const initialState = {
+            ...endpointInitialState,
+            loading: false,
+            endpoints: _.mapValues(normalizePayload(endpoints).endpoint, (item) => ({ ...item, ...item.attributes })),
+            total: 3
+        };
+        const id = '36';
+        const action = fromRequest(failureMessage(TEST_ENDPOINT), {}, { endpointId: id });
+        jest.spyOn(Date, 'now').mockImplementation(() => 1555583053066);
+        const newState = endpointsReducer(initialState, action);
+        const endpoint = newState.endpoints[id];
+        expect(endpoint.lastDeliveryStatus).toEqual('failure');
+        expect(endpoint.lastDeliveryTime).toEqual('2019-04-18T10:24:13.066Z');
+        expect(endpoint.firstFailureTime).toEqual('2019-04-18T10:24:13.066Z');
     });
 });

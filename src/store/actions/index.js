@@ -133,6 +133,7 @@ export const testEndpoint = (endpointId) => ({
     type: TEST_ENDPOINT,
     payload: ApiClient.create(`/endpoints/${ endpointId }/test`, {}),
     meta: {
+        endpointId,
         notifications: {
             rejected: {
                 variant: 'warning',

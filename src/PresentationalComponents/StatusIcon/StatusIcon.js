@@ -7,23 +7,23 @@ import {
 import PropTypes from 'prop-types';
 
 export const StatusIcon = ({ status }) => {
-    if (status && typeof(status) !== 'string') {
+    if (status === 'success') {
         return <Fragment>
             <CheckCircleIcon color='green' /> Success
         </Fragment>;
-    } else if (status === 'unknown') {
+    } else if (status === 'failure') {
         return <Fragment>
-            <QuestionCircleIcon color='grey' /> Unknown
+            <TimesCircleIcon color='red' /> Error
         </Fragment>;
     } else {
         return <Fragment>
-            <TimesCircleIcon color='red' /> Error
+            <QuestionCircleIcon color='grey' /> Unknown
         </Fragment>;
     }
 };
 
 StatusIcon.propTypes = {
-    status: PropTypes.oneOfType([ PropTypes.bool, PropTypes.oneOf([ 'unknown' ]) ]).isRequired
+    status: PropTypes.oneOf([ 'success', 'failure', 'unknown' ]).isRequired
 };
 
 export default StatusIcon;

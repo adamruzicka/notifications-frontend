@@ -7,7 +7,7 @@ const endpoints = {
                 name: 'Test 1',
                 url: 'http://whatever.com',
                 active: true,
-                filter_count: 1
+                last_delivery_status: null
             }
         },
         {
@@ -17,7 +17,7 @@ const endpoints = {
                 name: 'Test 2',
                 url: 'http://whatever1.com',
                 active: true,
-                filter_count: 1
+                last_delivery_status: null
             }
         },
         {
@@ -27,7 +27,7 @@ const endpoints = {
                 name: 'Test 3',
                 url: 'http://whatever2.com',
                 active: true,
-                filter_count: 1
+                last_delivery_status: null
             }
         }
     ],
