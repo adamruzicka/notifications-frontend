@@ -7,6 +7,7 @@ ShallowWrapper {
     initial="selected-only"
     scope="my-app-1"
     selectable={true}
+    subject="event type"
   >
     Something
   </RadioToggle>,
@@ -247,6 +248,7 @@ ShallowWrapper {
     initial="all"
     scope="my-app-1"
     selectable={true}
+    subject="event type"
   >
     Something
   </RadioToggle>,
@@ -487,6 +489,7 @@ ShallowWrapper {
     initial="selected-only"
     scope="my-app-1"
     selectable={false}
+    subject="event type"
   >
     Something
   </RadioToggle>,
