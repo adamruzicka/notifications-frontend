@@ -7,6 +7,11 @@ exports[`CustomBooleanFieldTemplate expect to call onChange handler 1`] = `
   isInline={false}
   isRequired={true}
   isValid={true}
+  style={
+    Object {
+      "marginTop": "1em",
+    }
+  }
 >
   <Checkbox
     aria-label="Test Input Field"
@@ -30,6 +35,11 @@ exports[`CustomBooleanFieldTemplate expect to render 1`] = `
   isInline={false}
   isRequired={true}
   isValid={true}
+  style={
+    Object {
+      "marginTop": "1em",
+    }
+  }
 >
   <Checkbox
     aria-label="Test Input Field"

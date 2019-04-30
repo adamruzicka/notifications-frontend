@@ -24,7 +24,8 @@ export class CustomInputFieldTemplate extends React.Component {
             isRequired={ this.props.required }
             isValid={ !hasErrors }
             helperTextInvalid={ invalidHelperText }
-            fieldId={ `custom-input-${ this.props.name }` }>
+            fieldId={ `custom-input-${ this.props.name }` }
+            style={ { marginTop: 'var(--pf-global--spacer--sm)' } }>
             <TextInput value={ value } aria-label={ this.props.schema.title } isValid={ !hasErrors }
                 type="text" onChange={ this.handleTextInputChange } placeholder={ placeholder } />
         </FormGroup>;

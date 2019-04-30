@@ -4,7 +4,7 @@ exports[`NotificationsPage expect to render  1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <NotificationsPage
-    rightBar="right"
+    showBreadcrumb={true}
     title="Something"
   >
     content
@@ -24,41 +24,34 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <PageHeader>
-          <Split
+          <Breadcrumb
+            aria-label="Breadcrumb"
             className=""
-            component="div"
-            gutter={null}
+            style={
+              Object {
+                "marginLeft": "calc(var(--pf-c-content--ol--MarginLeft) * -1 * 2)",
+              }
+            }
           >
-            <SplitItem
+            
+            <BreadcrumbItem
               className=""
-              isMain={true}
+              component="a"
+              isActive={true}
+              style={
+                Object {
+                  "marginTop": 0,
+                }
+              }
+              target={null}
+              to={null}
             >
-              <Breadcrumb
-                aria-label="Breadcrumb"
-                className=""
-              >
-                
-                <BreadcrumbItem
-                  className=""
-                  component="a"
-                  isActive={true}
-                  target={null}
-                  to={null}
-                >
-                  Something
-                </BreadcrumbItem>
-              </Breadcrumb>
-              <PageHeaderTitle
-                title="Something"
-              />
-            </SplitItem>
-            <SplitItem
-              className=""
-              isMain={false}
-            >
-              right
-            </SplitItem>
-          </Split>
+              Something
+            </BreadcrumbItem>
+          </Breadcrumb>
+          <PageHeaderTitle
+            title="Something"
+          />
         </PageHeader>,
         <Connect(Main)>
           content
@@ -72,187 +65,104 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "children": <Split
-            className=""
-            component="div"
-            gutter={null}
-          >
-            <SplitItem
+          "children": Array [
+            <Breadcrumb
+              aria-label="Breadcrumb"
               className=""
-              isMain={true}
+              style={
+                Object {
+                  "marginLeft": "calc(var(--pf-c-content--ol--MarginLeft) * -1 * 2)",
+                }
+              }
             >
-              <Breadcrumb
-                aria-label="Breadcrumb"
+              
+              <BreadcrumbItem
                 className=""
+                component="a"
+                isActive={true}
+                style={
+                  Object {
+                    "marginTop": 0,
+                  }
+                }
+                target={null}
+                to={null}
               >
-                
+                Something
+              </BreadcrumbItem>
+            </Breadcrumb>,
+            <PageHeaderTitle
+              title="Something"
+            />,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "aria-label": "Breadcrumb",
+              "children": Array [
+                "",
                 <BreadcrumbItem
                   className=""
                   component="a"
                   isActive={true}
+                  style={
+                    Object {
+                      "marginTop": 0,
+                    }
+                  }
                   target={null}
                   to={null}
                 >
                   Something
-                </BreadcrumbItem>
-              </Breadcrumb>
-              <PageHeaderTitle
-                title="Something"
-              />
-            </SplitItem>
-            <SplitItem
-              className=""
-              isMain={false}
-            >
-              right
-            </SplitItem>
-          </Split>,
-        },
-        "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "children": Array [
-              <SplitItem
-                className=""
-                isMain={true}
-              >
-                <Breadcrumb
-                  aria-label="Breadcrumb"
-                  className=""
-                >
-                  
-                  <BreadcrumbItem
-                    className=""
-                    component="a"
-                    isActive={true}
-                    target={null}
-                    to={null}
-                  >
-                    Something
-                  </BreadcrumbItem>
-                </Breadcrumb>
-                <PageHeaderTitle
-                  title="Something"
-                />
-              </SplitItem>,
-              <SplitItem
-                className=""
-                isMain={false}
-              >
-                right
-              </SplitItem>,
-            ],
-            "className": "",
-            "component": "div",
-            "gutter": null,
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "children": Array [
-                  <Breadcrumb
-                    aria-label="Breadcrumb"
-                    className=""
-                  >
-                    
-                    <BreadcrumbItem
-                      className=""
-                      component="a"
-                      isActive={true}
-                      target={null}
-                      to={null}
-                    >
-                      Something
-                    </BreadcrumbItem>
-                  </Breadcrumb>,
-                  <PageHeaderTitle
-                    title="Something"
-                  />,
-                ],
-                "className": "",
-                "isMain": true,
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "aria-label": "Breadcrumb",
-                    "children": Array [
-                      "",
-                      <BreadcrumbItem
-                        className=""
-                        component="a"
-                        isActive={true}
-                        target={null}
-                        to={null}
-                      >
-                        Something
-                      </BreadcrumbItem>,
-                    ],
-                    "className": "",
-                  },
-                  "ref": null,
-                  "rendered": Array [
-                    "",
-                    Object {
-                      "instance": null,
-                      "key": undefined,
-                      "nodeType": "function",
-                      "props": Object {
-                        "children": "Something",
-                        "className": "",
-                        "component": "a",
-                        "isActive": true,
-                        "target": null,
-                        "to": null,
-                      },
-                      "ref": null,
-                      "rendered": "Something",
-                      "type": [Function],
-                    },
-                  ],
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "function",
-                  "props": Object {
-                    "title": "Something",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
+                </BreadcrumbItem>,
               ],
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "children": "right",
-                "className": "",
-                "isMain": false,
+              "className": "",
+              "style": Object {
+                "marginLeft": "calc(var(--pf-c-content--ol--MarginLeft) * -1 * 2)",
               },
-              "ref": null,
-              "rendered": "right",
-              "type": [Function],
             },
-          ],
-          "type": [Function],
-        },
+            "ref": null,
+            "rendered": Array [
+              "",
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "Something",
+                  "className": "",
+                  "component": "a",
+                  "isActive": true,
+                  "style": Object {
+                    "marginTop": 0,
+                  },
+                  "target": null,
+                  "to": null,
+                },
+                "ref": null,
+                "rendered": "Something",
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "title": "Something",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
         "type": [Function],
       },
       Object {
@@ -261,6 +171,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": "content",
+          "style": undefined,
         },
         "ref": null,
         "rendered": "content",
@@ -277,41 +188,34 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <PageHeader>
-            <Split
+            <Breadcrumb
+              aria-label="Breadcrumb"
               className=""
-              component="div"
-              gutter={null}
+              style={
+                Object {
+                  "marginLeft": "calc(var(--pf-c-content--ol--MarginLeft) * -1 * 2)",
+                }
+              }
             >
-              <SplitItem
+              
+              <BreadcrumbItem
                 className=""
-                isMain={true}
+                component="a"
+                isActive={true}
+                style={
+                  Object {
+                    "marginTop": 0,
+                  }
+                }
+                target={null}
+                to={null}
               >
-                <Breadcrumb
-                  aria-label="Breadcrumb"
-                  className=""
-                >
-                  
-                  <BreadcrumbItem
-                    className=""
-                    component="a"
-                    isActive={true}
-                    target={null}
-                    to={null}
-                  >
-                    Something
-                  </BreadcrumbItem>
-                </Breadcrumb>
-                <PageHeaderTitle
-                  title="Something"
-                />
-              </SplitItem>
-              <SplitItem
-                className=""
-                isMain={false}
-              >
-                right
-              </SplitItem>
-            </Split>
+                Something
+              </BreadcrumbItem>
+            </Breadcrumb>
+            <PageHeaderTitle
+              title="Something"
+            />
           </PageHeader>,
           <Connect(Main)>
             content
@@ -325,187 +229,104 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "children": <Split
-              className=""
-              component="div"
-              gutter={null}
-            >
-              <SplitItem
+            "children": Array [
+              <Breadcrumb
+                aria-label="Breadcrumb"
                 className=""
-                isMain={true}
+                style={
+                  Object {
+                    "marginLeft": "calc(var(--pf-c-content--ol--MarginLeft) * -1 * 2)",
+                  }
+                }
               >
-                <Breadcrumb
-                  aria-label="Breadcrumb"
+                
+                <BreadcrumbItem
                   className=""
+                  component="a"
+                  isActive={true}
+                  style={
+                    Object {
+                      "marginTop": 0,
+                    }
+                  }
+                  target={null}
+                  to={null}
                 >
-                  
+                  Something
+                </BreadcrumbItem>
+              </Breadcrumb>,
+              <PageHeaderTitle
+                title="Something"
+              />,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "aria-label": "Breadcrumb",
+                "children": Array [
+                  "",
                   <BreadcrumbItem
                     className=""
                     component="a"
                     isActive={true}
+                    style={
+                      Object {
+                        "marginTop": 0,
+                      }
+                    }
                     target={null}
                     to={null}
                   >
                     Something
-                  </BreadcrumbItem>
-                </Breadcrumb>
-                <PageHeaderTitle
-                  title="Something"
-                />
-              </SplitItem>
-              <SplitItem
-                className=""
-                isMain={false}
-              >
-                right
-              </SplitItem>
-            </Split>,
-          },
-          "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "children": Array [
-                <SplitItem
-                  className=""
-                  isMain={true}
-                >
-                  <Breadcrumb
-                    aria-label="Breadcrumb"
-                    className=""
-                  >
-                    
-                    <BreadcrumbItem
-                      className=""
-                      component="a"
-                      isActive={true}
-                      target={null}
-                      to={null}
-                    >
-                      Something
-                    </BreadcrumbItem>
-                  </Breadcrumb>
-                  <PageHeaderTitle
-                    title="Something"
-                  />
-                </SplitItem>,
-                <SplitItem
-                  className=""
-                  isMain={false}
-                >
-                  right
-                </SplitItem>,
-              ],
-              "className": "",
-              "component": "div",
-              "gutter": null,
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "children": Array [
-                    <Breadcrumb
-                      aria-label="Breadcrumb"
-                      className=""
-                    >
-                      
-                      <BreadcrumbItem
-                        className=""
-                        component="a"
-                        isActive={true}
-                        target={null}
-                        to={null}
-                      >
-                        Something
-                      </BreadcrumbItem>
-                    </Breadcrumb>,
-                    <PageHeaderTitle
-                      title="Something"
-                    />,
-                  ],
-                  "className": "",
-                  "isMain": true,
-                },
-                "ref": null,
-                "rendered": Array [
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "aria-label": "Breadcrumb",
-                      "children": Array [
-                        "",
-                        <BreadcrumbItem
-                          className=""
-                          component="a"
-                          isActive={true}
-                          target={null}
-                          to={null}
-                        >
-                          Something
-                        </BreadcrumbItem>,
-                      ],
-                      "className": "",
-                    },
-                    "ref": null,
-                    "rendered": Array [
-                      "",
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "function",
-                        "props": Object {
-                          "children": "Something",
-                          "className": "",
-                          "component": "a",
-                          "isActive": true,
-                          "target": null,
-                          "to": null,
-                        },
-                        "ref": null,
-                        "rendered": "Something",
-                        "type": [Function],
-                      },
-                    ],
-                    "type": [Function],
-                  },
-                  Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "function",
-                    "props": Object {
-                      "title": "Something",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
+                  </BreadcrumbItem>,
                 ],
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "function",
-                "props": Object {
-                  "children": "right",
-                  "className": "",
-                  "isMain": false,
+                "className": "",
+                "style": Object {
+                  "marginLeft": "calc(var(--pf-c-content--ol--MarginLeft) * -1 * 2)",
                 },
-                "ref": null,
-                "rendered": "right",
-                "type": [Function],
               },
-            ],
-            "type": [Function],
-          },
+              "ref": null,
+              "rendered": Array [
+                "",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "Something",
+                    "className": "",
+                    "component": "a",
+                    "isActive": true,
+                    "style": Object {
+                      "marginTop": 0,
+                    },
+                    "target": null,
+                    "to": null,
+                  },
+                  "ref": null,
+                  "rendered": "Something",
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "title": "Something",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
           "type": [Function],
         },
         Object {
@@ -514,6 +335,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": "content",
+            "style": undefined,
           },
           "ref": null,
           "rendered": "content",

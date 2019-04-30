@@ -4,6 +4,7 @@ import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { Routes } from './Routes';
 import { NotificationsPortal } from '@red-hat-insights/insights-frontend-components/components/Notifications';
+import '@patternfly/react-core/dist/styles/base.css';
 import '@red-hat-insights/insights-frontend-components/components/Notifications.css';
 import './App.scss';
 

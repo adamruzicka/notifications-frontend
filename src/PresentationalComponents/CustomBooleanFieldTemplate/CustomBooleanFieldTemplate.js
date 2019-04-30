@@ -16,7 +16,8 @@ export class CustomBooleanFieldTemplate extends React.Component {
     render() {
         const { value } = this.state;
 
-        return <FormGroup fieldId={ `custom-checkbox-${ this.props.name }` } isRequired={ this.props.required }>
+        return <FormGroup fieldId={ `custom-checkbox-${ this.props.name }` } isRequired={ this.props.required }
+            style={ { marginTop: '1em' } }>
             <Checkbox
                 label={ this.props.schema.title }
                 aria-label={ this.props.schema.title }

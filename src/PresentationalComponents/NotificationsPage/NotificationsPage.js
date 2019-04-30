@@ -8,9 +8,7 @@ import {
 } from '@red-hat-insights/insights-frontend-components';
 import {
     Breadcrumb,
-    BreadcrumbItem,
-    Split,
-    SplitItem
+    BreadcrumbItem
 } from '@patternfly/react-core';
 
 import PropTypes from 'prop-types';
@@ -26,26 +24,22 @@ export class NotificationsPage extends Component {
             <BreadcrumbItem to='#' onClick={ this.toIndex }>Hooks</BreadcrumbItem>
             : '';
 
+    showBreadcrumb = () =>
+        this.props.showBreadcrumb && <Breadcrumb style={ { marginLeft: 'calc(var(--pf-c-content--ol--MarginLeft) * -1 * 2)' } }>
+            { this.showRootLink() }
+            <BreadcrumbItem isActive style={ { marginTop: 0 } }>{ this.props.title }</BreadcrumbItem>
+        </Breadcrumb>
+
     render() {
-        const { rightBar, title, children } = this.props;
+        const { title, children } = this.props;
 
         return (
             <Fragment>
                 <PageHeader>
-                    <Split>
-                        <SplitItem isMain>
-                            <Breadcrumb>
-                                { this.showRootLink() }
-                                <BreadcrumbItem isActive>
-                                    { title }
-                                </BreadcrumbItem>
-                            </Breadcrumb>
-                            <PageHeaderTitle title={ title } />
-                        </SplitItem>
-                        <SplitItem>{ rightBar }</SplitItem>
-                    </Split>
+                    { this.showBreadcrumb() }
+                    <PageHeaderTitle title={ title } />
                 </PageHeader>
-                <Main>
+                <Main style={ this.props.mainStyle }>
                     { children }
                 </Main>
             </Fragment>
@@ -53,11 +47,17 @@ export class NotificationsPage extends Component {
     }
 };
 
+NotificationsPage.defaultProps = {
+    showBreadcrumb: true
+};
+
 NotificationsPage.propTypes = {
     title: PropTypes.string.isRequired,
     rightBar: PropTypes.node,
+    showBreadcrumb: PropTypes.bool,
     children: PropTypes.node,
-    history: PropTypes.object
+    history: PropTypes.object,
+    mainStyle: PropTypes.object
 };
 
 export default withRouter(NotificationsPage);

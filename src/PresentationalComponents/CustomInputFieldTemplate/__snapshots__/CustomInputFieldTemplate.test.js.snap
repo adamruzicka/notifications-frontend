@@ -9,6 +9,11 @@ exports[`CustomInputFieldTemplate expect to call onChange handler 1`] = `
   isRequired={true}
   isValid={true}
   label="Test Input Field"
+  style={
+    Object {
+      "marginTop": "var(--pf-global--spacer--sm)",
+    }
+  }
 >
   <TextInput
     aria-label="Test Input Field"
@@ -34,6 +39,11 @@ exports[`CustomInputFieldTemplate expect to render 1`] = `
   isRequired={true}
   isValid={true}
   label="Test Input Field"
+  style={
+    Object {
+      "marginTop": "var(--pf-global--spacer--sm)",
+    }
+  }
 >
   <TextInput
     aria-label="Test Input Field"

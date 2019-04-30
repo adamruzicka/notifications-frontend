@@ -2,7 +2,11 @@
 
 exports[`CustomObjectFieldTemplate expect to render 1`] = `
 <div>
-  Test Object
+  <Title
+    size="md"
+  >
+    Test Object
+  </Title>
   This is a test
   Test Content
 </div>

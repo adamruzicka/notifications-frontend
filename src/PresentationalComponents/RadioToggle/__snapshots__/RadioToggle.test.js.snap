@@ -34,6 +34,12 @@ ShallowWrapper {
           label="All event types"
           name="my-app-1-event-type-radio"
           onChange={[Function]}
+          style={
+            Object {
+              "marginBottom": ".5em",
+              "marginTop": ".5em",
+            }
+          }
           value="all"
         />,
         <Radio
@@ -46,6 +52,12 @@ ShallowWrapper {
           label="Only selected event types"
           name="my-app-1-event-type-radio"
           onChange={[Function]}
+          style={
+            Object {
+              "marginBottom": "1em",
+              "marginTop": ".5em",
+            }
+          }
           value="selected-only"
         />,
         "Something",
@@ -67,6 +79,10 @@ ShallowWrapper {
           "label": "All event types",
           "name": "my-app-1-event-type-radio",
           "onChange": [Function],
+          "style": Object {
+            "marginBottom": ".5em",
+            "marginTop": ".5em",
+          },
           "value": "all",
         },
         "ref": null,
@@ -87,6 +103,10 @@ ShallowWrapper {
           "label": "Only selected event types",
           "name": "my-app-1-event-type-radio",
           "onChange": [Function],
+          "style": Object {
+            "marginBottom": "1em",
+            "marginTop": ".5em",
+          },
           "value": "selected-only",
         },
         "ref": null,
@@ -114,6 +134,12 @@ ShallowWrapper {
             label="All event types"
             name="my-app-1-event-type-radio"
             onChange={[Function]}
+            style={
+              Object {
+                "marginBottom": ".5em",
+                "marginTop": ".5em",
+              }
+            }
             value="all"
           />,
           <Radio
@@ -126,6 +152,12 @@ ShallowWrapper {
             label="Only selected event types"
             name="my-app-1-event-type-radio"
             onChange={[Function]}
+            style={
+              Object {
+                "marginBottom": "1em",
+                "marginTop": ".5em",
+              }
+            }
             value="selected-only"
           />,
           "Something",
@@ -147,6 +179,10 @@ ShallowWrapper {
             "label": "All event types",
             "name": "my-app-1-event-type-radio",
             "onChange": [Function],
+            "style": Object {
+              "marginBottom": ".5em",
+              "marginTop": ".5em",
+            },
             "value": "all",
           },
           "ref": null,
@@ -167,6 +203,10 @@ ShallowWrapper {
             "label": "Only selected event types",
             "name": "my-app-1-event-type-radio",
             "onChange": [Function],
+            "style": Object {
+              "marginBottom": "1em",
+              "marginTop": ".5em",
+            },
             "value": "selected-only",
           },
           "ref": null,
@@ -234,6 +274,12 @@ ShallowWrapper {
           label="All event types"
           name="my-app-1-event-type-radio"
           onChange={[Function]}
+          style={
+            Object {
+              "marginBottom": ".5em",
+              "marginTop": ".5em",
+            }
+          }
           value="all"
         />,
         <Radio
@@ -246,6 +292,12 @@ ShallowWrapper {
           label="Only selected event types"
           name="my-app-1-event-type-radio"
           onChange={[Function]}
+          style={
+            Object {
+              "marginBottom": "1em",
+              "marginTop": ".5em",
+            }
+          }
           value="selected-only"
         />,
         false,
@@ -267,6 +319,10 @@ ShallowWrapper {
           "label": "All event types",
           "name": "my-app-1-event-type-radio",
           "onChange": [Function],
+          "style": Object {
+            "marginBottom": ".5em",
+            "marginTop": ".5em",
+          },
           "value": "all",
         },
         "ref": null,
@@ -287,6 +343,10 @@ ShallowWrapper {
           "label": "Only selected event types",
           "name": "my-app-1-event-type-radio",
           "onChange": [Function],
+          "style": Object {
+            "marginBottom": "1em",
+            "marginTop": ".5em",
+          },
           "value": "selected-only",
         },
         "ref": null,
@@ -314,6 +374,12 @@ ShallowWrapper {
             label="All event types"
             name="my-app-1-event-type-radio"
             onChange={[Function]}
+            style={
+              Object {
+                "marginBottom": ".5em",
+                "marginTop": ".5em",
+              }
+            }
             value="all"
           />,
           <Radio
@@ -326,6 +392,12 @@ ShallowWrapper {
             label="Only selected event types"
             name="my-app-1-event-type-radio"
             onChange={[Function]}
+            style={
+              Object {
+                "marginBottom": "1em",
+                "marginTop": ".5em",
+              }
+            }
             value="selected-only"
           />,
           false,
@@ -347,6 +419,10 @@ ShallowWrapper {
             "label": "All event types",
             "name": "my-app-1-event-type-radio",
             "onChange": [Function],
+            "style": Object {
+              "marginBottom": ".5em",
+              "marginTop": ".5em",
+            },
             "value": "all",
           },
           "ref": null,
@@ -367,6 +443,10 @@ ShallowWrapper {
             "label": "Only selected event types",
             "name": "my-app-1-event-type-radio",
             "onChange": [Function],
+            "style": Object {
+              "marginBottom": "1em",
+              "marginTop": ".5em",
+            },
             "value": "selected-only",
           },
           "ref": null,
@@ -434,6 +514,12 @@ ShallowWrapper {
           label="All event types"
           name="my-app-1-event-type-radio"
           onChange={[Function]}
+          style={
+            Object {
+              "marginBottom": ".5em",
+              "marginTop": ".5em",
+            }
+          }
           value="all"
         />,
         false,
@@ -456,6 +542,10 @@ ShallowWrapper {
           "label": "All event types",
           "name": "my-app-1-event-type-radio",
           "onChange": [Function],
+          "style": Object {
+            "marginBottom": ".5em",
+            "marginTop": ".5em",
+          },
           "value": "all",
         },
         "ref": null,
@@ -484,6 +574,12 @@ ShallowWrapper {
             label="All event types"
             name="my-app-1-event-type-radio"
             onChange={[Function]}
+            style={
+              Object {
+                "marginBottom": ".5em",
+                "marginTop": ".5em",
+              }
+            }
             value="all"
           />,
           false,
@@ -506,6 +602,10 @@ ShallowWrapper {
             "label": "All event types",
             "name": "my-app-1-event-type-radio",
             "onChange": [Function],
+            "style": Object {
+              "marginBottom": ".5em",
+              "marginTop": ".5em",
+            },
             "value": "all",
           },
           "ref": null,

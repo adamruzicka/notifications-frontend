@@ -1,6 +1,8 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
-import { Button } from '@patternfly/react-core';
+import {
+    Button
+} from '@patternfly/react-core';
 
 import { bindActionCreators } from 'redux';
 import { withRouter, Redirect } from 'react-router-dom';
@@ -18,7 +20,8 @@ import {
 } from 'Store/actions';
 import {
     Skeleton,
-    SkeletonSize
+    SkeletonSize,
+    Spinner
 } from '@red-hat-insights/insights-frontend-components';
 import registryDecorator from '@red-hat-insights/insights-frontend-components/Utilities/Registry';
 import {
@@ -32,7 +35,7 @@ import {
 } from 'PresentationalComponents';
 
 const schema = {
-    title: 'Edit Hook',
+    title: 'Basic details',
     type: 'object',
     required: [ 'name', 'url' ],
     properties: {
@@ -77,6 +80,7 @@ export class NotificationEdit extends Component {
         history: PropTypes.object,
         loading: PropTypes.bool,
         filterLoading: PropTypes.bool,
+        appsLoading: PropTypes.bool,
         endpointErrors: PropTypes.object,
         submitting: PropTypes.bool
     }
@@ -145,12 +149,13 @@ export class NotificationEdit extends Component {
         const endpoint = this.singleEndpoint();
         let action = this.props.match.params.endpointId && endpoint ? endpoint.attributes.name : 'New Hook';
         const filter = this.props.match.params.endpointId ? this.props.filter : {};
+        const mainStyle = { background: 'white', borderTop: '1px solid var(--pf-global--BorderColor--light)' };
 
         if (endpoint && !this.props.match.params.endpointId) {
             return <Redirect to={ `/edit/${ endpoint.id }` } />;
         }
 
-        return <NotificationsPage title={ `${ action }` }>
+        return <NotificationsPage title={ `${ action }` } mainStyle={ mainStyle }>
             <LoadingState
                 loading={ this.props.loading }
                 placeholder={ <Skeleton size={ SkeletonSize.sm } /> }>
@@ -164,13 +169,17 @@ export class NotificationEdit extends Component {
                     showErrorList={ false }
                     onSubmit={ this.formSubmit } >
 
-                    <FilterList ref={ this.filterList }
-                        apps={ this.props.apps }
-                        filter={ filter } />
+                    <LoadingState
+                        loading={ this.props.filterLoading || this.props.appsLoading }
+                        placeholder={ <Spinner centered /> }>
 
+                        <FilterList ref={ this.filterList }
+                            apps={ this.props.apps }
+                            filter={ filter } />
+
+                    </LoadingState>
                     <div>
-                        <Button type='submit' variant="primary">Submit</Button>
-                        <Button onClick={ this.toIndex } variant="secondary">Cancel</Button>
+                        <Button type='submit' variant="primary">Submit</Button> <Button onClick={ this.toIndex } variant="secondary">Cancel</Button>
                     </div>
                 </Form>
             </LoadingState>

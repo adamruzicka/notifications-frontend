@@ -1,10 +1,13 @@
 import React from 'react';
+import {
+    Title
+} from '@patternfly/react-core';
 import PropTypes from 'prop-types';
 
 export const CustomObjectFieldTemplate = ({ title, description, properties }) => {
     return (
         <div>
-            { title }
+            <Title size='md'>{ title }</Title>
             { description }
             { properties.map(element => (
                 element.content

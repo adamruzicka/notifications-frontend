@@ -3,7 +3,6 @@ export { default as NotificationsPage } from './NotificationsPage/NotificationsP
 
 export * from './BulletlessList/BulletlessList';
 export * from './EndpointToggle/EndpointToggle';
-export * from './IndexToolbar/IndexToolbar';
 export * from './LoadingState/LoadingState';
 export * from './FilterList/FilterList';
 export * from './RadioToggle/RadioToggle';

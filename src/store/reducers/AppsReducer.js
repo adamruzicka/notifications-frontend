@@ -4,6 +4,7 @@ import {
 import {
     successMessage,
     failureMessage,
+    pendingMessage,
     initialStateFor,
     normalizeData
 } from './reducerHelper';
@@ -13,7 +14,7 @@ export const normalizeAppsData = (payload) =>
 
 export const appsReducer = function(state = initialStateFor('apps', {}), action) {
     switch (action.type) {
-        case FETCH_APPS:
+        case pendingMessage(FETCH_APPS):
             return {
                 ...state,
                 loading: true,

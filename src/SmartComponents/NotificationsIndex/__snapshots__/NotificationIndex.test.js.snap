@@ -2,11 +2,7 @@
 
 exports[`NotificationsIndex expect to render an EmptyState by default (with no endpoints) 1`] = `
 <withRouter(NotificationsPage)
-  rightBar={
-    <IndexToolbar
-      onClick={[MockFunction]}
-    />
-  }
+  showBreadcrumb={false}
   title="Hooks"
 >
   <LoadingState
@@ -22,6 +18,7 @@ exports[`NotificationsIndex expect to render an EmptyState by default (with no e
     >
       <EmptyState
         className=""
+        variant="large"
       >
         <p>
           <EmptyStateIcon
@@ -48,6 +45,7 @@ exports[`NotificationsIndex expect to render an EmptyState by default (with no e
           isDisabled={false}
           isFocus={false}
           isHover={false}
+          isInline={false}
           onClick={[MockFunction]}
           to="/new"
           type="button"
@@ -63,11 +61,7 @@ exports[`NotificationsIndex expect to render an EmptyState by default (with no e
 
 exports[`NotificationsIndex takes endpoints 1`] = `
 <withRouter(NotificationsPage)
-  rightBar={
-    <IndexToolbar
-      onClick={[MockFunction]}
-    />
-  }
+  showBreadcrumb={false}
   title="Hooks"
 >
   <LoadingState
@@ -77,186 +71,215 @@ exports[`NotificationsIndex takes endpoints 1`] = `
       />
     }
   >
-    <div>
-      <Table
-        aria-label="Hooks list"
-        cells={
-          Array [
-            Object {
-              "key": "name",
-              "title": "Name",
-              "transforms": Array [
-                [Function],
-              ],
-            },
-            "Type",
-            Object {
-              "key": "url",
-              "title": "Path",
-              "transforms": Array [
-                [Function],
-              ],
-            },
-            "Status",
-            Object {
-              "key": "active",
-              "title": "Active",
-              "transforms": Array [
-                [Function],
-              ],
-            },
-            "",
-          ]
-        }
-        className=""
-        contentId="expanded-content"
-        dropdownDirection="down"
-        dropdownPosition="right"
-        expandId="expandable-toggle"
-        gridBreakPoint="grid-md"
-        onCollapse={null}
-        onSort={[Function]}
-        rowLabeledBy="simple-node"
-        rows={
-          Array [
-            Array [
-              Object {
-                "title": "Test 1",
-              },
-              Object {
-                "title": "HTTP",
-              },
-              Object {
-                "title": "http://whatever.com",
-              },
-              Object {
-                "title": "true",
-              },
-              Object {
-                "title": "true",
-              },
-              Object {
-                "title": "actions",
-              },
-            ],
-            Array [
-              Object {
-                "title": "Test 2",
-              },
-              Object {
-                "title": "HTTP",
-              },
-              Object {
-                "title": "http://whatever1.com",
-              },
-              Object {
-                "title": "true",
-              },
-              Object {
-                "title": "true",
-              },
-              Object {
-                "title": "actions",
-              },
-            ],
-            Array [
-              Object {
-                "title": "Test 3",
-              },
-              Object {
-                "title": "HTTP",
-              },
-              Object {
-                "title": "http://whatever2.com",
-              },
-              Object {
-                "title": "true",
-              },
-              Object {
-                "title": "true",
-              },
-              Object {
-                "title": "actions",
-              },
-            ],
-          ]
-        }
-        sortBy={
-          Object {
-            "direction": "asc",
-            "index": 0,
-          }
-        }
-        variant={null}
+    <TableToolbar
+      isFooter={false}
+    >
+      <ToolbarGroup
+        className={null}
       >
-        <TableHeader
-          className=""
-        />
-        <TableBody
-          className=""
-          onRowClick={[Function]}
-          rowKey="id"
-        />
-        <tfoot>
-          <tr>
-            <td
-              colSpan="6"
-            >
-              <Pagination
-                dropDirection="down"
-                itemCount={1}
-                onFirstClick={[Function]}
-                onLastClick={[Function]}
-                onNextClick={[Function]}
-                onPageInput={[Function]}
-                onPerPageSelect={[Function]}
-                onPreviousClick={[Function]}
-                onSetPage={[Function]}
-                page={1}
-                perPage={10}
-                perPageOptions={
-                  Array [
-                    Object {
-                      "title": "10",
-                      "value": 10,
-                    },
-                    Object {
-                      "title": "20",
-                      "value": 20,
-                    },
-                    Object {
-                      "title": "50",
-                      "value": 50,
-                    },
-                    Object {
-                      "title": "100",
-                      "value": 100,
-                    },
-                  ]
-                }
-                titles={
+        <ToolbarItem
+          className={null}
+        >
+          <Button
+            aria-label={null}
+            className=""
+            component={[Function]}
+            isActive={false}
+            isBlock={false}
+            isDisabled={false}
+            isFocus={false}
+            isHover={false}
+            isInline={false}
+            onClick={[MockFunction]}
+            to="/new"
+            type="button"
+            variant="primary"
+          >
+            New hook
+          </Button>
+        </ToolbarItem>
+      </ToolbarGroup>
+    </TableToolbar>
+    <Table
+      aria-label="Hooks list"
+      borders={true}
+      cells={
+        Array [
+          Object {
+            "key": "name",
+            "title": "Name",
+            "transforms": Array [
+              [Function],
+            ],
+          },
+          "Type",
+          Object {
+            "key": "url",
+            "title": "Path",
+            "transforms": Array [
+              [Function],
+            ],
+          },
+          "Status",
+          Object {
+            "key": "active",
+            "title": "Active",
+            "transforms": Array [
+              [Function],
+            ],
+          },
+          "",
+        ]
+      }
+      className=""
+      contentId="expanded-content"
+      dropdownDirection="down"
+      dropdownPosition="right"
+      expandId="expandable-toggle"
+      gridBreakPoint="grid-md"
+      onCollapse={null}
+      onSort={[Function]}
+      rowLabeledBy="simple-node"
+      rows={
+        Array [
+          Array [
+            Object {
+              "title": "Test 1",
+            },
+            Object {
+              "title": "HTTP",
+            },
+            Object {
+              "title": "http://whatever.com",
+            },
+            Object {
+              "title": "true",
+            },
+            Object {
+              "title": "true",
+            },
+            Object {
+              "title": "actions",
+            },
+          ],
+          Array [
+            Object {
+              "title": "Test 2",
+            },
+            Object {
+              "title": "HTTP",
+            },
+            Object {
+              "title": "http://whatever1.com",
+            },
+            Object {
+              "title": "true",
+            },
+            Object {
+              "title": "true",
+            },
+            Object {
+              "title": "actions",
+            },
+          ],
+          Array [
+            Object {
+              "title": "Test 3",
+            },
+            Object {
+              "title": "HTTP",
+            },
+            Object {
+              "title": "http://whatever2.com",
+            },
+            Object {
+              "title": "true",
+            },
+            Object {
+              "title": "true",
+            },
+            Object {
+              "title": "actions",
+            },
+          ],
+        ]
+      }
+      sortBy={
+        Object {
+          "direction": "asc",
+          "index": 0,
+        }
+      }
+      variant={null}
+    >
+      <TableHeader
+        className=""
+      />
+      <TableBody
+        className=""
+        onRowClick={[Function]}
+        rowKey="id"
+      />
+      <tfoot>
+        <tr>
+          <td
+            colSpan="6"
+          >
+            <Pagination
+              dropDirection="down"
+              itemCount={1}
+              onFirstClick={[Function]}
+              onLastClick={[Function]}
+              onNextClick={[Function]}
+              onPageInput={[Function]}
+              onPerPageSelect={[Function]}
+              onPreviousClick={[Function]}
+              onSetPage={[Function]}
+              page={1}
+              perPage={10}
+              perPageOptions={
+                Array [
                   Object {
-                    "currPage": "Current page",
-                    "items": "items",
-                    "itemsPerPage": "Items per page",
-                    "optionsToggle": "Select",
-                    "pages": "pages",
-                    "paginationTitle": "Pagination",
-                    "toFirstPage": "Go to first page",
-                    "toLastPage": "Go to last page",
-                    "toNextPage": "Go to next page",
-                    "toPreviousPage": "Go to previous page",
-                  }
+                    "title": "10",
+                    "value": 10,
+                  },
+                  Object {
+                    "title": "20",
+                    "value": 20,
+                  },
+                  Object {
+                    "title": "50",
+                    "value": 50,
+                  },
+                  Object {
+                    "title": "100",
+                    "value": 100,
+                  },
+                ]
+              }
+              titles={
+                Object {
+                  "currPage": "Current page",
+                  "items": "items",
+                  "itemsPerPage": "Items per page",
+                  "optionsToggle": "Select",
+                  "pages": "pages",
+                  "paginationTitle": "Pagination",
+                  "perPageSuffix": "per page",
+                  "toFirstPage": "Go to first page",
+                  "toLastPage": "Go to last page",
+                  "toNextPage": "Go to next page",
+                  "toPreviousPage": "Go to previous page",
                 }
-                toggleTemplate={[Function]}
-                variant="bottom"
-                widgetId="pagination-options-menu-bottom"
-              />
-            </td>
-          </tr>
-        </tfoot>
-      </Table>
-    </div>
+              }
+              toggleTemplate={[Function]}
+              variant="top"
+              widgetId="pagination-options-menu-bottom"
+            />
+          </td>
+        </tr>
+      </tfoot>
+    </Table>
   </LoadingState>
 </withRouter(NotificationsPage)>
 `;
