@@ -159,6 +159,7 @@ exports[`FilterList expect to render 1`] = `
         </div>
         <ul
           class="pf-c-list"
+          style="list-style:none"
         >
           <li>
             <div
@@ -182,6 +183,7 @@ exports[`FilterList expect to render 1`] = `
             </div>
             <ul
               class="pf-c-list"
+              style="list-style:none"
             >
               <li>
                 <div
@@ -301,6 +303,7 @@ exports[`FilterList expect to render 1`] = `
         </div>
         <ul
           class="pf-c-list"
+          style="list-style:none"
         >
           <li>
             <div
@@ -324,6 +327,7 @@ exports[`FilterList expect to render 1`] = `
             </div>
             <ul
               class="pf-c-list"
+              style="list-style:none"
             >
               <li>
                 <div
@@ -573,6 +577,7 @@ exports[`FilterList expect to render 1`] = `
         </div>
         <ul
           class="pf-c-list"
+          style="list-style:none"
         >
           <li>
             <div
@@ -596,6 +601,7 @@ exports[`FilterList expect to render 1`] = `
             </div>
             <ul
               class="pf-c-list"
+              style="list-style:none"
             >
               <li>
                 <div

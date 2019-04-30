@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import {
     CardHeader,
     Checkbox,
-    List,
     ListItem,
     Card,
     CardBody,
@@ -11,7 +10,7 @@ import {
     StackItem
 } from '@patternfly/react-core';
 
-import { RadioToggle, ALL, SELECTED } from 'PresentationalComponents';
+import { BulletlessList, RadioToggle, ALL, SELECTED } from 'PresentationalComponents';
 import _ from 'lodash';
 
 export class FilterList extends Component {
@@ -73,11 +72,11 @@ export class FilterList extends Component {
     renderLevels = (levels) => {
         const levelsArray = _.values(levels);
         return levelsArray.length > 0 &&
-            <List>
+            <BulletlessList>
                 { levelsArray.map((level) =>
                     this.renderLevel(level)
                 ) }
-            </List>;
+            </BulletlessList>;
     }
 
     eventTypesListItem = (eventType) =>
@@ -96,11 +95,11 @@ export class FilterList extends Component {
     eventTypesList = (eventTypes) => {
         const eventTypesArray = _.values(eventTypes);
         return eventTypesArray.length > 0 &&
-            <List>
+            <BulletlessList>
                 { eventTypesArray.map((eventType) =>
                     this.eventTypesListItem(eventType)
                 ) }
-            </List>;
+            </BulletlessList>;
     }
 
     selectFilter = (arrayName, id) => {
