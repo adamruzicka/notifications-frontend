@@ -1,6 +1,7 @@
 export { default as NotificationActions } from './NotificationActions/NotificationActions';
 export { default as NotificationsPage } from './NotificationsPage/NotificationsPage';
 
+export * from './BulletlessList/BulletlessList';
 export * from './EndpointToggle/EndpointToggle';
 export * from './IndexToolbar/IndexToolbar';
 export * from './LoadingState/LoadingState';

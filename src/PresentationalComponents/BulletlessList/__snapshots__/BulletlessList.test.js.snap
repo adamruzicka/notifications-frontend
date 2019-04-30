@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilterList expect to render 1`] = `
+<ul
+  class="pf-c-list"
+  style="list-style:none"
+>
+  <li>
+    Something
+  </li>
+  <li>
+    Something else
+  </li>
+</ul>
+`;

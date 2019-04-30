@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import {
     CardHeader,
     Checkbox,
-    List,
     ListItem,
     Card,
     CardBody,
@@ -11,17 +10,8 @@ import {
     StackItem
 } from '@patternfly/react-core';
 
-import { RadioToggle, ALL, SELECTED } from 'PresentationalComponents';
+import { BulletlessList, RadioToggle, ALL, SELECTED } from 'PresentationalComponents';
 import _ from 'lodash';
-
-const BulletlessList = ({ children }) =>
-    <List style={ { listStyle: 'none' } }>
-        { children }
-    </List>;
-
-BulletlessList.propTypes = {
-    children: PropTypes.node
-};
 
 export class FilterList extends Component {
     static propTypes = {
