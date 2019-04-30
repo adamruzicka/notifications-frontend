@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Radio } from '@patternfly/react-core';
+import { Radio, ListItem } from '@patternfly/react-core';
+import { BulletlessList } from 'PresentationalComponents';
 
 export const ALL = 'all';
 export const SELECTED = 'selected-only';
@@ -38,20 +39,26 @@ export class RadioToggle extends Component {
         const group = `${ scope }-${ subject.replace(' ', '-') }-radio`;
         return (
             <React.Fragment>
-                <Radio value={ ALL }
-                    defaultChecked={ !selectable || this.state.value === ALL }
-                    onChange={ this.handleChange }
-                    label={ `All ${ subject }s` }
-                    id={ `${ scope }-radio-all` }
-                    name={ group } style={ radioStyle } />
-                { selectable &&
-                  <Radio value={ SELECTED }
-                      defaultChecked={ this.state.value === SELECTED }
-                      onChange={ this.handleChange }
-                      label={ `Only selected ${ subject }s` }
-                      id={ `${ scope }-radio-selected` }
-                      name={ group } style={ lowerRadioStyle } /> }
-                { selectable && this.state.value === SELECTED && children }
+                <BulletlessList>
+                    <ListItem>
+                        <Radio value={ ALL }
+                            defaultChecked={ !selectable || this.state.value === ALL }
+                            onChange={ this.handleChange }
+                            label={ `All ${ subject }s` }
+                            id={ `${ scope }-radio-all` }
+                            name={ group } style={ radioStyle }/>
+                    </ListItem>
+                    { selectable &&
+                      <ListItem>
+                          <Radio value={ SELECTED }
+                              defaultChecked={ this.state.value === SELECTED }
+                              onChange={ this.handleChange }
+                              label={ `Only selected ${ subject }s` }
+                              id={ `${ scope }-radio-selected` }
+                              name={ group } style={ lowerRadioStyle } />
+                      </ListItem> }
+                    { selectable && this.state.value === SELECTED && <ListItem>{ children }</ListItem> }
+                </BulletlessList>
             </React.Fragment>
         );
     }
