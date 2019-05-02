@@ -6,15 +6,6 @@ import { BulletlessList } from 'PresentationalComponents';
 export const ALL = 'all';
 export const SELECTED = 'selected-only';
 
-const radioStyle = {
-    marginTop: '.5em',
-    marginBottom: '.5em'
-};
-const lowerRadioStyle = {
-    marginBottom: '1em',
-    marginTop: '.5em'
-};
-
 export class RadioToggle extends Component {
     static propTypes = {
         children: PropTypes.node,
@@ -46,7 +37,7 @@ export class RadioToggle extends Component {
                             onChange={ this.handleChange }
                             label={ `All ${ subject }s` }
                             id={ `${ scope }-radio-all` }
-                            name={ group } style={ radioStyle }/>
+                            name={ group } />
                     </ListItem>
                     { selectable &&
                       <ListItem>
@@ -55,7 +46,7 @@ export class RadioToggle extends Component {
                               onChange={ this.handleChange }
                               label={ `Only selected ${ subject }s` }
                               id={ `${ scope }-radio-selected` }
-                              name={ group } style={ lowerRadioStyle } />
+                              name={ group }  />
                       </ListItem> }
                     { selectable && this.state.value === SELECTED && <ListItem>{ children }</ListItem> }
                 </BulletlessList>
