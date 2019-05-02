@@ -15,7 +15,6 @@ class App extends Component {
         insights.chrome.identifyApp('hooks');
         insights.chrome.navigation(buildNavigation());
 
-        this.appNav = insights.chrome.on('APP_NAVIGATION', event => this.props.history.push(`/${event.navId}`));
         this.buildNav = this.props.history.listen(() => insights.chrome.navigation(buildNavigation()));
     }
 
