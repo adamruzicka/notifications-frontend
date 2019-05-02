@@ -121,22 +121,26 @@ export class FilterList extends Component {
             }
             { apps.map((app) =>
                 <StackItem key={ `app-item-${ app.id }` }>
-                    <Checkbox id={ `app-check-${ app.id}` }
-                        data-event-type-id={ app.id }
-                        label={ <strong>{ app.attributes.title }</strong> }
-                        aria-label={ app.attributes.title }
-                        onChange={ () => this.selectFilter('appIds', app.id) }
-                        defaultChecked={ this.state.selected.appIds[app.id]  }/>
-                    { this.state.selected.appIds[app.id] &&
-                        <div style={ { marginTop: '1em', marginLeft: '1em' } }>
-                            <RadioToggle
-                                scope={ `app-${ app.id }` }
-                                selectable={ Object.keys(app.eventTypes).length > 0 }
-                                subject="event type"
-                                initial={ Object.keys(app.eventTypes).some((id) => this.state.selected.eventTypeIds[id]) ? SELECTED : ALL }>
-                                { this.eventTypesList(app.eventTypes, app.id) }
-                            </RadioToggle>
-                        </div> }
+                    <BulletlessList style={ { paddingLeft: '0em' } }>
+                        <ListItem>
+                            <Checkbox id={ `app-check-${ app.id}` }
+                                data-event-type-id={ app.id }
+                                label={ <strong>{ app.attributes.title }</strong> }
+                                aria-label={ app.attributes.title }
+                                onChange={ () => this.selectFilter('appIds', app.id) }
+                                defaultChecked={ this.state.selected.appIds[app.id]  }/>
+                        </ListItem>
+                        { this.state.selected.appIds[app.id] &&
+                                <ListItem>
+                                    <RadioToggle
+                                        scope={ `app-${ app.id }` }
+                                        selectable={ Object.keys(app.eventTypes).length > 0 }
+                                        subject="event type"
+                                        initial={ Object.keys(app.eventTypes).some((id) => this.state.selected.eventTypeIds[id]) ? SELECTED : ALL }>
+                                        { this.eventTypesList(app.eventTypes, app.id) }
+                                    </RadioToggle>
+                                </ListItem> }
+                    </BulletlessList>
                 </StackItem>
             ) }
         </Stack>);
