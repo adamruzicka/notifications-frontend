@@ -18,7 +18,7 @@ const NotificationEdit = asyncComponent(() =>
   import(/* webpackChunkName: "NotificationEdit" */ 'SmartComponents/NotificationEdit/NotificationEdit'));
 
 const paths = {
-    notificationsIndex: '/list',
+    notificationsIndex: '/',
     notificationEdit: '/edit/:endpointId',
     notificationCreate: '/new'
 };
