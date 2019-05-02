@@ -29,7 +29,7 @@ exports[`NotificationsIndex expect to render an EmptyState by default (with no e
         <Title
           size="lg"
         >
-          No Hooks found
+          No hooks found
         </Title>
         <EmptyStateBody
           className=""
