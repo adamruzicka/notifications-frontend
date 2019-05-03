@@ -147,7 +147,7 @@ export class NotificationEdit extends Component {
 
     render() {
         const endpoint = this.singleEndpoint();
-        let action = this.props.match.params.endpointId && endpoint ? endpoint.attributes.name : 'New Hook';
+        let action = this.props.match.params.endpointId && endpoint ? endpoint.attributes.name : 'New hook';
         const filter = this.props.match.params.endpointId ? this.props.filter : {};
         const mainStyle = { background: 'white', borderTop: '1px solid var(--pf-global--BorderColor--light)' };
 

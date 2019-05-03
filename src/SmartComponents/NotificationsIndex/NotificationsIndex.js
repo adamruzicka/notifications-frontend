@@ -178,7 +178,7 @@ export class NotificationsIndex extends Component {
                 <p>
                     <EmptyStateIcon icon={ CubesIcon } />
                 </p>
-                <Title size="lg">No Hooks found</Title>
+                <Title size="lg">No hooks found</Title>
                 <EmptyStateBody>
                     There are no hooks configured yet.
                 </EmptyStateBody>

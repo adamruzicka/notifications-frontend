@@ -8,7 +8,7 @@ exports[`NotificationEdit expect to render a Form 1`] = `
       "borderTop": "1px solid var(--pf-global--BorderColor--light)",
     }
   }
-  title="New Hook"
+  title="New hook"
 >
   <LoadingState
     placeholder={
@@ -1294,7 +1294,7 @@ exports[`NotificationEdit takes an endpoint 1`] = `
       "borderTop": "1px solid var(--pf-global--BorderColor--light)",
     }
   }
-  title="New Hook"
+  title="New hook"
 >
   <LoadingState
     placeholder={
