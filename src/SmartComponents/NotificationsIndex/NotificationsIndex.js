@@ -23,8 +23,9 @@ import {
 } from '@red-hat-insights/insights-frontend-components';
 import {
     Table,
-    TableHeader,
     TableBody,
+    TableGridBreakpoint,
+    TableHeader,
     sortable
 } from '@patternfly/react-table';
 import registryDecorator from '@red-hat-insights/insights-frontend-components/Utilities/Registry';
@@ -209,7 +210,8 @@ export class NotificationsIndex extends Component {
                 rows={ rows }
                 cells={ columns }
                 sortBy={ sortBy }
-                onSort={ this.onSort }>
+                onSort={ this.onSort }
+                gridBreakPoint={ TableGridBreakpoint.gridMd } >
                 <TableHeader />
                 <TableBody />
                 <tfoot><tr><td colSpan='6'>
