@@ -2,8 +2,6 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const config = require('./webpack.common.js');
-const { resolve } = require('path');
-const pkg = require('../package.json');
 
 const webpackConfig = {
     mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
@@ -46,19 +44,18 @@ const webpackConfig = {
         }, {
             test: /\.s?[ac]ss$/,
             use: [
-                process.env.NODE_ENV === 'production' ? 'style-loader' : MiniCssExtractPlugin.loader,
+                {
+                    loader: MiniCssExtractPlugin.loader,
+                    options: {
+                        hmr: process.env.NODE_ENV === 'development',
+                        reloadAll: true
+                    }
+                },
                 {
                     loader: 'css-loader'
                 },
                 {
-                    loader: 'sass-loader',
-                    options: {
-                        includePaths: [
-                            ...Object.values(pkg.sassIncludes).map(includePath =>
-                                resolve(__dirname, `../${includePath}`)
-                            )
-                        ]
-                    }
+                    loader: 'sass-loader'
                 }
             ]
         }, {

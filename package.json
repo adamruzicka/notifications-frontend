@@ -17,11 +17,6 @@
     "react-jsonschema-form": "^1.2.0",
     "schema-utils": "^1.0.0"
   },
-  "sassIncludes": {
-    "patternfly": "node_modules/patternfly/dist/sass",
-    "bootstrap": "node_modules/patternfly/node_modules/bootstrap-sass/assets/stylesheets",
-    "fontAwesome": "node_modules/patternfly/node_modules/font-awesome-sass/assets/stylesheets"
-  },
   "jest": {
     "collectCoverage": true,
     "coverageDirectory": "./coverage/",
