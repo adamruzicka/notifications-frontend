@@ -138,6 +138,7 @@ exports[`NotificationsIndex takes endpoints 1`] = `
       expandId="expandable-toggle"
       gridBreakPoint="grid-md"
       onCollapse={null}
+      onExpand={null}
       onSort={[Function]}
       rowLabeledBy="simple-node"
       rows={
