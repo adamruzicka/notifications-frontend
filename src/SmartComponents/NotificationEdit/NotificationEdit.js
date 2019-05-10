@@ -19,8 +19,6 @@ import {
     fetchApps
 } from 'Store/actions';
 import {
-    Skeleton,
-    SkeletonSize,
     Spinner
 } from '@red-hat-insights/insights-frontend-components';
 import registryDecorator from '@red-hat-insights/insights-frontend-components/Utilities/Registry';
@@ -157,8 +155,8 @@ export class NotificationEdit extends Component {
 
         return <NotificationsPage title={ `${ action }` } mainStyle={ mainStyle }>
             <LoadingState
-                loading={ this.props.loading }
-                placeholder={ <Skeleton size={ SkeletonSize.sm } /> }>
+                loading={ this.props.loading || this.props.filterLoading || this.props.appsLoading }
+                placeholder={ <Spinner centered /> }>
                 <Form ref={ this.form } schema={ schema } className="pf-c-form"
                     uiSchema={ uiSchema }
                     fields={ fields }
@@ -169,15 +167,10 @@ export class NotificationEdit extends Component {
                     showErrorList={ false }
                     onSubmit={ this.formSubmit } >
 
-                    <LoadingState
-                        loading={ this.props.filterLoading || this.props.appsLoading }
-                        placeholder={ <Spinner centered /> }>
+                    <FilterList ref={ this.filterList }
+                        apps={ this.props.apps }
+                        filter={ filter } />
 
-                        <FilterList ref={ this.filterList }
-                            apps={ this.props.apps }
-                            filter={ filter } />
-
-                    </LoadingState>
                     <div>
                         <Button type='submit' variant="primary">Submit</Button> <Button onClick={ this.toIndex } variant="secondary">Cancel</Button>
                     </div>
