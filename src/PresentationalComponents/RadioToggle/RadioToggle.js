@@ -12,11 +12,13 @@ export class RadioToggle extends Component {
         subject: PropTypes.string.isRequired,
         scope: PropTypes.string.isRequired,
         initial: PropTypes.oneOf([ ALL, SELECTED ]).isRequired,
-        selectable: PropTypes.bool.isRequired
+        selectable: PropTypes.bool.isRequired,
+        onToggle: PropTypes.func
     }
 
     handleChange = (_, event) => {
         const { value } = event.currentTarget;
+        this.props.onToggle && this.props.onToggle(value);
         this.setState({ value });
     }
 

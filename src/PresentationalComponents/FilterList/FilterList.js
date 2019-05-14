@@ -21,6 +21,8 @@ export class FilterList extends Component {
         super(props);
         const initialState = { selected: {
             appIds: {}, levelIds: {}, eventTypeIds: {}
+        }, toggles: {
+            appIds: {}, eventTypeIds: {}
         }};
 
         this.state = initialState;
@@ -46,6 +48,20 @@ export class FilterList extends Component {
                     });
                 }
             });
+
+            Object.values(props.apps).forEach((app) => {
+                if (stateCopy.toggles.appIds[app.id] === undefined) {
+                    const initial = Object.keys(app.eventTypes).some((id) => stateCopy.selected.eventTypeIds[id]) ? SELECTED : ALL;
+                    stateCopy.toggles.appIds[app.id] = initial;
+                }
+
+                Object.values(app.eventTypes).forEach((eventType) => {
+                    if (stateCopy.toggles.eventTypeIds[eventType.id] === undefined) {
+                        const initial = Object.keys(eventType.levels).some((id) => stateCopy.selected.levelIds[id]) ? SELECTED : ALL;
+                        stateCopy.toggles.eventTypeIds[eventType.id] = initial;
+                    }
+                });
+            });
         }
 
         return stateCopy;
@@ -67,6 +83,12 @@ export class FilterList extends Component {
                     defaultChecked={ this.state.selected.levelIds[level.id] } />
             </ListItem>;
 
+    setToggle = (value, what, id) => {
+        const newState = { ...this.state };
+        newState.toggles = { ...newState.toggles, [what]: { ...newState.toggles[what], [id]: value }};
+        this.setState(newState);
+    }
+
     renderLevels = (eventType, levels) => {
         const levelsArray = _.values(levels);
 
@@ -75,7 +97,8 @@ export class FilterList extends Component {
                 scope={ `event-type-${ eventType.id }` }
                 selectable={ levelsArray.length > 0 }
                 subject="level"
-                initial={ Object.keys(levels).some((id) => this.state.selected.levelIds[id]) ? SELECTED : ALL }>
+                onToggle={ (value) => { this.setToggle(value, 'eventTypeIds', eventType.id); } }
+                initial={ this.state.toggles.eventTypeIds[eventType.id] } >
                 <BulletlessList>
                     { levelsArray.map(this.renderLevel) }
                 </BulletlessList>
@@ -136,7 +159,8 @@ export class FilterList extends Component {
                                         scope={ `app-${ app.id }` }
                                         selectable={ Object.keys(app.eventTypes).length > 0 }
                                         subject="event type"
-                                        initial={ Object.keys(app.eventTypes).some((id) => this.state.selected.eventTypeIds[id]) ? SELECTED : ALL }>
+                                        onToggle={ (value) => { this.setToggle(value, 'appIds', app.id); } }
+                                        initial={ this.state.toggles.appIds[app.id] } >
                                         { this.eventTypesList(app.eventTypes, app.id) }
                                     </RadioToggle>
                                 </ListItem> }
