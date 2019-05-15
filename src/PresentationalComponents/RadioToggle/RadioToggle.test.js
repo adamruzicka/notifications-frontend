@@ -3,7 +3,8 @@ import { RadioToggle, ALL, SELECTED } from './RadioToggle';
 describe('RadioToggle', () => {
     const scope = 'my-app-1';
     const selectable = true;
-    const defaultProps = { scope, selectable };
+    const subject = 'event type';
+    const defaultProps = { scope, selectable, subject };
 
     it('expect to render just the radios on all', () => {
         const wrapper = shallow(

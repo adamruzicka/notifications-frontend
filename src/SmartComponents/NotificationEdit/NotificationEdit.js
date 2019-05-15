@@ -23,6 +23,7 @@ import {
 } from '@red-hat-insights/insights-frontend-components';
 import registryDecorator from '@red-hat-insights/insights-frontend-components/Utilities/Registry';
 import {
+    SELECTED,
     LoadingState,
     NotificationsPage,
     FilterList,
@@ -57,11 +58,6 @@ const fields = {
     BooleanField: CustomBooleanFieldTemplate
 };
 
-const getTrueKeys = (obj) => {
-    let keys = Object.keys(obj);
-    return keys.filter((key) => obj[key]);
-};
-
 @registryDecorator()
 export class NotificationEdit extends Component {
     static propTypes = {
@@ -89,14 +85,63 @@ export class NotificationEdit extends Component {
         this.fetchData();
     }
 
+    eventTypeLevels = (listState, eventType) => {
+        let levelIds = [];
+        Object.keys(eventType.levels).forEach((levelId) => {
+            listState.selected.levelIds[levelId] && levelIds.push(levelId);
+        });
+        return levelIds;
+    }
+
+    appEventTypes = (listState, app) => {
+        let levelIds = [];
+        let eventTypeIds = [];
+        Object.values(app.eventTypes).forEach((eventType) => {
+            if (listState.selected.eventTypeIds[eventType.id]) {
+                if (listState.toggles.eventTypeIds[eventType.id] !== SELECTED) {
+                    eventTypeIds.push(eventType.id);
+                } else {
+                    const currentLevelIds = this.eventTypeLevels(listState, eventType);
+                    if (currentLevelIds.length > 0) {
+                        eventTypeIds.push(eventType.id);
+                        levelIds = levelIds.concat(currentLevelIds);
+                    }
+                }
+            }
+        });
+
+        return { eventTypeIds, levelIds };
+    }
+
+    buildFilter = (listState) => {
+        let appIds = [];
+        let eventTypeIds = [];
+        let levelIds = [];
+
+        Object.values(this.props.apps).forEach((app) => {
+            if (listState.selected.appIds[app.id]) {
+                if (listState.toggles.appIds[app.id] !== SELECTED) {
+                    appIds.push(app.id);
+                } else {
+                    const { eventTypeIds: currentEventTypeIds, levelIds: currentLevelIds } = this.appEventTypes(listState, app);
+
+                    if (currentEventTypeIds.length > 0) {
+                        eventTypeIds = eventTypeIds.concat(currentEventTypeIds);
+                        levelIds = levelIds.concat(currentLevelIds);
+                        appIds.push(app.id);
+                    }
+                }
+            }
+        });
+
+        return { app_ids: appIds, event_type_ids: eventTypeIds, level_ids: levelIds };
+    }
+
     formSubmit = (data) => {
         let { active, name, url } = data.formData;
         const type = 'Endpoints::HttpEndpoint';
-        let filter = {
-            app_ids: getTrueKeys(this.filterList.current.state.selected.appIds),
-            event_type_ids: getTrueKeys(this.filterList.current.state.selected.eventTypeIds),
-            level_ids: getTrueKeys(this.filterList.current.state.selected.levelIds)
-        };
+
+        const filter = this.buildFilter(this.filterList.current.state);
 
         let payload = {
             active,
