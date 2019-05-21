@@ -106,7 +106,7 @@ export class NotificationsIndex extends Component {
     getNextEndpoint = () => {
         const { direction, index } = this.state.sortBy;
         const column = this.state.columns[index].key;
-        return this.props.fetchEndpoints(this.state.perPage * (this.state.page + 1), 1, `${column} ${direction}`, true);
+        return this.props.fetchEndpoints(this.state.perPage * this.state.page, 1, `${column} ${direction}`, true);
     }
 
     onPerPageSelect = (_event, perPage) => {
