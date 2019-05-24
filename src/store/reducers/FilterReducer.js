@@ -10,8 +10,7 @@ import {
 } from './reducerHelper';
 
 export const normalizeFilterData = (payload) => {
-    return payload.data === null ? {}
-        : normalizeData(payload, 'filter')[payload.data.id];
+    return payload.data !== null && typeof(payload.data) !== 'undefined' ? normalizeData(payload, 'filter')[payload.data.id] : {};
 };
 
 export const filterReducer = function(state = initialStateFor('filter', {}), action) {

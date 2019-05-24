@@ -87,8 +87,8 @@ export const endpointsReducer = function(state = initialStateFor('endpoints', {}
             return {
                 ...state,
                 loading: false,
-                error: action.payload.message,
-                endpoints: {}
+                endpoints: {},
+                error: true
             };
 
         case pendingMessage(FETCH_ENDPOINT):
@@ -110,13 +110,13 @@ export const endpointsReducer = function(state = initialStateFor('endpoints', {}
             return {
                 ...state,
                 loading: false,
-                error: action.payload.message
+                error: true
             };
 
         case failureMessage(DELETE_ENDPOINT):
             return {
                 ...state,
-                error: action.payload.message
+                error: true
             };
 
         case successMessage(DELETE_ENDPOINT):
@@ -145,8 +145,8 @@ export const endpointsReducer = function(state = initialStateFor('endpoints', {}
                 ...state,
                 submitting: false,
                 endpoint: action.meta.data,
-                errors: action.payload,
-                error: action.payload.message
+                error: true,
+                errors: action.payload.errors
             };
 
         case NEW_ENDPOINT:

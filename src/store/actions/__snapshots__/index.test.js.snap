@@ -11,10 +11,6 @@ Object {
         "title": "Endpoint Endpoint name created",
         "variant": "success",
       },
-      "rejected": Object {
-        "title": "Failed to create endpoint Endpoint name",
-        "variant": "danger",
-      },
     },
   },
   "payload": Promise {},
@@ -30,10 +26,6 @@ Object {
         "title": "Endpoint Endpoint name deleted",
         "variant": "success",
       },
-      "rejected": Object {
-        "title": "Failed to delete endpoint Endpoint name",
-        "variant": "danger",
-      },
     },
   },
   "payload": Promise {},
@@ -43,14 +35,6 @@ Object {
 
 exports[`fetchApps returns a state object 1`] = `
 Object {
-  "meta": Object {
-    "notifications": Object {
-      "rejected": Object {
-        "title": "Failed to load apps",
-        "variant": "danger",
-      },
-    },
-  },
   "payload": Promise {},
   "type": "FETCH_APPS",
 }
@@ -58,14 +42,6 @@ Object {
 
 exports[`fetchEndpoint returns a state object 1`] = `
 Object {
-  "meta": Object {
-    "notifications": Object {
-      "rejected": Object {
-        "title": "Failed to load endpoint 1",
-        "variant": "danger",
-      },
-    },
-  },
   "payload": Promise {},
   "type": "FETCH_ENDPOINT",
 }
@@ -75,12 +51,6 @@ exports[`fetchEndpoints returns a state object 1`] = `
 Object {
   "meta": Object {
     "endpoint": "/endpoints?offset=0&limit=10&sort_by=name asc",
-    "notifications": Object {
-      "rejected": Object {
-        "title": "Failed to load endpoints",
-        "variant": "danger",
-      },
-    },
     "partial": false,
     "sortBy": "name asc",
   },
@@ -91,14 +61,6 @@ Object {
 
 exports[`fetchFilter returns a state object 1`] = `
 Object {
-  "meta": Object {
-    "notifications": Object {
-      "rejected": Object {
-        "title": "Failed to load filter",
-        "variant": "danger",
-      },
-    },
-  },
   "payload": Promise {},
   "type": "FETCH_FILTER",
 }
@@ -119,10 +81,6 @@ Object {
         "title": "Test event delivery successful",
         "variant": "success",
       },
-      "rejected": Object {
-        "title": "Test event delivery failed",
-        "variant": "warning",
-      },
     },
   },
   "payload": Promise {},
@@ -132,14 +90,6 @@ Object {
 
 exports[`toggleEndpoint returns a state object 1`] = `
 Object {
-  "meta": Object {
-    "notifications": Object {
-      "rejected": Object {
-        "title": "Failed to toggle endpoint 1",
-        "variant": "danger",
-      },
-    },
-  },
   "payload": Promise {},
   "type": "SUBMIT_ENDPOINT",
 }
@@ -155,10 +105,6 @@ Object {
       "fulfilled": Object {
         "title": "Endpoint Endpoint name updated",
         "variant": "success",
-      },
-      "rejected": Object {
-        "title": "Failed to update endpoint Endpoint name",
-        "variant": "danger",
       },
     },
   },

@@ -29,28 +29,14 @@ export const fetchEndpoints = (page, perPage, sortBy = 'name asc', partial = fal
         meta: {
             endpoint: url,
             sortBy,
-            partial,
-            notifications: {
-                rejected: {
-                    variant: 'danger',
-                    title: 'Failed to load endpoints'
-                }
-            }
+            partial
         }
     };
 };
 
 export const fetchEndpoint = (id) => ({
     type: FETCH_ENDPOINT,
-    payload: ApiClient.get(`/endpoints/${ id }`),
-    meta: {
-        notifications: {
-            rejected: {
-                variant: 'danger',
-                title: `Failed to load endpoint ${ id }`
-            }
-        }
-    }
+    payload: ApiClient.get(`/endpoints/${ id }`)
 });
 
 export const createEndpoint = (data) => {
@@ -60,10 +46,6 @@ export const createEndpoint = (data) => {
         meta: {
             data,
             notifications: {
-                rejected: {
-                    variant: 'danger',
-                    title: `Failed to create endpoint ${ data.name }`
-                },
                 fulfilled: {
                     variant: 'success',
                     title: `Endpoint ${ data.name } created`
@@ -80,10 +62,6 @@ export const updateEndpoint = (id, data) => {
         meta: {
             data,
             notifications: {
-                rejected: {
-                    variant: 'danger',
-                    title: `Failed to update endpoint ${ data.name }`
-                },
                 fulfilled: {
                     variant: 'success',
                     title: `Endpoint ${ data.name } updated`
@@ -96,15 +74,7 @@ export const updateEndpoint = (id, data) => {
 export const toggleEndpoint = (id, on) => {
     return {
         type: SUBMIT_ENDPOINT,
-        payload: ApiClient.update(`/endpoints/${ id }`, { endpoint: { active: on }}),
-        meta: {
-            notifications: {
-                rejected: {
-                    variant: 'danger',
-                    title: `Failed to toggle endpoint ${ id }`
-                }
-            }
-        }
+        payload: ApiClient.update(`/endpoints/${ id }`, { endpoint: { active: on }})
     };
 };
 
@@ -113,10 +83,6 @@ export const deleteEndpoint = (id, name) => ({
     payload: ApiClient.destroy(`/endpoints/${ id }`).then(() => ({ id })),
     meta: {
         notifications: {
-            rejected: {
-                variant: 'danger',
-                title: `Failed to delete endpoint ${ name }`
-            },
             fulfilled: {
                 variant: 'success',
                 title: `Endpoint ${ name } deleted`
@@ -135,10 +101,6 @@ export const testEndpoint = (endpointId) => ({
     meta: {
         endpointId,
         notifications: {
-            rejected: {
-                variant: 'warning',
-                title: 'Test event delivery failed'
-            },
             fulfilled: {
                 variant: 'success',
                 title: 'Test event delivery successful'
@@ -149,33 +111,10 @@ export const testEndpoint = (endpointId) => ({
 
 export const fetchFilter = (endpointId) => ({
     type: FETCH_FILTER,
-    payload: ApiClient.get(`/endpoints/${ endpointId }/filter`)
-    .catch((error) => {
-        if (error.message === 'Not Found') {
-            return { data: null };
-        } else {
-            throw error;
-        }
-    }),
-    meta: {
-        notifications: {
-            rejected: {
-                variant: 'danger',
-                title: 'Failed to load filter'
-            }
-        }
-    }
+    payload: ApiClient.get(`/endpoints/${ endpointId }/filter`, { ignore404: true })
 });
 
 export const fetchApps = () => ({
     type: FETCH_APPS,
-    payload: ApiClient.get('/apps'),
-    meta: {
-        notifications: {
-            rejected: {
-                variant: 'danger',
-                title: 'Failed to load apps'
-            }
-        }
-    }
+    payload: ApiClient.get('/apps')
 });

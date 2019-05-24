@@ -13,7 +13,10 @@ export function init (...middleware) {
 
     registry = new ReducerRegistry({}, [
         promiseMiddleware(),
-        notificationsMiddleware(),
+        notificationsMiddleware({
+            errorTitleKey: 'title',
+            errorDescriptionKey: 'detail'
+        }),
         ...middleware
     ]);
 

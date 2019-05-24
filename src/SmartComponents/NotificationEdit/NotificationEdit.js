@@ -75,7 +75,7 @@ export class NotificationEdit extends Component {
         loading: PropTypes.bool,
         filterLoading: PropTypes.bool,
         appsLoading: PropTypes.bool,
-        endpointErrors: PropTypes.object,
+        endpointErrors: PropTypes.array,
         submitting: PropTypes.bool
     }
 
@@ -155,7 +155,14 @@ export class NotificationEdit extends Component {
         ((endpoint) ? this.props.updateEndpoint(endpoint.id, payload) : this.props.createEndpoint(payload))
         .then(this.toIndex)
         .catch(() => {
-            const errors = _.mapValues(this.props.endpointErrors.errors, (value) => ({ errors: value }));
+            let errors = {};
+            _.forEach(this.props.endpointErrors, (value) => {
+                const pointer = value.source.pointer.split('/');
+                const key = pointer[pointer.length - 1];
+                errors[key] = {
+                    errors: [ value.detail ]
+                };
+            });
             this.form.current.setState({
                 errors,
                 errorSchema: errors

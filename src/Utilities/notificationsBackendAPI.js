@@ -6,27 +6,55 @@ export const API_HEADERS = {
 };
 
 class BackendAPIClient {
-    static request(path, apiProps, method) {
-        return window.insights.chrome.auth.getUser()
-        .then(() => {
-            return fetch(NOTIFICATIONS_API_ROOT.concat(path), {
-                method: method || 'get',
-                headers: API_HEADERS,
-                body: JSON.stringify(apiProps)
-            });
-        }).then((response) => {
-            if (!response.ok && response.status !== 422) {
-                throw new Error(response.statusText);
-            }
+    static request(path, apiProps, method, options = {}) {
+        return this.authenticate()
+        .then(() => this.fetch(path, apiProps, method))
+        .then(this.checkForEmptyResponse)
+        .then((response) => this.checkForErrors(response, options))
+        .then((response) => response.json());
+    }
 
-            if (response.status === 422) {
-                return response.clone()
-                .json()
-                .then((json) => Promise.reject(json));
-            }
+    static fetch(path, apiProps, method) {
+        let params = {
+            method: method || 'get',
+            headers: API_HEADERS
+        };
 
-            return (response.status !== 204) ? response.json() : {};
-        });
+        if (apiProps) {
+            params.body = JSON.stringify(apiProps);
+        }
+
+        return fetch(NOTIFICATIONS_API_ROOT.concat(path), params);
+    }
+
+    static checkForEmptyResponse(response) {
+        return response.status === 204 ? { json: () => ({}) } : response;
+    }
+
+    static checkForErrors(response, options = {}) {
+        if (response.status === 404 && options.ignore404) {
+            return { json: () => ({}) };
+        }
+
+        const responseCloneJson = response.clone ? response.clone().json() : response;
+
+        if (response.status === 422) {
+            return responseCloneJson.then((json) =>
+                Promise.reject({ ...json, title: 'Validation error' })
+            );
+        }
+
+        if (response.status >= 400 && response.status <= 600) {
+            return responseCloneJson.then((json) =>
+                Promise.reject(json.errors[0])
+            );
+        }
+
+        return response;
+    }
+
+    static authenticate() {
+        return window.insights.chrome.auth.getUser();
     }
 
     static create(path, apiProps) {
@@ -37,8 +65,8 @@ class BackendAPIClient {
         return this.request(path, apiProps, 'put');
     }
 
-    static get(path) {
-        return this.request(path);
+    static get(path, options = {}) {
+        return this.request(path, null, 'get', options);
     }
 
     static destroy(path) {

@@ -127,7 +127,7 @@ describe('endpoint reducer', () => {
     });
 
     it('should handle FETCH_ENDPOINTS_FAILURE', () => {
-        const error = 'It broke';
+        const error = true;
         const newState = endpointsReducer(
             endpointInitialState,
             fromRequest(failureMessage(FETCH_ENDPOINTS), { message: error })
@@ -140,7 +140,7 @@ describe('endpoint reducer', () => {
     });
 
     it('should handle FETCH_ENDPOINT_FAILURE', () => {
-        const error = 'It broke';
+        const error = true;
         const newState = endpointsReducer(
             endpointInitialState,
             fromRequest(failureMessage(FETCH_ENDPOINT), { message: error })
@@ -183,7 +183,7 @@ describe('endpoint reducer', () => {
     });
 
     it('should handle SUBMIT_ENDPOINT_FAILURE', () => {
-        const error = 'Submit failed!';
+        const error = true;
         const action = fromRequest(failureMessage(SUBMIT_ENDPOINT), { message: error }, { data: {}});
         const newState = endpointsReducer(endpointInitialState, action);
         expect(newState).toEqual({
@@ -191,10 +191,7 @@ describe('endpoint reducer', () => {
             loading: false,
             submitting: false,
             endpoint: {},
-            error,
-            errors: {
-                message: error
-            }
+            error
         });
     });
 
@@ -210,7 +207,7 @@ describe('endpoint reducer', () => {
     });
 
     it('should handle DELETE_ENDPOINT_FAILURE', () => {
-        const error = 'Delete failed!';
+        const error = true;
         const action = fromRequest(failureMessage(DELETE_ENDPOINT), { message: error });
         const newState = endpointsReducer(endpointInitialState, action);
         expect(newState).toEqual({
