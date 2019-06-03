@@ -160,7 +160,13 @@ export class NotificationsIndex extends Component {
             event.preventDefault();
             this.props.deleteEndpoint(id, name).then(() => {
                 this.filtersInRowsAndCells();
-                return this.getNextEndpoint();
+                const { page, perPage } = this.state;
+                const { total } = this.props;
+                if (page !== 1 && total % perPage === 0) {
+                    return this.onPageChange(null, page - 1, false);
+                } else {
+                    return this.getNextEndpoint();
+                }
             }).then(() => {
                 this.filtersInRowsAndCells();
             });
