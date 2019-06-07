@@ -10,7 +10,11 @@ describe('request', () => {
 
     beforeAll(() => {
         window.insights = {
-            chrome: { auth: { getUser: jest.fn(() => objectResolver) }}
+            chrome: {
+                auth: {
+                    getUser: jest.fn(() => objectResolver),
+                    logout: jest.fn(() => objectResolver)
+                }}
         };
         window.fetch = fetchSpy;
     });
@@ -71,6 +75,16 @@ describe('checkForErrors', () => {
 
         await expect(ApiClient.checkForErrors(response)).rejects.toEqual(rejection);
         expect(response.json).toHaveBeenCalled();
+    });
+
+    it('rejects if status is 401', async () => {
+        const response = {
+            status: 401,
+            body: 'Authentication error:'
+        };
+
+        await expect(ApiClient.checkForErrors(response)).resolves.toEqual({});
+        expect(window.insights.chrome.auth.logout).toHaveBeenCalledWith(true);
     });
 });
 

@@ -11,7 +11,8 @@ class BackendAPIClient {
         .then(() => this.fetch(path, apiProps, method))
         .then(this.checkForEmptyResponse)
         .then((response) => this.checkForErrors(response, options))
-        .then((response) => response.json());
+        .then((response) => response.json())
+        .catch(() => Promise.reject({ title: 'Error parsing' }));
     }
 
     static fetch(path, apiProps, method) {
@@ -34,6 +35,10 @@ class BackendAPIClient {
     static checkForErrors(response, options = {}) {
         if (response.status === 404 && options.ignore404) {
             return { json: () => ({}) };
+        }
+
+        if (response.status === 401) {
+            return window.insights.chrome.auth.logout(true);
         }
 
         const responseCloneJson = response.clone ? response.clone().json() : response;

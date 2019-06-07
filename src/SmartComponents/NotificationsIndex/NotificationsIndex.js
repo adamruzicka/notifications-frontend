@@ -252,15 +252,13 @@ NotificationsIndex.propTypes = {
     toggleEndpoint: PropTypes.func.isRequired,
     testEndpoint: PropTypes.func.isRequired,
     endpoints: PropTypes.object.isRequired,
-    error: PropTypes.string,
     loading: PropTypes.bool,
     total: PropTypes.number
 };
 
-const mapStateToProps = ({ endpoints: { endpoints, loading, error, total }}) => ({
+const mapStateToProps = ({ endpoints: { endpoints, loading, total }}) => ({
     endpoints,
     loading,
-    error,
     total
 });
 
