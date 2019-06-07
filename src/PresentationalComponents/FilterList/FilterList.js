@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import {
+    Card,
+    CardBody,
+    CardHeader,
     Checkbox,
+    Grid,
+    GridItem,
     ListItem,
-    Stack,
-    StackItem,
     Title
 } from '@patternfly/react-core';
 
-import { BulletlessList, RadioToggle, ALL, SELECTED } from 'PresentationalComponents';
+import { BulletlessList, ALL, SELECTED } from 'PresentationalComponents';
 import _ from 'lodash';
 
 export class FilterList extends Component {
@@ -93,16 +96,9 @@ export class FilterList extends Component {
         const levelsArray = _.values(levels);
 
         return (
-            <RadioToggle
-                scope={ `event-type-${ eventType.id }` }
-                selectable={ levelsArray.length > 0 }
-                subject="level"
-                onToggle={ (value) => { this.setToggle(value, 'eventTypeIds', eventType.id); } }
-                initial={ this.state.toggles.eventTypeIds[eventType.id] } >
-                <BulletlessList>
-                    { levelsArray.map(this.renderLevel) }
-                </BulletlessList>
-            </RadioToggle>
+            <BulletlessList>
+                { levelsArray.map(this.renderLevel) }
+            </BulletlessList>
         );
     }
 
@@ -115,14 +111,13 @@ export class FilterList extends Component {
                     aria-label={ eventType.attributes.title }
                     onChange={ () => this.selectFilter('eventTypeIds', eventType.id) }
                     defaultChecked={ this.state.selected.eventTypeIds[eventType.id] } />
-                { this.state.selected.eventTypeIds[eventType.id] &&
-                      this.renderLevels(eventType, eventType.levels) }
+                { this.renderLevels(eventType, eventType.levels) }
             </ListItem>;
 
     eventTypesList = (eventTypes) => {
         const eventTypesArray = _.values(eventTypes);
         return eventTypesArray.length > 0 &&
-            <BulletlessList>
+            <BulletlessList style={ { paddingLeft: '0em' } }>
                 { eventTypesArray.map((eventType) =>
                     this.eventTypesListItem(eventType)
                 ) }
@@ -135,39 +130,49 @@ export class FilterList extends Component {
         this.setState(newState);
     }
 
+    appSelected = (app) => {
+        let newState = { ...this.state };
+        if (newState.selected.appIds[app.id] === undefined) {
+            Object.values(app.eventTypes).forEach((eventType) => {
+                newState.selected.eventTypeIds[eventType.id] = true;
+                Object.values(eventType.levels).forEach((level) => newState.selected.levelIds[level.id] = true);
+            });
+        }
+
+        newState.selected.appIds[app.id] = newState.selected.appIds[app.id] ? false : true;
+        this.setState(newState);
+    }
+
     render() {
         const apps = _.values(this.props.apps);
 
-        return (<Stack gutter="md">
-            { apps.length > 0 &&
-                <Title size='md'>Triggers</Title>
-            }
-            { apps.map((app) =>
-                <StackItem key={ `app-item-${ app.id }` }>
-                    <BulletlessList style={ { paddingLeft: '0em' } }>
-                        <ListItem>
-                            <Checkbox id={ `app-check-${ app.id}` }
-                                data-event-type-id={ app.id }
-                                label={ <strong>{ app.attributes.title }</strong> }
-                                aria-label={ app.attributes.title }
-                                onChange={ () => this.selectFilter('appIds', app.id) }
-                                defaultChecked={ this.state.selected.appIds[app.id]  }/>
-                        </ListItem>
-                        { this.state.selected.appIds[app.id] &&
-                                <ListItem>
-                                    <RadioToggle
-                                        scope={ `app-${ app.id }` }
-                                        selectable={ Object.keys(app.eventTypes).length > 0 }
-                                        subject="event type"
-                                        onToggle={ (value) => { this.setToggle(value, 'appIds', app.id); } }
-                                        initial={ this.state.toggles.appIds[app.id] } >
+        return (
+            <React.Fragment>
+                { apps.length > 0 &&
+                    <Title size='md'>Triggers</Title>
+                }
+                <Grid xl={ 4 } md={ 3 } xs={ 1 } gutter="md">
+                    { apps.map((app) =>
+                        <GridItem key={ `app-item-${ app.id }` }>
+                            <Card>
+                                <CardHeader>
+                                    <Checkbox id={ `app-check-${ app.id}` }
+                                        data-event-type-id={ app.id }
+                                        label={ <strong>{ app.attributes.title }</strong> }
+                                        aria-label={ app.attributes.title }
+                                        onChange={ () => this.appSelected(app) }
+                                        defaultChecked={ this.state.selected.appIds[app.id]  }/>
+                                </CardHeader>
+                                { this.state.selected.appIds[app.id] && _.keys(app.eventTypes).length > 0 &&
+                                    <CardBody>
                                         { this.eventTypesList(app.eventTypes, app.id) }
-                                    </RadioToggle>
-                                </ListItem> }
-                    </BulletlessList>
-                </StackItem>
-            ) }
-        </Stack>);
+                                    </CardBody>
+                                }
+                            </Card>
+                        </GridItem>
+                    ) }
+                </Grid>
+            </React.Fragment>);
     }
 }
 

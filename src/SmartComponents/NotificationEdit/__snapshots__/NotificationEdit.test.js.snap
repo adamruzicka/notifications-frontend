@@ -2,6 +2,1233 @@
 
 exports[`NotificationEdit expect to render a Form 1`] = `
 <withRouter(NotificationsPage)
+  appendix={
+    <PageSection
+      className=""
+      noPadding={false}
+      noPaddingMobile={false}
+      variant="default"
+    >
+      <Stack
+        className=""
+        component="div"
+        gutter="sm"
+      >
+        <StackItem
+          className=""
+          isFilled={false}
+        >
+          <FilterList
+            apps={
+              Object {
+                "1": Object {
+                  "attributes": Object {
+                    "name": "seed-app-0",
+                    "title": "Seed App 0",
+                  },
+                  "eventTypes": Object {},
+                  "id": 1,
+                  "relationships": Object {
+                    "eventTypes": Object {
+                      "data": Array [],
+                    },
+                  },
+                  "type": "app",
+                },
+                "10": Object {
+                  "attributes": Object {
+                    "name": "seed-app-9",
+                    "title": "Seed App 9",
+                  },
+                  "eventTypes": Object {
+                    "15": Object {
+                      "attributes": Object {
+                        "name": "seed-type-0",
+                        "title": "Seed Type 0",
+                      },
+                      "id": 15,
+                      "levels": Object {
+                        "33": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 33,
+                          "type": "level",
+                        },
+                        "34": Object {
+                          "attributes": Object {
+                            "title": "level-1",
+                          },
+                          "id": 34,
+                          "type": "level",
+                        },
+                        "35": Object {
+                          "attributes": Object {
+                            "title": "level-2",
+                          },
+                          "id": 35,
+                          "type": "level",
+                        },
+                        "36": Object {
+                          "attributes": Object {
+                            "title": "level-3",
+                          },
+                          "id": 36,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "33",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "34",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "35",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "36",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                    "16": Object {
+                      "attributes": Object {
+                        "name": "seed-type-1",
+                        "title": "Seed Type 1",
+                      },
+                      "id": 16,
+                      "levels": Object {
+                        "37": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 37,
+                          "type": "level",
+                        },
+                        "38": Object {
+                          "attributes": Object {
+                            "title": "level-1",
+                          },
+                          "id": 38,
+                          "type": "level",
+                        },
+                        "39": Object {
+                          "attributes": Object {
+                            "title": "level-2",
+                          },
+                          "id": 39,
+                          "type": "level",
+                        },
+                        "40": Object {
+                          "attributes": Object {
+                            "title": "level-3",
+                          },
+                          "id": 40,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "37",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "38",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "39",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "40",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                    "17": Object {
+                      "attributes": Object {
+                        "name": "seed-type-2",
+                        "title": "Seed Type 2",
+                      },
+                      "id": 17,
+                      "levels": Object {
+                        "41": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 41,
+                          "type": "level",
+                        },
+                        "42": Object {
+                          "attributes": Object {
+                            "title": "level-1",
+                          },
+                          "id": 42,
+                          "type": "level",
+                        },
+                        "43": Object {
+                          "attributes": Object {
+                            "title": "level-2",
+                          },
+                          "id": 43,
+                          "type": "level",
+                        },
+                        "44": Object {
+                          "attributes": Object {
+                            "title": "level-3",
+                          },
+                          "id": 44,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "41",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "42",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "43",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "44",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                    "18": Object {
+                      "attributes": Object {
+                        "name": "seed-type-3",
+                        "title": "Seed Type 3",
+                      },
+                      "id": 18,
+                      "levels": Object {
+                        "45": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 45,
+                          "type": "level",
+                        },
+                        "46": Object {
+                          "attributes": Object {
+                            "title": "level-1",
+                          },
+                          "id": 46,
+                          "type": "level",
+                        },
+                        "47": Object {
+                          "attributes": Object {
+                            "title": "level-2",
+                          },
+                          "id": 47,
+                          "type": "level",
+                        },
+                        "48": Object {
+                          "attributes": Object {
+                            "title": "level-3",
+                          },
+                          "id": 48,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "45",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "46",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "47",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "48",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                  },
+                  "id": 10,
+                  "relationships": Object {
+                    "eventTypes": Object {
+                      "data": Array [
+                        Object {
+                          "id": "15",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "16",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "17",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "18",
+                          "type": "eventType",
+                        },
+                      ],
+                    },
+                  },
+                  "type": "app",
+                },
+                "2": Object {
+                  "attributes": Object {
+                    "name": "seed-app-1",
+                    "title": "Seed App 1",
+                  },
+                  "eventTypes": Object {},
+                  "id": 2,
+                  "relationships": Object {
+                    "eventTypes": Object {
+                      "data": Array [],
+                    },
+                  },
+                  "type": "app",
+                },
+                "3": Object {
+                  "attributes": Object {
+                    "name": "seed-app-2",
+                    "title": "Seed App 2",
+                  },
+                  "eventTypes": Object {
+                    "1": Object {
+                      "attributes": Object {
+                        "name": "seed-type-0",
+                        "title": "Seed Type 0",
+                      },
+                      "id": 1,
+                      "levels": Object {
+                        "1": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 1,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "1",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                    "2": Object {
+                      "attributes": Object {
+                        "name": "seed-type-1",
+                        "title": "Seed Type 1",
+                      },
+                      "id": 2,
+                      "levels": Object {
+                        "2": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 2,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "2",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                  },
+                  "id": 3,
+                  "relationships": Object {
+                    "eventTypes": Object {
+                      "data": Array [
+                        Object {
+                          "id": "1",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "2",
+                          "type": "eventType",
+                        },
+                      ],
+                    },
+                  },
+                  "type": "app",
+                },
+                "4": Object {
+                  "attributes": Object {
+                    "name": "seed-app-3",
+                    "title": "Seed App 3",
+                  },
+                  "eventTypes": Object {
+                    "3": Object {
+                      "attributes": Object {
+                        "name": "seed-type-0",
+                        "title": "Seed Type 0",
+                      },
+                      "id": 3,
+                      "levels": Object {
+                        "3": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 3,
+                          "type": "level",
+                        },
+                        "4": Object {
+                          "attributes": Object {
+                            "title": "level-1",
+                          },
+                          "id": 4,
+                          "type": "level",
+                        },
+                        "5": Object {
+                          "attributes": Object {
+                            "title": "level-2",
+                          },
+                          "id": 5,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "3",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "4",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "5",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                    "4": Object {
+                      "attributes": Object {
+                        "name": "seed-type-1",
+                        "title": "Seed Type 1",
+                      },
+                      "id": 4,
+                      "levels": Object {
+                        "6": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 6,
+                          "type": "level",
+                        },
+                        "7": Object {
+                          "attributes": Object {
+                            "title": "level-1",
+                          },
+                          "id": 7,
+                          "type": "level",
+                        },
+                        "8": Object {
+                          "attributes": Object {
+                            "title": "level-2",
+                          },
+                          "id": 8,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "6",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "7",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "8",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                  },
+                  "id": 4,
+                  "relationships": Object {
+                    "eventTypes": Object {
+                      "data": Array [
+                        Object {
+                          "id": "3",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "4",
+                          "type": "eventType",
+                        },
+                      ],
+                    },
+                  },
+                  "type": "app",
+                },
+                "5": Object {
+                  "attributes": Object {
+                    "name": "seed-app-4",
+                    "title": "Seed App 4",
+                  },
+                  "eventTypes": Object {},
+                  "id": 5,
+                  "relationships": Object {
+                    "eventTypes": Object {
+                      "data": Array [],
+                    },
+                  },
+                  "type": "app",
+                },
+                "6": Object {
+                  "attributes": Object {
+                    "name": "seed-app-5",
+                    "title": "Seed App 5",
+                  },
+                  "eventTypes": Object {
+                    "5": Object {
+                      "attributes": Object {
+                        "name": "seed-type-0",
+                        "title": "Seed Type 0",
+                      },
+                      "id": 5,
+                      "levels": Object {
+                        "10": Object {
+                          "attributes": Object {
+                            "title": "level-1",
+                          },
+                          "id": 10,
+                          "type": "level",
+                        },
+                        "11": Object {
+                          "attributes": Object {
+                            "title": "level-2",
+                          },
+                          "id": 11,
+                          "type": "level",
+                        },
+                        "12": Object {
+                          "attributes": Object {
+                            "title": "level-3",
+                          },
+                          "id": 12,
+                          "type": "level",
+                        },
+                        "9": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 9,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "9",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "10",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "11",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "12",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                    "6": Object {
+                      "attributes": Object {
+                        "name": "seed-type-1",
+                        "title": "Seed Type 1",
+                      },
+                      "id": 6,
+                      "levels": Object {
+                        "13": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 13,
+                          "type": "level",
+                        },
+                        "14": Object {
+                          "attributes": Object {
+                            "title": "level-1",
+                          },
+                          "id": 14,
+                          "type": "level",
+                        },
+                        "15": Object {
+                          "attributes": Object {
+                            "title": "level-2",
+                          },
+                          "id": 15,
+                          "type": "level",
+                        },
+                        "16": Object {
+                          "attributes": Object {
+                            "title": "level-3",
+                          },
+                          "id": 16,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "13",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "14",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "15",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "16",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                    "7": Object {
+                      "attributes": Object {
+                        "name": "seed-type-2",
+                        "title": "Seed Type 2",
+                      },
+                      "id": 7,
+                      "levels": Object {
+                        "17": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 17,
+                          "type": "level",
+                        },
+                        "18": Object {
+                          "attributes": Object {
+                            "title": "level-1",
+                          },
+                          "id": 18,
+                          "type": "level",
+                        },
+                        "19": Object {
+                          "attributes": Object {
+                            "title": "level-2",
+                          },
+                          "id": 19,
+                          "type": "level",
+                        },
+                        "20": Object {
+                          "attributes": Object {
+                            "title": "level-3",
+                          },
+                          "id": 20,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "17",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "18",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "19",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "20",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                  },
+                  "id": 6,
+                  "relationships": Object {
+                    "eventTypes": Object {
+                      "data": Array [
+                        Object {
+                          "id": "5",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "6",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "7",
+                          "type": "eventType",
+                        },
+                      ],
+                    },
+                  },
+                  "type": "app",
+                },
+                "7": Object {
+                  "attributes": Object {
+                    "name": "seed-app-6",
+                    "title": "Seed App 6",
+                  },
+                  "eventTypes": Object {},
+                  "id": 7,
+                  "relationships": Object {
+                    "eventTypes": Object {
+                      "data": Array [],
+                    },
+                  },
+                  "type": "app",
+                },
+                "8": Object {
+                  "attributes": Object {
+                    "name": "seed-app-7",
+                    "title": "Seed App 7",
+                  },
+                  "eventTypes": Object {
+                    "10": Object {
+                      "attributes": Object {
+                        "name": "seed-type-2",
+                        "title": "Seed Type 2",
+                      },
+                      "id": 10,
+                      "levels": Object {
+                        "29": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 29,
+                          "type": "level",
+                        },
+                        "30": Object {
+                          "attributes": Object {
+                            "title": "level-1",
+                          },
+                          "id": 30,
+                          "type": "level",
+                        },
+                        "31": Object {
+                          "attributes": Object {
+                            "title": "level-2",
+                          },
+                          "id": 31,
+                          "type": "level",
+                        },
+                        "32": Object {
+                          "attributes": Object {
+                            "title": "level-3",
+                          },
+                          "id": 32,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "29",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "30",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "31",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "32",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                    "8": Object {
+                      "attributes": Object {
+                        "name": "seed-type-0",
+                        "title": "Seed Type 0",
+                      },
+                      "id": 8,
+                      "levels": Object {
+                        "21": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 21,
+                          "type": "level",
+                        },
+                        "22": Object {
+                          "attributes": Object {
+                            "title": "level-1",
+                          },
+                          "id": 22,
+                          "type": "level",
+                        },
+                        "23": Object {
+                          "attributes": Object {
+                            "title": "level-2",
+                          },
+                          "id": 23,
+                          "type": "level",
+                        },
+                        "24": Object {
+                          "attributes": Object {
+                            "title": "level-3",
+                          },
+                          "id": 24,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "21",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "22",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "23",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "24",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                    "9": Object {
+                      "attributes": Object {
+                        "name": "seed-type-1",
+                        "title": "Seed Type 1",
+                      },
+                      "id": 9,
+                      "levels": Object {
+                        "25": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 25,
+                          "type": "level",
+                        },
+                        "26": Object {
+                          "attributes": Object {
+                            "title": "level-1",
+                          },
+                          "id": 26,
+                          "type": "level",
+                        },
+                        "27": Object {
+                          "attributes": Object {
+                            "title": "level-2",
+                          },
+                          "id": 27,
+                          "type": "level",
+                        },
+                        "28": Object {
+                          "attributes": Object {
+                            "title": "level-3",
+                          },
+                          "id": 28,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "25",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "26",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "27",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "28",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                  },
+                  "id": 8,
+                  "relationships": Object {
+                    "eventTypes": Object {
+                      "data": Array [
+                        Object {
+                          "id": "8",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "9",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "10",
+                          "type": "eventType",
+                        },
+                      ],
+                    },
+                  },
+                  "type": "app",
+                },
+                "9": Object {
+                  "attributes": Object {
+                    "name": "seed-app-8",
+                    "title": "Seed App 8",
+                  },
+                  "eventTypes": Object {
+                    "11": Object {
+                      "attributes": Object {
+                        "name": "seed-type-0",
+                        "title": "Seed Type 0",
+                      },
+                      "id": 11,
+                      "levels": Object {},
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                    "12": Object {
+                      "attributes": Object {
+                        "name": "seed-type-1",
+                        "title": "Seed Type 1",
+                      },
+                      "id": 12,
+                      "levels": Object {},
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                    "13": Object {
+                      "attributes": Object {
+                        "name": "seed-type-2",
+                        "title": "Seed Type 2",
+                      },
+                      "id": 13,
+                      "levels": Object {},
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                    "14": Object {
+                      "attributes": Object {
+                        "name": "seed-type-3",
+                        "title": "Seed Type 3",
+                      },
+                      "id": 14,
+                      "levels": Object {},
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                  },
+                  "id": 9,
+                  "relationships": Object {
+                    "eventTypes": Object {
+                      "data": Array [
+                        Object {
+                          "id": "11",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "12",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "13",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "14",
+                          "type": "eventType",
+                        },
+                      ],
+                    },
+                  },
+                  "type": "app",
+                },
+              }
+            }
+            filter={
+              Object {
+                "13": Object {
+                  "apps": Object {
+                    "1": Object {
+                      "id": 1,
+                      "type": "app",
+                    },
+                    "3": Object {
+                      "id": 3,
+                      "type": "app",
+                    },
+                    "4": Object {
+                      "id": 4,
+                      "type": "app",
+                    },
+                    "8": Object {
+                      "id": 8,
+                      "type": "app",
+                    },
+                  },
+                  "attributes": Object {
+                    "enabled": true,
+                  },
+                  "endpoints": Object {
+                    "36": Object {
+                      "id": 36,
+                      "type": "endpoint",
+                    },
+                  },
+                  "eventTypes": Object {
+                    "1": Object {
+                      "id": 1,
+                      "type": "eventType",
+                    },
+                    "3": Object {
+                      "id": 3,
+                      "type": "eventType",
+                    },
+                    "8": Object {
+                      "id": 8,
+                      "type": "eventType",
+                    },
+                  },
+                  "id": 13,
+                  "levels": Object {
+                    "1": Object {
+                      "id": 1,
+                      "type": "level",
+                    },
+                    "22": Object {
+                      "id": 22,
+                      "type": "level",
+                    },
+                    "4": Object {
+                      "id": 4,
+                      "type": "level",
+                    },
+                  },
+                  "relationships": Object {
+                    "apps": Object {
+                      "data": Array [
+                        Object {
+                          "id": "1",
+                          "type": "app",
+                        },
+                        Object {
+                          "id": "3",
+                          "type": "app",
+                        },
+                        Object {
+                          "id": "4",
+                          "type": "app",
+                        },
+                        Object {
+                          "id": "8",
+                          "type": "app",
+                        },
+                        Object {
+                          "id": "4",
+                          "type": "app",
+                        },
+                      ],
+                    },
+                    "endpoints": Object {
+                      "data": Array [
+                        Object {
+                          "id": "36",
+                          "type": "endpoint",
+                        },
+                      ],
+                    },
+                    "eventTypes": Object {
+                      "data": Array [
+                        Object {
+                          "id": "1",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "3",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "8",
+                          "type": "eventType",
+                        },
+                      ],
+                    },
+                    "levels": Object {
+                      "data": Array [
+                        Object {
+                          "id": "1",
+                          "type": "level",
+                        },
+                        Object {
+                          "id": "4",
+                          "type": "level",
+                        },
+                        Object {
+                          "id": "22",
+                          "type": "level",
+                        },
+                      ],
+                    },
+                  },
+                  "type": "filter",
+                },
+              }
+            }
+          />
+        </StackItem>
+        <StackItem
+          className=""
+          isFilled={false}
+        >
+          <div>
+            <Button
+              aria-label={null}
+              className=""
+              component="button"
+              isActive={false}
+              isBlock={false}
+              isDisabled={false}
+              isFocus={false}
+              isHover={false}
+              isInline={false}
+              onClick={[Function]}
+              type="submit"
+              variant="primary"
+            >
+              Submit
+            </Button>
+             
+            <Button
+              aria-label={null}
+              className=""
+              component="button"
+              isActive={false}
+              isBlock={false}
+              isDisabled={false}
+              isFocus={false}
+              isHover={false}
+              isInline={false}
+              onClick={[Function]}
+              type="button"
+              variant="secondary"
+            >
+              Cancel
+            </Button>
+          </div>
+        </StackItem>
+      </Stack>
+    </PageSection>
+  }
   mainStyle={
     Object {
       "background": "white",
@@ -72,1207 +1299,26 @@ exports[`NotificationEdit expect to render a Form 1`] = `
         }
       }
     >
-      <FilterList
-        apps={
+      <Button
+        aria-label={null}
+        className=""
+        component="button"
+        isActive={false}
+        isBlock={false}
+        isDisabled={false}
+        isFocus={false}
+        isHover={false}
+        isInline={false}
+        style={
           Object {
-            "1": Object {
-              "attributes": Object {
-                "name": "seed-app-0",
-                "title": "Seed App 0",
-              },
-              "eventTypes": Object {},
-              "id": 1,
-              "relationships": Object {
-                "eventTypes": Object {
-                  "data": Array [],
-                },
-              },
-              "type": "app",
-            },
-            "10": Object {
-              "attributes": Object {
-                "name": "seed-app-9",
-                "title": "Seed App 9",
-              },
-              "eventTypes": Object {
-                "15": Object {
-                  "attributes": Object {
-                    "name": "seed-type-0",
-                    "title": "Seed Type 0",
-                  },
-                  "id": 15,
-                  "levels": Object {
-                    "33": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 33,
-                      "type": "level",
-                    },
-                    "34": Object {
-                      "attributes": Object {
-                        "title": "level-1",
-                      },
-                      "id": 34,
-                      "type": "level",
-                    },
-                    "35": Object {
-                      "attributes": Object {
-                        "title": "level-2",
-                      },
-                      "id": 35,
-                      "type": "level",
-                    },
-                    "36": Object {
-                      "attributes": Object {
-                        "title": "level-3",
-                      },
-                      "id": 36,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "33",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "34",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "35",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "36",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-                "16": Object {
-                  "attributes": Object {
-                    "name": "seed-type-1",
-                    "title": "Seed Type 1",
-                  },
-                  "id": 16,
-                  "levels": Object {
-                    "37": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 37,
-                      "type": "level",
-                    },
-                    "38": Object {
-                      "attributes": Object {
-                        "title": "level-1",
-                      },
-                      "id": 38,
-                      "type": "level",
-                    },
-                    "39": Object {
-                      "attributes": Object {
-                        "title": "level-2",
-                      },
-                      "id": 39,
-                      "type": "level",
-                    },
-                    "40": Object {
-                      "attributes": Object {
-                        "title": "level-3",
-                      },
-                      "id": 40,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "37",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "38",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "39",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "40",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-                "17": Object {
-                  "attributes": Object {
-                    "name": "seed-type-2",
-                    "title": "Seed Type 2",
-                  },
-                  "id": 17,
-                  "levels": Object {
-                    "41": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 41,
-                      "type": "level",
-                    },
-                    "42": Object {
-                      "attributes": Object {
-                        "title": "level-1",
-                      },
-                      "id": 42,
-                      "type": "level",
-                    },
-                    "43": Object {
-                      "attributes": Object {
-                        "title": "level-2",
-                      },
-                      "id": 43,
-                      "type": "level",
-                    },
-                    "44": Object {
-                      "attributes": Object {
-                        "title": "level-3",
-                      },
-                      "id": 44,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "41",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "42",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "43",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "44",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-                "18": Object {
-                  "attributes": Object {
-                    "name": "seed-type-3",
-                    "title": "Seed Type 3",
-                  },
-                  "id": 18,
-                  "levels": Object {
-                    "45": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 45,
-                      "type": "level",
-                    },
-                    "46": Object {
-                      "attributes": Object {
-                        "title": "level-1",
-                      },
-                      "id": 46,
-                      "type": "level",
-                    },
-                    "47": Object {
-                      "attributes": Object {
-                        "title": "level-2",
-                      },
-                      "id": 47,
-                      "type": "level",
-                    },
-                    "48": Object {
-                      "attributes": Object {
-                        "title": "level-3",
-                      },
-                      "id": 48,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "45",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "46",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "47",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "48",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-              },
-              "id": 10,
-              "relationships": Object {
-                "eventTypes": Object {
-                  "data": Array [
-                    Object {
-                      "id": "15",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "16",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "17",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "18",
-                      "type": "eventType",
-                    },
-                  ],
-                },
-              },
-              "type": "app",
-            },
-            "2": Object {
-              "attributes": Object {
-                "name": "seed-app-1",
-                "title": "Seed App 1",
-              },
-              "eventTypes": Object {},
-              "id": 2,
-              "relationships": Object {
-                "eventTypes": Object {
-                  "data": Array [],
-                },
-              },
-              "type": "app",
-            },
-            "3": Object {
-              "attributes": Object {
-                "name": "seed-app-2",
-                "title": "Seed App 2",
-              },
-              "eventTypes": Object {
-                "1": Object {
-                  "attributes": Object {
-                    "name": "seed-type-0",
-                    "title": "Seed Type 0",
-                  },
-                  "id": 1,
-                  "levels": Object {
-                    "1": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 1,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "1",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-                "2": Object {
-                  "attributes": Object {
-                    "name": "seed-type-1",
-                    "title": "Seed Type 1",
-                  },
-                  "id": 2,
-                  "levels": Object {
-                    "2": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 2,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "2",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-              },
-              "id": 3,
-              "relationships": Object {
-                "eventTypes": Object {
-                  "data": Array [
-                    Object {
-                      "id": "1",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "2",
-                      "type": "eventType",
-                    },
-                  ],
-                },
-              },
-              "type": "app",
-            },
-            "4": Object {
-              "attributes": Object {
-                "name": "seed-app-3",
-                "title": "Seed App 3",
-              },
-              "eventTypes": Object {
-                "3": Object {
-                  "attributes": Object {
-                    "name": "seed-type-0",
-                    "title": "Seed Type 0",
-                  },
-                  "id": 3,
-                  "levels": Object {
-                    "3": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 3,
-                      "type": "level",
-                    },
-                    "4": Object {
-                      "attributes": Object {
-                        "title": "level-1",
-                      },
-                      "id": 4,
-                      "type": "level",
-                    },
-                    "5": Object {
-                      "attributes": Object {
-                        "title": "level-2",
-                      },
-                      "id": 5,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "3",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "4",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "5",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-                "4": Object {
-                  "attributes": Object {
-                    "name": "seed-type-1",
-                    "title": "Seed Type 1",
-                  },
-                  "id": 4,
-                  "levels": Object {
-                    "6": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 6,
-                      "type": "level",
-                    },
-                    "7": Object {
-                      "attributes": Object {
-                        "title": "level-1",
-                      },
-                      "id": 7,
-                      "type": "level",
-                    },
-                    "8": Object {
-                      "attributes": Object {
-                        "title": "level-2",
-                      },
-                      "id": 8,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "6",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "7",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "8",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-              },
-              "id": 4,
-              "relationships": Object {
-                "eventTypes": Object {
-                  "data": Array [
-                    Object {
-                      "id": "3",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "4",
-                      "type": "eventType",
-                    },
-                  ],
-                },
-              },
-              "type": "app",
-            },
-            "5": Object {
-              "attributes": Object {
-                "name": "seed-app-4",
-                "title": "Seed App 4",
-              },
-              "eventTypes": Object {},
-              "id": 5,
-              "relationships": Object {
-                "eventTypes": Object {
-                  "data": Array [],
-                },
-              },
-              "type": "app",
-            },
-            "6": Object {
-              "attributes": Object {
-                "name": "seed-app-5",
-                "title": "Seed App 5",
-              },
-              "eventTypes": Object {
-                "5": Object {
-                  "attributes": Object {
-                    "name": "seed-type-0",
-                    "title": "Seed Type 0",
-                  },
-                  "id": 5,
-                  "levels": Object {
-                    "10": Object {
-                      "attributes": Object {
-                        "title": "level-1",
-                      },
-                      "id": 10,
-                      "type": "level",
-                    },
-                    "11": Object {
-                      "attributes": Object {
-                        "title": "level-2",
-                      },
-                      "id": 11,
-                      "type": "level",
-                    },
-                    "12": Object {
-                      "attributes": Object {
-                        "title": "level-3",
-                      },
-                      "id": 12,
-                      "type": "level",
-                    },
-                    "9": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 9,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "9",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "10",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "11",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "12",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-                "6": Object {
-                  "attributes": Object {
-                    "name": "seed-type-1",
-                    "title": "Seed Type 1",
-                  },
-                  "id": 6,
-                  "levels": Object {
-                    "13": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 13,
-                      "type": "level",
-                    },
-                    "14": Object {
-                      "attributes": Object {
-                        "title": "level-1",
-                      },
-                      "id": 14,
-                      "type": "level",
-                    },
-                    "15": Object {
-                      "attributes": Object {
-                        "title": "level-2",
-                      },
-                      "id": 15,
-                      "type": "level",
-                    },
-                    "16": Object {
-                      "attributes": Object {
-                        "title": "level-3",
-                      },
-                      "id": 16,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "13",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "14",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "15",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "16",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-                "7": Object {
-                  "attributes": Object {
-                    "name": "seed-type-2",
-                    "title": "Seed Type 2",
-                  },
-                  "id": 7,
-                  "levels": Object {
-                    "17": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 17,
-                      "type": "level",
-                    },
-                    "18": Object {
-                      "attributes": Object {
-                        "title": "level-1",
-                      },
-                      "id": 18,
-                      "type": "level",
-                    },
-                    "19": Object {
-                      "attributes": Object {
-                        "title": "level-2",
-                      },
-                      "id": 19,
-                      "type": "level",
-                    },
-                    "20": Object {
-                      "attributes": Object {
-                        "title": "level-3",
-                      },
-                      "id": 20,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "17",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "18",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "19",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "20",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-              },
-              "id": 6,
-              "relationships": Object {
-                "eventTypes": Object {
-                  "data": Array [
-                    Object {
-                      "id": "5",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "6",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "7",
-                      "type": "eventType",
-                    },
-                  ],
-                },
-              },
-              "type": "app",
-            },
-            "7": Object {
-              "attributes": Object {
-                "name": "seed-app-6",
-                "title": "Seed App 6",
-              },
-              "eventTypes": Object {},
-              "id": 7,
-              "relationships": Object {
-                "eventTypes": Object {
-                  "data": Array [],
-                },
-              },
-              "type": "app",
-            },
-            "8": Object {
-              "attributes": Object {
-                "name": "seed-app-7",
-                "title": "Seed App 7",
-              },
-              "eventTypes": Object {
-                "10": Object {
-                  "attributes": Object {
-                    "name": "seed-type-2",
-                    "title": "Seed Type 2",
-                  },
-                  "id": 10,
-                  "levels": Object {
-                    "29": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 29,
-                      "type": "level",
-                    },
-                    "30": Object {
-                      "attributes": Object {
-                        "title": "level-1",
-                      },
-                      "id": 30,
-                      "type": "level",
-                    },
-                    "31": Object {
-                      "attributes": Object {
-                        "title": "level-2",
-                      },
-                      "id": 31,
-                      "type": "level",
-                    },
-                    "32": Object {
-                      "attributes": Object {
-                        "title": "level-3",
-                      },
-                      "id": 32,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "29",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "30",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "31",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "32",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-                "8": Object {
-                  "attributes": Object {
-                    "name": "seed-type-0",
-                    "title": "Seed Type 0",
-                  },
-                  "id": 8,
-                  "levels": Object {
-                    "21": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 21,
-                      "type": "level",
-                    },
-                    "22": Object {
-                      "attributes": Object {
-                        "title": "level-1",
-                      },
-                      "id": 22,
-                      "type": "level",
-                    },
-                    "23": Object {
-                      "attributes": Object {
-                        "title": "level-2",
-                      },
-                      "id": 23,
-                      "type": "level",
-                    },
-                    "24": Object {
-                      "attributes": Object {
-                        "title": "level-3",
-                      },
-                      "id": 24,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "21",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "22",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "23",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "24",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-                "9": Object {
-                  "attributes": Object {
-                    "name": "seed-type-1",
-                    "title": "Seed Type 1",
-                  },
-                  "id": 9,
-                  "levels": Object {
-                    "25": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 25,
-                      "type": "level",
-                    },
-                    "26": Object {
-                      "attributes": Object {
-                        "title": "level-1",
-                      },
-                      "id": 26,
-                      "type": "level",
-                    },
-                    "27": Object {
-                      "attributes": Object {
-                        "title": "level-2",
-                      },
-                      "id": 27,
-                      "type": "level",
-                    },
-                    "28": Object {
-                      "attributes": Object {
-                        "title": "level-3",
-                      },
-                      "id": 28,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "25",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "26",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "27",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "28",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-              },
-              "id": 8,
-              "relationships": Object {
-                "eventTypes": Object {
-                  "data": Array [
-                    Object {
-                      "id": "8",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "9",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "10",
-                      "type": "eventType",
-                    },
-                  ],
-                },
-              },
-              "type": "app",
-            },
-            "9": Object {
-              "attributes": Object {
-                "name": "seed-app-8",
-                "title": "Seed App 8",
-              },
-              "eventTypes": Object {
-                "11": Object {
-                  "attributes": Object {
-                    "name": "seed-type-0",
-                    "title": "Seed Type 0",
-                  },
-                  "id": 11,
-                  "levels": Object {},
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [],
-                    },
-                  },
-                  "type": "eventType",
-                },
-                "12": Object {
-                  "attributes": Object {
-                    "name": "seed-type-1",
-                    "title": "Seed Type 1",
-                  },
-                  "id": 12,
-                  "levels": Object {},
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [],
-                    },
-                  },
-                  "type": "eventType",
-                },
-                "13": Object {
-                  "attributes": Object {
-                    "name": "seed-type-2",
-                    "title": "Seed Type 2",
-                  },
-                  "id": 13,
-                  "levels": Object {},
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [],
-                    },
-                  },
-                  "type": "eventType",
-                },
-                "14": Object {
-                  "attributes": Object {
-                    "name": "seed-type-3",
-                    "title": "Seed Type 3",
-                  },
-                  "id": 14,
-                  "levels": Object {},
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [],
-                    },
-                  },
-                  "type": "eventType",
-                },
-              },
-              "id": 9,
-              "relationships": Object {
-                "eventTypes": Object {
-                  "data": Array [
-                    Object {
-                      "id": "11",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "12",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "13",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "14",
-                      "type": "eventType",
-                    },
-                  ],
-                },
-              },
-              "type": "app",
-            },
+            "display": "none",
           }
         }
-        filter={
-          Object {
-            "13": Object {
-              "apps": Object {
-                "1": Object {
-                  "id": 1,
-                  "type": "app",
-                },
-                "3": Object {
-                  "id": 3,
-                  "type": "app",
-                },
-                "4": Object {
-                  "id": 4,
-                  "type": "app",
-                },
-                "8": Object {
-                  "id": 8,
-                  "type": "app",
-                },
-              },
-              "attributes": Object {
-                "enabled": true,
-              },
-              "endpoints": Object {
-                "36": Object {
-                  "id": 36,
-                  "type": "endpoint",
-                },
-              },
-              "eventTypes": Object {
-                "1": Object {
-                  "id": 1,
-                  "type": "eventType",
-                },
-                "3": Object {
-                  "id": 3,
-                  "type": "eventType",
-                },
-                "8": Object {
-                  "id": 8,
-                  "type": "eventType",
-                },
-              },
-              "id": 13,
-              "levels": Object {
-                "1": Object {
-                  "id": 1,
-                  "type": "level",
-                },
-                "22": Object {
-                  "id": 22,
-                  "type": "level",
-                },
-                "4": Object {
-                  "id": 4,
-                  "type": "level",
-                },
-              },
-              "relationships": Object {
-                "apps": Object {
-                  "data": Array [
-                    Object {
-                      "id": "1",
-                      "type": "app",
-                    },
-                    Object {
-                      "id": "3",
-                      "type": "app",
-                    },
-                    Object {
-                      "id": "4",
-                      "type": "app",
-                    },
-                    Object {
-                      "id": "8",
-                      "type": "app",
-                    },
-                    Object {
-                      "id": "4",
-                      "type": "app",
-                    },
-                  ],
-                },
-                "endpoints": Object {
-                  "data": Array [
-                    Object {
-                      "id": "36",
-                      "type": "endpoint",
-                    },
-                  ],
-                },
-                "eventTypes": Object {
-                  "data": Array [
-                    Object {
-                      "id": "1",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "3",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "8",
-                      "type": "eventType",
-                    },
-                  ],
-                },
-                "levels": Object {
-                  "data": Array [
-                    Object {
-                      "id": "1",
-                      "type": "level",
-                    },
-                    Object {
-                      "id": "4",
-                      "type": "level",
-                    },
-                    Object {
-                      "id": "22",
-                      "type": "level",
-                    },
-                  ],
-                },
-              },
-              "type": "filter",
-            },
-          }
-        }
-      />
-      <div>
-        <Button
-          aria-label={null}
-          className=""
-          component="button"
-          isActive={false}
-          isBlock={false}
-          isDisabled={false}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
-          type="submit"
-          variant="primary"
-        >
-          Submit
-        </Button>
-         
-        <Button
-          aria-label={null}
-          className=""
-          component="button"
-          isActive={false}
-          isBlock={false}
-          isDisabled={false}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
-          onClick={[Function]}
-          type="button"
-          variant="secondary"
-        >
-          Cancel
-        </Button>
-      </div>
+        type="submit"
+        variant="primary"
+      >
+        Submit
+      </Button>
     </Form>
   </LoadingState>
 </withRouter(NotificationsPage)>
@@ -1280,6 +1326,1233 @@ exports[`NotificationEdit expect to render a Form 1`] = `
 
 exports[`NotificationEdit takes an endpoint 1`] = `
 <withRouter(NotificationsPage)
+  appendix={
+    <PageSection
+      className=""
+      noPadding={false}
+      noPaddingMobile={false}
+      variant="default"
+    >
+      <Stack
+        className=""
+        component="div"
+        gutter="sm"
+      >
+        <StackItem
+          className=""
+          isFilled={false}
+        >
+          <FilterList
+            apps={
+              Object {
+                "1": Object {
+                  "attributes": Object {
+                    "name": "seed-app-0",
+                    "title": "Seed App 0",
+                  },
+                  "eventTypes": Object {},
+                  "id": 1,
+                  "relationships": Object {
+                    "eventTypes": Object {
+                      "data": Array [],
+                    },
+                  },
+                  "type": "app",
+                },
+                "10": Object {
+                  "attributes": Object {
+                    "name": "seed-app-9",
+                    "title": "Seed App 9",
+                  },
+                  "eventTypes": Object {
+                    "15": Object {
+                      "attributes": Object {
+                        "name": "seed-type-0",
+                        "title": "Seed Type 0",
+                      },
+                      "id": 15,
+                      "levels": Object {
+                        "33": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 33,
+                          "type": "level",
+                        },
+                        "34": Object {
+                          "attributes": Object {
+                            "title": "level-1",
+                          },
+                          "id": 34,
+                          "type": "level",
+                        },
+                        "35": Object {
+                          "attributes": Object {
+                            "title": "level-2",
+                          },
+                          "id": 35,
+                          "type": "level",
+                        },
+                        "36": Object {
+                          "attributes": Object {
+                            "title": "level-3",
+                          },
+                          "id": 36,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "33",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "34",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "35",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "36",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                    "16": Object {
+                      "attributes": Object {
+                        "name": "seed-type-1",
+                        "title": "Seed Type 1",
+                      },
+                      "id": 16,
+                      "levels": Object {
+                        "37": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 37,
+                          "type": "level",
+                        },
+                        "38": Object {
+                          "attributes": Object {
+                            "title": "level-1",
+                          },
+                          "id": 38,
+                          "type": "level",
+                        },
+                        "39": Object {
+                          "attributes": Object {
+                            "title": "level-2",
+                          },
+                          "id": 39,
+                          "type": "level",
+                        },
+                        "40": Object {
+                          "attributes": Object {
+                            "title": "level-3",
+                          },
+                          "id": 40,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "37",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "38",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "39",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "40",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                    "17": Object {
+                      "attributes": Object {
+                        "name": "seed-type-2",
+                        "title": "Seed Type 2",
+                      },
+                      "id": 17,
+                      "levels": Object {
+                        "41": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 41,
+                          "type": "level",
+                        },
+                        "42": Object {
+                          "attributes": Object {
+                            "title": "level-1",
+                          },
+                          "id": 42,
+                          "type": "level",
+                        },
+                        "43": Object {
+                          "attributes": Object {
+                            "title": "level-2",
+                          },
+                          "id": 43,
+                          "type": "level",
+                        },
+                        "44": Object {
+                          "attributes": Object {
+                            "title": "level-3",
+                          },
+                          "id": 44,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "41",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "42",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "43",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "44",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                    "18": Object {
+                      "attributes": Object {
+                        "name": "seed-type-3",
+                        "title": "Seed Type 3",
+                      },
+                      "id": 18,
+                      "levels": Object {
+                        "45": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 45,
+                          "type": "level",
+                        },
+                        "46": Object {
+                          "attributes": Object {
+                            "title": "level-1",
+                          },
+                          "id": 46,
+                          "type": "level",
+                        },
+                        "47": Object {
+                          "attributes": Object {
+                            "title": "level-2",
+                          },
+                          "id": 47,
+                          "type": "level",
+                        },
+                        "48": Object {
+                          "attributes": Object {
+                            "title": "level-3",
+                          },
+                          "id": 48,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "45",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "46",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "47",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "48",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                  },
+                  "id": 10,
+                  "relationships": Object {
+                    "eventTypes": Object {
+                      "data": Array [
+                        Object {
+                          "id": "15",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "16",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "17",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "18",
+                          "type": "eventType",
+                        },
+                      ],
+                    },
+                  },
+                  "type": "app",
+                },
+                "2": Object {
+                  "attributes": Object {
+                    "name": "seed-app-1",
+                    "title": "Seed App 1",
+                  },
+                  "eventTypes": Object {},
+                  "id": 2,
+                  "relationships": Object {
+                    "eventTypes": Object {
+                      "data": Array [],
+                    },
+                  },
+                  "type": "app",
+                },
+                "3": Object {
+                  "attributes": Object {
+                    "name": "seed-app-2",
+                    "title": "Seed App 2",
+                  },
+                  "eventTypes": Object {
+                    "1": Object {
+                      "attributes": Object {
+                        "name": "seed-type-0",
+                        "title": "Seed Type 0",
+                      },
+                      "id": 1,
+                      "levels": Object {
+                        "1": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 1,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "1",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                    "2": Object {
+                      "attributes": Object {
+                        "name": "seed-type-1",
+                        "title": "Seed Type 1",
+                      },
+                      "id": 2,
+                      "levels": Object {
+                        "2": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 2,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "2",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                  },
+                  "id": 3,
+                  "relationships": Object {
+                    "eventTypes": Object {
+                      "data": Array [
+                        Object {
+                          "id": "1",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "2",
+                          "type": "eventType",
+                        },
+                      ],
+                    },
+                  },
+                  "type": "app",
+                },
+                "4": Object {
+                  "attributes": Object {
+                    "name": "seed-app-3",
+                    "title": "Seed App 3",
+                  },
+                  "eventTypes": Object {
+                    "3": Object {
+                      "attributes": Object {
+                        "name": "seed-type-0",
+                        "title": "Seed Type 0",
+                      },
+                      "id": 3,
+                      "levels": Object {
+                        "3": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 3,
+                          "type": "level",
+                        },
+                        "4": Object {
+                          "attributes": Object {
+                            "title": "level-1",
+                          },
+                          "id": 4,
+                          "type": "level",
+                        },
+                        "5": Object {
+                          "attributes": Object {
+                            "title": "level-2",
+                          },
+                          "id": 5,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "3",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "4",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "5",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                    "4": Object {
+                      "attributes": Object {
+                        "name": "seed-type-1",
+                        "title": "Seed Type 1",
+                      },
+                      "id": 4,
+                      "levels": Object {
+                        "6": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 6,
+                          "type": "level",
+                        },
+                        "7": Object {
+                          "attributes": Object {
+                            "title": "level-1",
+                          },
+                          "id": 7,
+                          "type": "level",
+                        },
+                        "8": Object {
+                          "attributes": Object {
+                            "title": "level-2",
+                          },
+                          "id": 8,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "6",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "7",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "8",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                  },
+                  "id": 4,
+                  "relationships": Object {
+                    "eventTypes": Object {
+                      "data": Array [
+                        Object {
+                          "id": "3",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "4",
+                          "type": "eventType",
+                        },
+                      ],
+                    },
+                  },
+                  "type": "app",
+                },
+                "5": Object {
+                  "attributes": Object {
+                    "name": "seed-app-4",
+                    "title": "Seed App 4",
+                  },
+                  "eventTypes": Object {},
+                  "id": 5,
+                  "relationships": Object {
+                    "eventTypes": Object {
+                      "data": Array [],
+                    },
+                  },
+                  "type": "app",
+                },
+                "6": Object {
+                  "attributes": Object {
+                    "name": "seed-app-5",
+                    "title": "Seed App 5",
+                  },
+                  "eventTypes": Object {
+                    "5": Object {
+                      "attributes": Object {
+                        "name": "seed-type-0",
+                        "title": "Seed Type 0",
+                      },
+                      "id": 5,
+                      "levels": Object {
+                        "10": Object {
+                          "attributes": Object {
+                            "title": "level-1",
+                          },
+                          "id": 10,
+                          "type": "level",
+                        },
+                        "11": Object {
+                          "attributes": Object {
+                            "title": "level-2",
+                          },
+                          "id": 11,
+                          "type": "level",
+                        },
+                        "12": Object {
+                          "attributes": Object {
+                            "title": "level-3",
+                          },
+                          "id": 12,
+                          "type": "level",
+                        },
+                        "9": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 9,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "9",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "10",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "11",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "12",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                    "6": Object {
+                      "attributes": Object {
+                        "name": "seed-type-1",
+                        "title": "Seed Type 1",
+                      },
+                      "id": 6,
+                      "levels": Object {
+                        "13": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 13,
+                          "type": "level",
+                        },
+                        "14": Object {
+                          "attributes": Object {
+                            "title": "level-1",
+                          },
+                          "id": 14,
+                          "type": "level",
+                        },
+                        "15": Object {
+                          "attributes": Object {
+                            "title": "level-2",
+                          },
+                          "id": 15,
+                          "type": "level",
+                        },
+                        "16": Object {
+                          "attributes": Object {
+                            "title": "level-3",
+                          },
+                          "id": 16,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "13",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "14",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "15",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "16",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                    "7": Object {
+                      "attributes": Object {
+                        "name": "seed-type-2",
+                        "title": "Seed Type 2",
+                      },
+                      "id": 7,
+                      "levels": Object {
+                        "17": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 17,
+                          "type": "level",
+                        },
+                        "18": Object {
+                          "attributes": Object {
+                            "title": "level-1",
+                          },
+                          "id": 18,
+                          "type": "level",
+                        },
+                        "19": Object {
+                          "attributes": Object {
+                            "title": "level-2",
+                          },
+                          "id": 19,
+                          "type": "level",
+                        },
+                        "20": Object {
+                          "attributes": Object {
+                            "title": "level-3",
+                          },
+                          "id": 20,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "17",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "18",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "19",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "20",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                  },
+                  "id": 6,
+                  "relationships": Object {
+                    "eventTypes": Object {
+                      "data": Array [
+                        Object {
+                          "id": "5",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "6",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "7",
+                          "type": "eventType",
+                        },
+                      ],
+                    },
+                  },
+                  "type": "app",
+                },
+                "7": Object {
+                  "attributes": Object {
+                    "name": "seed-app-6",
+                    "title": "Seed App 6",
+                  },
+                  "eventTypes": Object {},
+                  "id": 7,
+                  "relationships": Object {
+                    "eventTypes": Object {
+                      "data": Array [],
+                    },
+                  },
+                  "type": "app",
+                },
+                "8": Object {
+                  "attributes": Object {
+                    "name": "seed-app-7",
+                    "title": "Seed App 7",
+                  },
+                  "eventTypes": Object {
+                    "10": Object {
+                      "attributes": Object {
+                        "name": "seed-type-2",
+                        "title": "Seed Type 2",
+                      },
+                      "id": 10,
+                      "levels": Object {
+                        "29": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 29,
+                          "type": "level",
+                        },
+                        "30": Object {
+                          "attributes": Object {
+                            "title": "level-1",
+                          },
+                          "id": 30,
+                          "type": "level",
+                        },
+                        "31": Object {
+                          "attributes": Object {
+                            "title": "level-2",
+                          },
+                          "id": 31,
+                          "type": "level",
+                        },
+                        "32": Object {
+                          "attributes": Object {
+                            "title": "level-3",
+                          },
+                          "id": 32,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "29",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "30",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "31",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "32",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                    "8": Object {
+                      "attributes": Object {
+                        "name": "seed-type-0",
+                        "title": "Seed Type 0",
+                      },
+                      "id": 8,
+                      "levels": Object {
+                        "21": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 21,
+                          "type": "level",
+                        },
+                        "22": Object {
+                          "attributes": Object {
+                            "title": "level-1",
+                          },
+                          "id": 22,
+                          "type": "level",
+                        },
+                        "23": Object {
+                          "attributes": Object {
+                            "title": "level-2",
+                          },
+                          "id": 23,
+                          "type": "level",
+                        },
+                        "24": Object {
+                          "attributes": Object {
+                            "title": "level-3",
+                          },
+                          "id": 24,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "21",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "22",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "23",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "24",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                    "9": Object {
+                      "attributes": Object {
+                        "name": "seed-type-1",
+                        "title": "Seed Type 1",
+                      },
+                      "id": 9,
+                      "levels": Object {
+                        "25": Object {
+                          "attributes": Object {
+                            "title": "level-0",
+                          },
+                          "id": 25,
+                          "type": "level",
+                        },
+                        "26": Object {
+                          "attributes": Object {
+                            "title": "level-1",
+                          },
+                          "id": 26,
+                          "type": "level",
+                        },
+                        "27": Object {
+                          "attributes": Object {
+                            "title": "level-2",
+                          },
+                          "id": 27,
+                          "type": "level",
+                        },
+                        "28": Object {
+                          "attributes": Object {
+                            "title": "level-3",
+                          },
+                          "id": 28,
+                          "type": "level",
+                        },
+                      },
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [
+                            Object {
+                              "id": "25",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "26",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "27",
+                              "type": "level",
+                            },
+                            Object {
+                              "id": "28",
+                              "type": "level",
+                            },
+                          ],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                  },
+                  "id": 8,
+                  "relationships": Object {
+                    "eventTypes": Object {
+                      "data": Array [
+                        Object {
+                          "id": "8",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "9",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "10",
+                          "type": "eventType",
+                        },
+                      ],
+                    },
+                  },
+                  "type": "app",
+                },
+                "9": Object {
+                  "attributes": Object {
+                    "name": "seed-app-8",
+                    "title": "Seed App 8",
+                  },
+                  "eventTypes": Object {
+                    "11": Object {
+                      "attributes": Object {
+                        "name": "seed-type-0",
+                        "title": "Seed Type 0",
+                      },
+                      "id": 11,
+                      "levels": Object {},
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                    "12": Object {
+                      "attributes": Object {
+                        "name": "seed-type-1",
+                        "title": "Seed Type 1",
+                      },
+                      "id": 12,
+                      "levels": Object {},
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                    "13": Object {
+                      "attributes": Object {
+                        "name": "seed-type-2",
+                        "title": "Seed Type 2",
+                      },
+                      "id": 13,
+                      "levels": Object {},
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                    "14": Object {
+                      "attributes": Object {
+                        "name": "seed-type-3",
+                        "title": "Seed Type 3",
+                      },
+                      "id": 14,
+                      "levels": Object {},
+                      "relationships": Object {
+                        "levels": Object {
+                          "data": Array [],
+                        },
+                      },
+                      "type": "eventType",
+                    },
+                  },
+                  "id": 9,
+                  "relationships": Object {
+                    "eventTypes": Object {
+                      "data": Array [
+                        Object {
+                          "id": "11",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "12",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "13",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "14",
+                          "type": "eventType",
+                        },
+                      ],
+                    },
+                  },
+                  "type": "app",
+                },
+              }
+            }
+            filter={
+              Object {
+                "13": Object {
+                  "apps": Object {
+                    "1": Object {
+                      "id": 1,
+                      "type": "app",
+                    },
+                    "3": Object {
+                      "id": 3,
+                      "type": "app",
+                    },
+                    "4": Object {
+                      "id": 4,
+                      "type": "app",
+                    },
+                    "8": Object {
+                      "id": 8,
+                      "type": "app",
+                    },
+                  },
+                  "attributes": Object {
+                    "enabled": true,
+                  },
+                  "endpoints": Object {
+                    "36": Object {
+                      "id": 36,
+                      "type": "endpoint",
+                    },
+                  },
+                  "eventTypes": Object {
+                    "1": Object {
+                      "id": 1,
+                      "type": "eventType",
+                    },
+                    "3": Object {
+                      "id": 3,
+                      "type": "eventType",
+                    },
+                    "8": Object {
+                      "id": 8,
+                      "type": "eventType",
+                    },
+                  },
+                  "id": 13,
+                  "levels": Object {
+                    "1": Object {
+                      "id": 1,
+                      "type": "level",
+                    },
+                    "22": Object {
+                      "id": 22,
+                      "type": "level",
+                    },
+                    "4": Object {
+                      "id": 4,
+                      "type": "level",
+                    },
+                  },
+                  "relationships": Object {
+                    "apps": Object {
+                      "data": Array [
+                        Object {
+                          "id": "1",
+                          "type": "app",
+                        },
+                        Object {
+                          "id": "3",
+                          "type": "app",
+                        },
+                        Object {
+                          "id": "4",
+                          "type": "app",
+                        },
+                        Object {
+                          "id": "8",
+                          "type": "app",
+                        },
+                        Object {
+                          "id": "4",
+                          "type": "app",
+                        },
+                      ],
+                    },
+                    "endpoints": Object {
+                      "data": Array [
+                        Object {
+                          "id": "36",
+                          "type": "endpoint",
+                        },
+                      ],
+                    },
+                    "eventTypes": Object {
+                      "data": Array [
+                        Object {
+                          "id": "1",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "3",
+                          "type": "eventType",
+                        },
+                        Object {
+                          "id": "8",
+                          "type": "eventType",
+                        },
+                      ],
+                    },
+                    "levels": Object {
+                      "data": Array [
+                        Object {
+                          "id": "1",
+                          "type": "level",
+                        },
+                        Object {
+                          "id": "4",
+                          "type": "level",
+                        },
+                        Object {
+                          "id": "22",
+                          "type": "level",
+                        },
+                      ],
+                    },
+                  },
+                  "type": "filter",
+                },
+              }
+            }
+          />
+        </StackItem>
+        <StackItem
+          className=""
+          isFilled={false}
+        >
+          <div>
+            <Button
+              aria-label={null}
+              className=""
+              component="button"
+              isActive={false}
+              isBlock={false}
+              isDisabled={false}
+              isFocus={false}
+              isHover={false}
+              isInline={false}
+              onClick={[Function]}
+              type="submit"
+              variant="primary"
+            >
+              Submit
+            </Button>
+             
+            <Button
+              aria-label={null}
+              className=""
+              component="button"
+              isActive={false}
+              isBlock={false}
+              isDisabled={false}
+              isFocus={false}
+              isHover={false}
+              isInline={false}
+              onClick={[Function]}
+              type="button"
+              variant="secondary"
+            >
+              Cancel
+            </Button>
+          </div>
+        </StackItem>
+      </Stack>
+    </PageSection>
+  }
   mainStyle={
     Object {
       "background": "white",
@@ -1350,1207 +2623,26 @@ exports[`NotificationEdit takes an endpoint 1`] = `
         }
       }
     >
-      <FilterList
-        apps={
+      <Button
+        aria-label={null}
+        className=""
+        component="button"
+        isActive={false}
+        isBlock={false}
+        isDisabled={false}
+        isFocus={false}
+        isHover={false}
+        isInline={false}
+        style={
           Object {
-            "1": Object {
-              "attributes": Object {
-                "name": "seed-app-0",
-                "title": "Seed App 0",
-              },
-              "eventTypes": Object {},
-              "id": 1,
-              "relationships": Object {
-                "eventTypes": Object {
-                  "data": Array [],
-                },
-              },
-              "type": "app",
-            },
-            "10": Object {
-              "attributes": Object {
-                "name": "seed-app-9",
-                "title": "Seed App 9",
-              },
-              "eventTypes": Object {
-                "15": Object {
-                  "attributes": Object {
-                    "name": "seed-type-0",
-                    "title": "Seed Type 0",
-                  },
-                  "id": 15,
-                  "levels": Object {
-                    "33": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 33,
-                      "type": "level",
-                    },
-                    "34": Object {
-                      "attributes": Object {
-                        "title": "level-1",
-                      },
-                      "id": 34,
-                      "type": "level",
-                    },
-                    "35": Object {
-                      "attributes": Object {
-                        "title": "level-2",
-                      },
-                      "id": 35,
-                      "type": "level",
-                    },
-                    "36": Object {
-                      "attributes": Object {
-                        "title": "level-3",
-                      },
-                      "id": 36,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "33",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "34",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "35",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "36",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-                "16": Object {
-                  "attributes": Object {
-                    "name": "seed-type-1",
-                    "title": "Seed Type 1",
-                  },
-                  "id": 16,
-                  "levels": Object {
-                    "37": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 37,
-                      "type": "level",
-                    },
-                    "38": Object {
-                      "attributes": Object {
-                        "title": "level-1",
-                      },
-                      "id": 38,
-                      "type": "level",
-                    },
-                    "39": Object {
-                      "attributes": Object {
-                        "title": "level-2",
-                      },
-                      "id": 39,
-                      "type": "level",
-                    },
-                    "40": Object {
-                      "attributes": Object {
-                        "title": "level-3",
-                      },
-                      "id": 40,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "37",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "38",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "39",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "40",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-                "17": Object {
-                  "attributes": Object {
-                    "name": "seed-type-2",
-                    "title": "Seed Type 2",
-                  },
-                  "id": 17,
-                  "levels": Object {
-                    "41": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 41,
-                      "type": "level",
-                    },
-                    "42": Object {
-                      "attributes": Object {
-                        "title": "level-1",
-                      },
-                      "id": 42,
-                      "type": "level",
-                    },
-                    "43": Object {
-                      "attributes": Object {
-                        "title": "level-2",
-                      },
-                      "id": 43,
-                      "type": "level",
-                    },
-                    "44": Object {
-                      "attributes": Object {
-                        "title": "level-3",
-                      },
-                      "id": 44,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "41",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "42",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "43",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "44",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-                "18": Object {
-                  "attributes": Object {
-                    "name": "seed-type-3",
-                    "title": "Seed Type 3",
-                  },
-                  "id": 18,
-                  "levels": Object {
-                    "45": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 45,
-                      "type": "level",
-                    },
-                    "46": Object {
-                      "attributes": Object {
-                        "title": "level-1",
-                      },
-                      "id": 46,
-                      "type": "level",
-                    },
-                    "47": Object {
-                      "attributes": Object {
-                        "title": "level-2",
-                      },
-                      "id": 47,
-                      "type": "level",
-                    },
-                    "48": Object {
-                      "attributes": Object {
-                        "title": "level-3",
-                      },
-                      "id": 48,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "45",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "46",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "47",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "48",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-              },
-              "id": 10,
-              "relationships": Object {
-                "eventTypes": Object {
-                  "data": Array [
-                    Object {
-                      "id": "15",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "16",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "17",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "18",
-                      "type": "eventType",
-                    },
-                  ],
-                },
-              },
-              "type": "app",
-            },
-            "2": Object {
-              "attributes": Object {
-                "name": "seed-app-1",
-                "title": "Seed App 1",
-              },
-              "eventTypes": Object {},
-              "id": 2,
-              "relationships": Object {
-                "eventTypes": Object {
-                  "data": Array [],
-                },
-              },
-              "type": "app",
-            },
-            "3": Object {
-              "attributes": Object {
-                "name": "seed-app-2",
-                "title": "Seed App 2",
-              },
-              "eventTypes": Object {
-                "1": Object {
-                  "attributes": Object {
-                    "name": "seed-type-0",
-                    "title": "Seed Type 0",
-                  },
-                  "id": 1,
-                  "levels": Object {
-                    "1": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 1,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "1",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-                "2": Object {
-                  "attributes": Object {
-                    "name": "seed-type-1",
-                    "title": "Seed Type 1",
-                  },
-                  "id": 2,
-                  "levels": Object {
-                    "2": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 2,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "2",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-              },
-              "id": 3,
-              "relationships": Object {
-                "eventTypes": Object {
-                  "data": Array [
-                    Object {
-                      "id": "1",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "2",
-                      "type": "eventType",
-                    },
-                  ],
-                },
-              },
-              "type": "app",
-            },
-            "4": Object {
-              "attributes": Object {
-                "name": "seed-app-3",
-                "title": "Seed App 3",
-              },
-              "eventTypes": Object {
-                "3": Object {
-                  "attributes": Object {
-                    "name": "seed-type-0",
-                    "title": "Seed Type 0",
-                  },
-                  "id": 3,
-                  "levels": Object {
-                    "3": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 3,
-                      "type": "level",
-                    },
-                    "4": Object {
-                      "attributes": Object {
-                        "title": "level-1",
-                      },
-                      "id": 4,
-                      "type": "level",
-                    },
-                    "5": Object {
-                      "attributes": Object {
-                        "title": "level-2",
-                      },
-                      "id": 5,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "3",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "4",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "5",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-                "4": Object {
-                  "attributes": Object {
-                    "name": "seed-type-1",
-                    "title": "Seed Type 1",
-                  },
-                  "id": 4,
-                  "levels": Object {
-                    "6": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 6,
-                      "type": "level",
-                    },
-                    "7": Object {
-                      "attributes": Object {
-                        "title": "level-1",
-                      },
-                      "id": 7,
-                      "type": "level",
-                    },
-                    "8": Object {
-                      "attributes": Object {
-                        "title": "level-2",
-                      },
-                      "id": 8,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "6",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "7",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "8",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-              },
-              "id": 4,
-              "relationships": Object {
-                "eventTypes": Object {
-                  "data": Array [
-                    Object {
-                      "id": "3",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "4",
-                      "type": "eventType",
-                    },
-                  ],
-                },
-              },
-              "type": "app",
-            },
-            "5": Object {
-              "attributes": Object {
-                "name": "seed-app-4",
-                "title": "Seed App 4",
-              },
-              "eventTypes": Object {},
-              "id": 5,
-              "relationships": Object {
-                "eventTypes": Object {
-                  "data": Array [],
-                },
-              },
-              "type": "app",
-            },
-            "6": Object {
-              "attributes": Object {
-                "name": "seed-app-5",
-                "title": "Seed App 5",
-              },
-              "eventTypes": Object {
-                "5": Object {
-                  "attributes": Object {
-                    "name": "seed-type-0",
-                    "title": "Seed Type 0",
-                  },
-                  "id": 5,
-                  "levels": Object {
-                    "10": Object {
-                      "attributes": Object {
-                        "title": "level-1",
-                      },
-                      "id": 10,
-                      "type": "level",
-                    },
-                    "11": Object {
-                      "attributes": Object {
-                        "title": "level-2",
-                      },
-                      "id": 11,
-                      "type": "level",
-                    },
-                    "12": Object {
-                      "attributes": Object {
-                        "title": "level-3",
-                      },
-                      "id": 12,
-                      "type": "level",
-                    },
-                    "9": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 9,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "9",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "10",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "11",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "12",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-                "6": Object {
-                  "attributes": Object {
-                    "name": "seed-type-1",
-                    "title": "Seed Type 1",
-                  },
-                  "id": 6,
-                  "levels": Object {
-                    "13": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 13,
-                      "type": "level",
-                    },
-                    "14": Object {
-                      "attributes": Object {
-                        "title": "level-1",
-                      },
-                      "id": 14,
-                      "type": "level",
-                    },
-                    "15": Object {
-                      "attributes": Object {
-                        "title": "level-2",
-                      },
-                      "id": 15,
-                      "type": "level",
-                    },
-                    "16": Object {
-                      "attributes": Object {
-                        "title": "level-3",
-                      },
-                      "id": 16,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "13",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "14",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "15",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "16",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-                "7": Object {
-                  "attributes": Object {
-                    "name": "seed-type-2",
-                    "title": "Seed Type 2",
-                  },
-                  "id": 7,
-                  "levels": Object {
-                    "17": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 17,
-                      "type": "level",
-                    },
-                    "18": Object {
-                      "attributes": Object {
-                        "title": "level-1",
-                      },
-                      "id": 18,
-                      "type": "level",
-                    },
-                    "19": Object {
-                      "attributes": Object {
-                        "title": "level-2",
-                      },
-                      "id": 19,
-                      "type": "level",
-                    },
-                    "20": Object {
-                      "attributes": Object {
-                        "title": "level-3",
-                      },
-                      "id": 20,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "17",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "18",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "19",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "20",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-              },
-              "id": 6,
-              "relationships": Object {
-                "eventTypes": Object {
-                  "data": Array [
-                    Object {
-                      "id": "5",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "6",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "7",
-                      "type": "eventType",
-                    },
-                  ],
-                },
-              },
-              "type": "app",
-            },
-            "7": Object {
-              "attributes": Object {
-                "name": "seed-app-6",
-                "title": "Seed App 6",
-              },
-              "eventTypes": Object {},
-              "id": 7,
-              "relationships": Object {
-                "eventTypes": Object {
-                  "data": Array [],
-                },
-              },
-              "type": "app",
-            },
-            "8": Object {
-              "attributes": Object {
-                "name": "seed-app-7",
-                "title": "Seed App 7",
-              },
-              "eventTypes": Object {
-                "10": Object {
-                  "attributes": Object {
-                    "name": "seed-type-2",
-                    "title": "Seed Type 2",
-                  },
-                  "id": 10,
-                  "levels": Object {
-                    "29": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 29,
-                      "type": "level",
-                    },
-                    "30": Object {
-                      "attributes": Object {
-                        "title": "level-1",
-                      },
-                      "id": 30,
-                      "type": "level",
-                    },
-                    "31": Object {
-                      "attributes": Object {
-                        "title": "level-2",
-                      },
-                      "id": 31,
-                      "type": "level",
-                    },
-                    "32": Object {
-                      "attributes": Object {
-                        "title": "level-3",
-                      },
-                      "id": 32,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "29",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "30",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "31",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "32",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-                "8": Object {
-                  "attributes": Object {
-                    "name": "seed-type-0",
-                    "title": "Seed Type 0",
-                  },
-                  "id": 8,
-                  "levels": Object {
-                    "21": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 21,
-                      "type": "level",
-                    },
-                    "22": Object {
-                      "attributes": Object {
-                        "title": "level-1",
-                      },
-                      "id": 22,
-                      "type": "level",
-                    },
-                    "23": Object {
-                      "attributes": Object {
-                        "title": "level-2",
-                      },
-                      "id": 23,
-                      "type": "level",
-                    },
-                    "24": Object {
-                      "attributes": Object {
-                        "title": "level-3",
-                      },
-                      "id": 24,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "21",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "22",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "23",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "24",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-                "9": Object {
-                  "attributes": Object {
-                    "name": "seed-type-1",
-                    "title": "Seed Type 1",
-                  },
-                  "id": 9,
-                  "levels": Object {
-                    "25": Object {
-                      "attributes": Object {
-                        "title": "level-0",
-                      },
-                      "id": 25,
-                      "type": "level",
-                    },
-                    "26": Object {
-                      "attributes": Object {
-                        "title": "level-1",
-                      },
-                      "id": 26,
-                      "type": "level",
-                    },
-                    "27": Object {
-                      "attributes": Object {
-                        "title": "level-2",
-                      },
-                      "id": 27,
-                      "type": "level",
-                    },
-                    "28": Object {
-                      "attributes": Object {
-                        "title": "level-3",
-                      },
-                      "id": 28,
-                      "type": "level",
-                    },
-                  },
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [
-                        Object {
-                          "id": "25",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "26",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "27",
-                          "type": "level",
-                        },
-                        Object {
-                          "id": "28",
-                          "type": "level",
-                        },
-                      ],
-                    },
-                  },
-                  "type": "eventType",
-                },
-              },
-              "id": 8,
-              "relationships": Object {
-                "eventTypes": Object {
-                  "data": Array [
-                    Object {
-                      "id": "8",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "9",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "10",
-                      "type": "eventType",
-                    },
-                  ],
-                },
-              },
-              "type": "app",
-            },
-            "9": Object {
-              "attributes": Object {
-                "name": "seed-app-8",
-                "title": "Seed App 8",
-              },
-              "eventTypes": Object {
-                "11": Object {
-                  "attributes": Object {
-                    "name": "seed-type-0",
-                    "title": "Seed Type 0",
-                  },
-                  "id": 11,
-                  "levels": Object {},
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [],
-                    },
-                  },
-                  "type": "eventType",
-                },
-                "12": Object {
-                  "attributes": Object {
-                    "name": "seed-type-1",
-                    "title": "Seed Type 1",
-                  },
-                  "id": 12,
-                  "levels": Object {},
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [],
-                    },
-                  },
-                  "type": "eventType",
-                },
-                "13": Object {
-                  "attributes": Object {
-                    "name": "seed-type-2",
-                    "title": "Seed Type 2",
-                  },
-                  "id": 13,
-                  "levels": Object {},
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [],
-                    },
-                  },
-                  "type": "eventType",
-                },
-                "14": Object {
-                  "attributes": Object {
-                    "name": "seed-type-3",
-                    "title": "Seed Type 3",
-                  },
-                  "id": 14,
-                  "levels": Object {},
-                  "relationships": Object {
-                    "levels": Object {
-                      "data": Array [],
-                    },
-                  },
-                  "type": "eventType",
-                },
-              },
-              "id": 9,
-              "relationships": Object {
-                "eventTypes": Object {
-                  "data": Array [
-                    Object {
-                      "id": "11",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "12",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "13",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "14",
-                      "type": "eventType",
-                    },
-                  ],
-                },
-              },
-              "type": "app",
-            },
+            "display": "none",
           }
         }
-        filter={
-          Object {
-            "13": Object {
-              "apps": Object {
-                "1": Object {
-                  "id": 1,
-                  "type": "app",
-                },
-                "3": Object {
-                  "id": 3,
-                  "type": "app",
-                },
-                "4": Object {
-                  "id": 4,
-                  "type": "app",
-                },
-                "8": Object {
-                  "id": 8,
-                  "type": "app",
-                },
-              },
-              "attributes": Object {
-                "enabled": true,
-              },
-              "endpoints": Object {
-                "36": Object {
-                  "id": 36,
-                  "type": "endpoint",
-                },
-              },
-              "eventTypes": Object {
-                "1": Object {
-                  "id": 1,
-                  "type": "eventType",
-                },
-                "3": Object {
-                  "id": 3,
-                  "type": "eventType",
-                },
-                "8": Object {
-                  "id": 8,
-                  "type": "eventType",
-                },
-              },
-              "id": 13,
-              "levels": Object {
-                "1": Object {
-                  "id": 1,
-                  "type": "level",
-                },
-                "22": Object {
-                  "id": 22,
-                  "type": "level",
-                },
-                "4": Object {
-                  "id": 4,
-                  "type": "level",
-                },
-              },
-              "relationships": Object {
-                "apps": Object {
-                  "data": Array [
-                    Object {
-                      "id": "1",
-                      "type": "app",
-                    },
-                    Object {
-                      "id": "3",
-                      "type": "app",
-                    },
-                    Object {
-                      "id": "4",
-                      "type": "app",
-                    },
-                    Object {
-                      "id": "8",
-                      "type": "app",
-                    },
-                    Object {
-                      "id": "4",
-                      "type": "app",
-                    },
-                  ],
-                },
-                "endpoints": Object {
-                  "data": Array [
-                    Object {
-                      "id": "36",
-                      "type": "endpoint",
-                    },
-                  ],
-                },
-                "eventTypes": Object {
-                  "data": Array [
-                    Object {
-                      "id": "1",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "3",
-                      "type": "eventType",
-                    },
-                    Object {
-                      "id": "8",
-                      "type": "eventType",
-                    },
-                  ],
-                },
-                "levels": Object {
-                  "data": Array [
-                    Object {
-                      "id": "1",
-                      "type": "level",
-                    },
-                    Object {
-                      "id": "4",
-                      "type": "level",
-                    },
-                    Object {
-                      "id": "22",
-                      "type": "level",
-                    },
-                  ],
-                },
-              },
-              "type": "filter",
-            },
-          }
-        }
-      />
-      <div>
-        <Button
-          aria-label={null}
-          className=""
-          component="button"
-          isActive={false}
-          isBlock={false}
-          isDisabled={false}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
-          type="submit"
-          variant="primary"
-        >
-          Submit
-        </Button>
-         
-        <Button
-          aria-label={null}
-          className=""
-          component="button"
-          isActive={false}
-          isBlock={false}
-          isDisabled={false}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
-          onClick={[Function]}
-          type="button"
-          variant="secondary"
-        >
-          Cancel
-        </Button>
-      </div>
+        type="submit"
+        variant="primary"
+      >
+        Submit
+      </Button>
     </Form>
   </LoadingState>
 </withRouter(NotificationsPage)>

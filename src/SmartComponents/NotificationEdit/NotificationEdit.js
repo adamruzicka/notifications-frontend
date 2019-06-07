@@ -1,7 +1,10 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import {
-    Button
+    Button,
+    Stack,
+    StackItem,
+    PageSection
 } from '@patternfly/react-core';
 
 import { bindActionCreators } from 'redux';
@@ -137,8 +140,8 @@ export class NotificationEdit extends Component {
         return { app_ids: appIds, event_type_ids: eventTypeIds, level_ids: levelIds };
     }
 
-    formSubmit = (data) => {
-        let { active, name, url } = data.formData;
+    formSubmit = () => {
+        let { active, name, url } = this.form.current.state.formData;
         const type = 'Endpoints::HttpEndpoint';
 
         const filter = this.buildFilter(this.filterList.current.state);
@@ -205,9 +208,29 @@ export class NotificationEdit extends Component {
             return <Redirect to={ `/edit/${ endpoint.id }` } />;
         }
 
-        return <NotificationsPage title={ `${ action }` } mainStyle={ mainStyle }>
+        const loading = this.props.loading || this.props.filterLoading || this.props.appsLoading;
+
+        const appendix =
+            <PageSection>
+                <Stack gutter="sm">
+                    <StackItem>
+                        <FilterList ref={ this.filterList }
+                            apps={ this.props.apps }
+                            filter={ filter } />
+                    </StackItem>
+                    <StackItem>
+                        <div>
+                            <Button onClick={ this.formSubmit } type='submit' variant="primary">Submit</Button>
+                            { ' ' }
+                            <Button onClick={ this.toIndex } variant="secondary">Cancel</Button>
+                        </div>
+                    </StackItem>
+                </Stack>
+            </PageSection>;
+
+        return <NotificationsPage title={ `${ action }` } mainStyle={ mainStyle } appendix={ !loading && appendix }>
             <LoadingState
-                loading={ this.props.loading || this.props.filterLoading || this.props.appsLoading }
+                loading={ loading }
                 placeholder={ <Spinner centered /> }>
                 <Form ref={ this.form } schema={ schema } className="pf-c-form"
                     uiSchema={ uiSchema }
@@ -218,14 +241,7 @@ export class NotificationEdit extends Component {
                     noValidate={ true }
                     showErrorList={ false }
                     onSubmit={ this.formSubmit } >
-
-                    <FilterList ref={ this.filterList }
-                        apps={ this.props.apps }
-                        filter={ filter } />
-
-                    <div>
-                        <Button type='submit' variant="primary">Submit</Button> <Button onClick={ this.toIndex } variant="secondary">Cancel</Button>
-                    </div>
+                    <Button type='submit' variant="primary" style={ { display: 'none' } }>Submit</Button>
                 </Form>
             </LoadingState>
         </NotificationsPage>;

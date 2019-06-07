@@ -5,7 +5,6 @@ export * from './BulletlessList/BulletlessList';
 export * from './EndpointToggle/EndpointToggle';
 export * from './LoadingState/LoadingState';
 export * from './FilterList/FilterList';
-export * from './RadioToggle/RadioToggle';
 export * from './StatusIcon/StatusIcon';
 export * from './StatusPopup/StatusPopup';
 export * from './CustomFieldTemplate/CustomFieldTemplate';
