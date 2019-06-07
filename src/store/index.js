@@ -15,7 +15,8 @@ export function init (...middleware) {
         promiseMiddleware(),
         notificationsMiddleware({
             errorTitleKey: 'title',
-            errorDescriptionKey: 'detail'
+            errorDescriptionKey: 'detail',
+            autoDismiss: true
         }),
         ...middleware
     ]);
