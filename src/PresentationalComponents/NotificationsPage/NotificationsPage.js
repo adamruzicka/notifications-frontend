@@ -41,16 +41,16 @@ export class NotificationsPage extends Component {
                     { this.showBreadcrumb() }
                     <PageHeaderTitle title={ title } />
                 </PageHeader>
-                <Stack>
+                <Stack style={ { backgroundColor: 'var(--pf-c-page__main-section--BackgroundColor)' } }>
                     <StackItem>
                         <Main style={ this.props.mainStyle }>
                             { children }
                         </Main>
                     </StackItem>
                     { appendix &&
-                        <StackItem>
-                            { appendix }
-                        </StackItem> }
+                      <StackItem>
+                          { appendix }
+                      </StackItem> }
                 </Stack>
             </Fragment>
         );
