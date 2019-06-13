@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { TextInput, FormGroup } from '@patternfly/react-core';
 
+import './CustomInputFieldTemplate.scss';
+
 export class CustomInputFieldTemplate extends React.Component {
     constructor(props) {
         super(props);
