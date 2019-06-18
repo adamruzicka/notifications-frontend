@@ -11,7 +11,7 @@ import {
     Title
 } from '@patternfly/react-core';
 
-import { BulletlessList, ALL, SELECTED } from 'PresentationalComponents';
+import { BulletlessList } from 'PresentationalComponents';
 import _ from 'lodash';
 
 export class FilterList extends Component {
@@ -24,8 +24,6 @@ export class FilterList extends Component {
         super(props);
         const initialState = { selected: {
             appIds: {}, levelIds: {}, eventTypeIds: {}
-        }, toggles: {
-            appIds: {}, eventTypeIds: {}
         }};
 
         this.state = initialState;
@@ -51,20 +49,6 @@ export class FilterList extends Component {
                     });
                 }
             });
-
-            Object.values(props.apps).forEach((app) => {
-                if (stateCopy.toggles.appIds[app.id] === undefined) {
-                    const initial = Object.keys(app.eventTypes).some((id) => stateCopy.selected.eventTypeIds[id]) ? SELECTED : ALL;
-                    stateCopy.toggles.appIds[app.id] = initial;
-                }
-
-                Object.values(app.eventTypes).forEach((eventType) => {
-                    if (stateCopy.toggles.eventTypeIds[eventType.id] === undefined) {
-                        const initial = Object.keys(eventType.levels).some((id) => stateCopy.selected.levelIds[id]) ? SELECTED : ALL;
-                        stateCopy.toggles.eventTypeIds[eventType.id] = initial;
-                    }
-                });
-            });
         }
 
         return stateCopy;
@@ -85,12 +69,6 @@ export class FilterList extends Component {
                     onChange={ () => this.selectFilter('levelIds', level.id) }
                     defaultChecked={ this.state.selected.levelIds[level.id] } />
             </ListItem>;
-
-    setToggle = (value, what, id) => {
-        const newState = { ...this.state };
-        newState.toggles = { ...newState.toggles, [what]: { ...newState.toggles[what], [id]: value }};
-        this.setState(newState);
-    }
 
     renderLevels = (eventType, levels) => {
         const levelsArray = _.values(levels);
