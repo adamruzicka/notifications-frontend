@@ -23,10 +23,9 @@ import {
 } from 'Store/actions';
 import {
     Spinner
-} from '@red-hat-insights/insights-frontend-components';
-import registryDecorator from '@red-hat-insights/insights-frontend-components/Utilities/Registry';
+} from '@redhat-cloud-services/frontend-components';
+import registryDecorator from '@redhat-cloud-services/frontend-components-utilities/files/Registry';
 import {
-    SELECTED,
     LoadingState,
     NotificationsPage,
     FilterList,
@@ -101,14 +100,10 @@ export class NotificationEdit extends Component {
         let eventTypeIds = [];
         Object.values(app.eventTypes).forEach((eventType) => {
             if (listState.selected.eventTypeIds[eventType.id]) {
-                if (listState.toggles.eventTypeIds[eventType.id] !== SELECTED) {
+                const currentLevelIds = this.eventTypeLevels(listState, eventType);
+                if (currentLevelIds.length > 0) {
                     eventTypeIds.push(eventType.id);
-                } else {
-                    const currentLevelIds = this.eventTypeLevels(listState, eventType);
-                    if (currentLevelIds.length > 0) {
-                        eventTypeIds.push(eventType.id);
-                        levelIds = levelIds.concat(currentLevelIds);
-                    }
+                    levelIds = levelIds.concat(currentLevelIds);
                 }
             }
         });
@@ -123,16 +118,12 @@ export class NotificationEdit extends Component {
 
         Object.values(this.props.apps).forEach((app) => {
             if (listState.selected.appIds[app.id]) {
-                if (listState.toggles.appIds[app.id] !== SELECTED) {
-                    appIds.push(app.id);
-                } else {
-                    const { eventTypeIds: currentEventTypeIds, levelIds: currentLevelIds } = this.appEventTypes(listState, app);
+                const { eventTypeIds: currentEventTypeIds, levelIds: currentLevelIds } = this.appEventTypes(listState, app);
 
-                    if (currentEventTypeIds.length > 0) {
-                        eventTypeIds = eventTypeIds.concat(currentEventTypeIds);
-                        levelIds = levelIds.concat(currentLevelIds);
-                        appIds.push(app.id);
-                    }
+                if (currentEventTypeIds.length > 0) {
+                    eventTypeIds = eventTypeIds.concat(currentEventTypeIds);
+                    levelIds = levelIds.concat(currentLevelIds);
+                    appIds.push(app.id);
                 }
             }
         });

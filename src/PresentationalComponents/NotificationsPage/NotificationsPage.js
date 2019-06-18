@@ -5,7 +5,7 @@ import {
     Main,
     PageHeader,
     PageHeaderTitle
-} from '@red-hat-insights/insights-frontend-components';
+} from '@redhat-cloud-services/frontend-components';
 import {
     Breadcrumb,
     BreadcrumbItem,
