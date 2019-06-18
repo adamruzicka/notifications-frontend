@@ -20,7 +20,7 @@ import {
     Skeleton,
     SkeletonSize,
     TableToolbar
-} from '@red-hat-insights/insights-frontend-components';
+} from '@redhat-cloud-services/frontend-components';
 import {
     Table,
     TableBody,
@@ -28,7 +28,7 @@ import {
     TableHeader,
     sortable
 } from '@patternfly/react-table';
-import registryDecorator from '@red-hat-insights/insights-frontend-components/Utilities/Registry';
+import registryDecorator from '@redhat-cloud-services/frontend-components-utilities/files/Registry';
 import debounce from 'lodash/debounce';
 
 import './notifications-index.scss';

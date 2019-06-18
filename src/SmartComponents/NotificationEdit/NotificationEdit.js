@@ -23,8 +23,8 @@ import {
 } from 'Store/actions';
 import {
     Spinner
-} from '@red-hat-insights/insights-frontend-components';
-import registryDecorator from '@red-hat-insights/insights-frontend-components/Utilities/Registry';
+} from '@redhat-cloud-services/frontend-components';
+import registryDecorator from '@redhat-cloud-services/frontend-components-utilities/files/Registry';
 import {
     SELECTED,
     LoadingState,

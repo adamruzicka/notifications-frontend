@@ -1,8 +1,8 @@
-import ReducerRegistry from '@red-hat-insights/insights-frontend-components/Utilities/ReducerRegistry';
+import ReducerRegistry from '@redhat-cloud-services/frontend-components-utilities/files/ReducerRegistry';
 import promiseMiddleware from 'redux-promise-middleware';
 import { filterReducer, endpointsReducer } from './reducers';
 import { appsReducer } from './reducers/AppsReducer';
-import { notifications, notificationsMiddleware } from '@red-hat-insights/insights-frontend-components/components/Notifications';
+import { notifications, notificationsMiddleware } from '@redhat-cloud-services/frontend-components-notifications';
 
 let registry;
 
