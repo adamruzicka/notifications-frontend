@@ -71,35 +71,119 @@ exports[`NotificationsIndex takes endpoints 1`] = `
       />
     }
   >
-    <TableToolbar
-      isFooter={false}
+    <Split
+      className=""
+      component={[Function]}
+      gutter={null}
     >
-      <ToolbarGroup
-        className={null}
+      <SplitItem
+        className=""
+        isFilled={true}
       >
-        <ToolbarItem
+        <ToolbarGroup
           className={null}
         >
-          <Button
-            aria-label={null}
-            className=""
-            component={[Function]}
-            isActive={false}
-            isBlock={false}
-            isDisabled={false}
-            isFocus={false}
-            isHover={false}
-            isInline={false}
-            onClick={[MockFunction]}
-            to="/new"
-            type="button"
-            variant="primary"
+          <ToolbarItem
+            className={null}
           >
-            New hook
-          </Button>
-        </ToolbarItem>
-      </ToolbarGroup>
-    </TableToolbar>
+            <TextInput
+              aria-label="Filter endpoints"
+              className=""
+              isDisabled={false}
+              isReadOnly={false}
+              isRequired={false}
+              isValid={true}
+              onChange={[Function]}
+              placeholder="Filter by name or url"
+              type="text"
+              value=""
+            />
+          </ToolbarItem>
+          <ToolbarItem
+            className={null}
+            style={
+              Object {
+                "marginLeft": "var(--pf-global--spacer--lg)",
+              }
+            }
+          >
+            <Button
+              aria-label={null}
+              className=""
+              component={[Function]}
+              isActive={false}
+              isBlock={false}
+              isDisabled={false}
+              isFocus={false}
+              isHover={false}
+              isInline={false}
+              onClick={[MockFunction]}
+              to="/new"
+              type="button"
+              variant="primary"
+            >
+              New hook
+            </Button>
+          </ToolbarItem>
+        </ToolbarGroup>
+      </SplitItem>
+      <SplitItem
+        className=""
+        isFilled={false}
+      >
+        <Pagination
+          dropDirection="down"
+          itemCount={1}
+          onFirstClick={[Function]}
+          onLastClick={[Function]}
+          onNextClick={[Function]}
+          onPageInput={[Function]}
+          onPerPageSelect={[Function]}
+          onPreviousClick={[Function]}
+          onSetPage={[Function]}
+          page={1}
+          perPage={10}
+          perPageOptions={
+            Array [
+              Object {
+                "title": "10",
+                "value": 10,
+              },
+              Object {
+                "title": "20",
+                "value": 20,
+              },
+              Object {
+                "title": "50",
+                "value": 50,
+              },
+              Object {
+                "title": "100",
+                "value": 100,
+              },
+            ]
+          }
+          titles={
+            Object {
+              "currPage": "Current page",
+              "items": "items",
+              "itemsPerPage": "Items per page",
+              "optionsToggle": "Select",
+              "pages": "pages",
+              "paginationTitle": "Pagination",
+              "perPageSuffix": "per page",
+              "toFirstPage": "Go to first page",
+              "toLastPage": "Go to last page",
+              "toNextPage": "Go to next page",
+              "toPreviousPage": "Go to previous page",
+            }
+          }
+          toggleTemplate={[Function]}
+          variant="top"
+          widgetId="pagination-options-menu-bottom"
+        />
+      </SplitItem>
+    </Split>
     <Table
       aria-label="Hooks list"
       borders={true}
@@ -221,66 +305,73 @@ exports[`NotificationsIndex takes endpoints 1`] = `
         onRowClick={[Function]}
         rowKey="id"
       />
-      <tfoot>
-        <tr>
-          <td
-            colSpan="6"
-          >
-            <Pagination
-              dropDirection="down"
-              itemCount={1}
-              onFirstClick={[Function]}
-              onLastClick={[Function]}
-              onNextClick={[Function]}
-              onPageInput={[Function]}
-              onPerPageSelect={[Function]}
-              onPreviousClick={[Function]}
-              onSetPage={[Function]}
-              page={1}
-              perPage={10}
-              perPageOptions={
-                Array [
-                  Object {
-                    "title": "10",
-                    "value": 10,
-                  },
-                  Object {
-                    "title": "20",
-                    "value": 20,
-                  },
-                  Object {
-                    "title": "50",
-                    "value": 50,
-                  },
-                  Object {
-                    "title": "100",
-                    "value": 100,
-                  },
-                ]
-              }
-              titles={
-                Object {
-                  "currPage": "Current page",
-                  "items": "items",
-                  "itemsPerPage": "Items per page",
-                  "optionsToggle": "Select",
-                  "pages": "pages",
-                  "paginationTitle": "Pagination",
-                  "perPageSuffix": "per page",
-                  "toFirstPage": "Go to first page",
-                  "toLastPage": "Go to last page",
-                  "toNextPage": "Go to next page",
-                  "toPreviousPage": "Go to previous page",
-                }
-              }
-              toggleTemplate={[Function]}
-              variant="top"
-              widgetId="pagination-options-menu-bottom"
-            />
-          </td>
-        </tr>
-      </tfoot>
     </Table>
+    <Split
+      className=""
+      component={[Function]}
+      gutter={null}
+    >
+      <SplitItem
+        className=""
+        isFilled={true}
+      />
+      <SplitItem
+        className=""
+        isFilled={false}
+      >
+        <Pagination
+          dropDirection="down"
+          itemCount={1}
+          onFirstClick={[Function]}
+          onLastClick={[Function]}
+          onNextClick={[Function]}
+          onPageInput={[Function]}
+          onPerPageSelect={[Function]}
+          onPreviousClick={[Function]}
+          onSetPage={[Function]}
+          page={1}
+          perPage={10}
+          perPageOptions={
+            Array [
+              Object {
+                "title": "10",
+                "value": 10,
+              },
+              Object {
+                "title": "20",
+                "value": 20,
+              },
+              Object {
+                "title": "50",
+                "value": 50,
+              },
+              Object {
+                "title": "100",
+                "value": 100,
+              },
+            ]
+          }
+          titles={
+            Object {
+              "currPage": "Current page",
+              "items": "items",
+              "itemsPerPage": "Items per page",
+              "optionsToggle": "Select",
+              "pages": "pages",
+              "paginationTitle": "Pagination",
+              "perPageSuffix": "per page",
+              "toFirstPage": "Go to first page",
+              "toLastPage": "Go to last page",
+              "toNextPage": "Go to next page",
+              "toPreviousPage": "Go to previous page",
+            }
+          }
+          toggleTemplate={[Function]}
+          variant="top"
+          widgetId="pagination-options-menu-bottom"
+        />
+      </SplitItem>
+    </Split>
   </LoadingState>
 </withRouter(NotificationsPage)>
 `;

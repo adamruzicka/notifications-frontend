@@ -52,6 +52,7 @@ Object {
   "meta": Object {
     "endpoint": "/endpoints?offset=0&limit=10&sort_by=name asc",
     "partial": false,
+    "search": false,
     "sortBy": "name asc",
   },
   "payload": Promise {},

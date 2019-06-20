@@ -9,14 +9,14 @@ export const NEW_ENDPOINT    = 'NEW_ENDPOINT';
 export const TEST_ENDPOINT   = 'TEST_ENDPOINT';
 export const FETCH_APPS      = 'FETCH_APPS';
 
-export const fetchEndpoints = (page, perPage, sortBy = 'name asc', partial = false) => {
+export const fetchEndpoints = (page, perPage, sortBy = 'name asc', partial = false, q = null) => {
     const offset = (page - 1) * perPage;
-    const params = { offset, limit: perPage, sort_by: sortBy };
+    const params = { offset, limit: perPage, sort_by: sortBy, q };
     let query = [];
 
     Object.keys(params).map(function(key) {
         const value = params[key];
-        if (value !== undefined) {
+        if (value !== undefined && value !== '' && value !== null) {
             query.push(`${ key }=${ value }`);
         }
     });
@@ -29,7 +29,8 @@ export const fetchEndpoints = (page, perPage, sortBy = 'name asc', partial = fal
         meta: {
             endpoint: url,
             sortBy,
-            partial
+            partial,
+            search: params.q !== null && params.q !== ''
         }
     };
 };

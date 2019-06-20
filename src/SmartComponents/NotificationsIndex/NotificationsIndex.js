@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { filter } from 'lodash';
 import {
     Title,
     Button,
@@ -8,7 +9,10 @@ import {
     EmptyStateBody,
     Pagination,
     ToolbarGroup,
-    ToolbarItem
+    ToolbarItem,
+    TextInput,
+    Split,
+    SplitItem
 } from '@patternfly/react-core';
 import { Link } from 'react-router-dom';
 import { CubesIcon } from '@patternfly/react-icons';
@@ -50,6 +54,8 @@ export class NotificationsIndex extends Component {
             page: 1,
             perPage: 10,
             rows: [ ],
+            query: null,
+            search: false,
             sortBy: {
                 index: 0,
                 direction: 'asc'
@@ -79,12 +85,10 @@ export class NotificationsIndex extends Component {
         this.refreshData();
     }
 
-    changePage = debounce(() => { this.refreshData(); }, 800);
-
     onPageChange = (_event, page, shouldDebounce) => {
         this.setState({ page });
         if (shouldDebounce) {
-            this.changePage();
+            this.refreshDataDebounced();
         } else {
             this.refreshData(page);
         }
@@ -96,12 +100,17 @@ export class NotificationsIndex extends Component {
     onSetPage = (event, page) =>
         event.target.className === 'pf-c-form-control' || this.onPageChange(event, page, false)
 
-    refreshData = (page = this.state.page, perPage = this.state.perPage, { direction, index } = this.state.sortBy) => {
+    refreshData = (page = this.state.page,
+        perPage = this.state.perPage,
+        { direction, index } = this.state.sortBy,
+        query = this.state.query) => {
         const column = this.state.columns[index].key;
-        this.props.fetchEndpoints(page, perPage, `${column} ${direction}`).then(() =>
+        this.props.fetchEndpoints(page, perPage, `${column} ${direction}`, false, query).then(() =>
             this.filtersInRowsAndCells()
         );
     }
+
+    refreshDataDebounced = debounce(() => { this.refreshData(); }, 800);
 
     getNextEndpoint = () => {
         const { direction, index } = this.state.sortBy;
@@ -122,7 +131,7 @@ export class NotificationsIndex extends Component {
     }
 
     filtersInRowsAndCells = () => {
-        const endpoints = Object.values(this.props.endpoints);
+        const endpoints = filter(Object.values(this.props.endpoints), (el) => el !== undefined);
 
         let rows = [];
         if (endpoints.length > 0) {
@@ -179,6 +188,12 @@ export class NotificationsIndex extends Component {
             this.props.testEndpoint(id).then(next, next);
         }
 
+    onFilterChange = (query) => {
+        this.setState({ query, search: query !== '', page: 1 }, async () => {
+            await this.refreshDataDebounced();
+        });
+    }
+
     noResults = () =>
         <Bullseye>
             <EmptyState>
@@ -194,9 +209,10 @@ export class NotificationsIndex extends Component {
         </Bullseye>
 
     resultsTable = () => {
-        const { perPage, page, rows, columns, sortBy } = this.state;
+        const { perPage, page, rows, columns, sortBy, query } = this.state;
+        const total = this.props.total ? this.props.total : 0;
         const pagination = <Pagination
-            itemCount={ this.props.total }
+            itemCount={ total }
             widgetId="pagination-options-menu-bottom"
             perPage={ perPage }
             page={ page }
@@ -205,13 +221,25 @@ export class NotificationsIndex extends Component {
             onPerPageSelect={ this.onPerPageSelect } />;
 
         return <React.Fragment>
-            <TableToolbar>
-                <ToolbarGroup>
-                    <ToolbarItem>
-                        <Button component={ Link } to={ '/new' } onClick={ this.props.newEndpoint }>New hook</Button>
-                    </ToolbarItem>
-                </ToolbarGroup>
-            </TableToolbar>
+            <Split component={ TableToolbar }>
+                <SplitItem isFilled={ true }>
+                    <ToolbarGroup>
+                        <ToolbarItem>
+                            <TextInput
+                                onChange={ this.onFilterChange }
+                                value={ query ? query : '' }
+                                placeholder="Filter by name or url"
+                                aria-label='Filter endpoints' />
+                        </ToolbarItem>
+                        <ToolbarItem style={ { marginLeft: 'var(--pf-global--spacer--lg)' } }>
+                            <Button component={ Link } to={ '/new' } onClick={ this.props.newEndpoint }>New hook</Button>
+                        </ToolbarItem>
+                    </ToolbarGroup>
+                </SplitItem>
+                <SplitItem>
+                    { pagination }
+                </SplitItem>
+            </Split>
             <Table aria-label='Hooks list'
                 rows={ rows }
                 cells={ columns }
@@ -220,25 +248,26 @@ export class NotificationsIndex extends Component {
                 gridBreakPoint={ TableGridBreakpoint.gridMd } >
                 <TableHeader />
                 <TableBody />
-                <tfoot><tr><td colSpan='6'>
-                    { pagination }
-                </td></tr></tfoot>
             </Table>
+            <Split component={ TableToolbar }>
+                <SplitItem isFilled={ true } />
+                <SplitItem>{ pagination }</SplitItem>
+            </Split>
         </React.Fragment>;
     }
 
     render() {
         const placeholder = <Skeleton size={ SkeletonSize.lg } />;
-        const { loading, total } = this.props;
+        const { loading, total, search } = this.props;
 
         return (
             <NotificationsPage
                 title='Hooks'
                 showBreadcrumb={ false }>
                 <LoadingState
-                    loading={ loading }
+                    loading={ loading && !search }
                     placeholder={ placeholder } >
-                    { total > 0 ? this.resultsTable() : this.noResults() }
+                    { total === 0 && !search ? this.noResults() : this.resultsTable() }
                 </LoadingState>
             </NotificationsPage>
         );
@@ -253,13 +282,15 @@ NotificationsIndex.propTypes = {
     testEndpoint: PropTypes.func.isRequired,
     endpoints: PropTypes.object.isRequired,
     loading: PropTypes.bool,
-    total: PropTypes.number
+    total: PropTypes.number,
+    search: PropTypes.any
 };
 
-const mapStateToProps = ({ endpoints: { endpoints, loading, total }}) => ({
+const mapStateToProps = ({ endpoints: { endpoints, loading, total, search }}) => ({
     endpoints,
     loading,
-    total
+    total,
+    search
 });
 
 const mapDispatchToProps = (dispatch) =>
