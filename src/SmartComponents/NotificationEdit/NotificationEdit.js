@@ -4,6 +4,7 @@ import {
     Button,
     Stack,
     StackItem,
+    Switch,
     PageSection
 } from '@patternfly/react-core';
 
@@ -31,7 +32,6 @@ import {
     FilterList,
     CustomInputFieldTemplate,
     CustomObjectFieldTemplate,
-    CustomBooleanFieldTemplate,
     CustomFieldTemplate
 } from 'PresentationalComponents';
 
@@ -41,8 +41,7 @@ const schema = {
     required: [ 'name', 'url' ],
     properties: {
         name: { type: 'string', title: 'Name' },
-        url: { type: 'string', title: 'URL' },
-        active: { type: 'boolean', title: 'Active', default: true }
+        url: { type: 'string', title: 'URL' }
     }
 };
 
@@ -56,8 +55,7 @@ const uiSchema = {
 };
 
 const fields = {
-    StringField: CustomInputFieldTemplate,
-    BooleanField: CustomBooleanFieldTemplate
+    StringField: CustomInputFieldTemplate
 };
 
 @registryDecorator()
@@ -79,6 +77,14 @@ export class NotificationEdit extends Component {
         appsLoading: PropTypes.bool,
         endpointErrors: PropTypes.array,
         submitting: PropTypes.bool
+    }
+
+    constructor(props) {
+        super(props);
+
+        this.handleChange = active => {
+            this.setState({ active });
+        };
     }
 
     componentDidMount() {
@@ -132,10 +138,11 @@ export class NotificationEdit extends Component {
     }
 
     formSubmit = () => {
-        let { active, name, url } = this.form.current.state.formData;
+        let { name, url } = this.form.current.state.formData;
         const type = 'Endpoints::HttpEndpoint';
 
         const filter = this.buildFilter(this.filterList.current.state);
+        const active = this.state.active;
 
         let payload = {
             active,
@@ -181,17 +188,20 @@ export class NotificationEdit extends Component {
         const endpoint = this.singleEndpoint();
         return endpoint ? {
             name: endpoint.attributes.name,
-            url: endpoint.attributes.url,
-            active: endpoint.attributes.active
+            url: endpoint.attributes.url
         } : {};
     }
+
+    endpointLoaded = (endpoint) =>
+        this.props.match.params.endpointId && endpoint;
 
     toIndex = () =>
         this.props.history.push('/list')
 
     render() {
         const endpoint = this.singleEndpoint();
-        let action = this.props.match.params.endpointId && endpoint ? endpoint.attributes.name : 'New hook';
+        let action = this.endpointLoaded(endpoint) ? endpoint.attributes.name : 'New hook';
+        const active = (this.state === null) ? (this.endpointLoaded(endpoint) ? endpoint.attributes.active : true) : this.state.active;
         const filter = this.props.match.params.endpointId ? this.props.filter : {};
         const mainStyle = { background: 'white', borderTop: '1px solid var(--pf-global--BorderColor--light)' };
 
@@ -219,7 +229,18 @@ export class NotificationEdit extends Component {
                 </Stack>
             </PageSection>;
 
-        return <NotificationsPage title={ `${ action }` } mainStyle={ mainStyle } appendix={ !loading && appendix }>
+        const toggle =
+            <div>
+                Active
+                { ' ' }
+                <Switch id="endpoint_enabled" isChecked={ active } onChange={ this.handleChange } />
+            </div>;
+
+        return <NotificationsPage
+            title={ `${ action }` }
+            mainStyle={ mainStyle }
+            appendix={ !loading && appendix }
+            rightHeader={ !this.props.loading && toggle }>
             <LoadingState
                 loading={ loading }
                 placeholder={ <Spinner centered /> }>
