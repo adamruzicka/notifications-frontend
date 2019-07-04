@@ -1239,14 +1239,8 @@ exports[`NotificationEdit expect to render a Form 1`] = `
     <div>
       Active
        
-      <Switch
-        aria-label=""
-        className=""
-        id="endpoint_enabled"
-        isChecked={true}
-        isDisabled={false}
-        label=""
-        onChange={[Function]}
+      <CustomSwitch
+        default={true}
       />
     </div>
   }
@@ -2572,14 +2566,8 @@ exports[`NotificationEdit takes an endpoint 1`] = `
     <div>
       Active
        
-      <Switch
-        aria-label=""
-        className=""
-        id="endpoint_enabled"
-        isChecked={true}
-        isDisabled={false}
-        label=""
-        onChange={[Function]}
+      <CustomSwitch
+        default={true}
       />
     </div>
   }
