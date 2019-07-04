@@ -1235,6 +1235,21 @@ exports[`NotificationEdit expect to render a Form 1`] = `
       "borderTop": "1px solid var(--pf-global--BorderColor--light)",
     }
   }
+  rightHeader={
+    <div>
+      Active
+       
+      <Switch
+        aria-label=""
+        className=""
+        id="endpoint_enabled"
+        isChecked={true}
+        isDisabled={false}
+        label=""
+        onChange={[Function]}
+      />
+    </div>
+  }
   title="New hook"
 >
   <LoadingState
@@ -1252,7 +1267,6 @@ exports[`NotificationEdit expect to render a Form 1`] = `
       disabled={false}
       fields={
         Object {
-          "BooleanField": [Function],
           "StringField": [Function],
         }
       }
@@ -1265,11 +1279,6 @@ exports[`NotificationEdit expect to render a Form 1`] = `
       schema={
         Object {
           "properties": Object {
-            "active": Object {
-              "default": true,
-              "title": "Active",
-              "type": "boolean",
-            },
             "name": Object {
               "title": "Name",
               "type": "string",
@@ -2559,6 +2568,21 @@ exports[`NotificationEdit takes an endpoint 1`] = `
       "borderTop": "1px solid var(--pf-global--BorderColor--light)",
     }
   }
+  rightHeader={
+    <div>
+      Active
+       
+      <Switch
+        aria-label=""
+        className=""
+        id="endpoint_enabled"
+        isChecked={true}
+        isDisabled={false}
+        label=""
+        onChange={[Function]}
+      />
+    </div>
+  }
   title="New hook"
 >
   <LoadingState
@@ -2576,7 +2600,6 @@ exports[`NotificationEdit takes an endpoint 1`] = `
       disabled={false}
       fields={
         Object {
-          "BooleanField": [Function],
           "StringField": [Function],
         }
       }
@@ -2589,11 +2612,6 @@ exports[`NotificationEdit takes an endpoint 1`] = `
       schema={
         Object {
           "properties": Object {
-            "active": Object {
-              "default": true,
-              "title": "Active",
-              "type": "boolean",
-            },
             "name": Object {
               "title": "Name",
               "type": "string",
