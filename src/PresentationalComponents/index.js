@@ -10,4 +10,3 @@ export * from './StatusPopup/StatusPopup';
 export * from './CustomFieldTemplate/CustomFieldTemplate';
 export * from './CustomInputFieldTemplate/CustomInputFieldTemplate';
 export * from './CustomObjectFieldTemplate/CustomObjectFieldTemplate';
-export * from './CustomBooleanFieldTemplate/CustomBooleanFieldTemplate';
