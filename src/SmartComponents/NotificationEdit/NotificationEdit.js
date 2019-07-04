@@ -45,6 +45,29 @@ const schema = {
     }
 };
 
+class CustomSwitch extends React.Component {
+    static propTypes = {
+        default: PropTypes.bool.isRequired
+    }
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            active: props.default
+        };
+        this.handleChange = active => {
+            this.setState({ active });
+        };
+    }
+
+    render() {
+        const { active } = this.state;
+        return (
+            <Switch id="endpoint_enabled" isChecked={ active } onChange={ this.handleChange } />
+        );
+    }
+}
+
 const uiSchema = {
     name: {
         'ui:placeholder': 'New hook endpoint name'
@@ -82,14 +105,12 @@ export class NotificationEdit extends Component {
     constructor(props) {
         super(props);
 
-        this.handleChange = active => {
-            this.setState({ active });
-        };
     }
 
     componentDidMount() {
         this.filterList = React.createRef();
         this.form = React.createRef();
+        this.switch = React.createRef();
         this.fetchData();
     }
 
@@ -142,7 +163,7 @@ export class NotificationEdit extends Component {
         const type = 'Endpoints::HttpEndpoint';
 
         const filter = this.buildFilter(this.filterList.current.state);
-        const active = this.state.active;
+        const active = this.switch.current.state.active;
 
         let payload = {
             active,
@@ -233,7 +254,7 @@ export class NotificationEdit extends Component {
             <div>
                 Active
                 { ' ' }
-                <Switch id="endpoint_enabled" isChecked={ active } onChange={ this.handleChange } />
+                <CustomSwitch default={ active } ref={ this.switch } />
             </div>;
 
         return <NotificationsPage
