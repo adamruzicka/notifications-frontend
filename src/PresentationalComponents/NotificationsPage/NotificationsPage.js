@@ -10,7 +10,9 @@ import {
     Breadcrumb,
     BreadcrumbItem,
     Stack,
-    StackItem
+    StackItem,
+    Split,
+    SplitItem
 } from '@patternfly/react-core';
 
 import PropTypes from 'prop-types';
@@ -33,13 +35,16 @@ export class NotificationsPage extends Component {
         </Breadcrumb>
 
     render() {
-        const { title, children, appendix } = this.props;
+        const { title, children, appendix, rightHeader } = this.props;
 
         return (
             <Fragment>
                 <PageHeader>
                     { this.showBreadcrumb() }
-                    <PageHeaderTitle title={ title } />
+                    <Split>
+                        <SplitItem isFilled={ true }><PageHeaderTitle title={ title } /></SplitItem>
+                        <SplitItem>{ rightHeader }</SplitItem>
+                    </Split>
                 </PageHeader>
                 <Stack style={ { backgroundColor: 'var(--pf-c-page__main-section--BackgroundColor)' } }>
                     <StackItem>
@@ -58,7 +63,8 @@ export class NotificationsPage extends Component {
 };
 
 NotificationsPage.defaultProps = {
-    showBreadcrumb: true
+    showBreadcrumb: true,
+    rightHeader: null
 };
 
 NotificationsPage.propTypes = {
@@ -68,7 +74,8 @@ NotificationsPage.propTypes = {
     children: PropTypes.node,
     history: PropTypes.object,
     mainStyle: PropTypes.object,
-    appendix: PropTypes.node
+    appendix: PropTypes.node,
+    rightHeader: PropTypes.node
 };
 
 export default withRouter(NotificationsPage);
