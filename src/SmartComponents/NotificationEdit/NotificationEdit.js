@@ -206,7 +206,13 @@ export class NotificationEdit extends Component {
         this.props.endpoint ? this.props.endpoint[this.props.match.params.endpointId] : null;
 
     initialFormData = () => {
-        const endpoint = this.singleEndpoint();
+        let endpoint = this.singleEndpoint();
+
+        if (this.form !== undefined && this.form.current !== null) {
+            const { name, url } = this.form.current.state.formData;
+            endpoint = { attributes: { name, url }};
+        }
+
         return endpoint ? {
             name: endpoint.attributes.name,
             url: endpoint.attributes.url
