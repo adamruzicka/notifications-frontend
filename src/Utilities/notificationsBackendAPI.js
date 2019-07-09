@@ -12,7 +12,15 @@ class BackendAPIClient {
         .then(this.checkForEmptyResponse)
         .then((response) => this.checkForErrors(response, options))
         .then((response) => response.json())
-        .catch(() => Promise.reject({ title: 'Error parsing' }));
+        .catch(this.finalCatch);
+    }
+
+    static finalCatch(promise) {
+        if (promise.errors === undefined) {
+            return Promise.reject({ title: 'Error parsing' });
+        } else {
+            return Promise.reject({ ...promise });
+        }
     }
 
     static fetch(path, apiProps, method) {
