@@ -31,8 +31,6 @@ ShallowWrapper {
       "children": Array [
         <PageHeader>
           <Breadcrumb
-            aria-label="Breadcrumb"
-            className=""
             style={
               Object {
                 "marginLeft": "calc(var(--pf-c-content--ol--MarginLeft) * -1 * 2)",
@@ -41,16 +39,12 @@ ShallowWrapper {
           >
             
             <BreadcrumbItem
-              className=""
-              component="a"
               isActive={true}
               style={
                 Object {
                   "marginTop": 0,
                 }
               }
-              target={null}
-              to={null}
             >
               Something
             </BreadcrumbItem>
@@ -112,8 +106,6 @@ ShallowWrapper {
         "props": Object {
           "children": Array [
             <Breadcrumb
-              aria-label="Breadcrumb"
-              className=""
               style={
                 Object {
                   "marginLeft": "calc(var(--pf-c-content--ol--MarginLeft) * -1 * 2)",
@@ -122,16 +114,12 @@ ShallowWrapper {
             >
               
               <BreadcrumbItem
-                className=""
-                component="a"
                 isActive={true}
                 style={
                   Object {
                     "marginTop": 0,
                   }
                 }
-                target={null}
-                to={null}
               >
                 Something
               </BreadcrumbItem>
@@ -163,25 +151,19 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "aria-label": "Breadcrumb",
               "children": Array [
                 "",
                 <BreadcrumbItem
-                  className=""
-                  component="a"
                   isActive={true}
                   style={
                     Object {
                       "marginTop": 0,
                     }
                   }
-                  target={null}
-                  to={null}
                 >
                   Something
                 </BreadcrumbItem>,
               ],
-              "className": "",
               "style": Object {
                 "marginLeft": "calc(var(--pf-c-content--ol--MarginLeft) * -1 * 2)",
               },
@@ -195,14 +177,10 @@ ShallowWrapper {
                 "nodeType": "function",
                 "props": Object {
                   "children": "Something",
-                  "className": "",
-                  "component": "a",
                   "isActive": true,
                   "style": Object {
                     "marginTop": 0,
                   },
-                  "target": null,
-                  "to": null,
                 },
                 "ref": null,
                 "rendered": "Something",
@@ -378,8 +356,6 @@ ShallowWrapper {
         "children": Array [
           <PageHeader>
             <Breadcrumb
-              aria-label="Breadcrumb"
-              className=""
               style={
                 Object {
                   "marginLeft": "calc(var(--pf-c-content--ol--MarginLeft) * -1 * 2)",
@@ -388,16 +364,12 @@ ShallowWrapper {
             >
               
               <BreadcrumbItem
-                className=""
-                component="a"
                 isActive={true}
                 style={
                   Object {
                     "marginTop": 0,
                   }
                 }
-                target={null}
-                to={null}
               >
                 Something
               </BreadcrumbItem>
@@ -459,8 +431,6 @@ ShallowWrapper {
           "props": Object {
             "children": Array [
               <Breadcrumb
-                aria-label="Breadcrumb"
-                className=""
                 style={
                   Object {
                     "marginLeft": "calc(var(--pf-c-content--ol--MarginLeft) * -1 * 2)",
@@ -469,16 +439,12 @@ ShallowWrapper {
               >
                 
                 <BreadcrumbItem
-                  className=""
-                  component="a"
                   isActive={true}
                   style={
                     Object {
                       "marginTop": 0,
                     }
                   }
-                  target={null}
-                  to={null}
                 >
                   Something
                 </BreadcrumbItem>
@@ -510,25 +476,19 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "aria-label": "Breadcrumb",
                 "children": Array [
                   "",
                   <BreadcrumbItem
-                    className=""
-                    component="a"
                     isActive={true}
                     style={
                       Object {
                         "marginTop": 0,
                       }
                     }
-                    target={null}
-                    to={null}
                   >
                     Something
                   </BreadcrumbItem>,
                 ],
-                "className": "",
                 "style": Object {
                   "marginLeft": "calc(var(--pf-c-content--ol--MarginLeft) * -1 * 2)",
                 },
@@ -542,14 +502,10 @@ ShallowWrapper {
                   "nodeType": "function",
                   "props": Object {
                     "children": "Something",
-                    "className": "",
-                    "component": "a",
                     "isActive": true,
                     "style": Object {
                       "marginTop": 0,
                     },
-                    "target": null,
-                    "to": null,
                   },
                   "ref": null,
                   "rendered": "Something",

@@ -16,13 +16,9 @@ exports[`NotificationsIndex expect to render an EmptyState by default (with no e
       className=""
       component="div"
     >
-      <EmptyState
-        className=""
-        variant="large"
-      >
+      <EmptyState>
         <p>
           <EmptyStateIcon
-            className=""
             icon={[Function]}
           />
         </p>
@@ -31,24 +27,13 @@ exports[`NotificationsIndex expect to render an EmptyState by default (with no e
         >
           No hooks found
         </Title>
-        <EmptyStateBody
-          className=""
-        >
+        <EmptyStateBody>
           There are no hooks configured yet.
         </EmptyStateBody>
         <Button
-          aria-label={null}
-          className=""
           component={[Function]}
-          isActive={false}
-          isBlock={false}
-          isDisabled={false}
-          isFocus={false}
-          isHover={false}
-          isInline={false}
           onClick={[MockFunction]}
           to="/new"
-          type="button"
           variant="primary"
         >
           New hook
@@ -108,19 +93,9 @@ exports[`NotificationsIndex takes endpoints 1`] = `
             }
           >
             <Button
-              aria-label={null}
-              className=""
               component={[Function]}
-              isActive={false}
-              isBlock={false}
-              isDisabled={false}
-              isFocus={false}
-              isHover={false}
-              isInline={false}
               onClick={[MockFunction]}
               to="/new"
-              type="button"
-              variant="primary"
             >
               New hook
             </Button>
@@ -132,8 +107,11 @@ exports[`NotificationsIndex takes endpoints 1`] = `
         isFilled={false}
       >
         <Pagination
+          className=""
           dropDirection="down"
           itemCount={1}
+          itemsEnd={null}
+          itemsStart={null}
           onFirstClick={[Function]}
           onLastClick={[Function]}
           onNextClick={[Function]}
@@ -320,8 +298,11 @@ exports[`NotificationsIndex takes endpoints 1`] = `
         isFilled={false}
       >
         <Pagination
+          className=""
           dropDirection="down"
           itemCount={1}
+          itemsEnd={null}
+          itemsStart={null}
           onFirstClick={[Function]}
           onLastClick={[Function]}
           onNextClick={[Function]}
