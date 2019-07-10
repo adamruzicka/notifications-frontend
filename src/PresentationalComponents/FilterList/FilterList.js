@@ -67,7 +67,7 @@ export class FilterList extends Component {
                     label={ level.attributes.title }
                     aria-label={ level.attributes.title }
                     onChange={ () => this.selectFilter('levelIds', level.id) }
-                    defaultChecked={ this.state.selected.levelIds[level.id] } />
+                    isChecked={ this.state.selected.levelIds[level.id] } />
             </ListItem>;
 
     renderLevels = (eventType, levels) => {
@@ -87,8 +87,8 @@ export class FilterList extends Component {
                     data-event-type-id={ eventType.id }
                     label={ eventType.attributes.title }
                     aria-label={ eventType.attributes.title }
-                    onChange={ () => this.selectFilter('eventTypeIds', eventType.id) }
-                    defaultChecked={ this.state.selected.eventTypeIds[eventType.id] } />
+                    onChange={ (checked) => this.eventTypeSelected(checked, eventType) }
+                    isChecked={ this.state.selected.eventTypeIds[eventType.id] } />
                 { this.renderLevels(eventType, eventType.levels) }
             </ListItem>;
 
@@ -108,12 +108,21 @@ export class FilterList extends Component {
         this.setState(newState);
     }
 
-    appSelected = (app) => {
+    eventTypeSelected = (checked, eventType) => {
+        let newState = { ...this.state };
+        Object.keys(eventType.levels).forEach((level) => {
+            newState.selected.levelIds[level] = checked;
+        });
+        newState.selected.eventTypeIds[eventType.id] = checked;
+        this.setState(newState);
+    }
+
+    appSelected = (checked, app) => {
         let newState = { ...this.state };
         if (newState.selected.appIds[app.id] === undefined) {
             Object.values(app.eventTypes).forEach((eventType) => {
-                newState.selected.eventTypeIds[eventType.id] = true;
-                Object.values(eventType.levels).forEach((level) => newState.selected.levelIds[level.id] = true);
+                newState.selected.eventTypeIds[eventType.id] = checked;
+                Object.values(eventType.levels).forEach((level) => newState.selected.levelIds[level.id] = checked);
             });
         }
 
@@ -138,8 +147,8 @@ export class FilterList extends Component {
                                         data-event-type-id={ app.id }
                                         label={ <strong>{ app.attributes.title }</strong> }
                                         aria-label={ app.attributes.title }
-                                        onChange={ () => this.appSelected(app) }
-                                        defaultChecked={ this.state.selected.appIds[app.id]  }/>
+                                        onChange={ (checked) => this.appSelected(checked, app) }
+                                        isChecked={ this.state.selected.appIds[app.id]  }/>
                                 </CardHeader>
                                 { this.state.selected.appIds[app.id] && _.keys(app.eventTypes).length > 0 &&
                                     <CardBody>
