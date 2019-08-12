@@ -18,7 +18,7 @@ Array [
         class="pf-c-card"
       >
         <div
-          class="pf-c-card__header pf-c-title pf-m-lg"
+          class="pf-c-card__header pf-c-title pf-m-md"
         >
           <div
             class="pf-c-check"
@@ -51,7 +51,7 @@ Array [
         class="pf-c-card"
       >
         <div
-          class="pf-c-card__header pf-c-title pf-m-lg"
+          class="pf-c-card__header pf-c-title pf-m-md"
         >
           <div
             class="pf-c-check"
@@ -83,7 +83,7 @@ Array [
         class="pf-c-card"
       >
         <div
-          class="pf-c-card__header pf-c-title pf-m-lg"
+          class="pf-c-card__header pf-c-title pf-m-md"
         >
           <div
             class="pf-c-check"
@@ -217,7 +217,7 @@ Array [
         class="pf-c-card"
       >
         <div
-          class="pf-c-card__header pf-c-title pf-m-lg"
+          class="pf-c-card__header pf-c-title pf-m-md"
         >
           <div
             class="pf-c-check"
@@ -431,7 +431,7 @@ Array [
         class="pf-c-card"
       >
         <div
-          class="pf-c-card__header pf-c-title pf-m-lg"
+          class="pf-c-card__header pf-c-title pf-m-md"
         >
           <div
             class="pf-c-check"
@@ -463,7 +463,7 @@ Array [
         class="pf-c-card"
       >
         <div
-          class="pf-c-card__header pf-c-title pf-m-lg"
+          class="pf-c-card__header pf-c-title pf-m-md"
         >
           <div
             class="pf-c-check"
@@ -495,7 +495,7 @@ Array [
         class="pf-c-card"
       >
         <div
-          class="pf-c-card__header pf-c-title pf-m-lg"
+          class="pf-c-card__header pf-c-title pf-m-md"
         >
           <div
             class="pf-c-check"
@@ -527,7 +527,7 @@ Array [
         class="pf-c-card"
       >
         <div
-          class="pf-c-card__header pf-c-title pf-m-lg"
+          class="pf-c-card__header pf-c-title pf-m-md"
         >
           <div
             class="pf-c-check"
@@ -886,7 +886,7 @@ Array [
         class="pf-c-card"
       >
         <div
-          class="pf-c-card__header pf-c-title pf-m-lg"
+          class="pf-c-card__header pf-c-title pf-m-md"
         >
           <div
             class="pf-c-check"
@@ -918,7 +918,7 @@ Array [
         class="pf-c-card"
       >
         <div
-          class="pf-c-card__header pf-c-title pf-m-lg"
+          class="pf-c-card__header pf-c-title pf-m-md"
         >
           <div
             class="pf-c-check"

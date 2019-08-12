@@ -3,12 +3,7 @@
 exports[`NotificationEdit expect to render a Form 1`] = `
 <withRouter(NotificationsPage)
   appendix={
-    <PageSection
-      className=""
-      noPadding={false}
-      noPaddingMobile={false}
-      variant="default"
-    >
+    <PageSection>
       <Stack
         className=""
         component="div"
@@ -1192,15 +1187,6 @@ exports[`NotificationEdit expect to render a Form 1`] = `
         >
           <div>
             <Button
-              aria-label={null}
-              className=""
-              component="button"
-              isActive={false}
-              isBlock={false}
-              isDisabled={false}
-              isFocus={false}
-              isHover={false}
-              isInline={false}
               onClick={[Function]}
               type="submit"
               variant="primary"
@@ -1209,17 +1195,7 @@ exports[`NotificationEdit expect to render a Form 1`] = `
             </Button>
              
             <Button
-              aria-label={null}
-              className=""
-              component="button"
-              isActive={false}
-              isBlock={false}
-              isDisabled={false}
-              isFocus={false}
-              isHover={false}
-              isInline={false}
               onClick={[Function]}
-              type="button"
               variant="secondary"
             >
               Cancel
@@ -1303,15 +1279,6 @@ exports[`NotificationEdit expect to render a Form 1`] = `
       }
     >
       <Button
-        aria-label={null}
-        className=""
-        component="button"
-        isActive={false}
-        isBlock={false}
-        isDisabled={false}
-        isFocus={false}
-        isHover={false}
-        isInline={false}
         style={
           Object {
             "display": "none",
@@ -1330,12 +1297,7 @@ exports[`NotificationEdit expect to render a Form 1`] = `
 exports[`NotificationEdit takes an endpoint 1`] = `
 <withRouter(NotificationsPage)
   appendix={
-    <PageSection
-      className=""
-      noPadding={false}
-      noPaddingMobile={false}
-      variant="default"
-    >
+    <PageSection>
       <Stack
         className=""
         component="div"
@@ -2519,15 +2481,6 @@ exports[`NotificationEdit takes an endpoint 1`] = `
         >
           <div>
             <Button
-              aria-label={null}
-              className=""
-              component="button"
-              isActive={false}
-              isBlock={false}
-              isDisabled={false}
-              isFocus={false}
-              isHover={false}
-              isInline={false}
               onClick={[Function]}
               type="submit"
               variant="primary"
@@ -2536,17 +2489,7 @@ exports[`NotificationEdit takes an endpoint 1`] = `
             </Button>
              
             <Button
-              aria-label={null}
-              className=""
-              component="button"
-              isActive={false}
-              isBlock={false}
-              isDisabled={false}
-              isFocus={false}
-              isHover={false}
-              isInline={false}
               onClick={[Function]}
-              type="button"
               variant="secondary"
             >
               Cancel
@@ -2630,15 +2573,6 @@ exports[`NotificationEdit takes an endpoint 1`] = `
       }
     >
       <Button
-        aria-label={null}
-        className=""
-        component="button"
-        isActive={false}
-        isBlock={false}
-        isDisabled={false}
-        isFocus={false}
-        isHover={false}
-        isInline={false}
         style={
           Object {
             "display": "none",
