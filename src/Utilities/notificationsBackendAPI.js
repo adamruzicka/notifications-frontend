@@ -26,7 +26,8 @@ class BackendAPIClient {
     static fetch(path, apiProps, method) {
         let params = {
             method: method || 'get',
-            headers: API_HEADERS
+            headers: API_HEADERS,
+            credentials: 'include'
         };
 
         if (apiProps) {
