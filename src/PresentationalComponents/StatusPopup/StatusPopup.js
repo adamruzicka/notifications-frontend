@@ -3,7 +3,7 @@ import { Tooltip } from '@patternfly/react-core';
 import PropTypes from 'prop-types';
 
 export const StatusPopup = ({ children, status, lastAttempt, lastFailure }) => {
-    let content = 'No delivery attemps so far';
+    let content = 'No delivery attempts so far';
     if (status === 'success') {
         content = `Last delivery attempt: ${ lastAttempt }`;
     } else if (status === 'failure') {
