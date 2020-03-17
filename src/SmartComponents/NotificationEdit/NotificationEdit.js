@@ -128,7 +128,7 @@ export class NotificationEdit extends Component {
         Object.values(app.eventTypes).forEach((eventType) => {
             if (listState.selected.eventTypeIds[eventType.id]) {
                 const currentLevelIds = this.eventTypeLevels(listState, eventType);
-                if (currentLevelIds.length > 0) {
+                if (eventType.levels.length === 0 || currentLevelIds.length > 0) {
                     eventTypeIds.push(eventType.id);
                     levelIds = levelIds.concat(currentLevelIds);
                 }
